@@ -1,0 +1,50 @@
+Time: 04-07-2024 07:46:47 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='DB Visit Report'
+-----------------------------------------------------------
+
+Time: 04-07-2024 07:46:48 AM
+-----------------------------------------------------------
+Message: ReadRecord : select Distinct R.Name as Region,S.name as State,T.Name as City,T.Code as [Town Code],A.NAme as Area ,TE.Name as Territory, TE.Code as [Territory Code],DI.Name as District ,DI.Code as [District Code],SA.EmployeeType as Role, SA.Code as [User Name],SA.Name as [Name] ,D.distributorid  as [DB Code],D.DistributorName as [DB Name] ,C.RouteCode as[ Beat Code] ,C.RouteName as[ Beat Name] ,PH.Transdate as [Visited Time],'' as [In Range],PH.Transdate as [Date],'' as Remarks , C.Latitude as [Latitude],C.Longitude as [Longitude],'' as [Store Out Time], '' as Purpose  , D.DBtype  as  [DB Type], PH.Transdate as [Creation Date] from PJPHdr PH    inner join SalesAgent SA on SA.Code =PH.Agentid    inner join  MonthlyRoutePlan MRP  on MRP.AgentID = PH.Agentid and MRP.RouteDate  = PH.RequestDate  inner join  Customer C on C. CustNo  = MRP.CustNo   INNER JOIN Distributor D on  d.DistributorID=C.dbcode INNER JOIN Region R   on R.Code = D.Branch  INNER JOIN  SalesmanDistributorMapping SDM on SDM.DistributorID=D.DistributorID INNER join SubDistributor SD   on SD.DistributorID=D.DistributorID  inner join LocationHierarchy LH on LH.City = D.GeoValueCode    inner join Town T  on T.Code =  LH.TownCode  inner join District Di on Di.Code=LH.DistrictCode  inner join Territory TE on TE.Code = D.Territory   inner join  Area  A  on  A.Code = D.Area   inner join  States S on  S.Code = D.State   where Convert(Date,PH.TransDate) between '2024-07-01 00:00:00.000' and '2024-07-04 23:59:59.000'  and D.Branch=Case when 'ALL'='ALL' then  D.Branch else 'ALL' end  and D.DistributorID=case when 'ALL'='ALL' then D.DistributorID else 'ALL' end and SD.SubDistributorID=case when 'ALL'='ALL' then SD.SubDistributorID else 'ALL' end  and SDM.Code=case when 'ALL'='ALL' then SDM.Code else 'ALL' end
+-----------------------------------------------------------
+
+Time: 04-07-2024 07:54:07 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='DB Visit Report'
+-----------------------------------------------------------
+
+Time: 04-07-2024 07:57:56 AM
+-----------------------------------------------------------
+Message: ReadRecord : select Distinct R.Name as Region,S.name as State,T.Name as City,T.Code as [Town Code],A.NAme as Area ,TE.Name as Territory, TE.Code as [Territory Code],DI.Name as District ,DI.Code as [District Code],SA.EmployeeType as Role, SA.Code as [User Name],SA.Name as [Name] ,D.distributorid  as [DB Code],D.DistributorName as [DB Name] ,C.RouteCode as[ Beat Code] ,C.RouteName as[ Beat Name] ,PH.Transdate as [Visited Time],'' as [In Range],PH.Transdate as [Date],'' as Remarks , C.Latitude as [Latitude],C.Longitude as [Longitude],'' as [Store Out Time], '' as Purpose  , D.DBtype  as  [DB Type], PH.Transdate as [Creation Date] from PJPHdr PH    inner join SalesAgent SA on SA.Code =PH.Agentid    inner join  MonthlyRoutePlan MRP  on MRP.AgentID = PH.Agentid and MRP.RouteDate  = PH.RequestDate  inner join  Customer C on C. CustNo  = MRP.CustNo   INNER JOIN Distributor D on  d.DistributorID=C.dbcode INNER JOIN Region R   on R.Code = D.Branch  INNER JOIN  SalesmanDistributorMapping SDM on SDM.DistributorID=D.DistributorID INNER join SubDistributor SD   on SD.DistributorID=D.DistributorID  inner join LocationHierarchy LH on LH.City = D.GeoValueCode    inner join Town T  on T.Code =  LH.TownCode  inner join District Di on Di.Code=LH.DistrictCode  inner join Territory TE on TE.Code = D.Territory   inner join  Area  A  on  A.Code = D.Area   inner join  States S on  S.Code = D.State   where Convert(Date,PH.TransDate) between '2024-07-01 00:00:00.000' and '2024-07-04 23:59:59.000'  and D.Branch=Case when 'ALL'='ALL' then  D.Branch else 'ALL' end  and D.DistributorID=case when 'ALL'='ALL' then D.DistributorID else 'ALL' end and SD.SubDistributorID=case when 'ALL'='ALL' then SD.SubDistributorID else 'ALL' end  and SDM.Code=case when 'ALL'='ALL' then SDM.Code else 'ALL' end
+-----------------------------------------------------------
+
+Time: 04-07-2024 08:46:49 AM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+-----------------------------------------------------------
+
+Time: 04-07-2024 08:46:49 AM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 04-07-2024 08:46:49 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 04-07-2024 08:57:57 AM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+-----------------------------------------------------------
+
+Time: 04-07-2024 08:57:57 AM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 04-07-2024 08:57:57 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+

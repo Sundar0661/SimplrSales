@@ -1,0 +1,255 @@
+Time: 03-07-2024 07:46:47 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Audit Detail'
+-----------------------------------------------------------
+
+Time: 03-07-2024 07:46:49 AM
+-----------------------------------------------------------
+Message: ReadRecord : Exec [Export_AuditDetailReport] '2024-06-01 00:00:00.000','2024-07-03 23:59:59.000','ADMIN' 
+-----------------------------------------------------------
+
+Time: 03-07-2024 07:46:55 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 03-07-2024 07:55:07 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Audit Detail'
+-----------------------------------------------------------
+
+Time: 03-07-2024 07:55:09 AM
+-----------------------------------------------------------
+Message: ReadRecord : Exec [Export_AuditDetailReport] '2024-06-01 00:00:00.000','2024-07-03 23:59:59.000','ADMIN' 
+-----------------------------------------------------------
+
+Time: 03-07-2024 07:55:09 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 03-07-2024 07:58:39 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Audit Detail'
+-----------------------------------------------------------
+
+Time: 03-07-2024 07:58:41 AM
+-----------------------------------------------------------
+Message: ReadRecord : Exec [Export_AuditDetailReport] '2024-06-01 00:00:00.000','2024-07-03 23:59:59.000','ADMIN' 
+-----------------------------------------------------------
+
+Time: 03-07-2024 07:58:41 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 03-07-2024 08:04:49 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Audit Detail'
+-----------------------------------------------------------
+
+Time: 03-07-2024 08:04:51 AM
+-----------------------------------------------------------
+Message: ReadRecord : Exec [Export_AuditDetailReport] '2024-06-01 00:00:00.000','2024-07-03 23:59:59.000','ADMIN' 
+-----------------------------------------------------------
+
+Time: 03-07-2024 08:04:51 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 03-07-2024 08:12:43 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Audit Detail'
+-----------------------------------------------------------
+
+Time: 03-07-2024 08:12:44 AM
+-----------------------------------------------------------
+Message: ReadRecord : Exec [Export_AuditDetailReport] '2024-06-01 00:00:00.000','2024-07-03 23:59:59.000','ADMIN' 
+-----------------------------------------------------------
+
+Time: 03-07-2024 08:12:44 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 03-07-2024 08:19:47 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Audit Detail'
+-----------------------------------------------------------
+
+Time: 03-07-2024 08:19:48 AM
+-----------------------------------------------------------
+Message: ReadRecord : Exec [Export_AuditDetailReport] '2024-05-01 00:00:00.000','2024-07-03 23:59:59.000','ADMIN' 
+-----------------------------------------------------------
+
+Time: 03-07-2024 08:19:48 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 03-07-2024 08:25:49 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Audit Detail'
+-----------------------------------------------------------
+
+Time: 03-07-2024 08:25:50 AM
+-----------------------------------------------------------
+Message: ReadRecord : Exec [Export_AuditDetailReport] '2024-06-01 00:00:00.000','2024-07-03 23:59:59.000','ADMIN' 
+-----------------------------------------------------------
+
+Time: 03-07-2024 08:25:52 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 03-07-2024 08:33:50 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Item'
+-----------------------------------------------------------
+
+Time: 03-07-2024 08:33:51 AM
+-----------------------------------------------------------
+Message: ReadRecord : select ItemNo as [Item No],Description,ShortDesc as [Short Description],ChineseDesc as [Chinese Name],BaseUOM,salesUOM as [Sales UOM],UnitPrice as [Unit Price],Category,BarCode,Brand,ToPDA,Active,SpecialItem as [Special Item],BestSellerItem as [Best Seller],NewItem as [New Item],Image,BulkUOM as [Bulk UOM] from Item 
+-----------------------------------------------------------
+
+Time: 03-07-2024 08:33:52 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 03-07-2024 08:49:50 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Item'
+-----------------------------------------------------------
+
+Time: 03-07-2024 08:49:51 AM
+-----------------------------------------------------------
+Message: ReadRecord : select ItemNo as [Item No],Description,ShortDesc as [Short Description],ChineseDesc as [Chinese Name],BaseUOM,salesUOM as [Sales UOM],UnitPrice as [Unit Price],Category,BarCode,Brand,ToPDA,Active,SpecialItem as [Special Item],BestSellerItem as [Best Seller],NewItem as [New Item],Image,BulkUOM as [Bulk UOM] from Item 
+-----------------------------------------------------------
+
+Time: 03-07-2024 08:49:51 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 03-07-2024 08:56:13 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Item'
+-----------------------------------------------------------
+
+Time: 03-07-2024 08:56:14 AM
+-----------------------------------------------------------
+Message: ReadRecord : select ItemNo as [Item No],Description,ShortDesc as [Short Description],ChineseDesc as [Chinese Name],BaseUOM,salesUOM as [Sales UOM],UnitPrice as [Unit Price],Category,BarCode,Brand,ToPDA,Active,SpecialItem as [Special Item],BestSellerItem as [Best Seller],NewItem as [New Item],Image,BulkUOM as [Bulk UOM] from Item 
+-----------------------------------------------------------
+
+Time: 03-07-2024 08:56:15 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 03-07-2024 09:20:13 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Item'
+-----------------------------------------------------------
+
+Time: 03-07-2024 09:20:14 AM
+-----------------------------------------------------------
+Message: ReadRecord : select ItemNo as [Item No],Description,ShortDesc as [Short Description],ChineseDesc as [Chinese Name],BaseUOM,salesUOM as [Sales UOM],UnitPrice as [Unit Price],Category,BarCode,Brand,ToPDA,Active,SpecialItem as [Special Item],BestSellerItem as [Best Seller],NewItem as [New Item],Image,BulkUOM as [Bulk UOM] from Item 
+-----------------------------------------------------------
+
+Time: 03-07-2024 09:20:19 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 03-07-2024 01:46:31 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Item'
+-----------------------------------------------------------
+
+Time: 03-07-2024 01:46:32 PM
+-----------------------------------------------------------
+Message: ReadRecord : select ItemNo as [Item No],Description,ShortDesc as [Short Description],ChineseDesc as [Chinese Name],BaseUOM,salesUOM as [Sales UOM],UnitPrice as [Unit Price],Category,BarCode,Brand,ToPDA,Active,SpecialItem as [Special Item],BestSellerItem as [Best Seller],NewItem as [New Item],Image,BulkUOM as [Bulk UOM] from Item 
+-----------------------------------------------------------
+
+Time: 03-07-2024 01:46:39 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 03-07-2024 01:55:39 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Item'
+-----------------------------------------------------------
+
+Time: 03-07-2024 01:55:40 PM
+-----------------------------------------------------------
+Message: ReadRecord : select ItemNo as [Item No],Description,ShortDesc as [Short Description],ChineseDesc as [Chinese Name],BaseUOM,salesUOM as [Sales UOM],UnitPrice as [Unit Price],Category,BarCode,Brand,ToPDA,Active,SpecialItem as [Special Item],BestSellerItem as [Best Seller],NewItem as [New Item],Image,BulkUOM as [Bulk UOM] from Item 
+-----------------------------------------------------------
+
+Time: 03-07-2024 01:55:47 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 03-07-2024 02:02:35 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Item'
+-----------------------------------------------------------
+
+Time: 03-07-2024 02:02:37 PM
+-----------------------------------------------------------
+Message: ReadRecord : select ItemNo as [Item No],Description,ShortDesc as [Short Description],ChineseDesc as [Chinese Name],BaseUOM,salesUOM as [Sales UOM],UnitPrice as [Unit Price],Category,BarCode,Brand,ToPDA,Active,SpecialItem as [Special Item],BestSellerItem as [Best Seller],NewItem as [New Item],Image,BulkUOM as [Bulk UOM] from Item 
+-----------------------------------------------------------
+
+Time: 03-07-2024 02:02:42 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 03-07-2024 02:06:37 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Item'
+-----------------------------------------------------------
+
+Time: 03-07-2024 02:06:39 PM
+-----------------------------------------------------------
+Message: ReadRecord : select ItemNo as [Item No],Description,ShortDesc as [Short Description],ChineseDesc as [Chinese Name],BaseUOM,salesUOM as [Sales UOM],UnitPrice as [Unit Price],Category,BarCode,Brand,ToPDA,Active,SpecialItem as [Special Item],BestSellerItem as [Best Seller],NewItem as [New Item],Image,BulkUOM as [Bulk UOM] from Item 
+-----------------------------------------------------------
+
+Time: 03-07-2024 02:06:40 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 03-07-2024 02:16:59 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Item'
+-----------------------------------------------------------
+
+Time: 03-07-2024 02:17:00 PM
+-----------------------------------------------------------
+Message: ReadRecord : select ItemNo as [Item No],Description,ShortDesc as [Short Description],ChineseDesc as [Chinese Name],BaseUOM,salesUOM as [Sales UOM],UnitPrice as [Unit Price],Category,BarCode,Brand,ToPDA,Active,SpecialItem as [Special Item],BestSellerItem as [Best Seller],NewItem as [New Item],Image,BulkUOM as [Bulk UOM] from Item 
+-----------------------------------------------------------
+
+Time: 03-07-2024 02:17:06 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 03-07-2024 02:17:58 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Item'
+-----------------------------------------------------------
+
+Time: 03-07-2024 02:18:00 PM
+-----------------------------------------------------------
+Message: ReadRecord : select ItemNo as [Item No],Description,ShortDesc as [Short Description],ChineseDesc as [Chinese Name],BaseUOM,salesUOM as [Sales UOM],UnitPrice as [Unit Price],Category,BarCode,Brand,ToPDA,Active,SpecialItem as [Special Item],BestSellerItem as [Best Seller],NewItem as [New Item],Image,BulkUOM as [Bulk UOM] from Item 
+-----------------------------------------------------------
+
+Time: 03-07-2024 02:18:04 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+

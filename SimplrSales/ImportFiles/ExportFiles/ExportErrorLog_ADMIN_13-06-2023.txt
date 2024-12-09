@@ -1,0 +1,76 @@
+Time: 13-06-2023 09:03:16 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Available Stock Report'
+-----------------------------------------------------------
+
+Time: 13-06-2023 09:04:38 AM
+-----------------------------------------------------------
+Message: ReadRecord : Select EI.ItemNo, I.ItemName as Description, EI.UOM, EI.Location, EI.BinNo as BinNo,EI.LotNo as LotNo,Format(EI.ExpiryDate,'dd-MMM-yyyy') as ExpiryDate,   EI.PalletNo,SUM(EI.Qty) as Qty, (SUM(EI.Qty) / isnull(UOM.BaseQty,1) ) as CTNQty,IsNull(Vendor.VendorNo, '') as VendorNo, IsNull(Vendor.VendorName, '')   as VendorName, isnull(I.SubCategory,'') as Category, Format(EI.ReceivedDate,'dd-MMM-yyyy') as [Received Date],isnull(EI.WeightArray, '') as WeightArray,   (SELECT sum((cast (value as float)))  FROM STRING_SPLIT((select isnull(WeightArray,0) from ExpiryItem where uom=EI.UOM   and lotno=EI.lotno   and binno=EI.binno and palletno=EI.palletno and itemno=EI.itemno and Qty>0 ), ',')) as [Total WeightArray] From ExpiryItem EI INNER JOIN   Location ON EI.[Location] = Location.Code and Location.ShowInInventory = 1 INNER JOIN Item I  ON I.ItemNo = EI.ItemNo    LEFT JOIN UOM ON UOM.ItemNO = I.ItemNo and UOM.UOM = 'CTN' LEFT JOIN Vendor ON Vendor.VendorNo = I.VendorNo Where EI.Qty >  0   and EI.Location not in ('TOCLEAR','STKLOC','DAMAGE')  Group by EI.ItemNo, I.ItemName, EI.UOM, EI.Location, isnull(UOM.BaseQty,1), EI.BinNo,   Format(EI.ExpiryDate,'dd-MMM-yyyy')  ,EI.LotNo ,EI.PalletNo,IsNull(Vendor.VendorNo, ''), IsNull(Vendor.VendorName, ''),  I.SubCategory,   EI.WeightArray,Format(EI.ReceivedDate,'dd-MMM-yyyy')   Order by ItemName
+-----------------------------------------------------------
+
+Time: 13-06-2023 09:04:38 AM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+-----------------------------------------------------------
+
+Time: 13-06-2023 09:04:38 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 13-06-2023 09:04:38 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 13-06-2023 09:04:56 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Available Stock Report'
+-----------------------------------------------------------
+
+Time: 13-06-2023 09:05:00 AM
+-----------------------------------------------------------
+Message: ReadRecord : Select EI.ItemNo, I.ItemName as Description, EI.UOM, EI.Location, EI.BinNo as BinNo,EI.LotNo as LotNo,Format(EI.ExpiryDate,'dd-MMM-yyyy') as ExpiryDate,   EI.PalletNo,SUM(EI.Qty) as Qty, (SUM(EI.Qty) / isnull(UOM.BaseQty,1) ) as CTNQty,IsNull(Vendor.VendorNo, '') as VendorNo, IsNull(Vendor.VendorName, '')   as VendorName, isnull(I.SubCategory,'') as Category, Format(EI.ReceivedDate,'dd-MMM-yyyy') as [Received Date],isnull(EI.WeightArray, '') as WeightArray,   (SELECT sum((cast (value as float)))  FROM STRING_SPLIT((select isnull(WeightArray,0) from ExpiryItem where uom=EI.UOM   and lotno=EI.lotno   and binno=EI.binno and palletno=EI.palletno and itemno=EI.itemno and Qty>0 ), ',')) as [Total WeightArray] From ExpiryItem EI INNER JOIN   Location ON EI.[Location] = Location.Code and Location.ShowInInventory = 1 INNER JOIN Item I  ON I.ItemNo = EI.ItemNo    LEFT JOIN UOM ON UOM.ItemNO = I.ItemNo and UOM.UOM = 'CTN' LEFT JOIN Vendor ON Vendor.VendorNo = I.VendorNo Where EI.Qty >  0   and EI.Location not in ('TOCLEAR','STKLOC','DAMAGE')  Group by EI.ItemNo, I.ItemName, EI.UOM, EI.Location, isnull(UOM.BaseQty,1), EI.BinNo,   Format(EI.ExpiryDate,'dd-MMM-yyyy')  ,EI.LotNo ,EI.PalletNo,IsNull(Vendor.VendorNo, ''), IsNull(Vendor.VendorName, ''),  I.SubCategory,   EI.WeightArray,Format(EI.ReceivedDate,'dd-MMM-yyyy')   Order by ItemName
+-----------------------------------------------------------
+
+Time: 13-06-2023 09:05:01 AM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.
+-----------------------------------------------------------
+
+Time: 13-06-2023 09:05:01 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 13-06-2023 09:05:01 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 13-06-2023 09:05:07 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Available Stock Report'
+-----------------------------------------------------------
+
+Time: 13-06-2023 09:06:16 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Available Stock Report' and TableName='AvailableStockReport'
+-----------------------------------------------------------
+
+Time: 13-06-2023 10:18:44 AM
+-----------------------------------------------------------
+Message: ReadRecord : Select EI.ItemNo, I.ItemName as Description, EI.UOM, EI.Location, EI.BinNo as BinNo,EI.LotNo as LotNo,Format(EI.ExpiryDate,'dd-MMM-yyyy') as ExpiryDate, EI.PalletNo,SUM(EI.Qty) as Qty, (SUM(EI.Qty) / isnull(UOM.BaseQty,1) ) as CTNQty,IsNull(Vendor.VendorNo, '') as VendorNo, IsNull(Vendor.VendorName, '') as VendorName, isnull(I.SubCategory,'') as Category, isnull(EI.WeightArray, '') as Weight,Format(EI.ReceivedDate,'dd-MMM-yyyy') as [Received Date],EI.WeightArray From ExpiryItem EI INNER JOIN Location ON EI.[Location] = Location.Code and Location.ShowInInventory = 1 INNER JOIN Item I ON I.ItemNo = EI.ItemNo LEFT JOIN UOM ON UOM.ItemNO = I.ItemNo and UOM.UOM = 'CTN' LEFT JOIN Vendor ON Vendor.VendorNo = I.VendorNo Where EI.Qty > 0 and EI.Location not in ('TOCLEAR','STKLOC','DAMAGE') Group by EI.ItemNo, I.ItemName, EI.UOM, EI.Location, isnull(UOM.BaseQty,1), EI.BinNo, Format(EI.ExpiryDate,'dd-MMM-yyyy')  , EI.LotNo ,EI.PalletNo,IsNull(Vendor.VendorNo, ''), IsNull(Vendor.VendorName, ''), I.SubCategory, EI.WeightArray,Format(EI.ReceivedDate,'dd-MMM-yyyy') Order by ItemName
+
+-----------------------------------------------------------
+
+Time: 13-06-2023 10:18:45 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 13-06-2023 10:18:45 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+

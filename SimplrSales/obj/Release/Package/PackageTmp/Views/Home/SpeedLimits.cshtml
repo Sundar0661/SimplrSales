@@ -1,0 +1,337 @@
+﻿@{
+    ViewBag.Title = "Map";
+}
+
+@*<h2>Map</h2>*@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .label {
+            color: #000;
+            background-color: white;
+            border: 1px solid #000;
+            font-family: "Lucida Grande", "Arial", sans-serif;
+            font-size: 12px;
+            text-align: center;
+            white-space: nowrap;
+            padding: 2px;
+        }
+
+            .label.green {
+                background-color: #58D400;
+            }
+
+            .label.red {
+                background-color: #D80027;
+                color: #fff;
+            }
+
+            .label.yellow {
+                background-color: #FCCA00;
+            }
+
+            .label.turquoise {
+                background-color: #00D9D2;
+            }
+
+            .label.brown {
+                background-color: #BF5300;
+                color: #fff;
+            }
+    </style>
+
+
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* The popup bubble styling. */
+        .popup-bubble {
+            /* Position the bubble centred-above its parent. */
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -100%);
+            /* Style the bubble. */
+            background-color: white;
+            padding: 5px;
+            border-radius: 5px;
+            font-family: sans-serif;
+            overflow-y: auto;
+            max-height: 60px;
+            box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.5);
+        }
+        /* The parent of the bubble. A zero-height div at the top of the tip. */
+        .popup-bubble-anchor {
+            /* Position the div a fixed distance above the tip. */
+            position: absolute;
+            width: 100%;
+            bottom: /* TIP_HEIGHT= */ 8px;
+            left: 0;
+        }
+            /* This element draws the tip. */
+            .popup-bubble-anchor::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                /* Center the tip horizontally. */
+                transform: translate(-50%, 0);
+                /* The tip is a https://css-tricks.com/snippets/css/css-triangle/ */
+                width: 0;
+                height: 0;
+                /* The tip is 8px high, and 12px wide. */
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                border-top: /* TIP_HEIGHT= */ 8px solid white;
+            }
+        /* JavaScript will position this div at the bottom of the popup tip. */
+        .popup-container {
+            cursor: auto;
+            height: 0;
+            position: absolute;
+            /* The max width of the info window. */
+            width: 200px;
+        }
+    </style>
+
+
+</head>
+<body>
+    @*<h3>My Google Maps Demo</h3>*@
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+    <div id="content">
+        Hello world!
+    </div>
+
+    <script src="~/Scripts/aes.js"></script>
+    <script src="~/Scripts/jquery-1.11.1.min.js"></script>
+    <script>
+
+        var url_GetActionConfigData = '@Url.Content("~/ActionConfig/GetActionConfigData/")';
+        var map;
+        var marker;
+        var markers = [];
+        var image1 = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+        var image = 'http://maps.google.com/mapfiles/ms/icons/truck.png';
+        //  var image = 'http://localhost:52063/Images/simplrTruck.png';
+        var popup, Popup;
+
+        var directionsService = "";
+        var directionsRenderer = "";
+        // Initialize and add the map
+        function initMap() {
+            directionsService = new google.maps.DirectionsService;
+            directionsRenderer = new google.maps.DirectionsRenderer;
+
+            // The location of Uluru
+            var uluru = { lat: 11.0494, lng: 77.0094 };
+            // The map, centered at Uluru
+            map = new google.maps.Map(
+              document.getElementById('map'), { zoom: 8, center: uluru });
+            // The marker, positioned at Uluru
+            marker = new google.maps.Marker({
+                position: uluru,
+                //icon: "http://localhost:52063/Images/simplrTruck.png",
+                // icon: imageA,
+                map: map
+            });
+            directionsRenderer.setMap(map);
+            // markers.push(uluru);
+            execute(map);
+
+        }
+
+
+        //function calculateAndDisplayRoute(directionsService, directionsRenderer, orginLat, orginLon, destinationLat, destinationLon) {
+        function calculateAndDisplayRoute(directionsService, directionsRenderer, j, executeQry) {
+            var waypts = [];
+            //var checkboxArray = document.getElementById('waypoints');
+
+            var orginLat = '';
+            var orginLon = '';
+            var destinationLat = '';
+            var destinationLon = '';
+            //for (var i = 0; i < executeQry.length ; i++) {
+            for (var i = 0; i < j  ; i++) {
+                if (i == 0) {
+                    orginLat = executeQry[i].Latitude;
+                    orginLon = executeQry[i].Longitude;
+                }
+                    // else if (i == executeQry.length j - 1) {
+                else if (i == j - 1) {
+                    destinationLat = executeQry[i].Latitude;
+                    destinationLon = executeQry[i].Longitude;
+                }
+                else {
+                    waypts.push({
+                        location: new google.maps.LatLng(executeQry[i].Latitude, executeQry[i].Longitude),
+                        stopover: true
+                    });
+                }
+            }
+
+            directionsService.route({
+                origin: new google.maps.LatLng(orginLat, orginLon),
+                destination: new google.maps.LatLng(destinationLat, destinationLon),
+                waypoints: waypts,
+                optimizeWaypoints: true,
+                travelMode: 'DRIVING'
+            }, function (response, status) {
+                if (status === 'OK') {
+                    //debugger;
+                    directionsRenderer.setDirections(response);
+                } else {
+                    window.alert('Directions request failed due to ' + status);
+                }
+            });
+        }
+
+
+        function setMapOnAll(map) {
+            marker.setMap(null);
+
+            //for (var i = 0; i < markers.length; i++) {
+            //    markers[i].setMap(map);
+            //}
+        }
+        function clearMarkers() {
+            setMapOnAll(null);
+        }
+        // var map1 = "";
+
+
+        //window.setInterval(function () {
+        //    execute(map);
+        //}, 30000);
+
+        // clearInterval()
+
+
+        function execute(map) {
+            // alert("test");
+            // var qry = "SELECT AgentId,Latitude,Longitude,Position  FROM CustVisit WHERE TransDate IN (SELECT max(TransDate) FROM CustVisit)";
+            //var qry = "SELECT AgentId,Latitude,Longitude,Position   FROM CustVisit WHERE  TransDate in (SELECT max(TransDate) FROM CustVisit Where Format(TransDate,'yyyyMMdd') = Format(GetDate(),'yyyyMMdd'))";
+           //  debugger;
+            var qry = "SELECT CustVisit.AgentId, Name, Latitude,Longitude , TransDate  FROM CustVisit  INNER JOIN SalesAgent ON CustVisit.AgentId = SalesAgent.Code  INNER JOIN (Select AgentId, max(TransDate) as MaxTransDate FROM CustVisit Where  Format(TransDate,'yyyyMMdd') = Format(GetDate()-22,'yyyyMMdd') Group by AgentID ) TCV ON CustVisit.AgentID = TCV.AgentID and CustVisit.TransDate = MaxTransDate Where Longitude <> 0 and Latitude <> 0";
+            var key = CryptoJS.enc.Utf8.parse('simplr8080808080');
+            var iv = CryptoJS.enc.Utf8.parse('simplr8080808080');
+            qry = CryptoJS.AES.encrypt(CryptoJS.enc.Utf8.parse(qry), key, { keySize: 128 / 8, iv: iv, mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 });
+            var params = "{'query':'" + qry + "'}";
+
+            //debugger;
+            $.ajax({
+                type: "POST",
+                url: url_GetActionConfigData,
+                data: params,
+                contentType: "application/json;charset=utf-8",
+                // dataType: "json",
+                async: false,
+                success: function (results) {
+                    //debugger;
+                    if (results != "") {
+                        var executeQry = $.parseJSON(results);
+                        clearMarkers();
+                        var j = 0;
+                        // debugger;
+                        for (var i = 0; i < executeQry.length    ; i++) {
+                            setTimeout(function () {
+                                var myLatLng = '';
+                                myLatLng = { lat: executeQry[j].Latitude, lng: executeQry[j].Longitude };
+                                marker = new google.maps.Marker({
+                                    position: myLatLng,
+                                    map: map,
+                                    icon: {
+                                        url: "http://maps.google.com/mapfiles/ms/icons/truck.png",
+                                        scaledSize: new google.maps.Size(50, 50),
+                                        labelOrigin: { x: 25, y: 0 }
+                                    },
+                                });
+                                //if (i == j)
+                                //    calculateAndDisplayRoute(directionsService, directionsRenderer, executeQry[j].Latitude, executeQry[j].Longitude, executeQry[j + 1].Latitude, executeQry[j + 1].Longitude);
+                                //else
+                                //    calculateAndDisplayRoute(directionsService, directionsRenderer, executeQry[0].Latitude, executeQry[0].Longitude, executeQry[j].Latitude, executeQry[j].Longitude);
+                                // debugger;
+                                if (i == j)
+                                    calculateAndDisplayRoute(directionsService, directionsRenderer, j, executeQry);
+                                else {
+                                    if (j != 0)
+                                        calculateAndDisplayRoute(directionsService, directionsRenderer, j + 1, executeQry);
+
+                                }
+                                j++;
+                                //if (i == j)
+                                //    calculateAndDisplayRoute(directionsService, directionsRenderer, j, executeQry);
+
+                            }, i * 3000);
+
+
+                        }
+                    }
+                },
+                error: function (results, q, a) {
+                    alert("test : : " + results);
+                }
+
+            });
+
+        }
+
+
+
+
+
+
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDI9hx4Xgpd5p5p_H_7Uu0vQTCX4nIiyJk&v=3.exp" type="text/javascript"></script>
+    <script src="http://cdn.sobekrepository.org/includes/gmaps-markerwithlabel/1.9.1/gmaps-markerwithlabel-1.9.1.js" type="text/javascript"></script>
+
+    @*<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDI9hx4Xgpd5p5p_H_7Uu0vQTCX4nIiyJk&callback=initMap">     </script>*@
+    @*<script src="http://cdn.sobekrepository.org/includes/gmaps-markerwithlabel/1.9.1/gmaps-markerwithlabel-1.9.1.js" type="text/javascript"></script>*@
+    <script>
+        initMap();
+    </script>
+</body>
+</html>

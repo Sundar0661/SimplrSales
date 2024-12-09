@@ -1,0 +1,90 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <style>
+        .ButtonStyle {
+            width: 20%;
+            height: 40px;
+            float: left;
+            font-size: 14px;
+        }
+    </style>
+
+    <script src="../../CommonModel/VariableAndJsDeclaration.js"></script>
+
+
+    <script>
+
+        $(window).load(function () {
+            var parameter = window.location.toString();
+            scrName = parameter.split('?')[1].split(' ')[0];
+            scrName = scrName.split('&')[0];
+            //var formView = parameter.split('&')[1].replace(/@/g, '"');
+            //newly added by.M 08.11.2021
+            var formView = parameter.split('&')[1].replace(/@#/g, '"');
+
+            FormView = $.parseJSON(formView);
+            agentID = FormView.UserID;
+            //debugger;
+
+            // var params = parameter.split('&')[2].split(' ')[0].replace(/@/g, '"');
+            var params = parameter.split('&')[2].replace(/@#/g, '"');
+            Params = $.parseJSON(params);
+            var query = getQueryConfigByScreenName(scrName);
+            //debugger;
+            if (query != null && query != undefined && query != '') {
+                query = formatQueryString(query, "");
+               // alert(query.replace(/%20/g, ' '))
+                execute(query.replace(/%20/g, ' '));
+                InitializeArrowIndicatorChart(executeQry);
+            }
+        });
+
+        function InitializeArrowIndicatorChart(data) {
+            var currentMonth = data[0]['Current Month UBA'];// parseInt(data[0]['Current Month UBA']);
+            var previousMonth = data[0]['Previous Month UBA'];// parseInt(data[0]['Previous Month UBA']);
+            $('#TagetValue').text(currentMonth);
+            $('#ActualValue').text(previousMonth);
+            $('#downArrow,#upArrow').hide();
+            if (currentMonth <= previousMonth)
+                $('#downArrow').show();
+            else if (currentMonth >= previousMonth)
+                $('#upArrow').show();
+        }
+
+    </script>
+    <script type="text/javascript" src="canvasjs.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<body>
+
+    <div id="chartContainer" style="margin-top:150px;margin-left:250px">
+        <table>
+            <tr>
+                <td><span id="TagetValue" style="font-size:30px;font-weight:bold;">0</span></td>
+                <td rowspan="2">
+                    <span id="downArrow" style='font-size:65px;color:red'>⬇</span>
+                    <span id="upArrow" style='font-size:65px;color:red'>⬆</span>
+                </td>
+                <td><span id="ActualValue" style="font-size:30px;font-weight:bold;">0</span></td>
+            </tr>
+            <tr>
+                <td><span id="TagetValue1" style="font-size:20px;">UBA</span></td>
+                <td><span id="ActualValue1" style="font-size:20px;">Vs M-1</span></td>
+            </tr>
+        </table>
+        <!--<span id="TagetValue" style="font-size:30px;">0</span>
+        <span id="TagetValue1" style="font-size:20px;">UBA</span>
+
+        <span id="downArrow" style='font-size:65px;color:red'>⬇</span>
+        <span id="upArrow" style='font-size:65px;color:red'>⬆</span>
+
+        <span id="ActualValue" style="font-size:30px;">0</span>
+        <span id="TagetValue1" style="font-size:20px;">Vs M-1</span>-->
+
+    </div>
+
+</body>
+
+</html>

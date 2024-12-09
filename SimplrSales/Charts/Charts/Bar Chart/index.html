@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+    .axis text {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+</style>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+
+    <script src="../../../Scripts/jquery-1.8.2.min.js"></script>
+    <script src="../../../Scripts/aes.js"></script>
+    <script src="d3.v3.min.js"></script>
+    <script>
+        var n = 6,  // number of samples
+      m = 3; // number of series
+
+        var dataset = {
+            GraphType: 0,
+            Data: []
+        };
+
+        dataset.Data.push(
+            {
+                Axes: [],
+                AxisType: "1",
+                SeriesData: [{ state: 'CA', age: 2704659 },
+                    { state: 'TX', age: 2027307 },
+                    { state: 'NY', age: 1208495 },
+                    { state: 'FL', age: 1140516 },
+                    { state: 'IL', age: 894368 },
+                    { state: 'PA', age: 737462 }],
+                GraphType: 0,
+                SeriesName: "Under 5 Years"
+            },
+            {
+                Axes: [],
+                AxisType: "1",
+                SeriesData: [{ state: 'CA', age: 4499890 },
+                    { state: 'TX', age: 3277946 },
+                    { state: 'NY', age: 2141490 },
+                    { state: 'FL', age: 1938695 },
+                    { state: 'IL', age: 1558919 },
+                    { state: 'PA', age: 1345341 }],
+                GraphType: 0,
+                SeriesName: "5 to 13 Years"
+            },
+            {
+                Axes: [],
+                AxisType: "2",
+                SeriesData: [{ state: 'CA', age: 2159981 },
+                    { state: 'TX', age: 1420518 },
+                    { state: 'NY', age: 1058031 },
+                    { state: 'FL', age: 925060 },
+                    { state: 'IL', age: 725973 },
+                    { state: 'PA', age: 1679201 }],
+                GraphType: 0,
+                SeriesName: "14 to 17 Years"
+            }
+        );
+
+        var margin = { top: 20, right: 80, bottom: 30, left: 80 },
+            width = 960 - margin.left - margin.right,
+            height = 500 - margin.top - margin.bottom;
+
+        var y = d3.scale.linear()
+            .domain([0, 4499890]) // the biggest number for Primary Axis
+            .range([height, 0]);
+
+        var y2 = d3.scale.linear()
+            .domain([0, 1679201]) // the biggest number for Secondary Axis
+            .range([height, 0]);
+
+        var x0 = d3.scale.ordinal();
+        x0.domain(dataset.Data[0].SeriesData.map(function (d) { return d.state; }));
+        x0.rangeBands([0, width], .2);
+
+        var x1 = d3.scale.ordinal()
+            .domain(d3.range(m))
+            .rangeBands([0, x0.rangeBand()]);
+
+        // colors
+        var z = d3.scale.category10();
+
+        var xAxis = d3.svg.axis()
+            .scale(x0)
+            .orient("bottom");
+
+        var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left");
+
+        var ySecAxis = d3.svg.axis()
+            .scale(y2)
+            .orient("right");
+
+        // Append svg
+        var svg = d3.select("body").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("svg:g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        // Append y axis
+        svg.append("g")
+            .attr("class", "y axis")
+            .call(yAxis);
+
+        // Append secondary y axis
+        svg.append("g")
+            .attr("class", "y2 axis")
+            .attr("transform", "translate(" + width + " ,0)")
+            .call(ySecAxis);
+
+        // Append x axis
+        svg.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xAxis);
+
+        svg.append("g").selectAll("g")
+            .data(dataset.Data)
+            .enter().append("g")
+            .style("fill", function (d, i) { return z(i); })
+            .attr("transform", function (d, i) { return "translate(" + x1(i) + ",0)"; })
+            .selectAll("rect")
+            .data(function (d) { return d.SeriesData; })
+            .enter().append("rect")
+            .attr("width", x1.rangeBand())
+            .attr("height", function (d, i, j) {  // <----- the change is from here
+                if (dataset.Data[j].AxisType === "1")
+                    return height - y(d.age);
+                return height - y2(d.age);
+            })
+            .attr("x", function (d) { return x0(d.state); })
+            .attr("y", function (d, i, j) {
+                if (dataset.Data[j].AxisType === "1")
+                    return y(d.age);
+                return y2(d.age);
+            });
+
+
+    </script>
+
+</body>

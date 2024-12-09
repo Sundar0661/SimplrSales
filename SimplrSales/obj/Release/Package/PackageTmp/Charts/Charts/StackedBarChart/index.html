@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=0.45"> -->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=0.7">-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+
+    <style>
+        .ButtonStyle {
+            width: 20%;
+            height: 40px;
+            float: left;
+            font-size: 14px;
+        }
+
+        /*.chartWrapper {
+            position: relative;
+        }
+
+            .chartWrapper > canvas {
+                position: absolute;
+                left: 0;
+                top: 0;
+                pointer-events: none;
+            }
+
+        .chartAreaWrapper {
+            width: 600px;
+            overflow-x: scroll;
+        }*/
+    </style>
+    <!--<script>
+        var SolutionName = "";
+        var systemTableConfig = null;
+
+    </script>-->
+    <script src="../../CommonModel/VariableAndJsDeclaration.js"></script>
+
+    <script>
+
+        $(window).load(function () {
+              // debugger;
+            var parameter = window.location.toString();
+            scrName = parameter.split('?')[1].split(' ')[0];
+            scrName = scrName.split('&')[0];
+            var formView = parameter.split('&')[1].replace(/@#/g, '"');
+            FormView = $.parseJSON(formView);
+            agentID = FormView.UserID;
+            _screenName = scrName;
+
+
+            // var params = parameter.split('&')[2].split(' ')[0].replace(/@/g, '"');
+            var params = parameter.split('&')[2].replace(/@#/g, '"');
+            Params = $.parseJSON(params);
+            var query = getQueryConfigByScreenName(scrName);
+            //  debugger;
+            // query=  "select '250' as x , '350' as y , '150' as z ,'George' as label union select '280' as x , '180' as y , '380' as z ,'Alex' as label union select '350' as y ,'250' as y ,'100' as z ,'fff' as label union select '180' as x , '300' as y , '210' as z ,'ggg' as label";
+            //query = "exec [SP_BrandPerformanceNew] '20210401','20210728','NATIONAL','DISTRIBUTOR OPERATION','PHP'";
+             //  debugger;
+            if (query != null && query != undefined && query != '') {
+                var str1 = "", str2 = "";
+                query = formatQueryString(query, "");
+                // execute(query.replace('%20', ' '));
+                //alert(query.replace(/%20/g, ' '));
+                execute(query.replace(/%20/g, ' '));
+                InitializeStackedBarChart(executeQry);
+                //InitializeMultiChart(str1, str2);
+            }
+        });
+
+        function InitializeStackedBarChart(data) {
+            var objarr = [];
+            var objarrList = [];
+
+            var lookup = {};
+            var items = data;
+            var result = [];
+
+            for (var item, i = 0; item = items[i++];) {
+                var name = item.Brand;
+
+                if (!(name in lookup)) {
+                    lookup[name] = 1;
+                    result.push(name);
+                }
+            }
+
+            var datapoint = [];
+            var datapointAdd = [];
+            var data1 = data;
+            var data1Len = 0;
+            var data1Len1 = data1.length;
+            while (data1Len1 != 0) {
+                datapointAdd = [];
+                for (var j = 0; j < result.length; j++) {
+                    for (var i = 0; i < data1.length; i++) {
+                        if (data1[i] != undefined) {
+                            if (result[j] == data1[i].Brand) {
+                                datapoint = { y: parseFloat(data1[i].Percentage), label: data1[i].Brand, name: data1[i].SubCategory };
+                                delete data1[i];
+                                data1Len++;
+                                i = data1.length + 1;
+                                data1Len1--;
+                            }
+                        }
+                    }
+                    if (datapoint.length == 0)
+                        datapoint = { y: 0, label: result[j] };
+                    if (datapoint.length != 0) {
+                        datapointAdd.push(datapoint);
+                        datapoint = [];
+                    }
+                }
+
+                objarr = {
+                    type: "stackedBar100",
+                    //showInLegend: true,
+                    //name: "With Friends",
+                    // color: "#6A6880",
+                    //yValueFormatString: "#,##0\"%\"",
+                    indexLabel: "{name}{y}",
+                    indexLabelFontSize: 12,
+                    indexLabelFontColor: "#F4F6F5",
+
+                    dataPoints: datapointAdd,
+                };
+                objarrList.push(objarr);
+            }
+
+            if (data.length == 0) {
+                lookup["No Data"] = 1;
+                result.push("No Data");
+                datapoint = { y: 0, label: "No Data" };
+                datapointAdd.push(datapoint);
+                objarr = {
+                    type: "stackedBar100",
+                    indexLabel: "{name}{y}",
+                    indexLabelFontSize: 12,
+                    indexLabelFontColor: "#F4F6F5",
+                    dataPoints: datapointAdd,
+                };
+                objarrList.push(objarr);
+            }
+
+            loadChart(objarrList);
+        }
+
+        function loadChart(data1) {
+            var chart = new CanvasJS.Chart("chartContainer", {
+                theme: 'light2',
+                //title: {
+                //    text: "Time Spent in Holiday Season"
+                //},
+                animationEnabled: true,
+                //axisY: {
+                //    title: "percent"
+                //},
+                legend: {
+                    horizontalAlign: 'center',
+                    verticalAlign: 'bottom'
+                },
+                //toolTip: {
+                //    shared: true,
+                //    content: "<span style='\"'color: {color};'\"'>{name}</span> : {y}min"
+                //},
+
+                data: data1
+            });
+            chart.render();
+        }
+
+        window.onload = function () {
+            //UpdateChart('column');
+        };
+
+
+    </script>
+    <script type="text/javascript" src="canvasjs.min.js"></script>
+
+</head>
+<body>
+    <div id="chartContainer">    </div>
+</body>
+
+</html>

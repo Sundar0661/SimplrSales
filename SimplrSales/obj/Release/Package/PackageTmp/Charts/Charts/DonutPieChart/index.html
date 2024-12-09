@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=0.45"> -->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=0.7">-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+
+    <style>
+        .ButtonStyle {
+            width: 20%;
+            height: 40px;
+            float: left;
+            font-size: 14px;
+        }
+
+        /*.chartWrapper {
+            position: relative;
+        }
+
+            .chartWrapper > canvas {
+                position: absolute;
+                left: 0;
+                top: 0;
+                pointer-events: none;
+            }
+
+        .chartAreaWrapper {
+            width: 600px;
+            overflow-x: scroll;
+        }*/
+    </style>
+    <!--<script>
+        var SolutionName = "";
+        var systemTableConfig = null;
+
+    </script>-->
+    <script src="../../CommonModel/VariableAndJsDeclaration.js"></script>
+
+    <script>
+
+        $(window).load(function () {
+             
+            var parameter = window.location.toString();
+            scrName = parameter.split('?')[1].split(' ')[0];
+            scrName = scrName.split('&')[0];
+            // alert(scrName);
+            var formView = parameter.split('&')[1].replace(/@#/g, '"');
+            FormView = $.parseJSON(formView);
+            agentID = FormView.UserID;
+
+            // var params = parameter.split('&')[2].split(' ')[0].replace(/@/g, '"');
+            var params = parameter.split('&')[2].replace(/@#/g, '"');
+            params = params.replace('%20', ' ');
+            Params = $.parseJSON(params);
+            var query = getQueryConfigByScreenName(scrName);
+            if (query != null && query != undefined && query != '') {
+                query = formatQueryString(query, "");
+                //execute(query.replace('%20', ' '));
+
+                //alert(query.replace(/%20/g, ' '));
+                execute(query.replace(/%20/g, ' '));
+                if (executeQry != null)
+                    InitializeDonutChart(executeQry, scrName);
+            }
+        });
+
+
+        function UpdateChartbyTarget(data, insideText) {
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                title: {
+                    text: insideText + "%",
+                    fontSize: 28,
+                    verticalAlign: "center",
+                    dockInsidePlotArea: true
+                },
+                animationEnabled: true,
+                legend: {
+                    fontSize: 20,
+                    fontFamily: "Helvetica"
+                },
+                width: 180,
+                height: 220,
+                theme: "light2",
+                toolTip: {
+                    enabled: false,       //disable here
+                    animationEnabled: false //disable here
+                },
+                data: [
+                {
+                    type: "doughnut",
+                    indexLabelFontFamily: "Garamond",
+                    indexLabelFontSize: 20,
+                    // indexLabel: "{label} {y}%",
+                    startAngle: -20,
+                    //showInLegend: true,
+                    //toolTipContent: "{legendText} {y}%",
+                    toolTipContent: "{name} {y}%",
+                    dataPoints: data,
+                    //dataPoints: [
+                    //    //{ y: 72.48, legendText: "Google", label: "Google" },
+                    //    //{ y: 10.39, legendText: "Bing", label: "Bing" },
+                    //    //{ y: 7.78, legendText: "Yahoo!", label: "Yahoo!" },
+                    //    //{ y: 7.14, legendText: "Baidu", label: "Baidu" },
+                    //    //{ y: 0.22, legendText: "Ask", label: "Ask" },
+                    //    //{ y: 0.15, legendText: "AOL", label: "AOL" },
+                    //    //{ y: 1.84, legendText: "Others", label: "Others" }
+                    //],
+
+                    //You can add dynamic data from the controller as shown below. Check the controller and uncomment the line which generates dataPoints.
+                    //dataPoints: @Html.Raw(ViewBag.DataPoints),
+                }
+                ]
+            });
+            chart.render();
+        }
+
+        window.onload = function () {
+            //UpdateChart('column');
+        };
+
+
+    </script>
+    <script type="text/javascript" src="canvasjs.min.js"></script>
+
+</head>
+<body>
+    <div style="width:100%">
+        <div style="width:70%">
+            <!--<div id="chartContainer" style="height: 300px; width: 100%;margin-left:-64px;">-->
+            <div id="chartContainer" style="height: 400px; margin-left:150px;margin-top:80px">
+            </div>
+        </div>
+        <div style="width:30%;margin-top:-200px;float:right;">
+            <span id="SpanSideText" style="font-weight:bold"></span>
+        </div>
+    </div>
+    <script>
+
+        function InitializeDonutChart(data, scrName) {
+
+            var datapoint = [];
+            var datapointAdd = [];
+            var total = 0;
+            var insideText = 0;
+            var sidetext = "";
+            if (data[0]['name'] == "Norm") {
+                for (var i = 0; i < data.length; i++) {
+                    total = parseFloat(data[i]['y']);
+                    datapoint = { y: data[i]['y'], legendText: data[i]['name'], color: "YellowGreen" };
+                    datapointAdd.push(datapoint);
+                    insideText = Math.round(data[i]['y']);
+                }
+                var totalPercentage = total / 100 * 100;
+                var remPercentage = 100 - totalPercentage;
+                datapoint = { y: remPercentage, color: "ForestGreen" };
+                datapointAdd.push(datapoint);
+                $('#SpanSideText').text("NORM");
+            }
+            else {
+                total = 0.0;
+                for (var i = 0; i < data.length; i++) {
+                    total = total + parseFloat(data[i]['y']);
+                }
+
+                var totalPercentage = 0.0;
+
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i]['name'] == 'yes') {
+                        totalPercentage = parseFloat(data[i]['y']) / total * 100;
+                        datapoint = { y: totalPercentage, legendText: data[i]['name'], color: "DodgerBlue" };
+                        datapointAdd.push(datapoint);
+                        insideText = Math.round(totalPercentage);
+                    }
+                }
+                //var totalPercentage = parseFloat(data[0]['y']) / total * 100;
+                var remPercentage = 100 - totalPercentage;
+                datapoint = { y: remPercentage, color: "OrangeRed" };
+                datapointAdd.push(datapoint);
+                if (scrName.split('_')[3] == "SellInDoNutChart")
+                    $('#SpanSideText').text("SELL IN % ACH");
+                else {
+                    $('#SpanSideText').text(data[0]['name'] + '-' + totalPercentage + '\n' + data[1]['name'] + '-' + remPercentage);
+                }
+
+            }
+            UpdateChartbyTarget(datapointAdd, insideText);
+        }
+    </script>
+</body>
+
+</html>

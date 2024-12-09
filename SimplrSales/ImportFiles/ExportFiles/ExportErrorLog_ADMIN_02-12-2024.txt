@@ -1,0 +1,75 @@
+Time: 02-12-2024 02:42:50 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Seller Daily First and Last Call'
+-----------------------------------------------------------
+
+Time: 02-12-2024 02:42:52 PM
+-----------------------------------------------------------
+Message: ReadRecord : exec SellerDailyFirstandLastCall '2024-12-02 00:00:00.000','2024-12-02 23:59:59.000','ADMIN','ALL','ALL','ALL'
+-----------------------------------------------------------
+
+Time: 02-12-2024 02:42:53 PM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Cannot find the object "SellerDailyFirstandLastCallTable" because it does not exist or you do not have permissions.
+-----------------------------------------------------------
+
+Time: 02-12-2024 02:42:55 PM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 02-12-2024 02:42:58 PM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 02-12-2024 02:43:32 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Seller Daily First and Last Call'
+-----------------------------------------------------------
+
+Time: 02-12-2024 02:43:34 PM
+-----------------------------------------------------------
+Message: ReadRecord : exec SellerDailyFirstandLastCall '2024-11-01 00:00:00.000','2024-12-02 23:59:59.000','ADMIN','ALL','ALL','ALL'
+-----------------------------------------------------------
+
+Time: 02-12-2024 02:43:35 PM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Cannot find the object "SellerDailyFirstandLastCallTable" because it does not exist or you do not have permissions.
+-----------------------------------------------------------
+
+Time: 02-12-2024 02:43:35 PM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 02-12-2024 02:44:02 PM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 02-12-2024 02:44:07 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Seller Daily First and Last Call'
+-----------------------------------------------------------
+
+Time: 02-12-2024 02:46:46 PM
+-----------------------------------------------------------
+Message: ReadRecord : exec SellerDailyFirstandLastCall '2024-11-01 00:00:00.000','2024-12-02 23:59:59.000','ADMIN','ALL','ALL','ALL'
+-----------------------------------------------------------
+
+Time: 02-12-2024 02:46:46 PM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Cannot find the object "SellerDailyFirstandLastCallTable" because it does not exist or you do not have permissions.
+-----------------------------------------------------------
+
+Time: 02-12-2024 02:46:46 PM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 02-12-2024 02:46:46 PM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+

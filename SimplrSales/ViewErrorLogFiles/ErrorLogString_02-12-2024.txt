@@ -1,0 +1,533 @@
+Time: 02-12-2024 03:05:51.571 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query: select SystemMaintanence from system
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:05:51.846 PM
+-----------------------------------------------------------
+Message: Connection String Exception: Invalid column name 'SystemMaintanence'.
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:05:51.875 PM
+-----------------------------------------------------------
+Message: LogIn Page Start 
+User.Identity Name-Value-IsUser: --
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:05:51.876 PM
+-----------------------------------------------------------
+Message: LogIn Page End
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:05:51.877 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query:  select Isnull(CompanyName,'') as CompanyName  from system
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:06:12.618 PM
+-----------------------------------------------------------
+Message: LogIn function Start 
+User Name : 502000281 ; Password : 1234
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:06:12.619 PM
+-----------------------------------------------------------
+Message: BusinessRule._solutionName : SALES-WEB
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:06:12.621 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query: select * from SalesAgent where UserID='502000281' COLLATE Latin1_General_CS_AS and PassWord = '1234' COLLATE Latin1_General_CS_AS   and Active=1 
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:06:12.793 PM
+-----------------------------------------------------------
+Message: Execute row Count : 1
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:06:12.979 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query: select description from usergroup where groupid=6
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:06:13.271 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query: select * from System where MDTNo='502000281'
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:06:13.391 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query: select IsAccessLevel from system
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:06:13.623 PM
+-----------------------------------------------------------
+Message: Connection String Exception: Invalid column name 'IsAccessLevel'.
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:06:13.688 PM
+-----------------------------------------------------------
+Message: LogIn function End - logSteps -1 & 2 Lang &  3 Qry  -select * from System where MDTNo='502000281' &  4 access Qry  -select IsAccessLevel from system &  5  &  6
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:06:14.721 PM
+-----------------------------------------------------------
+Message: ScreenName = Web_DashBoard
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:13:17.778 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query: select SystemMaintanence from system
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:13:18.059 PM
+-----------------------------------------------------------
+Message: Connection String Exception: Invalid column name 'SystemMaintanence'.
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:13:18.095 PM
+-----------------------------------------------------------
+Message: LogIn Page Start 
+User.Identity Name-Value-IsUser: --
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:13:18.096 PM
+-----------------------------------------------------------
+Message: LogIn Page End
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:13:18.096 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query:  select Isnull(CompanyName,'') as CompanyName  from system
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:13:41.079 PM
+-----------------------------------------------------------
+Message: LogIn function Start 
+User Name : 502000281 ; Password : 1234
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:13:41.080 PM
+-----------------------------------------------------------
+Message: BusinessRule._solutionName : SALES-WEB
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:13:41.081 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query: select * from SalesAgent where UserID='502000281' COLLATE Latin1_General_CS_AS and PassWord = '1234' COLLATE Latin1_General_CS_AS   and Active=1 
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:13:41.153 PM
+-----------------------------------------------------------
+Message: Execute row Count : 1
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:13:41.252 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query: select description from usergroup where groupid=6
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:13:41.553 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query: select * from System where MDTNo='502000281'
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:13:41.616 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query: select IsAccessLevel from system
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:13:41.854 PM
+-----------------------------------------------------------
+Message: Connection String Exception: Invalid column name 'IsAccessLevel'.
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:13:41.931 PM
+-----------------------------------------------------------
+Message: LogIn function End - logSteps -1 & 2 Lang &  3 Qry  -select * from System where MDTNo='502000281' &  4 access Qry  -select IsAccessLevel from system &  5  &  6
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:13:42.968 PM
+-----------------------------------------------------------
+Message: ScreenName = Web_DashBoard
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:29:20.448 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query: select SystemMaintanence from system
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:29:21.007 PM
+-----------------------------------------------------------
+Message: Connection String Exception: Invalid column name 'SystemMaintanence'.
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:29:21.027 PM
+-----------------------------------------------------------
+Message: LogIn Page Start 
+User.Identity Name-Value-IsUser: --
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:29:21.028 PM
+-----------------------------------------------------------
+Message: LogIn Page End
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:29:21.028 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query:  select Isnull(CompanyName,'') as CompanyName  from system
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:29:51.367 PM
+-----------------------------------------------------------
+Message: LogIn function Start 
+User Name : 502000281 ; Password : 1234
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:29:51.368 PM
+-----------------------------------------------------------
+Message: BusinessRule._solutionName : SALES-WEB
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:29:51.369 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query: select * from SalesAgent where UserID='502000281' COLLATE Latin1_General_CS_AS and PassWord = '1234' COLLATE Latin1_General_CS_AS   and Active=1 
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:29:51.427 PM
+-----------------------------------------------------------
+Message: Execute row Count : 1
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:29:51.480 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query: select description from usergroup where groupid=6
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:29:51.706 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query: select * from System where MDTNo='502000281'
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:29:51.764 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query: select IsAccessLevel from system
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:29:51.939 PM
+-----------------------------------------------------------
+Message: Connection String Exception: Invalid column name 'IsAccessLevel'.
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:29:51.998 PM
+-----------------------------------------------------------
+Message: LogIn function End - logSteps -1 & 2 Lang &  3 Qry  -select * from System where MDTNo='502000281' &  4 access Qry  -select IsAccessLevel from system &  5  &  6
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:29:53.030 PM
+-----------------------------------------------------------
+Message: ScreenName = Web_DashBoard
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:52:00.279 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query: select SystemMaintanence from system
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:52:00.454 PM
+-----------------------------------------------------------
+Message: Connection String Exception: Invalid column name 'SystemMaintanence'.
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:52:00.473 PM
+-----------------------------------------------------------
+Message: LogIn Page Start 
+User.Identity Name-Value-IsUser: --
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:52:00.474 PM
+-----------------------------------------------------------
+Message: LogIn Page End
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:52:00.475 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query:  select Isnull(CompanyName,'') as CompanyName  from system
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:52:34.697 PM
+-----------------------------------------------------------
+Message: LogIn function Start 
+User Name : 502000281 ; Password : 1234
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:52:34.698 PM
+-----------------------------------------------------------
+Message: BusinessRule._solutionName : SALES-WEB
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:52:34.699 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query: select * from SalesAgent where UserID='502000281' COLLATE Latin1_General_CS_AS and PassWord = '1234' COLLATE Latin1_General_CS_AS   and Active=1 
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:52:34.757 PM
+-----------------------------------------------------------
+Message: Execute row Count : 1
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:52:34.811 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query: select description from usergroup where groupid=6
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:52:35.247 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query: select * from System where MDTNo='502000281'
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:52:35.309 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query: select IsAccessLevel from system
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:52:35.614 PM
+-----------------------------------------------------------
+Message: Connection String Exception: Invalid column name 'IsAccessLevel'.
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:52:35.687 PM
+-----------------------------------------------------------
+Message: LogIn function End - logSteps -1 & 2 Lang &  3 Qry  -select * from System where MDTNo='502000281' &  4 access Qry  -select IsAccessLevel from system &  5  &  6
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:52:36.712 PM
+-----------------------------------------------------------
+Message: ScreenName = Web_DashBoard
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:56:15.553 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query: select SystemMaintanence from system
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:56:15.738 PM
+-----------------------------------------------------------
+Message: Connection String Exception: Invalid column name 'SystemMaintanence'.
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:56:15.761 PM
+-----------------------------------------------------------
+Message: LogIn Page Start 
+User.Identity Name-Value-IsUser: --
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:56:15.761 PM
+-----------------------------------------------------------
+Message: LogIn Page End
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:56:15.762 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query:  select Isnull(CompanyName,'') as CompanyName  from system
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:56:23.271 PM
+-----------------------------------------------------------
+Message: LogIn function Start 
+User Name : 502000281 ; Password : 1234
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:56:23.272 PM
+-----------------------------------------------------------
+Message: BusinessRule._solutionName : SALES-WEB
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:56:23.272 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query: select * from SalesAgent where UserID='502000281' COLLATE Latin1_General_CS_AS and PassWord = '1234' COLLATE Latin1_General_CS_AS   and Active=1 
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:56:23.336 PM
+-----------------------------------------------------------
+Message: Execute row Count : 1
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:56:23.379 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query: select description from usergroup where groupid=6
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:56:23.557 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query: select * from System where MDTNo='502000281'
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:56:23.615 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=13.67.95.127;Initial Catalog=SimplrCPFUAT;user ID=sa; Password=Simplr12345@; 
+Query: select IsAccessLevel from system
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:56:23.746 PM
+-----------------------------------------------------------
+Message: Connection String Exception: Invalid column name 'IsAccessLevel'.
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:56:24.121 PM
+-----------------------------------------------------------
+Message: LogIn function End - logSteps -1 & 2 Lang &  3 Qry  -select * from System where MDTNo='502000281' &  4 access Qry  -select IsAccessLevel from system &  5  &  6
+-----------------------------------------------------------
+
+Time: 02-12-2024 03:56:25.137 PM
+-----------------------------------------------------------
+Message: ScreenName = Web_DashBoard
+-----------------------------------------------------------
+
+Time: 02-12-2024 09:18:25.589 PM
+-----------------------------------------------------------
+Message: Startup.cs Configuration
+-----------------------------------------------------------
+
+Time: 02-12-2024 09:18:25.727 PM
+-----------------------------------------------------------
+Message: ClientId : 041a7870-996e-4dd4-b9c4-7387db06c6c1
+-----------------------------------------------------------
+
+Time: 02-12-2024 09:18:25.728 PM
+-----------------------------------------------------------
+Message: authority : https://login.microsoftonline.com/66984d9a-b5aa-41d9-9cf6-12cbc4d18e7b/v2.0
+-----------------------------------------------------------
+
+Time: 02-12-2024 09:18:25.728 PM
+-----------------------------------------------------------
+Message: redirectUrl : https://simplronline.in/SimplrPVMIGT/Login/MFAloginform/
+-----------------------------------------------------------
+
+Time: 02-12-2024 09:18:26.805 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=simplrsqlng.database.windows.net;Initial Catalog=SimplrPVMNGLive;user ID=ssa; Password=S!mplr@#1234; 
+Query: select SystemMaintanence from system
+-----------------------------------------------------------
+
+Time: 02-12-2024 09:18:28.741 PM
+-----------------------------------------------------------
+Message: Connection String Exception: Cannot open server 'simplrsqlng' requested by the login. Client with IP address '157.49.99.135' is not allowed to access the server.  To enable access, use the Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+-----------------------------------------------------------
+
+Time: 02-12-2024 09:18:28.809 PM
+-----------------------------------------------------------
+Message: LogIn Page Start 
+User.Identity Name-Value-IsUser: --
+-----------------------------------------------------------
+
+Time: 02-12-2024 09:18:29.588 PM
+-----------------------------------------------------------
+Message: LogIn Page End
+-----------------------------------------------------------
+
+Time: 02-12-2024 09:18:29.590 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=simplrsqlng.database.windows.net;Initial Catalog=SimplrPVMNGLive;user ID=ssa; Password=S!mplr@#1234; 
+Query:  select Isnull(CompanyName,'') as CompanyName  from system
+-----------------------------------------------------------
+
+Time: 02-12-2024 09:18:32.326 PM
+-----------------------------------------------------------
+Message: Connection String Exception: Cannot open server 'simplrsqlng' requested by the login. Client with IP address '157.49.99.135' is not allowed to access the server.  To enable access, use the Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+-----------------------------------------------------------
+
+Time: 02-12-2024 09:18:49.186 PM
+-----------------------------------------------------------
+Message: LogIn function Start 
+User Name : ADMIN ; Password : ADMIN
+-----------------------------------------------------------
+
+Time: 02-12-2024 09:18:49.188 PM
+-----------------------------------------------------------
+Message: BusinessRule._solutionName : SALES-WEB
+-----------------------------------------------------------
+
+Time: 02-12-2024 09:18:49.188 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=simplrsqlng.database.windows.net;Initial Catalog=SimplrPVMNGLive;user ID=ssa; Password=S!mplr@#1234; 
+Query: select * from SalesAgent where UserID='ADMIN' COLLATE Latin1_General_CS_AS and PassWord = 'ADMIN' COLLATE Latin1_General_CS_AS   and Active=1 
+-----------------------------------------------------------
+
+Time: 02-12-2024 09:18:51.192 PM
+-----------------------------------------------------------
+Message: Connection String Exception: Cannot open server 'simplrsqlng' requested by the login. Client with IP address '157.49.99.135' is not allowed to access the server.  To enable access, use the Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+-----------------------------------------------------------
+
+Time: 02-12-2024 09:18:51.195 PM
+-----------------------------------------------------------
+Message: Execute row Count : 0
+-----------------------------------------------------------
+
+Time: 02-12-2024 09:18:51.196 PM
+-----------------------------------------------------------
+Message: Log In Faild : Invalid Username/Password, Please Try Again - logSteps - 1
+-----------------------------------------------------------
+
+Time: 02-12-2024 09:18:51.210 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=simplrsqlng.database.windows.net;Initial Catalog=SimplrPVMNGLive;user ID=ssa; Password=S!mplr@#1234; 
+Query: select SystemMaintanence from system
+-----------------------------------------------------------
+
+Time: 02-12-2024 09:18:53.447 PM
+-----------------------------------------------------------
+Message: Connection String Exception: Cannot open server 'simplrsqlng' requested by the login. Client with IP address '157.49.99.135' is not allowed to access the server.  To enable access, use the Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+-----------------------------------------------------------
+
+Time: 02-12-2024 09:18:53.488 PM
+-----------------------------------------------------------
+Message: LogIn Page Start 
+User.Identity Name-Value-IsUser: --
+-----------------------------------------------------------
+
+Time: 02-12-2024 09:18:53.583 PM
+-----------------------------------------------------------
+Message: LogIn Page End
+-----------------------------------------------------------
+
+Time: 02-12-2024 09:18:53.584 PM
+-----------------------------------------------------------
+Message: Connection String: Data Source=simplrsqlng.database.windows.net;Initial Catalog=SimplrPVMNGLive;user ID=ssa; Password=S!mplr@#1234; 
+Query:  select Isnull(CompanyName,'') as CompanyName  from system
+-----------------------------------------------------------
+
+Time: 02-12-2024 09:18:55.675 PM
+-----------------------------------------------------------
+Message: Connection String Exception: Cannot open server 'simplrsqlng' requested by the login. Client with IP address '157.49.99.135' is not allowed to access the server.  To enable access, use the Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+-----------------------------------------------------------
+

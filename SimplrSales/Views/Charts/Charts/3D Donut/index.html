@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: relative;
+}
+path.slice{
+	stroke-width:2px;
+}
+polyline{
+	opacity: .3;
+	stroke: black;
+	stroke-width: 2px;
+	fill: none;
+} 
+svg text.percent{
+	text-anchor:middle;
+}
+
+</style>
+<body>
+<script src="d3.v3.min.js"></script>
+<script src="Donut3D.js"></script>
+<script>
+
+//Initialize3DDonut
+
+var salesData=[];
+
+
+
+
+var svg = d3.select("body").append("svg").attr("width",700).attr("height",300);
+
+svg.append("g").attr("id","salesDonut");
+Donut3D.draw("salesDonut", randomData(), 150, 150, 130, 100, 30, 0.4);
+	
+function changeData(){
+	Donut3D.transition("salesDonut", randomData(), 130, 100, 30, 0.4);
+}
+
+function randomData(){
+	return salesData.map(function(d){
+		return {label:d.label, value:d.value, color:d.color, total:d.total};});
+}
+
+function Initialize3DDonut(backgroundColor, width, height, fontSize, fontColor, content){
+	
+	//alert('Initialize3DDonut');
+	try{
+		
+	
+	salesData=[];
+	content = new String(content);
+  	var arr = content.split('##');
+	
+  	for(var i=0; i< arr.length; i++){
+		var str = new String(arr[i]);
+		str = str.replace(/@@/g, "'");
+		salesData.push(eval('(' +str+')'));
+		//salesData.push(eval('(' +str+')'));
+  	}
+  	
+  }catch(e){
+  	//alert(e);
+  }
+  	
+	Donut3D.draw("salesDonut", randomData(), 150, 150, 130, 100, 30, 0.4);
+	changeData();	
+	
+	document.body.style.backgroundColor = backgroundColor;
+	//svg = d3.select("body").append("svg").attr("fill",fontColor);
+	toggle_visibility('percent',fontSize,fontColor);
+}
+
+
+function getElementsByClassName(node,classname) {
+  if (node.getElementsByClassName) { // use native implementation if available
+    return node.getElementsByClassName(classname);
+  } else {
+    return (function getElementsByClass(searchClass,node) {
+        if ( node == null )
+          node = document;
+        var classElements = [],
+            els = node.getElementsByTagName("*"),
+            elsLen = els.length,
+            pattern = new RegExp("(^|\\s)"+searchClass+"(\\s|$)"), i, j;
+
+        for (i = 0, j = 0; i < elsLen; i++) {
+          if ( pattern.test(els[i].className) ) {
+              classElements[j] = els[i];
+              j++;
+          }
+        }
+        return classElements;
+    })(classname, node);
+  }
+}
+function toggle_visibility(className,fontSize,fontColor) {
+   var elements = getElementsByClassName(document, className),
+       n = elements.length;
+       
+       //alert('n -> ' + n);
+       
+   for (var i = 0; i < n; i++) {
+     var e = elements[i];
+	 e.style.fill = fontColor;
+	 e.style.fontSize = fontSize;
+   }
+}
+
+
+
+</script>
+</body>

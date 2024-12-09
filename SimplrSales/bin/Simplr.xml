@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<configuration>
+  <connectionStrings name="SalesServer.My.MySettings.ConnectionString" connectionString="Data Source=simplrdb.southeastasia.cloudapp.azure.com;Initial Catalog=SimplrFNN;User ID=sa;password=Simplr12345@;Connect Timeout=120" />
+  <NavconnectionStrings name="SalesServer.My.MySettings.NavConnectionString" connectionString="Data Source=simplrdb.southeastasia.cloudapp.azure.com;Initial Catalog=SimplrFNN;User ID=Dbuser1;password=Db#$ee232323;Connect Timeout=120" />
+
+<BaseURL value="https://cmapps2.camelnuts.com:14047/BC140-CU4-W1_SHH/WS/"></BaseURL>
+<CompanyName value="SHH-UAT"></CompanyName>
+<MaxCompanyName value="MAX-UAT"></MaxCompanyName>
+
+<UserName value="SIMPLR"></UserName>
+<Password value="Simplr2020"></Password>
+<Hostname value="Simplr2020"></Hostname>
+<Source value="D:\Kathir\E-Invoice\SimplrXMLSFTP\SimplrXMLSFTP\bin\Debug\Export\"></Source>
+<Destination value="D:\Kathir\SEJ\SimplrXMLSFTP\SimplrXMLSFTP\bin\Debug\Backup\"></Destination>
+
+<AROPEN key="AROPEN" value="/FNSG/SIMPLR_DEV/OBD/AROPEN/"></AROPEN>
+<CUSTOMER key="CUSTOMER" value="/FNSG/SIMPLR_DEV/OBD/CUST/"></CUSTOMER>
+<ITEM key="ITEM" value="/FNSG/SIMPLR_DEV/OBD/ITEM/"></ITEM>
+<MASTERDATA key="MASTERDATA" value="/FNSG/SIMPLR_DEV/OBD/MASTERDATA/"></MASTERDATA>
+<MOBILE key="MOBILE" value="/FNSG/SIMPLR_DEV/OBD/MOBILE/"></MOBILE>
+<PAYTERMS key="PAYTERMS" value="/FNSG/SIMPLR_DEV/OBD/PAYTERMS/"></PAYTERMS>
+<PRICING key="PRICING" value="/FNSG/SIMPLR_DEV/OBD/PRICING/"></PRICING>
+<ROUTE key="ROUTE" value="/FNSG/SIMPLR_DEV/OBD/ROUTE/"></ROUTE>
+<SLMSTOCK key="SLMSTOCK" value="/FNSG/SIMPLR_DEV/OBD/SLM_STOCK/"></SLMSTOCK>
+<WHSSTOCK key="WHSSTOCK" value="/FNSG/SIMPLR_DEV/OBD/WHS_STOCK/"></WHSSTOCK>
+<INBSTOCK key="INBSTOCK" value="/FNSG/SIMPLR_DEV/INB/STOCK/"></INBSTOCK>
+<SALES key="SALES" value="/FNSG/SIMPLR_DEV/INB/SALES/"></SALES>
+<PAYMENT key="PAYMENT" value="/FNSG/SIMPLR_DEV/INB/PAYMENT/"></PAYMENT>
+
+</configuration>

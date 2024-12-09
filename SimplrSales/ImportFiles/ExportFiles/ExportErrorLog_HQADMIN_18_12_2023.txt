@@ -1,0 +1,40 @@
+Time: 18/12/2023 03:39:49 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Customer'
+-----------------------------------------------------------
+
+Time: 18/12/2023 03:39:49 PM
+-----------------------------------------------------------
+Message: ReadRecord : select CustNo as [Customer No],CustName as [Customer Name],Address as [Address 1],Address2 as [Address 2],Address3 as [Address 3],Address4 as [Address 4],PostCode as [Postal Code],City,CountryCode as[Country Code],Phone,ContactPerson as[Contact Person], Channel,SubChannel as[Sub Channel],  PriceGroup as [Price Group],PaymentTerms as [Payment Terms],SalesAgent as [SalesMan Code],DBCode,DBName,Region as [RegionCode],AreaCode as [RegionName], case when Active=1 then 'ACTIVE' else 'INACTIVE' end as [Active],Longitude,Latitude,Discount,LandMark,OutletStatus from Customer
+-----------------------------------------------------------
+
+Time: 18/12/2023 03:40:22 PM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 18/12/2023 03:40:31 PM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 18/12/2023 03:49:42 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Customer'
+-----------------------------------------------------------
+
+Time: 18/12/2023 03:49:42 PM
+-----------------------------------------------------------
+Message: ReadRecord : select CustNo as [Customer No],CustName as [Customer Name],Address as [Address 1],Address2 as [Address 2],Address3 as [Address 3],Address4 as [Address 4],PostCode as [Postal Code],City,CountryCode as[Country Code],Phone,ContactPerson as[Contact Person], Channel,SubChannel as[Sub Channel],  PriceGroup as [Price Group],PaymentTerms as [Payment Terms],SalesAgent as [SalesMan Code],DBCode,DBName,Region as [RegionCode],AreaCode as [RegionName], case when Active=1 then 'ACTIVE' else 'INACTIVE' end as [Active],Longitude,Latitude,Discount,LandMark,OutletStatus from Customer
+-----------------------------------------------------------
+
+Time: 18/12/2023 03:49:58 PM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 18/12/2023 03:50:11 PM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+

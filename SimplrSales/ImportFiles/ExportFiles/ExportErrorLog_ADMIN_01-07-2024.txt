@@ -1,0 +1,226 @@
+Time: 01-07-2024 12:55:02 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='AB Checklist'
+-----------------------------------------------------------
+
+Time: 01-07-2024 12:55:02 PM
+-----------------------------------------------------------
+Message: ReadRecord : select PONo as [PO No], ContainerNo as [Container No], convert(varchar(9),StartTime,114) as [Start Time], EndTime  as [End Time], A.AgentID as [Agent ID],SA.NAME as [Agent Name],A.DocDate from dbo.ABCheckList A WITH(Nolock) inner join dbo.SalesAgent SA WITH(Nolock) ON A.AgentID=SA.Code INNER JOIN MDT M ON M.MDTNo=A.MDTNo WHERE CONVERT(varchar(23),A.DocDate,120) between CONVERT(varchar(23), '2024-06-20 00:00:00.000',120) and CONVERT(varchar(10), '2024-07-01 23:59:59.000',120)+' '+CONVERT(VARCHAR(13),'59:59:59.000',114) AND M.Location=case when {Location}='ALL' THEN M.Location else {Location} end
+-----------------------------------------------------------
+
+Time: 01-07-2024 12:55:02 PM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Incorrect syntax near '}'.
+-----------------------------------------------------------
+
+Time: 01-07-2024 12:55:02 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 01-07-2024 12:55:03 PM
+-----------------------------------------------------------
+Message: AutoExport dttoexcel = Specified argument was out of the range of valid values.
+Parameter name: index
+-----------------------------------------------------------
+
+Time: 01-07-2024 01:00:44 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='AB Checklist'
+-----------------------------------------------------------
+
+Time: 01-07-2024 01:00:45 PM
+-----------------------------------------------------------
+Message: ReadRecord : select PONo as [PO No], ContainerNo as [Container No], convert(varchar(9),StartTime,114) as [Start Time], EndTime  as [End Time], A.AgentID as [Agent ID],SA.NAME as [Agent Name],A.DocDate from dbo.ABCheckList A WITH(Nolock) inner join dbo.SalesAgent SA WITH(Nolock) ON A.AgentID=SA.Code INNER JOIN MDT M ON M.MDTNo=A.MDTNo WHERE CONVERT(varchar(23),A.DocDate,120) between CONVERT(varchar(23), '2024-06-10 00:00:00.000',120) and CONVERT(varchar(10), '2024-07-01 23:59:59.000',120)+' '+CONVERT(VARCHAR(13),'59:59:59.000',114) AND M.Location=case when {Location}='ALL' THEN M.Location else {Location} end
+-----------------------------------------------------------
+
+Time: 01-07-2024 01:00:45 PM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Incorrect syntax near '}'.
+-----------------------------------------------------------
+
+Time: 01-07-2024 01:00:45 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 01-07-2024 01:00:45 PM
+-----------------------------------------------------------
+Message: AutoExport dttoexcel = Specified argument was out of the range of valid values.
+Parameter name: index
+-----------------------------------------------------------
+
+Time: 01-07-2024 01:03:14 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='AB Checklist'
+-----------------------------------------------------------
+
+Time: 01-07-2024 01:03:15 PM
+-----------------------------------------------------------
+Message: ReadRecord : select PONo as [PO No], ContainerNo as [Container No], convert(varchar(9),StartTime,114) as [Start Time], EndTime  as [End Time], A.AgentID as [Agent ID],SA.NAME as [Agent Name],A.DocDate from dbo.ABCheckList A WITH(Nolock) inner join dbo.SalesAgent SA WITH(Nolock) ON A.AgentID=SA.Code INNER JOIN MDT M ON M.MDTNo=A.MDTNo WHERE CONVERT(varchar(23),A.DocDate,120) between CONVERT(varchar(23), '2024-06-01 00:00:00.000',120) and CONVERT(varchar(10), '2024-07-01 23:59:59.000',120)+' '+CONVERT(VARCHAR(13),'59:59:59.000',114) AND M.Location=case when {Location}='ALL' THEN M.Location else {Location} end
+-----------------------------------------------------------
+
+Time: 01-07-2024 01:03:15 PM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Incorrect syntax near '}'.
+-----------------------------------------------------------
+
+Time: 01-07-2024 01:03:15 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 01-07-2024 01:03:15 PM
+-----------------------------------------------------------
+Message: AutoExport dttoexcel = Specified argument was out of the range of valid values.
+Parameter name: index
+-----------------------------------------------------------
+
+Time: 01-07-2024 01:03:37 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='AB Checklist'
+-----------------------------------------------------------
+
+Time: 01-07-2024 01:03:38 PM
+-----------------------------------------------------------
+Message: ReadRecord : select PONo as [PO No], ContainerNo as [Container No], convert(varchar(9),StartTime,114) as [Start Time], EndTime  as [End Time], A.AgentID as [Agent ID],SA.NAME as [Agent Name],A.DocDate from dbo.ABCheckList A WITH(Nolock) inner join dbo.SalesAgent SA WITH(Nolock) ON A.AgentID=SA.Code INNER JOIN MDT M ON M.MDTNo=A.MDTNo WHERE CONVERT(varchar(23),A.DocDate,120) between CONVERT(varchar(23), '2024-01-01 00:00:00.000',120) and CONVERT(varchar(10), '2024-07-01 23:59:59.000',120)+' '+CONVERT(VARCHAR(13),'59:59:59.000',114) AND M.Location=case when {Location}='ALL' THEN M.Location else {Location} end
+-----------------------------------------------------------
+
+Time: 01-07-2024 01:03:38 PM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Incorrect syntax near '}'.
+-----------------------------------------------------------
+
+Time: 01-07-2024 01:03:38 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 01-07-2024 01:03:38 PM
+-----------------------------------------------------------
+Message: AutoExport dttoexcel = Specified argument was out of the range of valid values.
+Parameter name: index
+-----------------------------------------------------------
+
+Time: 01-07-2024 01:03:58 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='AB Checklist'
+-----------------------------------------------------------
+
+Time: 01-07-2024 01:05:19 PM
+-----------------------------------------------------------
+Message: ReadRecord : select PONo as [PO No], ContainerNo as [Container No], convert(varchar(9),StartTime,114) as [Start Time], EndTime  as [End Time], A.AgentID as [Agent ID],SA.NAME as [Agent Name],A.DocDate from dbo.ABCheckList A WITH(Nolock) inner join dbo.SalesAgent SA WITH(Nolock) ON A.AgentID=SA.Code INNER JOIN MDT M ON M.MDTNo=A.MDTNo WHERE CONVERT(varchar(23),A.DocDate,120) between CONVERT(varchar(23), '2023-01-01 00:00:00.000',120) and CONVERT(varchar(10), '2024-07-01 23:59:59.000',120)+' '+CONVERT(VARCHAR(13),'59:59:59.000',114) AND M.Location=case when {Location}='ALL' THEN M.Location else {Location} end
+-----------------------------------------------------------
+
+Time: 01-07-2024 01:05:20 PM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Incorrect syntax near '}'.
+-----------------------------------------------------------
+
+Time: 01-07-2024 01:05:20 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 01-07-2024 01:05:20 PM
+-----------------------------------------------------------
+Message: AutoExport dttoexcel = Specified argument was out of the range of valid values.
+Parameter name: index
+-----------------------------------------------------------
+
+Time: 01-07-2024 01:11:01 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='AB Checklist'
+-----------------------------------------------------------
+
+Time: 01-07-2024 01:11:25 PM
+-----------------------------------------------------------
+Message: ReadRecord : select PONo as [PO No], ContainerNo as [Container No], convert(varchar(9),StartTime,114) as [Start Time], EndTime  as [End Time], A.AgentID as [Agent ID],SA.NAME as [Agent Name],A.DocDate from dbo.ABCheckList A WITH(Nolock) inner join dbo.SalesAgent SA WITH(Nolock) ON A.AgentID=SA.Code INNER JOIN MDT M ON M.MDTNo=A.MDTNo WHERE CONVERT(varchar(23),A.DocDate,120) between CONVERT(varchar(23), '2024-01-01 00:00:00.000',120) and CONVERT(varchar(10), '2024-07-01 23:59:59.000',120)+' '+CONVERT(VARCHAR(13),'59:59:59.000',114) AND M.Location=case when 'ALL'='ALL' THEN M.Location else 'ALL' end
+-----------------------------------------------------------
+
+Time: 01-07-2024 01:11:25 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 01-07-2024 02:39:41 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Sales Order Log'
+-----------------------------------------------------------
+
+Time: 01-07-2024 02:39:43 PM
+-----------------------------------------------------------
+Message: ReadRecord : Select OrdNo, OrdDt, ItemNo, InvNo, Qty, UOM, CustId, CustItemNo, CustName, DeliQty, Delivered, DeliveryDate, [Description], Discount, DistributorCode, 
+DTG, ExpiryDate, Gst, GstAmt, Approved, ApprovedBy, ApprovedDate, ApprovedQty, AttachedtoLineNo, BaseQty, Confirmed, ConfirmedBy, ConfirmedQty, 
+CountryCode, CreatedBy, creditLimit, creditLimitbal, IsCompleted, IsConfirmed, ISDelivered, ItemNo2, Location, LocationCode, LotNo, OrderType, 
+OrdLevelStatus, PackingSize, PayTerms, PCNo, PickDTG, PickingStatus, PONo, Price, PrintNo, Priority, PromoID, PromoOffer, QuoteNo, ReasonCode,
+Remarks, Remarks2, ReportType, RequestedDate, SalesCoord, SalesType, SAPEntryNo, SAPUOM, SerialNo, ShipAdd, ShipAdd2, ShipAdd3, ShipAdd4, ShipAgent,
+ShipCity, ShipMethod, ShipName, ShipPin, SOSID, StandingOrder, StockTakeNo, SubAmt, SubsidiaryCode, SubTotal, Telephone, TermDays, TotalAmt, TotalQty, 
+ts, Unloaded, UPC, VariantCode, VehicleID, Void, VoidDate, VoidedBy, VoidRemarks, Warehouse From dbo.SalesOrderLog WITH(NOLOCK) where 1=1
+
+-----------------------------------------------------------
+
+Time: 01-07-2024 02:39:43 PM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 01-07-2024 02:39:45 PM
+-----------------------------------------------------------
+Message: AutoExport dttoexcel = Unable to set cell value to System.Byte[]
+-----------------------------------------------------------
+
+Time: 01-07-2024 02:39:55 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Sales Order Log'
+-----------------------------------------------------------
+
+Time: 01-07-2024 02:39:59 PM
+-----------------------------------------------------------
+Message: ReadRecord : Select OrdNo, OrdDt, ItemNo, InvNo, Qty, UOM, CustId, CustItemNo, CustName, DeliQty, Delivered, DeliveryDate, [Description], Discount, DistributorCode, 
+DTG, ExpiryDate, Gst, GstAmt, Approved, ApprovedBy, ApprovedDate, ApprovedQty, AttachedtoLineNo, BaseQty, Confirmed, ConfirmedBy, ConfirmedQty, 
+CountryCode, CreatedBy, creditLimit, creditLimitbal, IsCompleted, IsConfirmed, ISDelivered, ItemNo2, Location, LocationCode, LotNo, OrderType, 
+OrdLevelStatus, PackingSize, PayTerms, PCNo, PickDTG, PickingStatus, PONo, Price, PrintNo, Priority, PromoID, PromoOffer, QuoteNo, ReasonCode,
+Remarks, Remarks2, ReportType, RequestedDate, SalesCoord, SalesType, SAPEntryNo, SAPUOM, SerialNo, ShipAdd, ShipAdd2, ShipAdd3, ShipAdd4, ShipAgent,
+ShipCity, ShipMethod, ShipName, ShipPin, SOSID, StandingOrder, StockTakeNo, SubAmt, SubsidiaryCode, SubTotal, Telephone, TermDays, TotalAmt, TotalQty, 
+ts, Unloaded, UPC, VariantCode, VehicleID, Void, VoidDate, VoidedBy, VoidRemarks, Warehouse From dbo.SalesOrderLog WITH(NOLOCK) where 1=1
+
+-----------------------------------------------------------
+
+Time: 01-07-2024 02:39:59 PM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 01-07-2024 02:40:44 PM
+-----------------------------------------------------------
+Message: AutoExport dttoexcel = Unable to set cell value to System.Byte[]
+-----------------------------------------------------------
+
+Time: 01-07-2024 02:40:55 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Sales Order Log'
+-----------------------------------------------------------
+
+Time: 01-07-2024 02:40:58 PM
+-----------------------------------------------------------
+Message: ReadRecord : Select OrdNo, OrdDt, ItemNo, InvNo, Qty, UOM, CustId, CustItemNo, CustName, DeliQty, Delivered, DeliveryDate, [Description], Discount, DistributorCode, 
+DTG, ExpiryDate, Gst, GstAmt, Approved, ApprovedBy, ApprovedDate, ApprovedQty, AttachedtoLineNo, BaseQty, Confirmed, ConfirmedBy, ConfirmedQty, 
+CountryCode, CreatedBy, creditLimit, creditLimitbal, IsCompleted, IsConfirmed, ISDelivered, ItemNo2, Location, LocationCode, LotNo, OrderType, 
+OrdLevelStatus, PackingSize, PayTerms, PCNo, PickDTG, PickingStatus, PONo, Price, PrintNo, Priority, PromoID, PromoOffer, QuoteNo, ReasonCode,
+Remarks, Remarks2, ReportType, RequestedDate, SalesCoord, SalesType, SAPEntryNo, SAPUOM, SerialNo, ShipAdd, ShipAdd2, ShipAdd3, ShipAdd4, ShipAgent,
+ShipCity, ShipMethod, ShipName, ShipPin, SOSID, StandingOrder, StockTakeNo, SubAmt, SubsidiaryCode, SubTotal, Telephone, TermDays, TotalAmt, TotalQty, 
+ts, Unloaded, UPC, VariantCode, VehicleID, Void, VoidDate, VoidedBy, VoidRemarks, Warehouse From dbo.SalesOrderLog WITH(NOLOCK) where 1=1
+
+-----------------------------------------------------------
+
+Time: 01-07-2024 02:40:58 PM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 01-07-2024 02:43:23 PM
+-----------------------------------------------------------
+Message: AutoExport dttoexcel = Unable to set cell value to System.Byte[]
+-----------------------------------------------------------
+

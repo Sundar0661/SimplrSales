@@ -1,0 +1,35 @@
+Time: 17-07-2024 03:57:15 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Outbound List'
+-----------------------------------------------------------
+
+Time: 17-07-2024 07:36:44 AM
+-----------------------------------------------------------
+Message: Exception : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) strSteps : 2
+-----------------------------------------------------------
+
+Time: 17-07-2024 11:11:15 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Inventory Movement'
+-----------------------------------------------------------
+
+Time: 17-07-2024 11:20:14 PM
+-----------------------------------------------------------
+Message: ReadRecord : exec [Export_InventoryMovement] '2024-07-17 00:00:00.000','2024-07-17 23:59:59.000','ALL','ALL','ADMIN'
+-----------------------------------------------------------
+
+Time: 17-07-2024 11:27:33 PM
+-----------------------------------------------------------
+Message: ReadRecord Exception : A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The specified network name is no longer available.)
+-----------------------------------------------------------
+
+Time: 17-07-2024 11:27:33 PM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 17-07-2024 11:27:34 PM
+-----------------------------------------------------------
+Message: AutoExport dttoexcel = Object reference not set to an instance of an object.
+-----------------------------------------------------------
+

@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "MapWaypointsDirections";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Waypoints in Directions</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <style>
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            height: 100%;
+            display: flex;
+        }
+
+        #sidebar {
+            flex-basis: 15rem;
+            flex-grow: 1;
+            padding: 1rem;
+            max-width: 30rem;
+            height: 100%;
+            box-sizing: border-box;
+            overflow: auto;
+        }
+
+        #map {
+            flex-basis: 0;
+            flex-grow: 4;
+            height: 100%;
+        }
+
+        #directions-panel {
+            margin-top: 10px;
+        }
+    </style>
+
+
+    @*<script src="./index.js"></script>*@
+  
+
+</head>
+<body>
+    <div id="container">
+        <div id="map"></div>
+        <div id="sidebar">
+            <div>
+                <b>Start:</b>
+                <select id="start">
+                    <option value="Halifax, NS">Halifax, NS</option>
+                    <option value="Boston, MA">Boston, MA</option>
+                    <option value="New York, NY">New York, NY</option>
+                    <option value="Miami, FL">Miami, FL</option>
+                </select>
+                <br />
+                <b>Waypoints:</b> <br />
+                <i>(Ctrl+Click or Cmd+Click for multiple selection)</i> <br />
+                <select multiple id="waypoints">
+                    <option value="montreal, quebec">Montreal, QBC</option>
+                    <option value="toronto, ont">Toronto, ONT</option>
+                    <option value="chicago, il">Chicago</option>
+                    <option value="winnipeg, mb">Winnipeg</option>
+                    <option value="fargo, nd">Fargo</option>
+                    <option value="calgary, ab">Calgary</option>
+                    <option value="spokane, wa">Spokane</option>
+                </select>
+                <br />
+                <b>End:</b>
+                <select id="end">
+                    <option value="Vancouver, BC">Vancouver, BC</option>
+                    <option value="Seattle, WA">Seattle, WA</option>
+                    <option value="San Francisco, CA">San Francisco, CA</option>
+                    <option value="Los Angeles, CA">Los Angeles, CA</option>
+                </select>
+                <br />
+                <input type="submit" id="submit" />
+            </div>
+            <div id="directions-panel"></div>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+    <script src="~/Scripts/Map/MapWaypointsDirections.js"></script>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5XH-ALvr81IiuEDWekI2k91ujPeZL864&callback=initMap&v=weekly"
+    @*<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5XH-ALvr81IiuEDWekI2k91ujPeZL864&v=weekly"*@
+            async></script>
+
+   
+    <script>
+        //initMap();
+    </script>
+</body>
+
+</html>

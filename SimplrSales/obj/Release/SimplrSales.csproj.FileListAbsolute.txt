@@ -1,0 +1,1759 @@
+D:\Source\SimplrSales\SimplrSales\bin\SqlServerTypes\x64\msvcr120.dll
+D:\Source\SimplrSales\SimplrSales\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Source\SimplrSales\SimplrSales\bin\SqlServerTypes\x86\msvcr120.dll
+D:\Source\SimplrSales\SimplrSales\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Source\SimplrSales\SimplrSales\bin\SimplrSales.dll.config
+D:\Source\SimplrSales\SimplrSales\bin\SimplrSales.pdb
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\csc.exe
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\csc.exe.config
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\csc.rsp
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\csi.exe
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\csi.rsp
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\System.AppContext.dll
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\System.Collections.Immutable.dll
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\System.IO.FileSystem.dll
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\System.Reflection.Metadata.dll
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\vbc.exe
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\vbc.exe.config
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\vbc.rsp
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\VBCSCompiler.exe
+D:\Source\SimplrSales\SimplrSales\bin\roslyn\VBCSCompiler.exe.config
+D:\Source\SimplrSales\SimplrSales\bin\Antlr3.Runtime.dll
+D:\Source\SimplrSales\SimplrSales\bin\BarcodeLib.dll
+D:\Source\SimplrSales\SimplrSales\bin\DotNetOpenAuth.AspNet.dll
+D:\Source\SimplrSales\SimplrSales\bin\DotNetOpenAuth.Core.dll
+D:\Source\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\Source\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.dll
+D:\Source\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.dll
+D:\Source\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\Source\SimplrSales\SimplrSales\bin\EntityFramework.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.Azure.KeyVault.Core.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.Data.Edm.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.Data.OData.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Logging.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Tokens.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.Owin.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.OpenIdConnect.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.Common.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.DataVisualization.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.Design.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.WebDesign.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.WebForms.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.WinForms.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.SqlServer.Types.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.Web.Infrastructure.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.WindowsAzure.Storage.dll
+D:\Source\SimplrSales\SimplrSales\bin\Office.dll
+D:\Source\SimplrSales\SimplrSales\bin\Owin.dll
+D:\Source\SimplrSales\SimplrSales\bin\QRCoder.dll
+D:\Source\SimplrSales\SimplrSales\bin\SimplrExportBLL.dll
+D:\Source\SimplrSales\SimplrSales\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Source\SimplrSales\SimplrSales\bin\System.Net.Http.Formatting.dll
+D:\Source\SimplrSales\SimplrSales\bin\System.Net.Http.WebRequest.dll
+D:\Source\SimplrSales\SimplrSales\bin\System.Spatial.dll
+D:\Source\SimplrSales\SimplrSales\bin\System.Web.Helpers.dll
+D:\Source\SimplrSales\SimplrSales\bin\System.Web.Http.dll
+D:\Source\SimplrSales\SimplrSales\bin\System.Web.Http.OData.dll
+D:\Source\SimplrSales\SimplrSales\bin\System.Web.Http.WebHost.dll
+D:\Source\SimplrSales\SimplrSales\bin\System.Web.Mvc.dll
+D:\Source\SimplrSales\SimplrSales\bin\System.Web.Optimization.dll
+D:\Source\SimplrSales\SimplrSales\bin\System.Web.Razor.dll
+D:\Source\SimplrSales\SimplrSales\bin\System.Web.WebPages.Deployment.dll
+D:\Source\SimplrSales\SimplrSales\bin\System.Web.WebPages.dll
+D:\Source\SimplrSales\SimplrSales\bin\System.Web.WebPages.Razor.dll
+D:\Source\SimplrSales\SimplrSales\bin\WebGrease.dll
+D:\Source\SimplrSales\SimplrSales\bin\WebMatrix.Data.dll
+D:\Source\SimplrSales\SimplrSales\bin\WebMatrix.WebData.dll
+D:\Source\SimplrSales\SimplrSales\bin\EnvDTE.dll
+D:\Source\SimplrSales\SimplrSales\bin\stdole.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.VSHelp.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.ComponentModelHost.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.TemplateWizardInterface.dll
+D:\Source\SimplrSales\SimplrSales\bin\EnvDTE80.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.Build.Tasks.Core.dll
+D:\Source\SimplrSales\SimplrSales\bin\VSLangProj.dll
+D:\Source\SimplrSales\SimplrSales\bin\VSLangProj80.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.GraphModel.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.MSXML.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.Build.Utilities.Core.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.Build.Framework.dll
+D:\Source\SimplrSales\SimplrSales\bin\VSLangProj2.dll
+D:\Source\SimplrSales\SimplrSales\bin\SimplrExportBLL.pdb
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.Azure.KeyVault.Core.xml
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Logging.pdb
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Logging.xml
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.pdb
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.xml
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.pdb
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Tokens.pdb
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Tokens.xml
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.Owin.xml
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.xml
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.OpenIdConnect.xml
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.WindowsAzure.Storage.pdb
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.WindowsAzure.Storage.xml
+D:\Source\SimplrSales\SimplrSales\bin\System.IdentityModel.Tokens.Jwt.pdb
+D:\Source\SimplrSales\SimplrSales\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\Source\SimplrSales\SimplrSales\bin\System.Web.Helpers.xml
+D:\Source\SimplrSales\SimplrSales\bin\System.Web.Mvc.xml
+D:\Source\SimplrSales\SimplrSales\bin\System.Web.Razor.xml
+D:\Source\SimplrSales\SimplrSales\bin\System.Web.WebPages.xml
+D:\Source\SimplrSales\SimplrSales\bin\System.Web.WebPages.Deployment.xml
+D:\Source\SimplrSales\SimplrSales\bin\System.Web.WebPages.Razor.xml
+D:\Source\SimplrSales\SimplrSales\bin\EntityFramework.xml
+D:\Source\SimplrSales\SimplrSales\bin\System.Net.Http.Formatting.xml
+D:\Source\SimplrSales\SimplrSales\bin\System.Web.Http.xml
+D:\Source\SimplrSales\SimplrSales\bin\System.Web.Http.WebHost.xml
+D:\Source\SimplrSales\SimplrSales\bin\WebMatrix.Data.xml
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Source\SimplrSales\SimplrSales\bin\WebMatrix.WebData.xml
+D:\Source\SimplrSales\SimplrSales\bin\DotNetOpenAuth.AspNet.xml
+D:\Source\SimplrSales\SimplrSales\bin\DotNetOpenAuth.Core.xml
+D:\Source\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\Source\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.xml
+D:\Source\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.xml
+D:\Source\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\Source\SimplrSales\SimplrSales\bin\System.Web.Http.OData.xml
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.Data.Edm.xml
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.Data.OData.xml
+D:\Source\SimplrSales\SimplrSales\bin\System.Spatial.xml
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.TemplateWizardInterface.xml
+D:\Source\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\de\Microsoft.Data.OData.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\es\Microsoft.Data.OData.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\it\Microsoft.Data.OData.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\de\System.Spatial.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\es\System.Spatial.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\fr\System.Spatial.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\it\System.Spatial.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ja\System.Spatial.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ko\System.Spatial.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\ru\System.Spatial.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\zh-Hans\System.Spatial.resources.dll
+D:\Source\SimplrSales\SimplrSales\bin\zh-Hant\System.Spatial.resources.dll
+D:\Source\SimplrSales\SimplrSales\obj\Release\SimplrSales.csprojResolveAssemblyReference.cache
+D:\Source\SimplrSales\SimplrSales\obj\Release\RdlCompile.cache
+D:\Source\SimplrSales\SimplrSales\obj\Release\RdlCompile.compiled
+D:\Source\SimplrSales\SimplrSales\obj\Release\SimplrSales.dll
+D:\Source\SimplrSales\SimplrSales\obj\Release\SimplrSales.pdb
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\Source\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\Source\SimplrSales\SimplrSales\bin\ClosedXML.dll
+D:\Source\SimplrSales\SimplrSales\bin\DocumentFormat.OpenXml.dll
+D:\Source\SimplrSales\SimplrSales\bin\ExcelNumberFormat.dll
+D:\Source\SimplrSales\SimplrSales\bin\ClosedXML.pdb
+D:\Source\SimplrSales\SimplrSales\bin\ClosedXML.xml
+D:\Source\SimplrSales\SimplrSales\bin\DocumentFormat.OpenXml.xml
+D:\Source\SimplrSales\SimplrSales\bin\ExcelNumberFormat.xml
+D:\Source\SimplrSales\SimplrSales\bin\BouncyCastle.Crypto.dll
+D:\Source\SimplrSales\SimplrSales\bin\itextsharp.dll
+D:\Source\SimplrSales\SimplrSales\bin\itextsharp.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\SqlServerTypes\x64\msvcr120.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\SqlServerTypes\x86\msvcr120.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\SimplrSales.dll.config
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\SimplrSales.pdb
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\csc.exe
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\csc.exe.config
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\csc.rsp
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\csi.exe
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\csi.rsp
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\System.AppContext.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\System.Collections.Immutable.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\System.IO.FileSystem.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\System.Reflection.Metadata.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\vbc.exe
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\vbc.exe.config
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\vbc.rsp
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\VBCSCompiler.exe
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\roslyn\VBCSCompiler.exe.config
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Antlr3.Runtime.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\BouncyCastle.Crypto.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.AspNet.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.Core.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\EntityFramework.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\itextsharp.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.Azure.KeyVault.Core.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.Data.Edm.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.Data.OData.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Logging.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Tokens.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.Owin.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.OpenIdConnect.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.Common.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.DataVisualization.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.Design.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.WebDesign.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.WebForms.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.WinForms.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.SqlServer.Types.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.Web.Infrastructure.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.WindowsAzure.Storage.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Office.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Owin.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\QRCoder.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\SimplrExportBLL.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.Net.Http.Formatting.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.Net.Http.WebRequest.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.Spatial.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.Web.Helpers.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.Web.Http.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.Web.Http.OData.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.Web.Http.WebHost.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.Web.Mvc.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.Web.Optimization.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.Web.Razor.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.Web.WebPages.Deployment.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.Web.WebPages.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.Web.WebPages.Razor.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\WebGrease.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\WebMatrix.Data.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\WebMatrix.WebData.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ClosedXML.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\EnvDTE.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.Shell.Interop.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\stdole.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\DocumentFormat.OpenXml.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ExcelNumberFormat.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.OLE.Interop.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.MSXML.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\SimplrExportBLL.pdb
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\itextsharp.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.Azure.KeyVault.Core.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Logging.pdb
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Logging.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.pdb
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.pdb
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Tokens.pdb
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Tokens.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.Owin.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.OpenIdConnect.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.WindowsAzure.Storage.pdb
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.WindowsAzure.Storage.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.IdentityModel.Tokens.Jwt.pdb
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.Web.Helpers.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.Web.Mvc.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.Web.Razor.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.Web.WebPages.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.Web.WebPages.Deployment.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.Web.WebPages.Razor.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\EntityFramework.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.Net.Http.Formatting.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.Web.Http.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.Web.Http.WebHost.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\WebMatrix.Data.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\WebMatrix.WebData.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.AspNet.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.Core.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.Web.Http.OData.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.Data.Edm.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\Microsoft.Data.OData.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\System.Spatial.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ClosedXML.pdb
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ClosedXML.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\DocumentFormat.OpenXml.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ExcelNumberFormat.xml
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\de\Microsoft.Data.OData.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\es\Microsoft.Data.OData.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\it\Microsoft.Data.OData.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\de\System.Spatial.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\es\System.Spatial.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\fr\System.Spatial.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\it\System.Spatial.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ja\System.Spatial.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ko\System.Spatial.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\ru\System.Spatial.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\zh-Hans\System.Spatial.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\bin\zh-Hant\System.Spatial.resources.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\obj\Release\SimplrSales.csproj.AssemblyReference.cache
+D:\Final Copy\16012024\SimplrSales\SimplrSales\obj\Release\RdlCompile.cache
+D:\Final Copy\16012024\SimplrSales\SimplrSales\obj\Release\RdlCompile.compiled
+D:\Final Copy\16012024\SimplrSales\SimplrSales\obj\Release\SimplrSales.csproj.CoreCompileInputs.cache
+D:\Final Copy\16012024\SimplrSales\SimplrSales\obj\Release\SimplrSales.csproj.CopyComplete
+D:\Final Copy\16012024\SimplrSales\SimplrSales\obj\Release\SimplrSales.dll
+D:\Final Copy\16012024\SimplrSales\SimplrSales\obj\Release\SimplrSales.pdb
+D:\Final Copy\03022024\SimplrSales\SimplrSales\obj\Release\SimplrSales.csproj.AssemblyReference.cache
+D:\Final Copy\03022024\SimplrSales\SimplrSales\obj\Release\RdlCompile.cache
+D:\Final Copy\03022024\SimplrSales\SimplrSales\obj\Release\RdlCompile.compiled
+D:\Final Copy\03022024\SimplrSales\SimplrSales\obj\Release\SimplrSales.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\obj\Release\SimplrSales.pdb
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\SqlServerTypes\x64\msvcr120.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\SqlServerTypes\x86\msvcr120.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\SimplrSales.dll.config
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\SimplrSales.pdb
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\csc.exe
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\csc.exe.config
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\csc.rsp
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\csi.exe
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\csi.rsp
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\System.AppContext.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\System.Collections.Immutable.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\System.IO.FileSystem.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\System.Reflection.Metadata.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\vbc.exe
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\vbc.exe.config
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\vbc.rsp
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\VBCSCompiler.exe
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\roslyn\VBCSCompiler.exe.config
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Antlr3.Runtime.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\BouncyCastle.Crypto.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.AspNet.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.Core.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\EntityFramework.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\itextsharp.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.Azure.KeyVault.Core.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.Data.Edm.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.Data.OData.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Logging.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Tokens.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.OpenIdConnect.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.Common.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.DataVisualization.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.Design.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.WebDesign.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.WebForms.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.WinForms.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.SqlServer.Types.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.Web.Infrastructure.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.WindowsAzure.Storage.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Office.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Owin.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\QRCoder.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\SimplrExportBLL.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.Net.Http.Formatting.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.Net.Http.WebRequest.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.Spatial.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.Web.Helpers.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.Web.Http.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.Web.Http.OData.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.Web.Http.WebHost.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.Web.Mvc.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.Web.Optimization.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.Web.Razor.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.Web.WebPages.Deployment.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.Web.WebPages.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.Web.WebPages.Razor.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\WebGrease.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\WebMatrix.Data.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\WebMatrix.WebData.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ClosedXML.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\EnvDTE.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.Shell.Interop.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\stdole.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\DocumentFormat.OpenXml.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ExcelNumberFormat.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.OLE.Interop.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.MSXML.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\SimplrExportBLL.pdb
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\itextsharp.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.Azure.KeyVault.Core.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Logging.pdb
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Logging.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.pdb
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.pdb
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Tokens.pdb
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Tokens.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.OpenIdConnect.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.WindowsAzure.Storage.pdb
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.WindowsAzure.Storage.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.IdentityModel.Tokens.Jwt.pdb
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.Web.Helpers.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.Web.Mvc.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.Web.Razor.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.Web.WebPages.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.Web.WebPages.Deployment.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.Web.WebPages.Razor.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\EntityFramework.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.Net.Http.Formatting.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.Web.Http.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.Web.Http.WebHost.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\WebMatrix.Data.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\WebMatrix.WebData.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.AspNet.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.Core.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.Web.Http.OData.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.Data.Edm.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\Microsoft.Data.OData.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\System.Spatial.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ClosedXML.pdb
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ClosedXML.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\DocumentFormat.OpenXml.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ExcelNumberFormat.xml
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\de\Microsoft.Data.OData.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\es\Microsoft.Data.OData.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\it\Microsoft.Data.OData.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\de\System.Spatial.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\es\System.Spatial.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\fr\System.Spatial.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\it\System.Spatial.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ja\System.Spatial.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ko\System.Spatial.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\ru\System.Spatial.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\zh-Hans\System.Spatial.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\bin\zh-Hant\System.Spatial.resources.dll
+D:\Final Copy\03022024\SimplrSales\SimplrSales\obj\Release\SimplrSales.csproj.CoreCompileInputs.cache
+D:\Final Copy\03022024\SimplrSales\SimplrSales\obj\Release\SimplrSales.csproj.CopyComplete
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\SqlServerTypes\x64\msvcr120.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\SqlServerTypes\x86\msvcr120.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\SimplrSales.dll.config
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\SimplrSales.pdb
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\csc.exe
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\csc.exe.config
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\csc.rsp
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\csi.exe
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\csi.rsp
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\System.AppContext.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\System.Collections.Immutable.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\System.IO.FileSystem.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\System.Reflection.Metadata.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\vbc.exe
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\vbc.exe.config
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\vbc.rsp
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\VBCSCompiler.exe
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\roslyn\VBCSCompiler.exe.config
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Antlr3.Runtime.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\BouncyCastle.Crypto.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.AspNet.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.Core.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\EntityFramework.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\itextsharp.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.Azure.KeyVault.Core.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.Data.Edm.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.Data.OData.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Logging.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Tokens.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.OpenIdConnect.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.Common.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.DataVisualization.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.Design.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.WebDesign.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.WebForms.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.WinForms.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.SqlServer.Types.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.Web.Infrastructure.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.WindowsAzure.Storage.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Office.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Owin.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\QRCoder.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\SimplrExportBLL.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.Net.Http.Formatting.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.Net.Http.WebRequest.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.Spatial.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.Web.Helpers.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.Web.Http.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.Web.Http.OData.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.Web.Http.WebHost.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.Web.Mvc.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.Web.Optimization.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.Web.Razor.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.Web.WebPages.Deployment.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.Web.WebPages.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.Web.WebPages.Razor.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\WebGrease.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\WebMatrix.Data.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\WebMatrix.WebData.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ClosedXML.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\EnvDTE.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.Shell.Interop.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\stdole.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\DocumentFormat.OpenXml.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ExcelNumberFormat.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.OLE.Interop.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.MSXML.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\SimplrExportBLL.pdb
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\itextsharp.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.Azure.KeyVault.Core.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Logging.pdb
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Logging.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.pdb
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.pdb
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Tokens.pdb
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Tokens.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.OpenIdConnect.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.WindowsAzure.Storage.pdb
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.WindowsAzure.Storage.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.IdentityModel.Tokens.Jwt.pdb
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.Web.Helpers.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.Web.Mvc.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.Web.Razor.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.Web.WebPages.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.Web.WebPages.Deployment.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.Web.WebPages.Razor.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\EntityFramework.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.Net.Http.Formatting.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.Web.Http.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.Web.Http.WebHost.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\WebMatrix.Data.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\WebMatrix.WebData.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.AspNet.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.Core.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.Web.Http.OData.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.Data.Edm.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\Microsoft.Data.OData.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\System.Spatial.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ClosedXML.pdb
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ClosedXML.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\DocumentFormat.OpenXml.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ExcelNumberFormat.xml
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\de\Microsoft.Data.OData.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\es\Microsoft.Data.OData.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\it\Microsoft.Data.OData.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\de\System.Spatial.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\es\System.Spatial.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\fr\System.Spatial.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\it\System.Spatial.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ja\System.Spatial.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ko\System.Spatial.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\ru\System.Spatial.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\zh-Hans\System.Spatial.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\bin\zh-Hant\System.Spatial.resources.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\obj\Release\SimplrSales.csproj.AssemblyReference.cache
+D:\Final Copy\14022024\SimplrSales\SimplrSales\obj\Release\RdlCompile.cache
+D:\Final Copy\14022024\SimplrSales\SimplrSales\obj\Release\RdlCompile.compiled
+D:\Final Copy\14022024\SimplrSales\SimplrSales\obj\Release\SimplrSales.csproj.CoreCompileInputs.cache
+D:\Final Copy\14022024\SimplrSales\SimplrSales\obj\Release\SimplrSales.csproj.CopyComplete
+D:\Final Copy\14022024\SimplrSales\SimplrSales\obj\Release\SimplrSales.dll
+D:\Final Copy\14022024\SimplrSales\SimplrSales\obj\Release\SimplrSales.pdb
+E:\21022024\SimplrSales\SimplrSales\bin\SqlServerTypes\x64\msvcr120.dll
+E:\21022024\SimplrSales\SimplrSales\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+E:\21022024\SimplrSales\SimplrSales\bin\SqlServerTypes\x86\msvcr120.dll
+E:\21022024\SimplrSales\SimplrSales\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+E:\21022024\SimplrSales\SimplrSales\bin\SimplrSales.dll.config
+E:\21022024\SimplrSales\SimplrSales\bin\SimplrSales.pdb
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\csc.exe
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\csc.exe.config
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\csc.rsp
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\csi.exe
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\csi.rsp
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\System.AppContext.dll
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\System.Collections.Immutable.dll
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\System.IO.FileSystem.dll
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\System.Reflection.Metadata.dll
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\vbc.exe
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\vbc.exe.config
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\vbc.rsp
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\VBCSCompiler.exe
+E:\21022024\SimplrSales\SimplrSales\bin\roslyn\VBCSCompiler.exe.config
+E:\21022024\SimplrSales\SimplrSales\bin\Antlr3.Runtime.dll
+E:\21022024\SimplrSales\SimplrSales\bin\BouncyCastle.Crypto.dll
+E:\21022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.AspNet.dll
+E:\21022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.Core.dll
+E:\21022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\21022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.dll
+E:\21022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.dll
+E:\21022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\21022024\SimplrSales\SimplrSales\bin\EntityFramework.dll
+E:\21022024\SimplrSales\SimplrSales\bin\itextsharp.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.Azure.KeyVault.Core.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.Data.Edm.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.Data.OData.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Logging.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Tokens.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.Cookies.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.OpenIdConnect.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.Common.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.DataVisualization.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.Design.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.WebDesign.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.WebForms.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.WinForms.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.SqlServer.Types.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.Web.Infrastructure.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.Web.WebPages.OAuth.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.WindowsAzure.Storage.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Office.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Owin.dll
+E:\21022024\SimplrSales\SimplrSales\bin\QRCoder.dll
+E:\21022024\SimplrSales\SimplrSales\bin\SimplrExportBLL.dll
+E:\21022024\SimplrSales\SimplrSales\bin\System.IdentityModel.Tokens.Jwt.dll
+E:\21022024\SimplrSales\SimplrSales\bin\System.Net.Http.Formatting.dll
+E:\21022024\SimplrSales\SimplrSales\bin\System.Net.Http.WebRequest.dll
+E:\21022024\SimplrSales\SimplrSales\bin\System.Spatial.dll
+E:\21022024\SimplrSales\SimplrSales\bin\System.Web.Helpers.dll
+E:\21022024\SimplrSales\SimplrSales\bin\System.Web.Http.dll
+E:\21022024\SimplrSales\SimplrSales\bin\System.Web.Http.OData.dll
+E:\21022024\SimplrSales\SimplrSales\bin\System.Web.Http.WebHost.dll
+E:\21022024\SimplrSales\SimplrSales\bin\System.Web.Mvc.dll
+E:\21022024\SimplrSales\SimplrSales\bin\System.Web.Optimization.dll
+E:\21022024\SimplrSales\SimplrSales\bin\System.Web.Razor.dll
+E:\21022024\SimplrSales\SimplrSales\bin\System.Web.WebPages.Deployment.dll
+E:\21022024\SimplrSales\SimplrSales\bin\System.Web.WebPages.dll
+E:\21022024\SimplrSales\SimplrSales\bin\System.Web.WebPages.Razor.dll
+E:\21022024\SimplrSales\SimplrSales\bin\WebGrease.dll
+E:\21022024\SimplrSales\SimplrSales\bin\WebMatrix.Data.dll
+E:\21022024\SimplrSales\SimplrSales\bin\WebMatrix.WebData.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ClosedXML.dll
+E:\21022024\SimplrSales\SimplrSales\bin\EnvDTE.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.Shell.Interop.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+E:\21022024\SimplrSales\SimplrSales\bin\stdole.dll
+E:\21022024\SimplrSales\SimplrSales\bin\DocumentFormat.OpenXml.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ExcelNumberFormat.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.OLE.Interop.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.TextManager.Interop.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.MSXML.dll
+E:\21022024\SimplrSales\SimplrSales\bin\SimplrExportBLL.pdb
+E:\21022024\SimplrSales\SimplrSales\bin\itextsharp.xml
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.Azure.KeyVault.Core.xml
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Logging.pdb
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Logging.xml
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.pdb
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.xml
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.pdb
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Tokens.pdb
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Tokens.xml
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.xml
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.xml
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.Cookies.xml
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.OpenIdConnect.xml
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.WindowsAzure.Storage.pdb
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.WindowsAzure.Storage.xml
+E:\21022024\SimplrSales\SimplrSales\bin\System.IdentityModel.Tokens.Jwt.pdb
+E:\21022024\SimplrSales\SimplrSales\bin\System.IdentityModel.Tokens.Jwt.xml
+E:\21022024\SimplrSales\SimplrSales\bin\System.Web.Helpers.xml
+E:\21022024\SimplrSales\SimplrSales\bin\System.Web.Mvc.xml
+E:\21022024\SimplrSales\SimplrSales\bin\System.Web.Razor.xml
+E:\21022024\SimplrSales\SimplrSales\bin\System.Web.WebPages.xml
+E:\21022024\SimplrSales\SimplrSales\bin\System.Web.WebPages.Deployment.xml
+E:\21022024\SimplrSales\SimplrSales\bin\System.Web.WebPages.Razor.xml
+E:\21022024\SimplrSales\SimplrSales\bin\EntityFramework.xml
+E:\21022024\SimplrSales\SimplrSales\bin\System.Net.Http.Formatting.xml
+E:\21022024\SimplrSales\SimplrSales\bin\System.Web.Http.xml
+E:\21022024\SimplrSales\SimplrSales\bin\System.Web.Http.WebHost.xml
+E:\21022024\SimplrSales\SimplrSales\bin\WebMatrix.Data.xml
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.Web.WebPages.OAuth.xml
+E:\21022024\SimplrSales\SimplrSales\bin\WebMatrix.WebData.xml
+E:\21022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.AspNet.xml
+E:\21022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.Core.xml
+E:\21022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\21022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.xml
+E:\21022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.xml
+E:\21022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\21022024\SimplrSales\SimplrSales\bin\System.Web.Http.OData.xml
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.Data.Edm.xml
+E:\21022024\SimplrSales\SimplrSales\bin\Microsoft.Data.OData.xml
+E:\21022024\SimplrSales\SimplrSales\bin\System.Spatial.xml
+E:\21022024\SimplrSales\SimplrSales\bin\ClosedXML.pdb
+E:\21022024\SimplrSales\SimplrSales\bin\ClosedXML.xml
+E:\21022024\SimplrSales\SimplrSales\bin\DocumentFormat.OpenXml.xml
+E:\21022024\SimplrSales\SimplrSales\bin\ExcelNumberFormat.xml
+E:\21022024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.Common.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.Common.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.Common.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.Design.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.Design.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.Design.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.Design.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.Design.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.Design.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.Design.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.Design.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\de\Microsoft.Data.Edm.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\es\Microsoft.Data.Edm.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\fr\Microsoft.Data.Edm.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\it\Microsoft.Data.Edm.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ja\Microsoft.Data.Edm.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ko\Microsoft.Data.Edm.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ru\Microsoft.Data.Edm.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\de\Microsoft.Data.OData.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\es\Microsoft.Data.OData.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\fr\Microsoft.Data.OData.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\it\Microsoft.Data.OData.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ja\Microsoft.Data.OData.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ko\Microsoft.Data.OData.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ru\Microsoft.Data.OData.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\de\System.Spatial.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\es\System.Spatial.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\fr\System.Spatial.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\it\System.Spatial.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ja\System.Spatial.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ko\System.Spatial.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\ru\System.Spatial.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\zh-Hans\System.Spatial.resources.dll
+E:\21022024\SimplrSales\SimplrSales\bin\zh-Hant\System.Spatial.resources.dll
+E:\21022024\SimplrSales\SimplrSales\obj\Release\SimplrSales.csproj.AssemblyReference.cache
+E:\21022024\SimplrSales\SimplrSales\obj\Release\RdlCompile.cache
+E:\21022024\SimplrSales\SimplrSales\obj\Release\RdlCompile.compiled
+E:\21022024\SimplrSales\SimplrSales\obj\Release\SimplrSales.csproj.CoreCompileInputs.cache
+E:\21022024\SimplrSales\SimplrSales\obj\Release\SimplrSales.csproj.CopyComplete
+E:\21022024\SimplrSales\SimplrSales\obj\Release\SimplrSales.dll
+E:\21022024\SimplrSales\SimplrSales\obj\Release\SimplrSales.pdb
+E:\23022024\SimplrSales\SimplrSales\bin\SqlServerTypes\x64\msvcr120.dll
+E:\23022024\SimplrSales\SimplrSales\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+E:\23022024\SimplrSales\SimplrSales\bin\SqlServerTypes\x86\msvcr120.dll
+E:\23022024\SimplrSales\SimplrSales\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+E:\23022024\SimplrSales\SimplrSales\bin\SimplrSales.dll.config
+E:\23022024\SimplrSales\SimplrSales\bin\SimplrSales.pdb
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\csc.exe
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\csc.exe.config
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\csc.rsp
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\csi.exe
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\csi.rsp
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\System.AppContext.dll
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\System.Collections.Immutable.dll
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\System.IO.FileSystem.dll
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\System.Reflection.Metadata.dll
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\vbc.exe
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\vbc.exe.config
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\vbc.rsp
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\VBCSCompiler.exe
+E:\23022024\SimplrSales\SimplrSales\bin\roslyn\VBCSCompiler.exe.config
+E:\23022024\SimplrSales\SimplrSales\bin\Antlr3.Runtime.dll
+E:\23022024\SimplrSales\SimplrSales\bin\BouncyCastle.Crypto.dll
+E:\23022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.AspNet.dll
+E:\23022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.Core.dll
+E:\23022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\23022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.dll
+E:\23022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.dll
+E:\23022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\23022024\SimplrSales\SimplrSales\bin\EntityFramework.dll
+E:\23022024\SimplrSales\SimplrSales\bin\itextsharp.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.Azure.KeyVault.Core.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.Data.Edm.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.Data.OData.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Logging.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Tokens.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.Cookies.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.OpenIdConnect.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.Common.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.DataVisualization.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.Design.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.WebDesign.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.WebForms.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.WinForms.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.SqlServer.Types.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.Web.Infrastructure.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.Web.WebPages.OAuth.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.WindowsAzure.Storage.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Office.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Owin.dll
+E:\23022024\SimplrSales\SimplrSales\bin\QRCoder.dll
+E:\23022024\SimplrSales\SimplrSales\bin\SimplrExportBLL.dll
+E:\23022024\SimplrSales\SimplrSales\bin\System.IdentityModel.Tokens.Jwt.dll
+E:\23022024\SimplrSales\SimplrSales\bin\System.Net.Http.Formatting.dll
+E:\23022024\SimplrSales\SimplrSales\bin\System.Net.Http.WebRequest.dll
+E:\23022024\SimplrSales\SimplrSales\bin\System.Spatial.dll
+E:\23022024\SimplrSales\SimplrSales\bin\System.Web.Helpers.dll
+E:\23022024\SimplrSales\SimplrSales\bin\System.Web.Http.dll
+E:\23022024\SimplrSales\SimplrSales\bin\System.Web.Http.OData.dll
+E:\23022024\SimplrSales\SimplrSales\bin\System.Web.Http.WebHost.dll
+E:\23022024\SimplrSales\SimplrSales\bin\System.Web.Mvc.dll
+E:\23022024\SimplrSales\SimplrSales\bin\System.Web.Optimization.dll
+E:\23022024\SimplrSales\SimplrSales\bin\System.Web.Razor.dll
+E:\23022024\SimplrSales\SimplrSales\bin\System.Web.WebPages.Deployment.dll
+E:\23022024\SimplrSales\SimplrSales\bin\System.Web.WebPages.dll
+E:\23022024\SimplrSales\SimplrSales\bin\System.Web.WebPages.Razor.dll
+E:\23022024\SimplrSales\SimplrSales\bin\WebGrease.dll
+E:\23022024\SimplrSales\SimplrSales\bin\WebMatrix.Data.dll
+E:\23022024\SimplrSales\SimplrSales\bin\WebMatrix.WebData.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ClosedXML.dll
+E:\23022024\SimplrSales\SimplrSales\bin\EnvDTE.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.Shell.Interop.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+E:\23022024\SimplrSales\SimplrSales\bin\stdole.dll
+E:\23022024\SimplrSales\SimplrSales\bin\DocumentFormat.OpenXml.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ExcelNumberFormat.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.OLE.Interop.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.TextManager.Interop.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.MSXML.dll
+E:\23022024\SimplrSales\SimplrSales\bin\SimplrExportBLL.pdb
+E:\23022024\SimplrSales\SimplrSales\bin\itextsharp.xml
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.Azure.KeyVault.Core.xml
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Logging.pdb
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Logging.xml
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.pdb
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.xml
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.pdb
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Tokens.pdb
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Tokens.xml
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.xml
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.xml
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.Cookies.xml
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.OpenIdConnect.xml
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.WindowsAzure.Storage.pdb
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.WindowsAzure.Storage.xml
+E:\23022024\SimplrSales\SimplrSales\bin\System.IdentityModel.Tokens.Jwt.pdb
+E:\23022024\SimplrSales\SimplrSales\bin\System.IdentityModel.Tokens.Jwt.xml
+E:\23022024\SimplrSales\SimplrSales\bin\System.Web.Helpers.xml
+E:\23022024\SimplrSales\SimplrSales\bin\System.Web.Mvc.xml
+E:\23022024\SimplrSales\SimplrSales\bin\System.Web.Razor.xml
+E:\23022024\SimplrSales\SimplrSales\bin\System.Web.WebPages.xml
+E:\23022024\SimplrSales\SimplrSales\bin\System.Web.WebPages.Deployment.xml
+E:\23022024\SimplrSales\SimplrSales\bin\System.Web.WebPages.Razor.xml
+E:\23022024\SimplrSales\SimplrSales\bin\EntityFramework.xml
+E:\23022024\SimplrSales\SimplrSales\bin\System.Net.Http.Formatting.xml
+E:\23022024\SimplrSales\SimplrSales\bin\System.Web.Http.xml
+E:\23022024\SimplrSales\SimplrSales\bin\System.Web.Http.WebHost.xml
+E:\23022024\SimplrSales\SimplrSales\bin\WebMatrix.Data.xml
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.Web.WebPages.OAuth.xml
+E:\23022024\SimplrSales\SimplrSales\bin\WebMatrix.WebData.xml
+E:\23022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.AspNet.xml
+E:\23022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.Core.xml
+E:\23022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\23022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.xml
+E:\23022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.xml
+E:\23022024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\23022024\SimplrSales\SimplrSales\bin\System.Web.Http.OData.xml
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.Data.Edm.xml
+E:\23022024\SimplrSales\SimplrSales\bin\Microsoft.Data.OData.xml
+E:\23022024\SimplrSales\SimplrSales\bin\System.Spatial.xml
+E:\23022024\SimplrSales\SimplrSales\bin\ClosedXML.pdb
+E:\23022024\SimplrSales\SimplrSales\bin\ClosedXML.xml
+E:\23022024\SimplrSales\SimplrSales\bin\DocumentFormat.OpenXml.xml
+E:\23022024\SimplrSales\SimplrSales\bin\ExcelNumberFormat.xml
+E:\23022024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.Common.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.Common.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.Common.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.Design.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.Design.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.Design.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.Design.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.Design.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.Design.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.Design.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.Design.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\de\Microsoft.Data.Edm.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\es\Microsoft.Data.Edm.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\fr\Microsoft.Data.Edm.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\it\Microsoft.Data.Edm.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ja\Microsoft.Data.Edm.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ko\Microsoft.Data.Edm.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ru\Microsoft.Data.Edm.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\de\Microsoft.Data.OData.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\es\Microsoft.Data.OData.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\fr\Microsoft.Data.OData.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\it\Microsoft.Data.OData.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ja\Microsoft.Data.OData.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ko\Microsoft.Data.OData.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ru\Microsoft.Data.OData.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\de\System.Spatial.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\es\System.Spatial.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\fr\System.Spatial.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\it\System.Spatial.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ja\System.Spatial.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ko\System.Spatial.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\ru\System.Spatial.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\zh-Hans\System.Spatial.resources.dll
+E:\23022024\SimplrSales\SimplrSales\bin\zh-Hant\System.Spatial.resources.dll
+E:\23022024\SimplrSales\SimplrSales\obj\Release\SimplrSales.csproj.AssemblyReference.cache
+E:\23022024\SimplrSales\SimplrSales\obj\Release\RdlCompile.cache
+E:\23022024\SimplrSales\SimplrSales\obj\Release\RdlCompile.compiled
+E:\23022024\SimplrSales\SimplrSales\obj\Release\SimplrSales.csproj.CoreCompileInputs.cache
+E:\23022024\SimplrSales\SimplrSales\obj\Release\SimplrSales.csproj.CopyComplete
+E:\23022024\SimplrSales\SimplrSales\obj\Release\SimplrSales.dll
+E:\23022024\SimplrSales\SimplrSales\obj\Release\SimplrSales.pdb
+C:\sep\02092024\SimplrSales\SimplrSales\bin\SqlServerTypes\x64\msvcr120.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\SqlServerTypes\x86\msvcr120.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\SimplrSales.dll.config
+C:\sep\02092024\SimplrSales\SimplrSales\bin\SimplrSales.pdb
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\csc.exe
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\csc.exe.config
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\csc.rsp
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\csi.exe
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\csi.rsp
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\System.AppContext.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\System.Collections.Immutable.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\System.IO.FileSystem.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\System.Reflection.Metadata.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\vbc.exe
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\vbc.exe.config
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\vbc.rsp
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\VBCSCompiler.exe
+C:\sep\02092024\SimplrSales\SimplrSales\bin\roslyn\VBCSCompiler.exe.config
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Antlr3.Runtime.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\BouncyCastle.Crypto.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Code128.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.AspNet.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.Core.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\EntityFramework.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\itextsharp.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.Azure.KeyVault.Core.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.Data.Edm.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.Data.OData.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Logging.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.WsFederation.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Tokens.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Tokens.Saml.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Xml.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.Owin.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.Cookies.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.OpenIdConnect.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.WsFederation.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.Common.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.Design.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.WebDesign.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.WebForms.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.ReportViewer.WinForms.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.SqlServer.Types.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.Web.Infrastructure.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.WindowsAzure.Storage.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Newtonsoft.Json.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Office.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Owin.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\QRCoder.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\SimplrExportBLL.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.Net.Http.Formatting.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.Net.Http.WebRequest.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.Spatial.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.Web.Helpers.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.Web.Http.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.Web.Http.OData.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.Web.Http.WebHost.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.Web.Mvc.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.Web.Optimization.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.Web.Razor.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.Web.WebPages.Deployment.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.Web.WebPages.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.Web.WebPages.Razor.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\WebGrease.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\WebMatrix.Data.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\WebMatrix.WebData.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ZPLPrint.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ClosedXML.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\EnvDTE.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.Shell.Interop.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\stdole.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\DocumentFormat.OpenXml.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ExcelNumberFormat.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.OLE.Interop.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.MSXML.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\SimplrExportBLL.pdb
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ZPLPrint.pdb
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Code128.pdb
+C:\sep\02092024\SimplrSales\SimplrSales\bin\itextsharp.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.Azure.KeyVault.Core.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Logging.pdb
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Logging.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.pdb
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.pdb
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.WsFederation.pdb
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Protocols.WsFederation.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Tokens.pdb
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Tokens.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Tokens.Saml.pdb
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Tokens.Saml.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Xml.pdb
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.IdentityModel.Xml.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.Owin.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.Cookies.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.OpenIdConnect.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.Owin.Security.WsFederation.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.WindowsAzure.Storage.pdb
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.WindowsAzure.Storage.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Newtonsoft.Json.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.IdentityModel.Tokens.Jwt.pdb
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.Web.Helpers.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.Web.Mvc.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.Web.Razor.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.Web.WebPages.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.Web.WebPages.Deployment.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.Web.WebPages.Razor.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\EntityFramework.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.Net.Http.Formatting.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.Web.Http.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.Web.Http.WebHost.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\WebMatrix.Data.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\WebMatrix.WebData.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.AspNet.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.Core.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OAuth.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.Web.Http.OData.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.Data.Edm.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\Microsoft.Data.OData.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\System.Spatial.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ClosedXML.pdb
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ClosedXML.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\DocumentFormat.OpenXml.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ExcelNumberFormat.xml
+C:\sep\02092024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.Common.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.Common.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.Common.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.Design.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.Design.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.Design.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\de\Microsoft.Data.Edm.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\es\Microsoft.Data.Edm.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\it\Microsoft.Data.Edm.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\de\Microsoft.Data.OData.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\es\Microsoft.Data.OData.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\fr\Microsoft.Data.OData.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\it\Microsoft.Data.OData.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ja\Microsoft.Data.OData.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ko\Microsoft.Data.OData.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ru\Microsoft.Data.OData.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\de\System.Spatial.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\es\System.Spatial.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\fr\System.Spatial.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\it\System.Spatial.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ja\System.Spatial.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ko\System.Spatial.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\ru\System.Spatial.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\zh-Hans\System.Spatial.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\bin\zh-Hant\System.Spatial.resources.dll
+C:\sep\02092024\SimplrSales\SimplrSales\obj\Release\SimplrSales.csproj.AssemblyReference.cache
+C:\sep\02092024\SimplrSales\SimplrSales\obj\Release\RdlCompile.cache
+C:\sep\02092024\SimplrSales\SimplrSales\obj\Release\RdlCompile.compiled
+C:\sep\02092024\SimplrSales\SimplrSales\obj\Release\SimplrSales.csproj.CoreCompileInputs.cache
+C:\sep\02092024\SimplrSales\SimplrSales\obj\Release\SimplrSales.csproj.CopyComplete
+C:\sep\02092024\SimplrSales\SimplrSales\obj\Release\SimplrSales.dll
+C:\sep\02092024\SimplrSales\SimplrSales\obj\Release\SimplrSales.pdb

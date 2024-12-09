@@ -1,0 +1,5 @@
+Time: 04-07-2024 08:39:12 PM
+-----------------------------------------------------------
+Message: insert into CustProdTemp(CustID,ItemNo,Active) values(N'NKA-CVS-00070', N'EK03010101', '1') --- 284 --- Conversion from string "The transaction log for database" to type 'Double' is not valid.
+-----------------------------------------------------------
+

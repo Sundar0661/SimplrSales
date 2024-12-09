@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=0.45"> -->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=0.7">-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+
+    <style>
+        .ButtonStyle {
+            width: 20%;
+            height: 40px;
+            float: left;
+            font-size: 14px;
+        }
+
+        /*.chartWrapper {
+            position: relative;
+        }
+
+            .chartWrapper > canvas {
+                position: absolute;
+                left: 0;
+                top: 0;
+                pointer-events: none;
+            }
+
+        .chartAreaWrapper {
+            width: 600px;
+            overflow-x: scroll;
+        }*/
+    </style>
+
+    <script src="../../CommonModel/VariableAndJsDeclaration.js"></script>
+
+    <script>
+
+        $(window).load(function () {
+            var parameter = window.location.toString();
+            scrName = parameter.split('?')[1].split(' ')[0];
+            scrName = scrName.split('&')[0];
+            var formView = parameter.split('&')[1].replace(/@#/g, '"');
+            FormView = $.parseJSON(formView);
+            agentID = FormView.UserID;
+            // debugger;
+            // var params = parameter.split('&')[2].split(' ')[0].replace(/@/g, '"');
+            var params = parameter.split('&')[2].replace(/@#/g, '"');
+            Params = $.parseJSON(params);
+            var query = getQueryConfigByScreenName(scrName);
+            // debugger;
+            if (query != null && query != undefined && query != '') {
+                var str1 = "", str2 = "";
+                query = formatQueryString(query, "");
+                // debugger;
+                execute(query.replace(/%20/g, ' '));
+                dbDataRows = executeQry;
+                if (executeQry != null)
+                    InitializeColumnChart(executeQry);
+            }
+        });
+
+        function InitializeColumnChart(data) {
+            var dataPointList = [];
+            var dataPoint = [];
+            for (var i = 0; i < data.length; i++) {
+
+                dataPoint = { y: data[i].SOTarget, label: "SOTarget" };
+                dataPointList.push(dataPoint)
+                dataPoint = { y: data[i].SOActual, label: "SOActual" };
+                dataPointList.push(dataPoint)
+                dataPoint = { y: data[i].SITarget, label: "SITarget" };
+                dataPointList.push(dataPoint)
+                dataPoint = { y: data[i].SIActual, label: "SIActual" };
+                dataPointList.push(dataPoint)
+            }
+            var chart = new CanvasJS.Chart("chartContainer", {
+                theme: "light2",
+                animationEnabled: true,
+                //title: {
+                //    text: "Column Chart in ASP.Net MVC using CanvasJS"
+                //},
+                data: [
+                {
+                    type: "column",
+                    dataPoints: dataPointList,
+
+                }
+                ]
+            });
+            chart.render();
+        }
+
+        window.onload = function () {
+        };
+
+
+    </script>
+    <script type="text/javascript" src="canvasjs.min.js"></script>
+
+</head>
+<body>
+
+    <div id="chartContainer">
+    </div>
+
+
+    <script>
+
+    </script>
+</body>
+
+</html>

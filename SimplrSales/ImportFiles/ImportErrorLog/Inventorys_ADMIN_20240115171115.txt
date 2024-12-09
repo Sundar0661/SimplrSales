@@ -1,0 +1,5 @@
+Time: 15-01-2024 05:11:37 PM
+-----------------------------------------------------------
+Message: Update Inventorys set SerialNo='0', PalletNo='0', LineNum='0', ReceivedDate='15-01-2024 19:41:26', ItemNo=N'ITEM116', ExpiryDate='2024-04-01 00:00:00', Location=N'location6', UOM=N'UOM236', Qty='16', LotNo=N'1146', BinNo=N'bin36' Where 1=1 and ItemNo='ITEM116' and UOM='UOM236' --- 0 --- Conversion from string "The conversion of a varchar data" to type 'Double' is not valid.
+-----------------------------------------------------------
+

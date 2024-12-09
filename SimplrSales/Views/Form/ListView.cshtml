@@ -1,0 +1,158 @@
+﻿@{
+    ViewBag.Title = "ListView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/jqueryui-1.12.1.jquery-ui.min.js"></script>
+<link href="~/Content/ListView.css" rel="stylesheet" />
+
+<div class="formContainer">
+    <div id="FormConfigId_@ViewBag.ScreenName"></div>
+</div>
+
+<script type="text/javascript">
+   // debugger;
+    var _screenName = '@ViewBag.ScreenName';
+    GetFormConfig("FormConfigId_" + _screenName, _screenName);
+    $('#formContainer').show();
+
+</script>
+
+<link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+<link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+
+@section Scripts{
+
+    <script src="~/Scripts/jquery-ui-1.8.24.js"></script>
+    <script src="~/Scripts/jquery-ui-1.8.24.min.js"></script>
+
+    <script type="text/javascript">
+        var isListLookUpClicked = false;
+        $(document).ready(function () {
+            $(".datepicker").datepicker({
+                dateFormat: "dd/mm/yy",
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "-60:+0"
+            });
+        });
+
+        $('.monthyearpicker').datepicker({
+            // changeMonth: true,
+            changeYear: true,
+            showButtonPanel: true,
+            dateFormat: 'yy',
+            onClose: function (dateText, inst) {
+                $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
+            }
+        });
+
+    </script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+           
+            $('#createPopupDialog').dialog({
+                autoOpen: false,
+                width: "100%",
+                //  height: 400,
+                // height: ($(window).height() - 200),
+                // height: "50%",
+                resizable: false,
+                title: 'Details',
+                modal: true,
+                close: true,
+                closeOnEscape: true,
+                open: function (event, ui) { },
+                close: function (event, ui) { },
+                beforeClose: function (event, ui) {
+                    $('#createPopupDialogHiddenId').show();
+                    // debugger;
+                    // alert('close');
+                    // $(this).parents('.ui-dialog').removeClass('out').addClass('in');
+                    //  $('#createPopupDialog').parents('.ui-dialog').removeClass('in').addClass('out');
+
+                }
+            });
+            //$('<div id="createPopupDialog" />').css('overflow', 'auto')
+
+            //$('#createPopupDialog').live("dialogclose", function () {
+            //    alert('close');
+            //});
+
+            $('#deletePopupDialog').dialog({
+                autoOpen: false,
+                width: "25%",
+                resizable: false,
+                title: 'Details',
+                modal: true,
+                // closeOnEscape: true,
+                open: function (event, ui) {
+                },
+                buttons: {
+                    "Ok": function () {
+                        $(this).dialog('close');
+                        DeleteForm();
+                    },
+                    "Cancel": function () {
+                        $(this).dialog('close');
+                    }
+                }
+            });
+
+            $('#messageDialog').dialog({
+                autoOpen: false,
+                width: "30%",
+                resizable: false,
+                title: 'Message',
+                modal: true,
+                //closeOnEscape: true,
+                open: function (event, ui) {
+                },
+                buttons: {
+                    "Ok": function () {
+                        $(this).dialog('close');
+                    }
+                }
+            });
+
+            $('#dialog').dialog({
+                autoOpen: false,
+                width: "50%",
+                resizable: false,
+                title: 'Details',
+                modal: true,
+                // close: 'slide',
+
+                closeOnEscape: true,
+                open: function (event, ui) { },
+                beforeClose: function (event, ui) {
+                    $('#dialogHiddenId').show();
+                },
+                buttons: {
+                    "Close": function () {
+                        $('#dialog').dialog('close');
+                    }
+                },
+
+            });
+
+            $('#dialog').live("dialogclose", function () {
+                $('#dialog').parents('.ui-dialog').removeClass('in').addClass('out');
+            });
+            if ('@ViewBag.Message' != '' && '@ViewBag.Message' != null) {
+                $('#messageDialog').dialog('open');
+                $('#messageDialogId').text('@ViewBag.Message');
+                //  alert('@ViewBag.Message');
+            }
+        });
+
+
+
+
+    </script>
+
+
+
+}
+

@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <style>
+        .ButtonStyle {
+            width: 20%;
+            height: 40px;
+            float: left;
+            font-size: 14px;
+        }
+    </style>
+    <script src="../../CommonModel/VariableAndJsDeclaration.js"></script>
+
+    <script>
+        $(window).load(function () {
+            var parameter = window.location.toString();
+            //  var parameter = "http://localhost:52063/Charts/Charts/MultiChart/index.html?Web_SalesDashboard_CHART_MultiChartMTD&{@MenuCode@:@Administration@,@UserID@:@sales1@,@URL@:@http://13.67.95.127/KeeSongSimplrSalesService/Photo/@}&{@FormView@:{@MenuCode@:@Administration@,@UserID@:@sales1@,@URL@:@http://13.67.95.127/KeeSongSimplrSalesService/Photo/@,@FilterDate@:@2020-05-05@,@Title@:@@,@LstSales@:@@,@LstSalesCat@:@@,@LstSalesItem@:@@}}"
+            // var parameter = "http://localhost:52063/Charts/Charts/MultiChart/index.html?Web_DashBoard_CHART_MultiChartMTD&{@MenuCode@:@Administration@,@UserID@:@sales1@,@URL@:@http://13.67.95.127/KeeSongSimplrSalesService/Photo/@}&{@FormView@:{@MenuCode@:@Administration@,@UserID@:@sales1@,@URL@:@http://13.67.95.127/KeeSongSimplrSalesService/Photo/@,@Title@:@@,@LstCustomerMaster@:{@CustNo@:@160@,@CustName@:@Ministry of Defence@,@Address@:@5 Depot Road, #15-01 Tower B, Defence Technology Towers@,@Address2@:@@,@Address3@:@@,@PaymentTerms@:@COD@,@PostCode@:@@,@City@:@@,@CountryCode@:@@,@Phone@:@@,@ContactPerson@:@@,@Segment@:@@,@Utility_Fee@:@@,@commission_percent@:@@,@FieldName@:@LstCustomerMaster@}}}"
+            //debugger;
+            scrName = parameter.split('?')[1].split(' ')[0];
+            scrName = scrName.split('&')[0];
+            _screenName = scrName;
+            var formView = parameter.split('&')[1].replace(/@#/g, '"');
+            FormView = $.parseJSON(formView);
+            agentID = FormView.UserID;
+            var params = parameter.split('&')[2].replace(/@#/g, '"');
+            Params = $.parseJSON(params);
+            ////var parameter = "http://localhost:52063/Charts/Charts/MultiChart/index.html?Web_SalesDashboard_CHART_MultiChartMTD&{@MenuCode@:@Administration@,@UserID@:@sales1@,@URL@:@http://13.67.95.127/KeeSongSimplrSalesService/Photo/@}&{@FormView@:{@MenuCode@:@Administration@,@UserID@:@sales1@,@URL@:@http://13.67.95.127/KeeSongSimplrSalesService/Photo/@,@FilterDate@:@2020-05-05@,@Title@:@@,@LstSales@:@@,@LstSalesCat@:@@,@LstSalesItem@:@@}}"
+            //scrName = "Web_DashBoard_CHART_MultiChartMTD";
+            //var formView = "{@MenuCode@:@Administration@,@UserID@:@sales1@,@URL@:@http://13.67.95.127/KeeSongSimplrSalesService/Photo/@}".replace(/@/g, '"');;
+            //FormView = $.parseJSON(formView);
+            //var params = "{@FormView@:{@MenuCode@:@Administration@,@UserID@:@sales1@,@URL@:@http://13.67.95.127/KeeSongSimplrSalesService/Photo/@,@Title@:@@,@LstCustomerMaster@:{@CustNo@:@160@,@CustName@:@Ministry of Defence@,@Address@:@5 Depot Road, #15-01 Tower B, Defence Technology Towers@,@Address2@:@@,@Address3@:@@,@PaymentTerms@:@COD@,@PostCode@:@@,@City@:@@,@CountryCode@:@@,@Phone@:@@,@ContactPerson@:@@,@Segment@:@@,@Utility_Fee@:@@,@commission_percent@:@@,@FieldName@:@LstCustomerMaster@}}}".replace(/@/g, '"');;
+            //Params = $.parseJSON(params);
+
+            // var query = "select 'Agent1' as AgentName ,'SalesTarget1' as SalesTarget , 'CurMonTarget1' as CurMonTarget union select 'Agent2' as AgentName ,'SalesTarget2' as SalesTarget , 'CurMonTarget2' as CurMonTarget";
+            // var query = "select 'Agent1' as AgentName ,'18' as SalesTarget , '23' as CurMonTarget union select 'Agent2' as AgentName ,'29' as SalesTarget , '33' as CurMonTarget union select 'Agent3' as AgentName ,'24' as SalesTarget , '15' as CurMonTarget union select 'Agent4' as AgentName ,'10' as SalesTarget , '16' as CurMonTarget";
+            
+            var query = getQueryConfigByScreenName(scrName);
+            if (query != null && query != undefined && query != '') {
+                var str1 = "", str2 = "";
+                query = formatQueryString(query, "");
+                execute(query);
+                dbDataRows = executeQry;
+                if (dbDataRows != null) {
+                    for (var j = 0; j < dbDataRows.length; j++) {
+                        if (str1 == '') {
+                            str1 = '{';
+                        } else {
+                            str1 += '##{';
+                        }
+
+                        var tmpcolor = dbDataRows[j].Color;
+                        var color1 = dbDataRows[j].Color;
+                        var color2 = '';
+
+                        try {
+                            color1 = tmpcolor.split('@')[0];
+                            color2 = tmpcolor.split('@')[1];
+                        }
+                        catch { }
+
+                        str1 += 'label:@@' + dbDataRows[j].AgentName + '@@, y: ' + dbDataRows[j].SalesTarget + ',color:@@' + color1 + '@@ }';
+                        if (str2 == '') {
+                            str2 = '{';
+                        } else {
+                            str2 += '##{';
+                        }
+                        str2 += 'label:@@' + dbDataRows[j].AgentName + '@@, y: ' + dbDataRows[j].CurMonTarget + ',color:@@' + color2 + '@@ }';
+                    }
+                    str1 = "'" + str1 + "'";
+                    str2 = "'" + str2 + "'";
+                    InitializeMultiChart(str1, str2);
+                }
+            }
+        });
+
+
+        /*** Change type "column" to "bar", "area", "line" or "pie"***/
+        var _chartType = "column";//"line";
+        var arr1 = [], arr2 = [];
+
+        function UpdateChart(_type) {
+            //alert(_type);
+            _chartType = _type;
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+                title: {
+                    text: ""
+                },
+                axisX: {
+                    lineColor: "#000000",
+                    labelFontColor: "#000000",
+                },
+                axisY: {
+                    lineColor: "#000000",
+                    labelFontColor: "#000000",
+                },
+
+                data: [  //array of dataSeries
+                { //dataSeries - first quarter
+                    type: _chartType,//"column",
+                    name: "Sales Target",
+                    dataPoints: [
+                    { label: "Agent1", y: 18 },
+                    { label: "Agent2", y: 29 },
+                    { label: "Agent3", y: 40 },
+                    { label: "Agent4", y: 34 },
+                    { label: "Agent5", y: 24 }
+                    ]
+                },
+
+               { //dataSeries - second quarter
+
+                   type: _chartType,
+                   name: "Actual Target",
+                   dataPoints: [
+                   { label: "Agent1", y: 23 },
+                   { label: "Agent2", y: 33 },
+                   { label: "Agent3", y: 48 },
+                   { label: "Agent4", y: 37 },
+                   { label: "Agent5", y: 20 }
+                   ]
+               }
+                ]
+            });
+
+            chart.render();
+        }
+
+        function UpdateChartbyTarget(_type, SalesTarget, CurMonTarget) {
+            //alert(_type);
+            _chartType = _type;
+            var chart = new CanvasJS.Chart("chartContainer", {
+                title: {
+                    text: ""
+                },
+                axisX: {
+                    lineColor: "#000000",
+                    labelFontColor: "#000000",
+                },
+                axisY: {
+                    lineColor: "#000000",
+                    labelFontColor: "#000000",
+                },
+
+                toolTip: {
+                    content: "<p style='font-size:14px;'><b>{y}</b><p>"
+                },
+
+                data: [  //array of dataSeries
+                { //dataSeries - first quarter
+                    type: _chartType,//"column",
+                    name: "Sales Target",
+                    dataPoints: SalesTarget
+                }, { //dataSeries - second quarter
+                    type: _chartType,
+                    name: "Actual Target",
+                    dataPoints: CurMonTarget
+                }
+                ]
+            });
+
+            chart.render();
+        }
+
+        window.onload = function () {
+            //UpdateChart('column');
+        };
+
+
+    </script>
+    <script type="text/javascript" src="canvasjs.min.js"></script>
+
+</head>
+<body>
+
+    <!--
+    <select onchange="UpdateChart(this.value)">
+        <option value="column">Column</option>
+        <option value="bar">Bar</option>
+        <option value="area">Area</option>
+        <option value="line">Line</option>
+        <option value="pie">Pie</option>
+    </select>
+    -->
+    <!--
+    <div id="btn" style="height: 40px; width: 100%; border:1px solid #e8e8e8;">
+
+          <button title="Column" onclick="UpdateChartbyTarget('column', arr1, arr2);" class="ButtonStyle">Column</button>
+          <button title="Bar" onclick="UpdateChartbyTarget('bar', arr1, arr2);" class="ButtonStyle">Bar</button>
+          <button title="Area" onclick="UpdateChartbyTarget('area', arr1, arr2);" class="ButtonStyle">Area</button>
+          <button title="Line" onclick="UpdateChartbyTarget('line', arr1, arr2);" class="ButtonStyle">Line</button>
+          <button title="Pie" onclick="UpdateChartbyTarget('pie', arr1, arr2);" class="ButtonStyle">Pie</button>
+
+    </div>
+          -->
+    <!--<div id="chartContainer" style="height: 300px; width: 100%;">
+    </div>-->
+    <!--<div id="chartContainer" style="height: 60%; width: 100%;">-->
+    <!--style="height: 380px; width: 600px; overflow-x:auto;position:relative;"-->
+    <!--<div style="width:315px;height:300px;overflow-x:scroll">-->
+    <div id="chartContainer">
+    </div>
+    <!--</div>-->
+
+
+
+    <script>
+
+        function InitializeMultiChart(SalesTarget, CurMonTarget) {
+
+
+            SalesTarget = new String(SalesTarget);
+            var arr = SalesTarget.split('##');
+            for (var i = 0; i < arr.length; i++) {
+                var str = new String(arr[i]);
+                str = strReplace(str);
+                //  str = str.replace(/@@/g, "'");
+                arr1.push(eval('(' + str + ')'));
+                //salesData.push(eval('(' +str+')'));
+            }
+
+            CurMonTarget = new String(CurMonTarget);
+            var arr = CurMonTarget.split('##');
+            for (var i = 0; i < arr.length; i++) {
+                var str = new String(arr[i]);
+                // str = str.replace(/@@/g, "'");
+                str = strReplace(str);
+                arr2.push(eval('(' + str + ')'));
+                //salesData.push(eval('(' +str+')'));
+            }
+
+            UpdateChartbyTarget('column', arr1, arr2);
+            //dashboard('#dashboard',freqData);
+        }
+    </script>
+</body>
+
+</html>

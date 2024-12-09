@@ -1,0 +1,241 @@
+Time: 06-12-2024 07:35:39 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select * from Gridfunctions where screenname =N'MAIN' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:35:40 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Customers' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:35:40 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Products' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:35:40 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Inventory' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:35:40 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Sales' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:35:41 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Payments' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:35:41 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Data Transfer' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:35:41 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Reports' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:35:41 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Administration' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:35:47 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ exec DMSLoginSP 'ADMIN'  
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:35:55 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ 
+SELECT 'ALL' as DistributorID,'ALL' as SalesOfficeID,'ALL' as SalesAgent, 'Excel' as FileType,format(getdate(),'dd/MM/yyyy') as FromDate,format(getdate(),'dd/MM/yyyy')  as ToDate  
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:35:58 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_DistributorID :
+ exec  sp_ExportDistributorDD 'ADMIN'  
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:35:58 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_SalesOfficeID :
+ EXEC [sp_ExportSalesOfficeID] 'ADMIN',''  
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:35:58 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_SalesAgent :
+ SELECT 'ALL' as Code,'ALL' as Text,1 as DP UNION select Distinct SalesmanTerritory   as Code,SalesmanTerritory+' - '+Name as Text,2 as DP  from NodeTree N Inner Join SalesAgent Sa on Sa.NodeTreeValue=N.SalesmanTerritory inner join SalesmanGroup G on G.GroupID=N.SalesmanTerritory and  G.UserId ='ADMIN'  and N.SalesOfficeID= case when '' in ('ALL','') then  N.SalesOfficeID else '' end and  N.DistributorID=case when '' in ('ALL','') then N.DistributorID else '' end  Order by DP, Code
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:35:59 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_FileType :
+ Select 'csv' as Code, 'CSV' as Text Union Select 'xlsx' as Code,'Excel' as Text  Order By Code
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:35:59 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_DistributorID :
+ exec  sp_ExportDistributorDD 'ADMIN'  
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:35:59 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_SalesOfficeID :
+ EXEC [sp_ExportSalesOfficeID] 'ADMIN','ALL'  
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:35:59 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_SalesAgent :
+ SELECT 'ALL' as Code,'ALL' as Text,1 as DP UNION select Distinct SalesmanTerritory   as Code,SalesmanTerritory+' - '+Name as Text,2 as DP  from NodeTree N Inner Join SalesAgent Sa on Sa.NodeTreeValue=N.SalesmanTerritory inner join SalesmanGroup G on G.GroupID=N.SalesmanTerritory and  G.UserId ='ADMIN'  and N.SalesOfficeID= case when '' in ('ALL','') then  N.SalesOfficeID else '' end and  N.DistributorID=case when 'ALL' in ('ALL','') then N.DistributorID else 'ALL' end  Order by DP, Code
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:36:00 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_SalesOfficeID :
+ EXEC [sp_ExportSalesOfficeID] 'ADMIN','ALL'  
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:36:00 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_SalesAgent :
+ SELECT 'ALL' as Code,'ALL' as Text,1 as DP UNION select Distinct SalesmanTerritory   as Code,SalesmanTerritory+' - '+Name as Text,2 as DP  from NodeTree N Inner Join SalesAgent Sa on Sa.NodeTreeValue=N.SalesmanTerritory inner join SalesmanGroup G on G.GroupID=N.SalesmanTerritory and  G.UserId ='ADMIN'  and N.SalesOfficeID= case when 'ALL' in ('ALL','') then  N.SalesOfficeID else 'ALL' end and  N.DistributorID=case when 'ALL' in ('ALL','') then N.DistributorID else 'ALL' end  Order by DP, Code
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:36:00 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_SalesAgent :
+ SELECT 'ALL' as Code,'ALL' as Text,1 as DP UNION select Distinct SalesmanTerritory   as Code,SalesmanTerritory+' - '+Name as Text,2 as DP  from NodeTree N Inner Join SalesAgent Sa on Sa.NodeTreeValue=N.SalesmanTerritory inner join SalesmanGroup G on G.GroupID=N.SalesmanTerritory and  G.UserId ='ADMIN'  and N.SalesOfficeID= case when 'ALL' in ('ALL','') then  N.SalesOfficeID else 'ALL' end and  N.DistributorID=case when 'ALL' in ('ALL','') then N.DistributorID else 'ALL' end  Order by DP, Code
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:36:01 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_FileType :
+ Select 'csv' as Code, 'CSV' as Text Union Select 'xlsx' as Code,'Excel' as Text  Order By Code
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:36:06 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select Distinct E.AliasName  from ExportQueryConfig E inner join ExportGroup E1 on E.AliasName=E1.AliasName And E1.Access=(select top 1 Access from Salesagent Where UserID='ADMIN') Where E.IsActive =1   Order by AliasName 
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:36:06 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select Distinct E.AliasName  from ExportQueryConfig E inner join ExportGroup E1 on E.AliasName=E1.AliasName And E1.Access=(select top 1 Access from Salesagent Where UserID='ADMIN') Where E.IsActive =1  
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:36:06 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select Distinct E.AliasName  from ExportQueryConfig E inner join ExportGroup E1 on E.AliasName=E1.AliasName And E1.Access=(select top 1 Access from Salesagent Where UserID='ADMIN') Where E.IsActive =1   Order by AliasName 
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:39:13 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select * from Gridfunctions where screenname =N'MAIN' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:39:14 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Masters' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:39:14 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Customers' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:39:14 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Inventory' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:39:14 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Sales' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:39:14 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Payments' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:39:14 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Data Transfer' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:39:14 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Reports' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:39:14 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Administration' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:39:59 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ 
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:40:09 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ 
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:40:12 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > CustomerList_FORM_COMBOBOX_salesagent :
+ select Code,name as Text from salesagent  order by Name
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:40:13 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ SELECT DISTINCT CustGroup, CustNo,ThirdPartyCode ,CustName,ChineseName,Address,Address3, Address4 ,PostCode ,City,Phone,ContactPerson,CreditLimit,SalesmanName,  ProvisionalBalance,PriceGroup,PaymentTerms,PaymentMethod,SalesAgent,Location,Channel,SubChannel,OutletType,EWT,DiscountGroup,Active,DTG,DTG1  from ( select Distinct cg.Description as CustGroup , Customer.CustNo,CR.ThirdPartyCode ,Customer.CustName,Customer.ChineseName,Customer.[Address],Customer.Address2,BarangayName as Address3,Country.Name      as Address4,Customer.PostCode,customer.City as City,SalesAgent.Name AS SalesmanName,Customer.Phone,Customer.ContactPerson,Customer.CreditLimit,  Customer.ProvisionalBalance,Customer.PriceGroup, Customer.PaymentMethod,Customer.PaymentTerms,Customer.SalesAgent,Location.Name as Location,Channel.Description as Channel ,SubChannel.Description as  SubChannel ,OutletType,Customer.DiscountGroup,Customer.EWT,CASE WHEN Customer.Active ='1' THEN 'Yes' ELSE 'No' END AS Active,customer.DTG as DTG,customer.DTG as DTG1 from Customer left join Barangay   on Customer.Address3 =Barangay.Code left join Country on Country.Code=Customer.Address4  left join NodeTree on NodeTree.SalesmanTerritory=SalesAgent left join channel on Customer.channel=channel.Code left join SubChannel on Customer.subchannel=SubChannel.code left join Location on Location.Code=NodeTree.SalesOfficeID and NodeTree.SalesmanTerritory=SalesAgent left JOIN SalesManGroup SM ON SM.GroupId = Customer.SalesAgent Left Join Crossreference CR on CR.SimplrCode =Customer.CustNo and CR.CrossReferenceType ='CUSTOMER' LEFT join CustGroup cg on cg.Code=Customer.CustGroup left join SalesAgent on Customer.SalesAgent=SalesAgent.Code Where SM.UserId ='ADMIN') as Customerlist Where 1=1    Order by DTG1 DESC,CustNo DESC offset  0  rows Fetch next 10 rows only
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:40:13 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ SELECT DISTINCT CustGroup, CustNo,ThirdPartyCode ,CustName,ChineseName,Address,Address3, Address4 ,PostCode ,City,Phone,ContactPerson,CreditLimit,SalesmanName,  ProvisionalBalance,PriceGroup,PaymentTerms,PaymentMethod,SalesAgent,Location,Channel,SubChannel,OutletType,EWT,DiscountGroup,Active,DTG,DTG1  from ( select Distinct cg.Description as CustGroup , Customer.CustNo,CR.ThirdPartyCode ,Customer.CustName,Customer.ChineseName,Customer.[Address],Customer.Address2,BarangayName as Address3,Country.Name      as Address4,Customer.PostCode,customer.City as City,SalesAgent.Name AS SalesmanName,Customer.Phone,Customer.ContactPerson,Customer.CreditLimit,  Customer.ProvisionalBalance,Customer.PriceGroup, Customer.PaymentMethod,Customer.PaymentTerms,Customer.SalesAgent,Location.Name as Location,Channel.Description as Channel ,SubChannel.Description as  SubChannel ,OutletType,Customer.DiscountGroup,Customer.EWT,CASE WHEN Customer.Active ='1' THEN 'Yes' ELSE 'No' END AS Active,customer.DTG as DTG,customer.DTG as DTG1 from Customer left join Barangay   on Customer.Address3 =Barangay.Code left join Country on Country.Code=Customer.Address4  left join NodeTree on NodeTree.SalesmanTerritory=SalesAgent left join channel on Customer.channel=channel.Code left join SubChannel on Customer.subchannel=SubChannel.code left join Location on Location.Code=NodeTree.SalesOfficeID and NodeTree.SalesmanTerritory=SalesAgent left JOIN SalesManGroup SM ON SM.GroupId = Customer.SalesAgent Left Join Crossreference CR on CR.SimplrCode =Customer.CustNo and CR.CrossReferenceType ='CUSTOMER' LEFT join CustGroup cg on cg.Code=Customer.CustGroup left join SalesAgent on Customer.SalesAgent=SalesAgent.Code Where SM.UserId ='ADMIN') as Customerlist Where 1=1   
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:40:13 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ SELECT DISTINCT CustGroup, CustNo,ThirdPartyCode ,CustName,ChineseName,Address,Address3, Address4 ,PostCode ,City,Phone,ContactPerson,CreditLimit,SalesmanName,  ProvisionalBalance,PriceGroup,PaymentTerms,PaymentMethod,SalesAgent,Location,Channel,SubChannel,OutletType,EWT,DiscountGroup,Active,DTG,DTG1  from ( select Distinct cg.Description as CustGroup , Customer.CustNo,CR.ThirdPartyCode ,Customer.CustName,Customer.ChineseName,Customer.[Address],Customer.Address2,BarangayName as Address3,Country.Name      as Address4,Customer.PostCode,customer.City as City,SalesAgent.Name AS SalesmanName,Customer.Phone,Customer.ContactPerson,Customer.CreditLimit,  Customer.ProvisionalBalance,Customer.PriceGroup, Customer.PaymentMethod,Customer.PaymentTerms,Customer.SalesAgent,Location.Name as Location,Channel.Description as Channel ,SubChannel.Description as  SubChannel ,OutletType,Customer.DiscountGroup,Customer.EWT,CASE WHEN Customer.Active ='1' THEN 'Yes' ELSE 'No' END AS Active,customer.DTG as DTG,customer.DTG as DTG1 from Customer left join Barangay   on Customer.Address3 =Barangay.Code left join Country on Country.Code=Customer.Address4  left join NodeTree on NodeTree.SalesmanTerritory=SalesAgent left join channel on Customer.channel=channel.Code left join SubChannel on Customer.subchannel=SubChannel.code left join Location on Location.Code=NodeTree.SalesOfficeID and NodeTree.SalesmanTerritory=SalesAgent left JOIN SalesManGroup SM ON SM.GroupId = Customer.SalesAgent Left Join Crossreference CR on CR.SimplrCode =Customer.CustNo and CR.CrossReferenceType ='CUSTOMER' LEFT join CustGroup cg on cg.Code=Customer.CustGroup left join SalesAgent on Customer.SalesAgent=SalesAgent.Code Where SM.UserId ='ADMIN') as Customerlist Where 1=1    Order by DTG1 DESC,CustNo DESC
+-----------------------------------------------------------
+

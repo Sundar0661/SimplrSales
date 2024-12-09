@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+<body>
+
+    <canvas id="myChart" style="width:100%;max-width:600px;min-width:390px;min-height:250px;"></canvas>
+    <script src="../../CommonModel/VariableAndJsDeclaration.js"></script>
+
+    <script>
+        var arr1 = [], arr2 = [], arr3 = [];
+        $(window).load(function () {
+
+            var parameter = window.location.toString();
+            //scrName = 'Web_DashBoard_CHART_PIEChart';
+            scrName = parameter.split('?')[1].split(' ')[0];
+            scrName = scrName.split('&')[0];
+            var formView = parameter.split('&')[1].replace(/@#/g, '"');
+            FormView = $.parseJSON(formView);
+            agentID = FormView.UserID;
+            //var params = parameter.split('&')[2].split(' ')[0].replace(/@/g, '"');
+            var params = parameter.split('&')[2].replace(/@#/g, '"');
+            Params = $.parseJSON(params);
+            _screenName = scrName;
+            //debugger;
+            ////var parameter = "http://localhost:52063/Charts/Charts/MultiChart/index.html?Web_SalesDashboard_CHART_MultiChartMTD&{@MenuCode@:@Administration@,@UserID@:@sales1@,@URL@:@http://13.67.95.127/KeeSongSimplrSalesService/Photo/@}&{@FormView@:{@MenuCode@:@Administration@,@UserID@:@sales1@,@URL@:@http://13.67.95.127/KeeSongSimplrSalesService/Photo/@,@FilterDate@:@2020-05-05@,@Title@:@@,@LstSales@:@@,@LstSalesCat@:@@,@LstSalesItem@:@@}}"
+            //scrName = "Web_DashBoard_CHART_PIEChart";
+            //var formView = "{@MenuCode@:@Administration@,@UserID@:@sales1@,@URL@:@http://13.67.95.127/KeeSongSimplrSalesService/Photo/@}".replace(/@/g, '"');;
+            //FormView = $.parseJSON(formView);
+            //var params = "{@FormView@:{@MenuCode@:@Administration@,@UserID@:@sales1@,@URL@:@http://13.67.95.127/KeeSongSimplrSalesService/Photo/@,@Title@:@@,@LstCustomerMaster@:{@CustNo@:@160@,@CustName@:@Ministry of Defence@,@Address@:@5 Depot Road, #15-01 Tower B, Defence Technology Towers@,@Address2@:@@,@Address3@:@@,@PaymentTerms@:@COD@,@PostCode@:@@,@City@:@@,@CountryCode@:@@,@Phone@:@@,@ContactPerson@:@@,@Segment@:@@,@Utility_Fee@:@@,@commission_percent@:@@,@FieldName@:@LstCustomerMaster@}}}".replace(/@/g, '"');;
+            //Params = $.parseJSON(params);
+
+
+            //Params = $.parseJSON('{"FormView":{"MenuCode":"Administration","UserID":"sales1","URL":"http://simplrcloud.southeastasia.cloudapp.azure.com/SimplrPokkaLiveSimplrSalesService/Photo/"}}');
+
+            //Web_DashBoard_CHART_PIEChart
+            // alert(scrName);
+            var res1 = [];
+            var res2 = [];
+            var res3 = [];
+            //var scrName = "Web_DashBoard_CHART_PIEChart";
+            var query = getQueryConfigByScreenName(scrName);
+            var chartGetString = setQueryConfig1(scrName);
+            if (query != null && query != undefined && query != '') {
+                query += ' ' + chartGetString['QueryConfig_' + scrName + '_GroupText'];
+                query += ' ' + chartGetString['QueryConfig_' + scrName + '_OrderText'];
+
+                query = formatQueryString(query, "");
+                // alert(query);
+
+                //  debugger;
+                // var query = "Select 'M/C Serviced' as name, Count( distinct custid) as value from Invoice Where Isnull(void, 0) = 0 and Invoice.Invdt  between DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()) , 0) and  GETDATE() UNION Select 'M/C Not Serviced' as name, (Select Count( distinct custno) as CustCount from Customer Where Isnull(Active, 1) = 1) - (Select Count( distinct custid) as InvCount from Invoice Where Isnull(void, 0) = 0 and Invoice.Invdt  between DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()) , 0) and  GETDATE())  as value";
+                //  var query = "Select   Count( distinct custid) as y  ,'M/C Serviced' as name from Invoice Where Isnull(void, 0) = 0 and Invoice.Invdt  between DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()) , 0) and  GETDATE() UNION Select   (Select Count( distinct custno) as CustCount from Customer Where Isnull(Active, 1) = 1) - (Select Count( distinct custid) as InvCount from Invoice Where Isnull(void, 0) = 0 and Invoice.Invdt  between DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()) , 0) and  GETDATE())  as y ,'M/C Not Serviced' as name";
+                execute(query);
+
+                for (var i = 0; i < executeQry.length; i++) {
+                    res1[i] = executeQry[i]["name"];
+                    res2[i] = executeQry[i]["y"];
+                    res3[i] = executeQry[i]["Color"];
+                }
+                //executeNameValueList(query);
+
+                var str1 = '';
+                ////////////////////////////////
+                ////var db = new dbConnection().createDataBaseConnection();
+                //// dbDataRows = execute(query);
+                //dbDataRows = executeQry;
+                ////while (dbDataRows.isValidRow()) {
+                //for (var j = 0; j < dbDataRows.length; j++) {
+                //    if (str1 == '') {
+                //        str1 = '{';
+                //    } else {
+                //        str1 += '##{';
+                //    }
+                //    //str1 +='y:@@'+dbDataRows.fieldByName('value')+'@@, name: ' + dbDataRows.fieldByName('name') +'}';
+                //    str1 += 'y:' + dbDataRows[j].value + ', name: @@' + dbDataRows[j].name + '@@}';
+                //    //dbDataRows.next();
+                //}
+                ////dbDataRows.close();
+                ////db.close();
+
+                //str1 = "'" + str1 + "'";
+                //////////////////////////////////////////////
+                //alert(str1);
+                InitializeNewPieChart(res1,res2,res3);
+            }
+
+        });
+
+
+        function InitializeNewPieChart(res1,res2,res3) {
+            //alert('InitializeNewPieChart');
+            arr1 = res1;
+            arr2 = res2;
+            arr3 = res3;
+            //alert(JSON.stringify(arr1));
+            UpdateChartbyTarget(arr1,arr2,arr3);
+            //dashboard('#dashboard',freqData);
+        }
+
+        function UpdateChartbyTarget(xArr,yArr,cArr) {
+           // const xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+           // const yValues = [55, 49, 44, 24, 15];
+            //const barColors = [
+            //    "#b91d47",
+            //    "#00aba9",
+            //    "#2b5797",
+            //    "#e8c3b9",
+            //    "#1e7145"
+            //];
+
+            new Chart("myChart", {
+                type: "doughnut",
+                data: {
+                    labels: xArr,
+                  
+                    datasets: [{
+                        backgroundColor: cArr,
+                        data: yArr
+                       
+                    }]
+                },
+                options: {
+                    legend: {
+                        display: true,  // Set to false to hide the legend
+                        position: 'bottom',
+                        labels: {
+                            "fontSize": 8,
+                            usePointStyle: true
+                        }
+                    },
+                    hover: { mode: null },
+                    plugins: {
+                        datalabels: {
+                            color: '#ffffff',
+
+                            formatter: function (value, ctx) {
+                                let sum = 0;
+                                let dataArr = ctx.chart.data.datasets[0].data;
+                                dataArr.map(data => {
+                                    sum += data;
+                                });
+                                let percentage = (value * 100 / sum).toFixed(2) + "%";
+                                return percentage;
+                                //return context.chart.data.labels[value];
+                            },
+                            font: {
+                                // weight: 'bold',
+                                size: 11,
+                                family: 'Times New Roman'
+                            }
+
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

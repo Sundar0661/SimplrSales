@@ -1,0 +1,15 @@
+Time: 03-07-2023 11:28:00 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Monthly Pallet Count'
+-----------------------------------------------------------
+
+Time: 03-07-2023 11:28:27 AM
+-----------------------------------------------------------
+Message: ReadRecord : Select CONVERT(VARCHAR(11),ExpiryItemDailyClosing.DTG,106) as TransDate,Count(PalletNo) as Qty  from  Item,ExpiryItemDailyClosing where Qty >0 and BinNo not like '%MR%' AND Item.ItemNo=ExpiryItemDailyClosing.ItemNo and Month(ExpiryItemDailyClosing.DTG) between month('2023-05-30') and month('2023-05-30') and Year(ExpiryItemDailyClosing.DTG) between Year('2023-05-30') and Year('2023-05-30') and DATEPART(dd,ExpiryItemDailyClosing.DTG) between 00 and 01 and Location=case when 'ALL'='ALL' then Location else 'ALL' end group by CONVERT(VARCHAR(11),ExpiryItemDailyClosing.DTG,106) order by TransDate 
+-----------------------------------------------------------
+
+Time: 03-07-2023 11:28:27 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+

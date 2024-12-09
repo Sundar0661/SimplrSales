@@ -1,0 +1,803 @@
+﻿
+* {
+    box-sizing: border-box;
+}
+
+#buttonDivId {
+    margin-top: 5px;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    /*padding: 12px;*/
+    padding: 0px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    height: 30px;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    margin-top: -4px;
+    margin-left: 10px;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+.formContainer {
+    width: 98%;
+     height: auto;
+    /*height: 100%;*/
+    /* padding: 57px; */
+    border: 2px solid #e7e7e7;
+    padding-top: 12px;
+    /*border-radius: 20px;*/
+    border-radius: 5px;
+    /*margin-left: 17px;*/
+    margin-left: 1%;
+    margin-bottom:5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit]; {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+.labeltext {
+    float: left;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.row {
+    line-height: .8;
+    /*text-align: left;*/
+   margin-right: 0px;
+    margin-left: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.col-1 {
+    float: left;
+    width: 1%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-2 {
+    float: left;
+    width: 2%;
+    margin-top: 6px;
+    /*text-align: left;*/
+}
+
+.col-3 {
+    float: left;
+    width: 3%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-4 {
+    float: left;
+    width: 4%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-5 {
+    float: left;
+    width: 5%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-6 {
+    float: left;
+    width: 6%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-7 {
+    float: left;
+    width: 7%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-8 {
+    float: left;
+    width: 8%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-9 {
+    float: left;
+    width: 9%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-10 {
+    float: left;
+    width: 10%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-11 {
+    float: left;
+    width: 11%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-12 {
+    float: left;
+    width: 12%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-13 {
+    float: left;
+    width: 13%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-14 {
+    float: left;
+    width: 14%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-15 {
+    float: left;
+    width: 15%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-16 {
+    float: left;
+    width: 16%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-17 {
+    float: left;
+    width: 17%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-18 {
+    float: left;
+    width: 18%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-19 {
+    float: left;
+    width: 19%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-20 {
+    float: left;
+    width: 20%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-21 {
+    float: left;
+    width: 21%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-22 {
+    float: left;
+    width: 22%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-23 {
+    float: left;
+    width: 23%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+
+.col-24 {
+    float: left;
+    width: 24%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-26 {
+    float: left;
+    width: 26%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-27 {
+    float: left;
+    width: 27%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-28 {
+    float: left;
+    width: 28%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-29 {
+    float: left;
+    width: 29%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-30 {
+    float: left;
+    width: 30%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-31 {
+    float: left;
+    width: 31%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-32 {
+    float: left;
+    width: 32%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-33 {
+    float: left;
+    width: 33%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-34 {
+    float: left;
+    width: 34%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-35 {
+    float: left;
+    width: 35%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-36 {
+    float: left;
+    width: 36%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-37 {
+    float: left;
+    width: 37%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-38 {
+    float: left;
+    width: 38%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-39 {
+    float: left;
+    width: 39%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-40 {
+    float: left;
+    width: 40%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-41 {
+    float: left;
+    width: 41%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-42 {
+    float: left;
+    width: 42%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-43 {
+    float: left;
+    width: 43%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-44 {
+    float: left;
+    width: 44%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-45 {
+    float: left;
+    width: 45%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-46 {
+    float: left;
+    width: 46%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-47 {
+    float: left;
+    width: 47%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-48 {
+    float: left;
+    width: 48%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-49 {
+    float: left;
+    width: 49%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-50 {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-51 {
+    float: left;
+    width: 51%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-52 {
+    float: left;
+    width: 52%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-53 {
+    float: left;
+    width: 53%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-54 {
+    float: left;
+    width: 54%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-55 {
+    float: left;
+    width: 55%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-56 {
+    float: left;
+    width: 56%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-57 {
+    float: left;
+    width: 57%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-58 {
+    float: left;
+    width: 58%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-59 {
+    float: left;
+    width: 59%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-60 {
+    float: left;
+    width: 60%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-61 {
+    float: left;
+    width: 61%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-62 {
+    float: left;
+    width: 62%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-63 {
+    float: left;
+    width: 63%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-64 {
+    float: left;
+    width: 64%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-65 {
+    float: left;
+    width: 65%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-66 {
+    float: left;
+    width: 66%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-67 {
+    float: left;
+    width: 67%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-68 {
+    float: left;
+    width: 68%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-69 {
+    float: left;
+    width: 69%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-70 {
+    float: left;
+    width: 70%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+
+.col-71 {
+    float: left;
+    width: 71%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-72 {
+    float: left;
+    width: 72%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-73 {
+    float: left;
+    width: 73%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-74 {
+    float: left;
+    width: 74%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+/*.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+    text-align: left;
+}*/
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.col-76 {
+    float: left;
+    width: 76%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-77 {
+    float: left;
+    width: 77%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-78 {
+    float: left;
+    width: 78%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-79 {
+    float: left;
+    width: 79%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-80 {
+    float: left;
+    width: 80%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-81 {
+    float: left;
+    width: 81%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-82 {
+    float: left;
+    width: 82%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-83 {
+    float: left;
+    width: 83%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-84 {
+    float: left;
+    width: 84%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-85 {
+    float: left;
+    width: 85%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-86 {
+    float: left;
+    width: 86%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-87 {
+    float: left;
+    width: 87%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-88 {
+    float: left;
+    width: 88%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-89 {
+    float: left;
+    width: 89%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-90 {
+    float: left;
+    width: 90%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-91 {
+    float: left;
+    width: 91%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-92 {
+    float: left;
+    width: 92%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-93 {
+    float: left;
+    width: 93%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-94 {
+    float: left;
+    width: 94%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-95 {
+    float: left;
+    width: 95%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-96 {
+    float: left;
+    width: 96%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-97 {
+    float: left;
+    width: 97%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-98 {
+    float: left;
+    width: 98%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-99 {
+    float: left;
+    width: 99%;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.col-100 {
+    float: left;
+    width: 100%;
+    /*margin-top: 6px;*/
+    text-align: left;
+}

@@ -1,0 +1,80 @@
+Time: 03-12-2024 08:09:59 AM
+-----------------------------------------------------------
+Message: FolderPath (fileLocation):C:\Nisha\WebTool\Dec 2024\03122024\SimplrSales\SimplrSales\ImportFiles\ExportFiles\
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:09:59 AM
+-----------------------------------------------------------
+Message: Step:1 Pass parameter tableNameList & user Id :Seller Daily First and Last Call & ADMIN
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:09:59 AM
+-----------------------------------------------------------
+Message: Step:1 Parameters passed:tableNameList[i]=Seller Daily First and Last Call,_userId=ADMIN,AgentID=,FromDt=01-12-2024 00:00:00,ToDt=03-12-2024 00:00:00
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:18:26 AM
+-----------------------------------------------------------
+Message: Step:2 : ReturnValue =C:\Nisha\WebTool\Dec 2024\03122024\SimplrSales\SimplrSales\ImportFiles\ExportFiles\Seller Daily First and Last Call_ADMIN_20241203081824796.xlsx
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:48:00 AM
+-----------------------------------------------------------
+Message: FolderPath (fileLocation):C:\Nisha\WebTool\Dec 2024\03122024\SimplrSales\SimplrSales\ImportFiles\ExportFiles\
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:48:00 AM
+-----------------------------------------------------------
+Message: Step:1 Pass parameter tableNameList & user Id :Seller Daily First and Last Call & ADMIN
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:48:00 AM
+-----------------------------------------------------------
+Message: Step:1 Parameters passed:tableNameList[i]=Seller Daily First and Last Call,_userId=ADMIN,AgentID=,FromDt=02-12-2024 00:00:00,ToDt=03-12-2024 00:00:00
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:54:17 AM
+-----------------------------------------------------------
+Message: Step:2 : ReturnValue =C:\Nisha\WebTool\Dec 2024\03122024\SimplrSales\SimplrSales\ImportFiles\ExportFiles\Seller Daily First and Last Call_ADMIN_20241203085221007.csv
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:54:58 AM
+-----------------------------------------------------------
+Message: FolderPath (fileLocation):C:\Nisha\WebTool\Dec 2024\03122024\SimplrSales\SimplrSales\ImportFiles\ExportFiles\
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:54:58 AM
+-----------------------------------------------------------
+Message: Step:1 Pass parameter tableNameList & user Id :Seller Daily First and Last Call & ADMIN
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:54:58 AM
+-----------------------------------------------------------
+Message: Step:1 Parameters passed:tableNameList[i]=Seller Daily First and Last Call,_userId=ADMIN,AgentID=,FromDt=02-12-2024 00:00:00,ToDt=03-12-2024 00:00:00
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:59:06 AM
+-----------------------------------------------------------
+Message: Step:2 : ReturnValue =C:\Nisha\WebTool\Dec 2024\03122024\SimplrSales\SimplrSales\ImportFiles\ExportFiles\Seller Daily First and Last Call_ADMIN_20241203085903638.csv
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:36:41 AM
+-----------------------------------------------------------
+Message: FolderPath (fileLocation):C:\Nisha\WebTool\Dec 2024\06122024\SimplrSales\SimplrSales\ImportFiles\ExportFiles\
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:36:41 AM
+-----------------------------------------------------------
+Message: Step:1 Pass parameter tableNameList & user Id :Seller Daily First and Last Call & ADMIN
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:36:41 AM
+-----------------------------------------------------------
+Message: Step:1 Parameters passed:tableNameList[i]=Seller Daily First and Last Call,_userId=ADMIN,AgentID=,FromDt=25-11-2024 00:00:00,ToDt=25-11-2024 00:00:00
+-----------------------------------------------------------
+
+Time: 06-12-2024 07:38:39 AM
+-----------------------------------------------------------
+Message: Step:2 : ReturnValue =C:\Nisha\WebTool\Dec 2024\06122024\SimplrSales\SimplrSales\ImportFiles\ExportFiles\Seller Daily First and Last Call_ADMIN_20241206073739493.csv
+-----------------------------------------------------------
+

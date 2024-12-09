@@ -1,0 +1,118 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+
+<script type="text/javascript">
+    var qry = '@ViewBag.query';
+    var FormView = {};
+    var _UserID = '@Session["UserId"]';
+    FormView.UserID = '@Session["UserId"]';
+    var _screenName = "VehicleAssignmentList";
+    var currentScreenName = _screenName;
+    CurrentScreen_TabScreen_Name = _screenName;
+</script>
+
+
+<div class="formContainer">
+
+    <div style="width: 100%">
+        <div id="div1" style="width: 49.7%; float: left; display: inline-block; margin-top: 5px; border-style: solid; border-color: forestgreen; border-width: 10px 10px 5px 10px;">
+            <div style="background-color: forestgreen; height: 30px;">
+                <a href="#" style="color: white;"><span class="glyphicon glyphicon-print"></span></a>
+                <a href="#" onclick="removeTable(1);" style="margin-left: 670px; color: red;"><span class="glyphicon glyphicon-remove"></span></a>
+            </div>
+            <table id='table1' class="mytable" style="width: 90%; margin-left: 30px;">
+                <tbody class="connectedSortable">
+                    <tr class="table1">
+                        <th>col1</th>
+                        <th>col2</th>
+                        <th>col3</th>
+                        <th>col4</th>
+                    </tr>
+                    <tr class="table1">
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                        <td>d</td>
+                    </tr>
+                    <tr class="table1">
+                        <td>e</td>
+                        <td>f</td>
+                        <td>g</td>
+                        <td>h</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="div2" style="width: 49.7%; float: right; display: inline-block; margin-top: 5px; border-style: solid; border-color: forestgreen; border-width: 10px 10px 5px 10px;">
+            <div style="background-color: forestgreen; height: 30px;">
+
+                <a href="#" style="color: white;"><span class="glyphicon glyphicon-print"></span></a>
+                <a href="#" onclick="removeTable(2);" style="margin-left: 670px; color: red;"><span class="glyphicon glyphicon-remove"></span></a>
+
+            </div>
+            <table id='table2' class="mytable" style="width: 90%; margin-left: 30px;">
+                <tbody class="connectedSortable">
+                    <tr class="table2">
+                        <th>COL1</th>
+                        <th>COL2</th>
+                        <th>COL3</th>
+                        <th>COL4</th>
+                    </tr>
+                    <tr class="table2">
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr class="table2">
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div style="width: 100%">
+        <div id="div3" style="width: 49.7%; display: inline-block; margin-top: 5px; border-style: solid; border-color: forestgreen; border-width: 10px 10px 5px 10px;">
+            <div style="background-color: forestgreen; height: 30px;">
+                <a href="#" style="color: white;" ><span class="glyphicon glyphicon-print"></span></a>
+                <a href="#" onclick="removeTable(3);" style="margin-left: 670px; color: red;"><span class="glyphicon glyphicon-remove"></span></a>
+            </div>
+            <table id='table3' class="mytable" style="width: 90%; margin-left: 30px;">
+                <tbody class="connectedSortable">
+                    <tr class="table3">
+                        <th>COL1</th>
+                        <th>COL2</th>
+                        <th>COL3</th>
+                        <th>COL4</th>
+                    </tr>
+                    <tr class="table3">
+                        <td>11</td>
+                        <td>22</td>
+                        <td>33</td>
+                        <td>44</td>
+                    </tr>
+                    <tr class="table3">
+                        <td>55</td>
+                        <td>66</td>
+                        <td>77</td>
+                        <td>88</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="~/Scripts/Main/VehicleAssignment.js"></script>
+
+

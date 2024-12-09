@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SimplrSalesEdmxModelStoreContainer" CdmEntityContainer="SimplrSalesEdmxEntities">
+    <FunctionImportMapping FunctionImportName="SalesOfficeProc" FunctionName="SimplrSalesEdmxModel.Store.SalesOfficeProc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SimplrSalesEdmxModel.SalesOfficeProc_Result">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ExportQueryConfigProc" FunctionName="SimplrSalesEdmxModel.Store.ExportQueryConfigProc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SimplrSalesEdmxModel.ExportQueryConfigProc_Result">
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="AliasName" ColumnName="AliasName" />
+          <ScalarProperty Name="Query" ColumnName="Query" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="byDocument" ColumnName="byDocument" />
+          <ScalarProperty Name="DocumentFields" ColumnName="DocumentFields" />
+          <ScalarProperty Name="ExportKey" ColumnName="ExportKey" />
+          <ScalarProperty Name="ExportField" ColumnName="ExportField" />
+          <ScalarProperty Name="DocumentQuery" ColumnName="DocumentQuery" />
+          <ScalarProperty Name="IsComplete" ColumnName="IsComplete" />
+          <ScalarProperty Name="Sno" ColumnName="Sno" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Autogenerate" ColumnName="Autogenerate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

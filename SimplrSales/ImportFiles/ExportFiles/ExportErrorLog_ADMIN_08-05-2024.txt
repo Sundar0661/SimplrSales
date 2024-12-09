@@ -1,0 +1,65 @@
+Time: 08-05-2024 11:07:58 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Activity Report'
+-----------------------------------------------------------
+
+Time: 08-05-2024 11:07:58 AM
+-----------------------------------------------------------
+Message: ReadRecord : Exec [Report_Activity] '2024-05-01 00:00:00.000','2024-05-08 23:59:59.000','ALL','ADMIN'
+-----------------------------------------------------------
+
+Time: 08-05-2024 11:07:59 AM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 08-05-2024 11:07:59 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 08-05-2024 11:18:52 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Order Report'
+-----------------------------------------------------------
+
+Time: 08-05-2024 11:19:37 AM
+-----------------------------------------------------------
+Message: ReadRecord : Select Distinct  Format(OH.OrdDt,'dd-MM-yyyy') as Date, R.Name as Region,S.RegionCode as  State, C.City as City,C.AreaCode as Area ,C.TerritoryCode as Territory ,SA.EmployeeType as Role ,SA.Code as UserName ,SA.Name as Name ,C.RouteName as  BeatName, C.DBCode as DBCode,C.CustNo as OutletCode,C.CustName as OutletName,C.Channel as  ChannelType ,C.CustGroup as [Group] ,OI.ItemNo as SkUCode  ,OI.Description as  SKU,I.Category as Category,I.SubCategory as Subcategory,I.Brand as Brand,OI.Price as Price,OI.Qty as Quantity ,OI.SubAmt as Amount ,Sum(OI.Qty) as TotalQuantity,OH.TotalAmt as TotalAmount,OH.OrdNo as OrderNumber,Format(OH.OrdDt,'dd-MM-yyyy') as CreationDate,OH.Remarks as Remarks  from [dbo].Orderhdr OH WITH(NOLOCK)INNER JOIN [dbo].Customer C WITH(NOLOCK) on C.CustNo =  OH.CustIdINNER JOIN [dbo].OrdItem OI WITH(NOLOCK) on  OI.OrdNo  = OH.OrdNo INNER JOIN  [dbo].Item I  WITH(NOLOCK) on I.Itemno =  OI.ItemNo INNER JOIN [dbo].Region R  WITH(NOLOCK) on R.Code = C.Region INNER JOIN [dbo].States S WITH(NOLOCK) on S.RegionCode = R.Code INNER JOIN [dbo].Distributor D WITH(NOLOCK) on D.Branch = R.Code and d.DistributorID=C.dbcodeINNER JOIN  [dbo].SalesmanDistributorMapping SDM WITH(NOLOCK) on SDM.DistributorID=D.DistributorIDINNER join [dbo].SalesAgent SA WITH(NOLOCK) on SA.Code=SDM.CodeINNER join [dbo].SubDistributor SD  WITH(NOLOCK) on SD.DistributorID=D.DistributorIDwhere  Convert(Date,OH.OrdDt) between '2024-05-01 00:00:00.000' and '2024-05-08 23:59:59.000'and D.Branch=Case when 'ALL'='ALL' then  D.Branch else 'ALL' end and D.DistributorID=case when 'ALL'='ALL' then D.DistributorID else 'ALL' endand SD.SubDistributorID=case when 'ALL'='ALL' then SD.SubDistributorID else 'ALL' end and SDM.Code=case when {AgentId}='ALL' then SDM.Code else {AgentId} endgroup by OH.OrdDt,R.Name,S.RegionCode, C.City ,C.AreaCode,C.TerritoryCode,SA.EmployeeType,SA.Code,SA.Name,C.RouteName,C.DBCode,C.CustNo,C.CustName,C.Channel ,C.CustGroup,OI.ItemNo,OI.Description  ,I.Category,I.SubCategory ,I.Brand ,OI.Price,OI.Qty,OI.SubAmt,OH.TotalAmt,OH.OrdNo,OH.Remarks
+-----------------------------------------------------------
+
+Time: 08-05-2024 11:19:37 AM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Incorrect syntax near '}'.
+-----------------------------------------------------------
+
+Time: 08-05-2024 11:19:38 AM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 08-05-2024 11:19:45 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 08-05-2024 11:56:34 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Order Report'
+-----------------------------------------------------------
+
+Time: 08-05-2024 11:56:35 AM
+-----------------------------------------------------------
+Message: ReadRecord : Select Distinct  Format(OH.OrdDt,'dd-MM-yyyy') as Date, R.Name as Region,S.RegionCode as  State, C.City as City,C.AreaCode as Area ,C.TerritoryCode as Territory ,SA.EmployeeType as Role ,SA.Code as UserName ,SA.Name as Name ,C.RouteName as  BeatName, C.DBCode as DBCode,C.CustNo as OutletCode,C.CustName as OutletName,C.Channel as  ChannelType ,C.CustGroup as [Group] ,OI.ItemNo as SkUCode  ,OI.Description as  SKU,I.Category as Category,I.SubCategory as Subcategory,I.Brand as Brand,OI.Price as Price,OI.Qty as Quantity ,OI.SubAmt as Amount ,Sum(OI.Qty) as TotalQuantity,OH.TotalAmt as TotalAmount,OH.OrdNo as OrderNumber,Format(OH.OrdDt,'dd-MM-yyyy') as CreationDate,OH.Remarks as Remarks   from [dbo].Orderhdr OH WITH(NOLOCK) INNER JOIN [dbo].Customer C WITH(NOLOCK) on C.CustNo =  OH.CustId INNER JOIN [dbo].OrdItem OI WITH(NOLOCK) on  OI.OrdNo  = OH.OrdNo  INNER JOIN  [dbo].Item I  WITH(NOLOCK) on I.Itemno =  OI.ItemNo  INNER JOIN [dbo].Region R  WITH(NOLOCK) on R.Code = C.Region  INNER JOIN [dbo].States S WITH(NOLOCK) on S.RegionCode = R.Code  INNER JOIN [dbo].Distributor D WITH(NOLOCK) on D.Branch = R.Code and d.DistributorID=C.dbcode INNER JOIN  [dbo].SalesmanDistributorMapping SDM WITH(NOLOCK) on SDM.DistributorID=D.DistributorID INNER join [dbo].SalesAgent SA WITH(NOLOCK) on SA.Code=SDM.Code INNER join [dbo].SubDistributor SD  WITH(NOLOCK) on SD.DistributorID=D.DistributorID where  Convert(Date,OH.OrdDt) between '2024-05-01 00:00:00.000' and '2024-05-08 23:59:59.000' and D.Branch=Case when 'ALL'='ALL' then  D.Branch else 'ALL' end  and D.DistributorID=case when 'ALL'='ALL' then D.DistributorID else 'ALL' end and SD.SubDistributorID=case when 'ALL'='ALL' then SD.SubDistributorID else 'ALL' end  and SDM.Code=case when 'ALL'='ALL' then SDM.Code else 'ALL' end group by OH.OrdDt,R.Name,S.RegionCode, C.City ,C.AreaCode,C.TerritoryCode,SA.EmployeeType,SA.Code,SA.Name,C.RouteName,C.DBCode,C.CustNo,C.CustName,C.Channel ,C.CustGroup,OI.ItemNo,OI.Description  ,I.Category,I.SubCategory ,I.Brand ,OI.Price,OI.Qty,OI.SubAmt,OH.TotalAmt,OH.OrdNo,OH.Remarks
+-----------------------------------------------------------
+
+Time: 08-05-2024 11:56:36 AM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 08-05-2024 11:56:38 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+

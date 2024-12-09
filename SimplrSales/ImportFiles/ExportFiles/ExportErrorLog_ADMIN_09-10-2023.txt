@@ -1,0 +1,126 @@
+Time: 09-10-2023 08:43:07 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Available Stock Report'
+-----------------------------------------------------------
+
+Time: 09-10-2023 08:47:38 AM
+-----------------------------------------------------------
+Message: ReadRecord : Select EI.ItemNo, I.ItemName as Description, EI.UOM, EI.Location, EI.BinNo, CASE WHEN RH.OrdNo is NULL THEN EI.BinNo + ', ' + EI.PalletNo ELSE EI.BinNo + ', ' + RH.TransNo + ', ' + EI.ItemNo + ', ' + I.ItemName + ', ' + RE.UOM + ', ' + Cast(RE.Qty as Nvarchar) + ', ' + RE.PalletNo END as PalletNo,EI.LotNo, CONVERT(varchar, EI.ExpiryDate, 110) AS ExpiryDate, CONVERT(varchar, EI.ReceivedDate, 110) AS ReceivedDate, EI.Qty, CASE WHEN RE.Qty is NULL THEN 1 ELSE CASE WHEN RE.Qty * UOM.BaseQty = EI.Qty THEN 1 ELSE 0 END END as NumOfPallet, CASE WHEN UOM.BaseQty is Null then EI.Qty ELSE EI.Qty/UOM.BaseQty END as NumOfCarton From ExpiryItem EI INNER JOIN Item I ON I.ItemNo = EI.ItemNo LEFT JOIN ReceivedDetExp RE ON EI.ItemNo = RE.ItemNo and EI.LotNo = RE.LotNo and EI.PalletNo = RE.PalletNo LEFT JOIN ReceivedHdr RH ON RE.OrdNo = RH.OrdNo LEFT JOIN UOM ON RE.UOM = UOM.UOM and RE.ItemNo = UOM.ItemNo Where EI.Qty > 0 and I.Department = {CustID}
+-----------------------------------------------------------
+
+Time: 09-10-2023 08:47:38 AM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Incorrect syntax near '}'.
+-----------------------------------------------------------
+
+Time: 09-10-2023 08:47:38 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 09-10-2023 08:47:38 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 09-10-2023 08:54:52 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Available Stock Report'
+-----------------------------------------------------------
+
+Time: 09-10-2023 08:55:20 AM
+-----------------------------------------------------------
+Message: ReadRecord : Select EI.ItemNo, I.ItemName as Description, EI.UOM, EI.Location, EI.BinNo, CASE WHEN RH.OrdNo is NULL THEN EI.BinNo + ', ' + EI.PalletNo ELSE EI.BinNo + ', ' + RH.TransNo + ', ' + EI.ItemNo + ', ' + I.ItemName + ', ' + RE.UOM + ', ' + Cast(RE.Qty as Nvarchar) + ', ' + RE.PalletNo END as PalletNo,EI.LotNo, CONVERT(varchar, EI.ExpiryDate, 110) AS ExpiryDate, CONVERT(varchar, EI.ReceivedDate, 110) AS ReceivedDate, EI.Qty, CASE WHEN RE.Qty is NULL THEN 1 ELSE CASE WHEN RE.Qty * UOM.BaseQty = EI.Qty THEN 1 ELSE 0 END END as NumOfPallet, CASE WHEN UOM.BaseQty is Null then EI.Qty ELSE EI.Qty/UOM.BaseQty END as NumOfCarton From ExpiryItem EI INNER JOIN Item I ON I.ItemNo = EI.ItemNo LEFT JOIN ReceivedDetExp RE ON EI.ItemNo = RE.ItemNo and EI.LotNo = RE.LotNo and EI.PalletNo = RE.PalletNo LEFT JOIN ReceivedHdr RH ON RE.OrdNo = RH.OrdNo LEFT JOIN UOM ON RE.UOM = UOM.UOM and RE.ItemNo = UOM.ItemNo Where EI.Qty > 0 and I.Department = {CustID}
+-----------------------------------------------------------
+
+Time: 09-10-2023 08:55:20 AM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Incorrect syntax near '}'.
+-----------------------------------------------------------
+
+Time: 09-10-2023 08:55:31 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 09-10-2023 08:55:42 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 09-10-2023 08:56:28 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Available Stock Report'
+-----------------------------------------------------------
+
+Time: 09-10-2023 08:58:00 AM
+-----------------------------------------------------------
+Message: ReadRecord : Select EI.ItemNo, I.ItemName as Description, EI.UOM, EI.Location, EI.BinNo, CASE WHEN RH.OrdNo is NULL THEN EI.BinNo + ', ' + EI.PalletNo ELSE EI.BinNo + ', ' + RH.TransNo + ', ' + EI.ItemNo + ', ' + I.ItemName + ', ' + RE.UOM + ', ' + Cast(RE.Qty as Nvarchar) + ', ' + RE.PalletNo END as PalletNo,EI.LotNo, CONVERT(varchar, EI.ExpiryDate, 110) AS ExpiryDate, CONVERT(varchar, EI.ReceivedDate, 110) AS ReceivedDate, EI.Qty, CASE WHEN RE.Qty is NULL THEN 1 ELSE CASE WHEN RE.Qty * UOM.BaseQty = EI.Qty THEN 1 ELSE 0 END END as NumOfPallet, CASE WHEN UOM.BaseQty is Null then EI.Qty ELSE EI.Qty/UOM.BaseQty END as NumOfCarton From ExpiryItem EI INNER JOIN Item I ON I.ItemNo = EI.ItemNo LEFT JOIN ReceivedDetExp RE ON EI.ItemNo = RE.ItemNo and EI.LotNo = RE.LotNo and EI.PalletNo = RE.PalletNo LEFT JOIN ReceivedHdr RH ON RE.OrdNo = RH.OrdNo LEFT JOIN UOM ON RE.UOM = UOM.UOM and RE.ItemNo = UOM.ItemNo Where EI.Qty > 0 and I.Department = {CustID}
+-----------------------------------------------------------
+
+Time: 09-10-2023 08:58:00 AM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Incorrect syntax near '}'.
+-----------------------------------------------------------
+
+Time: 09-10-2023 08:58:45 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 09-10-2023 08:58:45 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 09-10-2023 08:59:19 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Available Stock Report'
+-----------------------------------------------------------
+
+Time: 09-10-2023 08:59:36 AM
+-----------------------------------------------------------
+Message: ReadRecord : Select EI.ItemNo, I.ItemName as Description, EI.UOM, EI.Location, EI.BinNo, CASE WHEN RH.OrdNo is NULL THEN EI.BinNo + ', ' + EI.PalletNo ELSE EI.BinNo + ', ' + RH.TransNo + ', ' + EI.ItemNo + ', ' + I.ItemName + ', ' + RE.UOM + ', ' + Cast(RE.Qty as Nvarchar) + ', ' + RE.PalletNo END as PalletNo,EI.LotNo, CONVERT(varchar, EI.ExpiryDate, 110) AS ExpiryDate, CONVERT(varchar, EI.ReceivedDate, 110) AS ReceivedDate, EI.Qty, CASE WHEN RE.Qty is NULL THEN 1 ELSE CASE WHEN RE.Qty * UOM.BaseQty = EI.Qty THEN 1 ELSE 0 END END as NumOfPallet, CASE WHEN UOM.BaseQty is Null then EI.Qty ELSE EI.Qty/UOM.BaseQty END as NumOfCarton From ExpiryItem EI INNER JOIN Item I ON I.ItemNo = EI.ItemNo LEFT JOIN ReceivedDetExp RE ON EI.ItemNo = RE.ItemNo and EI.LotNo = RE.LotNo and EI.PalletNo = RE.PalletNo LEFT JOIN ReceivedHdr RH ON RE.OrdNo = RH.OrdNo LEFT JOIN UOM ON RE.UOM = UOM.UOM and RE.ItemNo = UOM.ItemNo Where EI.Qty > 0 and I.Department = {CustID}
+-----------------------------------------------------------
+
+Time: 09-10-2023 08:59:36 AM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Incorrect syntax near '}'.
+-----------------------------------------------------------
+
+Time: 09-10-2023 08:59:38 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 09-10-2023 09:01:09 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 09-10-2023 09:01:36 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Available Stock Report'
+-----------------------------------------------------------
+
+Time: 09-10-2023 09:02:03 AM
+-----------------------------------------------------------
+Message: ReadRecord : Select EI.ItemNo, I.ItemName as Description, EI.UOM, EI.Location, EI.BinNo, CASE WHEN RH.OrdNo is NULL THEN EI.BinNo + ', ' + EI.PalletNo ELSE EI.BinNo + ', ' + RH.TransNo + ', ' + EI.ItemNo + ', ' + I.ItemName + ', ' + RE.UOM + ', ' + Cast(RE.Qty as Nvarchar) + ', ' + RE.PalletNo END as PalletNo,EI.LotNo, CONVERT(varchar, EI.ExpiryDate, 110) AS ExpiryDate, CONVERT(varchar, EI.ReceivedDate, 110) AS ReceivedDate, EI.Qty, CASE WHEN RE.Qty is NULL THEN 1 ELSE CASE WHEN RE.Qty * UOM.BaseQty = EI.Qty THEN 1 ELSE 0 END END as NumOfPallet, CASE WHEN UOM.BaseQty is Null then EI.Qty ELSE EI.Qty/UOM.BaseQty END as NumOfCarton From ExpiryItem EI INNER JOIN Item I ON I.ItemNo = EI.ItemNo LEFT JOIN ReceivedDetExp RE ON EI.ItemNo = RE.ItemNo and EI.LotNo = RE.LotNo and EI.PalletNo = RE.PalletNo LEFT JOIN ReceivedHdr RH ON RE.OrdNo = RH.OrdNo LEFT JOIN UOM ON RE.UOM = UOM.UOM and RE.ItemNo = UOM.ItemNo Where EI.Qty > 0 and I.Department = {CustID}
+-----------------------------------------------------------
+
+Time: 09-10-2023 09:02:03 AM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Incorrect syntax near '}'.
+-----------------------------------------------------------
+
+Time: 09-10-2023 09:02:05 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 09-10-2023 09:02:47 AM
+-----------------------------------------------------------
+Message: AutoExport dttoexcel = Specified argument was out of the range of valid values.
+Parameter name: index
+-----------------------------------------------------------
+

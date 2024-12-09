@@ -1,0 +1,678 @@
+Time: 08-12-2024 09:50:20 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select * from Gridfunctions where screenname =N'MAIN' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:50:20 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Masters' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:50:21 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Customers' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:50:21 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Inventory' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:50:21 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Sales' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:50:21 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Payments' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:50:22 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Data Transfer' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:50:22 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Reports' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:50:23 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Administration' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:50:34 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ 
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:51:05 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ 
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:51:12 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select CustID,CustName,AgentID,AgentName from (select N.CustID,N.CustName,N.AgentID,SA.Name as AgentName from NewCust N inner join SalesAgent SA on SA.Code=N.AgentID Inner Join SalesmanGroup G on G.GroupID=SA.NodeTreeValue Where G.UserID='502494' and N.Active=1  and IsNull(N.IsConfirmed,0)=1  and IsNull(N.HQConfirmed,0)=0) as A Where 1=1   Order by CustID offset  0  rows Fetch next 10 rows only
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:51:12 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select CustID,CustName,AgentID,AgentName from (select N.CustID,N.CustName,N.AgentID,SA.Name as AgentName from NewCust N inner join SalesAgent SA on SA.Code=N.AgentID Inner Join SalesmanGroup G on G.GroupID=SA.NodeTreeValue Where G.UserID='502494' and N.Active=1  and IsNull(N.IsConfirmed,0)=1  and IsNull(N.HQConfirmed,0)=0) as A Where 1=1  
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:51:12 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select CustID,CustName,AgentID,AgentName from (select N.CustID,N.CustName,N.AgentID,SA.Name as AgentName from NewCust N inner join SalesAgent SA on SA.Code=N.AgentID Inner Join SalesmanGroup G on G.GroupID=SA.NodeTreeValue Where G.UserID='502494' and N.Active=1  and IsNull(N.IsConfirmed,0)=1  and IsNull(N.HQConfirmed,0)=0) as A Where 1=1   Order by CustID
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:51:46 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select Top 1 Longitude,Latitude,CASE WHEN IIF(deptcode like '%1%','1','0')=1 then 1 else 0 End as [Day],case when IIF(deptcode like '%2%','1','0')=1 then 1 else 0 End  as Day2 ,case when IIF(deptcode like '%3%','1','0')=1 then 1 else 0 End  as Day3,case when IIF(deptcode like '%4%','1','0')=1 then 1 else 0 end  as Day4,  case when IIF(deptcode like '%5%','1','0')=1 then 1 else 0 End  as Day5,case when IIF(deptcode like '%6%','1','0')=1 then 1 else 0 End  as Day6,CASE WHEN IIF(outlettype like '%Week1%','1','0')=1 then 1 else 0 End as RouteWeek,case when IIF(outlettype like '%Week2%','1','0')=1 then 1 else 0 End as Week2, (Select Description from custgroup where custgroup.code=NewCust.GSTCustGroup) as CustGroup,CustID,    CustName,Case when Address2='' then Address else  Concat(Address,',',Address2) end  as Address,NewCust.MobileNo , NewCust.AgentID+' - '+SA.Name as AgentID1,NewCust.AgentID as AgentID,N.SalesRegion as SalesRegion ,  (Select Distinct ProvinceName from ProvinceMaster   where ProvinceMaster.ProvinceCode=NewCust.Province) as Province,    (select Distinct BarangayName from Barangay where Barangay.Code=NewCust.Barangay) as Barangay,    NewCust.City as City,CustClass,NewCust.Email,NewCust.Phone,NewCust.Contact as ContactPerson,Pin,'http://13.67.95.127/SimplrEBFFSalesService/Photo/'+'/'+Phototransactions.FileName as UserImage, NewCust.Active,BillAdd2,BillAdd3,BillAdd4,NC.Name,NC.Designation,NC.PhoneNo,Channel,SubChannel ,PaymentTerms,PaymentMethod,CSALicenseNo,CSAValidity,SSTRegNo,MSICCode,ECOSS,LicenseNo,LicenseType,FORMAT(CL.StartDate,(Select DateFormatString from system)) as StartDate,FORMAT(CL.EndDate,(Select DateFormatString from system)) as EndDate,ShipName ,ShipAddr ,ShipAddr2 ,ShipAddr3 ,ShipAddr4 ,ShipPost ,ShipCity  ,ProvisionalBalance, ZoneCode,[Bill-toNo],Address2,Address3,Address4,City,Pin as PostCode,state from NewCust  Inner Join SalesAgent SA on NewCust.AgentID=SA.Code inner join nodetree N ON N.SalesManTerritory=NewCust.AgentID left join NewCustContacts NC ON NC.CustNo = NewCust.CustId Left join PhotoTransactions on PhotoTransactions.CustNo= NewCust.CustID Left Join CommodityLicense CL ON CL.CustNo=NewCust.CustId    where  CustID='DOP0000031' Union select Top 1 Longitude,Latitude,CASE WHEN IIF(deptcode like '%1%','1','0')=1 then 1 else 0 End as Day,case when IIF(deptcode like '%2%','1','0')=1 then 1 else 0 End  as Day2 ,case when IIF(deptcode like '%3%','1','0')=1 then 1 else 0 End  as Day3,case when IIF(deptcode like '%4%','1','0')=1 then 1 else 0 end  as Day4,  case when IIF(deptcode like '%5%','1','0')=1 then 1 else 0 End  as Day5,case when IIF(deptcode like '%6%','1','0')=1 then 1 else 0 End  as Day6,CASE WHEN IIF(outlettype like '%Week1%','1','0')=1 then 1 else 0 End as RouteWeek,case when IIF(outlettype like '%Week2%','1','0')=1 then 1 else 0 End as Week2,(Select Description from custgroup where custgroup.code=NewCust.GSTCustGroup) as CustGroup,CustID,    CustName,Case when Address2='' then Address else  Concat(Address,',',Address2) end  as Address,NewCust.MobileNo,NewCust.AgentID+' - '+SA.Name as AgentID1,NewCust.AgentID as AgentID,N.SalesRegion as SalesRegion , (Select Distinct ProvinceName from ProvinceMaster where ProvinceMaster.ProvinceCode=NewCust.Province) as Province,    (select Distinct BarangayName from Barangay where Barangay.Code=NewCust.Barangay) as Barangay,    NewCust.City as City,CustClass,NewCust.Email,NewCust.Phone,NewCust.Contact as ContactPerson,Pin,'http://13.67.95.127/SimplrEBFFSalesService/Photo/'+'/'+Phototransactions.FileName as UserImage,NewCust.Active,BillAdd2,BillAdd3,BillAdd4,NC.Name,NC.Designation,NC.PhoneNo,Channel,SubChannel,PaymentTerms,PaymentMethod,CSALicenseNo,CSAValidity,SSTRegNo,MSICCode,ECOSS,LicenseNo,LicenseType,FORMAT(CL.StartDate,(Select DateFormatString from system)) as StartDate,FORMAT(CL.EndDate,(Select DateFormatString from system)) as EndDate,ShipName ,ShipAddr ,ShipAddr2 ,ShipAddr3 ,ShipAddr4 ,ShipPost ,ShipCity  ,ProvisionalBalance, ZoneCode,[Bill-toNo],Address2,Address3,Address4,City,Pin as PostCode,state from NewCust     Inner Join SalesAgent SA on NewCust.AgentID=SA.Code   Inner Join SalesmanGroup G on G.GroupID=SA.NodeTreeValue inner join nodetree N ON N.SalesManTerritory=NewCust.AgentID left join NewCustContacts NC ON NC.CustNo = NewCust.CustId Left Join CommodityLicense CL ON CL.CustNo=NewCust.CustId Left join PhotoTransactions on PhotoTransactions.CustNo= NewCust.CustID where 'DOP0000031' = ''     and CustID =(Select top 1 CustID from NewCust N inner join SalesAgent SA on SA.Code=N.AgentID   Inner Join   SalesmanGroup G on G.GroupID=SA.NodeTreeValue  Where G.UserID='502494' and N.Active=1 and IsNull(N.HQConfirmed,0)=0 and IsNull(N.IsConfirmed,0)=0   Order By custid)  
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:51:51 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_FORM_TABGROUP :
+ Select 1 as Display,  'General' as Descriptions, 'General' as Value UNION Select  2 as Display,'Communication' as Descriptions, 'Communication' as Value UNION Select  3 as Display,'Invoicing' as Descriptions, 'Invoicing' as Value UNION Select  4 as Display,'Payment' as Descriptions, 'Payment' as Value UNION Select  5 as Display,'Shipping' as Descriptions, 'Shipping' as Value UNION Select 6 as Display,'Contacts' as Descriptions, 'Contacts' as Value UNION Select 7 as Display,'License' as Descriptions, 'License' as Value UNION Select  8 as Display,'Photo' as Descriptions, 'Photo' as Value  
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:51:55 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_FORM_COMBOBOX_Channel :
+ 
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:51:56 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_FORM_COMBOBOX_SubChannel :
+ 
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:51:56 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_FORM_COMBOBOX_State :
+ 
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:52:04 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_FORM_COMBOBOX_PriceGroup :
+ 
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:52:24 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_FORM_COMBOBOX_PaymentTerms :
+ 
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:52:24 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_FORM_COMBOBOX_PaymentMethod :
+ 
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:52:42 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+    
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:52:42 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+   
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:52:42 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+    
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:52:43 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select Code,Designation,Name,PhoneNo from NewCustContacts where CustNo=''   Order by Name
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:52:43 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select Code,Designation,Name,PhoneNo from NewCustContacts where CustNo=''  
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:52:43 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select Code,Designation,Name,PhoneNo from NewCustContacts where CustNo=''   Order by Name
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:52:45 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select CL.ItemNo as AItemNo,I.Description from CommodityLicense CL inner join Item I ON I.ItemNo=CL.ItemNo WHERE ISNULL(CustNo,'')=''   Order by AItemNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:52:45 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select CL.ItemNo as AItemNo,I.Description from CommodityLicense CL inner join Item I ON I.ItemNo=CL.ItemNo WHERE ISNULL(CustNo,'')=''  
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:52:45 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select CL.ItemNo as AItemNo,I.Description from CommodityLicense CL inner join Item I ON I.ItemNo=CL.ItemNo WHERE ISNULL(CustNo,'')=''   Order by AItemNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:52:46 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_General_FORM_COMBOBOX_Channel :
+ select * from (Select Distinct Code as Code,Description as Text from Channel) as A  
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:52:46 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_General_FORM_COMBOBOX_SubChannel :
+ select * from (Select Distinct Code as Code,Description as Text from SubChannel) as B  
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:52:46 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_General_FORM_COMBOBOX_SubChannel :
+ select * from (Select Distinct Code as Code,Description as Text from SubChannel) as B  
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:52:47 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_General_FORM_COMBOBOX_State :
+ select distinct Code as Code,Name as Text from States  Order by Code
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:52:48 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_General_FORM_COMBOBOX_SalesRegion :
+ 
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:52:48 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_Invoicing_FORM_COMBOBOX_PriceGroup :
+ Select Code,Code as Text  from PriceGroup  order by Code asc
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:52:49 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_Payment_FORM_COMBOBOX_PaymentTerms :
+ select * from (select Distinct Code as Code, Description as Text from PayTerms) as A  Order by Code
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:52:50 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_Payment_FORM_COMBOBOX_PaymentMethod :
+ select * from (select Distinct Code as Code, Description as Text from PayMethod) as A  Order by Code
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:53:19 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+    
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:53:19 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+   
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:53:19 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+    
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:53:24 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select Code,Designation,Name,PhoneNo from NewCustContacts where CustNo='DOP0000031'   Order by Name
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:53:24 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select Code,Designation,Name,PhoneNo from NewCustContacts where CustNo='DOP0000031'  
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:53:24 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select Code,Designation,Name,PhoneNo from NewCustContacts where CustNo='DOP0000031'   Order by Name
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:53:28 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select CL.ItemNo as AItemNo,I.Description from CommodityLicense CL inner join Item I ON I.ItemNo=CL.ItemNo WHERE ISNULL(CustNo,'')='DOP0000031'   Order by AItemNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:53:28 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select CL.ItemNo as AItemNo,I.Description from CommodityLicense CL inner join Item I ON I.ItemNo=CL.ItemNo WHERE ISNULL(CustNo,'')='DOP0000031'  
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:53:28 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select CL.ItemNo as AItemNo,I.Description from CommodityLicense CL inner join Item I ON I.ItemNo=CL.ItemNo WHERE ISNULL(CustNo,'')='DOP0000031'   Order by AItemNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:53:55 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_General_AUTOCOMPLETE_City :
+ SELECT Code, Text FROM (select distinct city as Code,city as Text from customer where city is not null and city <>'') customerdet WHERE 1 = 1 AND Text LIKE '%b%'  ORDER BY Code ASC
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:54:21 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_General_AUTOCOMPLETE_CountryCode :
+ SELECT Code, Text FROM (select distinct countrycode as Code,countrycode as Text from customer where countrycode is not null and countrycode <>'') customerdet WHERE 1 = 1 AND Text LIKE '%m%'  ORDER BY Code ASC
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:55:03 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_FORM_OPTION_BillMultiple :
+ select case when 'true' = 'true' then  'AMR Kedai Runcit'  else ''  end as [FormView.ShipName],case when 'true' = 'true'  then  'Penang'  else ''  end as [FormView.ShipAddr] ,case when 'true' = 'true' then  ''  else ''   end as [FormView.ShipAddr2], case when 'true' = 'true' then  ''  else ''  end as [FormView.ShipAddr3] ,  case when 'true' = 'true' then  ''  else ''  end as [FormView.ShipAddr4] ,case when 'true' = 'true'  then  '641030'  else ''  end as [FormView.ShipPost] ,case when 'true' = 'true' then  'b'  else ''   end as [FormView.ShipCity] ,case when 'true' = 'true' then '' else '' end as [FormView.State1],case when 'true' = 'true' then  'm'  else ''   end as [FormView.CountryCode1]  
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:55:07 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_BillMultiple :
+ undefined undefined undefined
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:55:08 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_BillMultiple :
+ undefined undefined undefined
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:57:25 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_FORM_OPTION_BillMultiple :
+ select case when 'false' = 'true' then  'AMR Kedai Runcit'  else ''  end as [FormView.ShipName],case when 'false' = 'true'  then  'Penang'  else ''  end as [FormView.ShipAddr] ,case when 'false' = 'true' then  ''  else ''   end as [FormView.ShipAddr2], case when 'false' = 'true' then  ''  else ''  end as [FormView.ShipAddr3] ,  case when 'false' = 'true' then  ''  else ''  end as [FormView.ShipAddr4] ,case when 'false' = 'true'  then  '641030'  else ''  end as [FormView.ShipPost] ,case when 'false' = 'true' then  'b'  else ''   end as [FormView.ShipCity] ,case when 'false' = 'true' then '' else '' end as [FormView.State1],case when 'false' = 'true' then  'm'  else ''   end as [FormView.CountryCode1]  
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:57:27 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_BillMultiple :
+ undefined undefined undefined
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:57:27 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_BillMultiple :
+ undefined undefined undefined
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:57:28 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_FORM_OPTION_BillMultiple :
+ select case when 'true' = 'true' then  'AMR Kedai Runcit'  else ''  end as [FormView.ShipName],case when 'true' = 'true'  then  'Penang'  else ''  end as [FormView.ShipAddr] ,case when 'true' = 'true' then  ''  else ''   end as [FormView.ShipAddr2], case when 'true' = 'true' then  ''  else ''  end as [FormView.ShipAddr3] ,  case when 'true' = 'true' then  ''  else ''  end as [FormView.ShipAddr4] ,case when 'true' = 'true'  then  '641030'  else ''  end as [FormView.ShipPost] ,case when 'true' = 'true' then  'b'  else ''   end as [FormView.ShipCity] ,case when 'true' = 'true' then '' else '' end as [FormView.State1],case when 'true' = 'true' then  'm'  else ''   end as [FormView.CountryCode1]  
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:57:29 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_BillMultiple :
+ undefined undefined undefined
+-----------------------------------------------------------
+
+Time: 08-12-2024 09:57:29 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_BillMultiple :
+ undefined undefined undefined
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:22:26 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select * from Gridfunctions where screenname =N'MAIN' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:22:26 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Masters' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:22:26 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Customers' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:22:26 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Inventory' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:22:26 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Sales' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:22:27 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Payments' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:22:27 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Data Transfer' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:22:27 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Reports' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:22:27 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Administration' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:22:35 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ 
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:22:47 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ 
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:22:51 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select CustID,CustName,AgentID,AgentName from (select N.CustID,N.CustName,N.AgentID,SA.Name as AgentName from NewCust N inner join SalesAgent SA on SA.Code=N.AgentID Inner Join SalesmanGroup G on G.GroupID=SA.NodeTreeValue Where G.UserID='502494' and N.Active=1  and IsNull(N.IsConfirmed,0)=1  and IsNull(N.HQConfirmed,0)=0) as A Where 1=1   Order by CustID offset  0  rows Fetch next 10 rows only
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:22:51 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select CustID,CustName,AgentID,AgentName from (select N.CustID,N.CustName,N.AgentID,SA.Name as AgentName from NewCust N inner join SalesAgent SA on SA.Code=N.AgentID Inner Join SalesmanGroup G on G.GroupID=SA.NodeTreeValue Where G.UserID='502494' and N.Active=1  and IsNull(N.IsConfirmed,0)=1  and IsNull(N.HQConfirmed,0)=0) as A Where 1=1  
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:22:51 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select CustID,CustName,AgentID,AgentName from (select N.CustID,N.CustName,N.AgentID,SA.Name as AgentName from NewCust N inner join SalesAgent SA on SA.Code=N.AgentID Inner Join SalesmanGroup G on G.GroupID=SA.NodeTreeValue Where G.UserID='502494' and N.Active=1  and IsNull(N.IsConfirmed,0)=1  and IsNull(N.HQConfirmed,0)=0) as A Where 1=1   Order by CustID
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:07 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select Top 1 Longitude,Latitude,CASE WHEN IIF(deptcode like '%1%','1','0')=1 then 1 else 0 End as [Day],case when IIF(deptcode like '%2%','1','0')=1 then 1 else 0 End  as Day2 ,case when IIF(deptcode like '%3%','1','0')=1 then 1 else 0 End  as Day3,case when IIF(deptcode like '%4%','1','0')=1 then 1 else 0 end  as Day4,  case when IIF(deptcode like '%5%','1','0')=1 then 1 else 0 End  as Day5,case when IIF(deptcode like '%6%','1','0')=1 then 1 else 0 End  as Day6,CASE WHEN IIF(outlettype like '%Week1%','1','0')=1 then 1 else 0 End as RouteWeek,case when IIF(outlettype like '%Week2%','1','0')=1 then 1 else 0 End as Week2, (Select Description from custgroup where custgroup.code=NewCust.GSTCustGroup) as CustGroup,CustID,    CustName,Case when Address2='' then Address else  Concat(Address,',',Address2) end  as Address,NewCust.MobileNo , NewCust.AgentID+' - '+SA.Name as AgentID1,NewCust.AgentID as AgentID,N.SalesRegion as SalesRegion ,  (Select Distinct ProvinceName from ProvinceMaster   where ProvinceMaster.ProvinceCode=NewCust.Province) as Province,    (select Distinct BarangayName from Barangay where Barangay.Code=NewCust.Barangay) as Barangay,    NewCust.City as City,CustClass,NewCust.Email,NewCust.Phone,NewCust.Contact as ContactPerson,Pin,'http://13.67.95.127/SimplrEBFFSalesService/Photo/'+'/'+Phototransactions.FileName as UserImage, NewCust.Active,BillAdd2,BillAdd3,BillAdd4,NC.Name,NC.Designation,NC.PhoneNo,Channel,SubChannel ,PaymentTerms,PaymentMethod,CSALicenseNo,CSAValidity,SSTRegNo,MSICCode,ECOSS,LicenseNo,LicenseType,FORMAT(CL.StartDate,(Select DateFormatString from system)) as StartDate,FORMAT(CL.EndDate,(Select DateFormatString from system)) as EndDate,ShipName ,ShipAddr ,ShipAddr2 ,ShipAddr3 ,ShipAddr4 ,ShipPost ,ShipCity  ,ProvisionalBalance, ZoneCode,[Bill-toNo],Address2,Address3,Address4,City,Pin as PostCode,state from NewCust  Inner Join SalesAgent SA on NewCust.AgentID=SA.Code inner join nodetree N ON N.SalesManTerritory=NewCust.AgentID left join NewCustContacts NC ON NC.CustNo = NewCust.CustId Left join PhotoTransactions on PhotoTransactions.CustNo= NewCust.CustID Left Join CommodityLicense CL ON CL.CustNo=NewCust.CustId    where  CustID='DOP0000031' Union select Top 1 Longitude,Latitude,CASE WHEN IIF(deptcode like '%1%','1','0')=1 then 1 else 0 End as Day,case when IIF(deptcode like '%2%','1','0')=1 then 1 else 0 End  as Day2 ,case when IIF(deptcode like '%3%','1','0')=1 then 1 else 0 End  as Day3,case when IIF(deptcode like '%4%','1','0')=1 then 1 else 0 end  as Day4,  case when IIF(deptcode like '%5%','1','0')=1 then 1 else 0 End  as Day5,case when IIF(deptcode like '%6%','1','0')=1 then 1 else 0 End  as Day6,CASE WHEN IIF(outlettype like '%Week1%','1','0')=1 then 1 else 0 End as RouteWeek,case when IIF(outlettype like '%Week2%','1','0')=1 then 1 else 0 End as Week2,(Select Description from custgroup where custgroup.code=NewCust.GSTCustGroup) as CustGroup,CustID,    CustName,Case when Address2='' then Address else  Concat(Address,',',Address2) end  as Address,NewCust.MobileNo,NewCust.AgentID+' - '+SA.Name as AgentID1,NewCust.AgentID as AgentID,N.SalesRegion as SalesRegion , (Select Distinct ProvinceName from ProvinceMaster where ProvinceMaster.ProvinceCode=NewCust.Province) as Province,    (select Distinct BarangayName from Barangay where Barangay.Code=NewCust.Barangay) as Barangay,    NewCust.City as City,CustClass,NewCust.Email,NewCust.Phone,NewCust.Contact as ContactPerson,Pin,'http://13.67.95.127/SimplrEBFFSalesService/Photo/'+'/'+Phototransactions.FileName as UserImage,NewCust.Active,BillAdd2,BillAdd3,BillAdd4,NC.Name,NC.Designation,NC.PhoneNo,Channel,SubChannel,PaymentTerms,PaymentMethod,CSALicenseNo,CSAValidity,SSTRegNo,MSICCode,ECOSS,LicenseNo,LicenseType,FORMAT(CL.StartDate,(Select DateFormatString from system)) as StartDate,FORMAT(CL.EndDate,(Select DateFormatString from system)) as EndDate,ShipName ,ShipAddr ,ShipAddr2 ,ShipAddr3 ,ShipAddr4 ,ShipPost ,ShipCity  ,ProvisionalBalance, ZoneCode,[Bill-toNo],Address2,Address3,Address4,City,Pin as PostCode,state from NewCust     Inner Join SalesAgent SA on NewCust.AgentID=SA.Code   Inner Join SalesmanGroup G on G.GroupID=SA.NodeTreeValue inner join nodetree N ON N.SalesManTerritory=NewCust.AgentID left join NewCustContacts NC ON NC.CustNo = NewCust.CustId Left Join CommodityLicense CL ON CL.CustNo=NewCust.CustId Left join PhotoTransactions on PhotoTransactions.CustNo= NewCust.CustID where 'DOP0000031' = ''     and CustID =(Select top 1 CustID from NewCust N inner join SalesAgent SA on SA.Code=N.AgentID   Inner Join   SalesmanGroup G on G.GroupID=SA.NodeTreeValue  Where G.UserID='502494' and N.Active=1 and IsNull(N.HQConfirmed,0)=0 and IsNull(N.IsConfirmed,0)=0   Order By custid)  
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:11 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_FORM_TABGROUP :
+ Select 1 as Display,  'General' as Descriptions, 'General' as Value UNION Select  2 as Display,'Communication' as Descriptions, 'Communication' as Value UNION Select  3 as Display,'Invoicing' as Descriptions, 'Invoicing' as Value UNION Select  4 as Display,'Payment' as Descriptions, 'Payment' as Value UNION Select  5 as Display,'Shipping' as Descriptions, 'Shipping' as Value UNION Select 6 as Display,'Contacts' as Descriptions, 'Contacts' as Value UNION Select 7 as Display,'License' as Descriptions, 'License' as Value UNION Select  8 as Display,'Photo' as Descriptions, 'Photo' as Value  
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:13 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_FORM_COMBOBOX_Channel :
+ 
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:13 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_FORM_COMBOBOX_SubChannel :
+ 
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:13 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_FORM_COMBOBOX_State :
+ 
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:14 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_FORM_COMBOBOX_PriceGroup :
+ 
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:14 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_FORM_COMBOBOX_PaymentTerms :
+ 
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:14 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_FORM_COMBOBOX_PaymentMethod :
+ 
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:17 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+    
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:17 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+   
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:17 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+    
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:18 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select Code,Designation,Name,PhoneNo from NewCustContacts where CustNo=''   Order by Name
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:18 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select Code,Designation,Name,PhoneNo from NewCustContacts where CustNo=''  
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:18 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select Code,Designation,Name,PhoneNo from NewCustContacts where CustNo=''   Order by Name
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:19 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select CL.ItemNo as AItemNo,I.Description from CommodityLicense CL inner join Item I ON I.ItemNo=CL.ItemNo WHERE ISNULL(CustNo,'')=''   Order by AItemNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:19 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select CL.ItemNo as AItemNo,I.Description from CommodityLicense CL inner join Item I ON I.ItemNo=CL.ItemNo WHERE ISNULL(CustNo,'')=''  
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:19 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select CL.ItemNo as AItemNo,I.Description from CommodityLicense CL inner join Item I ON I.ItemNo=CL.ItemNo WHERE ISNULL(CustNo,'')=''   Order by AItemNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:20 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_General_FORM_COMBOBOX_Channel :
+ select * from (Select Distinct Code as Code,Description as Text from Channel) as A  
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:20 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_General_FORM_COMBOBOX_SubChannel :
+ select * from (Select Distinct Code as Code,Description as Text from SubChannel) as B  
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:20 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_General_FORM_COMBOBOX_SubChannel :
+ select * from (Select Distinct Code as Code,Description as Text from SubChannel) as B  
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:20 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_General_FORM_COMBOBOX_State :
+ select distinct Code as Code,Name as Text from States  Order by Code
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:21 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_General_FORM_COMBOBOX_SalesRegion :
+ 
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:21 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_Invoicing_FORM_COMBOBOX_PriceGroup :
+ Select Code,Code as Text  from PriceGroup  order by Code asc
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:21 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_Payment_FORM_COMBOBOX_PaymentTerms :
+ select * from (select Distinct Code as Code, Description as Text from PayTerms) as A  Order by Code
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:21 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_Payment_FORM_COMBOBOX_PaymentMethod :
+ select * from (select Distinct Code as Code, Description as Text from PayMethod) as A  Order by Code
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:24 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+    
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:24 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+   
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:24 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+    
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:25 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select Code,Designation,Name,PhoneNo from NewCustContacts where CustNo='DOP0000031'   Order by Name
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:25 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select Code,Designation,Name,PhoneNo from NewCustContacts where CustNo='DOP0000031'  
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:25 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select Code,Designation,Name,PhoneNo from NewCustContacts where CustNo='DOP0000031'   Order by Name
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:27 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select CL.ItemNo as AItemNo,I.Description from CommodityLicense CL inner join Item I ON I.ItemNo=CL.ItemNo WHERE ISNULL(CustNo,'')='DOP0000031'   Order by AItemNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:27 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select CL.ItemNo as AItemNo,I.Description from CommodityLicense CL inner join Item I ON I.ItemNo=CL.ItemNo WHERE ISNULL(CustNo,'')='DOP0000031'  
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:27 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select CL.ItemNo as AItemNo,I.Description from CommodityLicense CL inner join Item I ON I.ItemNo=CL.ItemNo WHERE ISNULL(CustNo,'')='DOP0000031'   Order by AItemNo
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:48 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_General_AUTOCOMPLETE_City :
+ SELECT Code, Text FROM (select distinct city as Code,city as Text from customer where city is not null and city <>'') customerdet WHERE 1 = 1 AND Text LIKE '%b%'  ORDER BY Code ASC
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:49 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_General_AUTOCOMPLETE_City :
+ SELECT Code, Text FROM (select distinct city as Code,city as Text from customer where city is not null and city <>'') customerdet WHERE 1 = 1 AND Text LIKE '%ba%'  ORDER BY Code ASC
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:53 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_General_AUTOCOMPLETE_CountryCode :
+ SELECT Code, Text FROM (select distinct countrycode as Code,countrycode as Text from customer where countrycode is not null and countrycode <>'') customerdet WHERE 1 = 1 AND Text LIKE '%m%'  ORDER BY Code ASC
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:23:57 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_FORM_OPTION_BillMultiple :
+ select case when 'true' = 'true' then  'AMR Kedai Runcit'  else ''  end as [FormView.ShipName],case when 'true' = 'true'  then  'Penang'  else ''  end as [FormView.ShipAddr] ,case when 'true' = 'true' then  ''  else ''   end as [FormView.ShipAddr2], case when 'true' = 'true' then  ''  else ''  end as [FormView.ShipAddr3] ,  case when 'true' = 'true' then  ''  else ''  end as [FormView.ShipAddr4] ,case when 'true' = 'true'  then  '641030'  else ''  end as [FormView.ShipPost] ,case when 'true' = 'true' then  'BALING'  else ''   end as [FormView.ShipCity] ,case when 'true' = 'true' then '' else '' end as [FormView.State1],case when 'true' = 'true' then  'Malasiya'  else ''   end as [FormView.CountryCode1]  
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:24:01 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_BillMultiple :
+ undefined undefined undefined
+-----------------------------------------------------------
+
+Time: 08-12-2024 10:24:01 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > NewCustomerForm_BillMultiple :
+ undefined undefined undefined
+-----------------------------------------------------------
+

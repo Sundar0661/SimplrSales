@@ -1,0 +1,115 @@
+﻿@{
+    ViewBag.Title = "Report";
+    Layout = "~/Views/Shared/_LayoutReport.cshtml";
+    
+}
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+@*<div class="container">*@
+<div class="">
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>Order Summary</strong></h3>
+                </div>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-condensed">
+                            <thead id="ReportHeaderId">
+                            </thead>
+                            <tbody id="ReportBodyId">
+                                <tr>
+                                    <td>BS-200</td>
+                                    <td class="text-center">$10.99</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-right">$10.99</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .invoice-title h2, .invoice-title h3 {
+        display: inline-block;
+    }
+
+    .table > tbody > tr > .no-line {
+        border-top: none;
+    }
+
+    .table > thead > tr > .no-line {
+        border-bottom: none;
+    }
+
+    .table > tbody > tr > .thick-line {
+        border-top: 2px solid;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    table, td, th {
+        border: 1px solid black;
+    }
+</style>
+
+
+<script>
+     
+    var data = '@Session["ListData"]';
+    data = data.replace(/&lt;/g, "<");
+    data = data.replace(/&gt;/g, ">");
+    data = data.replace(/&quot;/g, '"');
+    data = data.replace(/&#39;/g, "'");
+
+    if (data != '')
+        data = $.parseJSON(data);
+    var listConfigFields = '@Session["ListConfigFields"]';
+    listConfigFields = listConfigFields.replace(/&lt;/g, "<");
+    listConfigFields = listConfigFields.replace(/&gt;/g, ">");
+    listConfigFields = listConfigFields.replace(/&quot;/g, '"');
+    listConfigFields = listConfigFields.replace(/&#39;/g, "'");
+
+    if (listConfigFields != '')
+        listConfigFields = $.parseJSON(listConfigFields);
+
+    var FieldNameArrayList = [];
+
+    $("#ReportHeaderId").empty();
+    var html = '';
+    html = '<tr>';
+    for (var i = 0; i < listConfigFields.length; i++) {
+        FieldNameArrayList.push(listConfigFields[i].DataMember);
+        html += '<td><strong>' + listConfigFields[i].NewText + '</strong></td>';
+    }
+    html += '</tr>';
+    $("#ReportHeaderId").append(html);
+
+    
+    $("#ReportBodyId").empty();
+    html = '';
+    for (var i = 0; i < data.length; i++) {
+        html += '<tr >';
+        for (var j = 0; j < FieldNameArrayList.length; j++) {
+            var colName = FieldNameArrayList[j].replace("\t", "");
+            html += '<td> ' + data[i][colName] + ' </td>';
+        }
+        html += '</tr>';
+    }
+    $("#ReportBodyId").append(html);
+
+
+</script>

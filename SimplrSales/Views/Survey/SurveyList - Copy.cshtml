@@ -1,0 +1,115 @@
+﻿@{
+    ViewBag.Title = "Survey List";
+}
+
+@section Scripts{
+
+
+    <script>
+        var url_GetCheckListDetails = '@Url.Content("~/Survey/GetCheckListDetails/")';
+        var url_ExecuteNonQuerys = '@Url.Content("~/Survey/ExecuteNonQuerys/")';
+        var url_GetCheckList = '@Url.Content("~/Survey/GetCheckList/")';
+        var url_Survey = '@Url.Content("~/Survey/Survey/")';
+
+        $(document).ready(function () {
+            $.ajax({
+
+                url: url_GetCheckList,
+                // url: '/Survey/GetCheckList',
+                type: 'GET',
+                dataType: 'json',
+                async: false,
+                data: {},
+                success: function (results) {
+                    if (results != null && results != "" && results != undefined) {
+                        prepare_Data(results);
+                    }
+                },
+                error: function (xhr) {
+                    alert('Failed. To get data please check.');
+                    //alert('Request Status: ' + xhr.status + ' Status Text: ' + xhr.statusText + ' ' + xhr.responseText);
+                }
+            });
+            //Call EmpDetails jsonResult Method
+
+        });
+
+        function prepare_Data(json) {
+
+            var tr;
+            var link;
+            var param_s;
+            //Append each row to html table
+            for (var i = 0; i < json.Table.length; i++) {
+                param_s = encodeURI(url_Survey + '?ChecklistName=' + json.Table[i].ThemeName + '&NoofScreens=' + json.Table[i].FormId + '');
+                tr = $('<tr/>');
+                tr.append("<td><a href=" + param_s + ">" + json.Table[i].ThemeName + "</a></td>");
+                tr.append("<td>" + json.Table[i].FormId + "</td>");
+                tr.append("<td>" + json.Table[i].Device + "</td>");
+                $('table').append(tr);
+            }
+        }
+
+        function callDesignerPage() {
+            window.location = url_Survey;
+        }
+
+        var getQueryString = function (field) {
+            var href = window.location.href;
+            var reg = new RegExp('[?&]' + field + '=([^&#]*)', 'i');
+            var string = reg.exec(href);
+            return string ? string[1] : null;
+        };
+
+    </script>
+
+
+}
+
+<!-- PANEL FOR GETTING INPUT STARTS HERE... ========================-->
+<div id="Input_div" align="center">
+
+    <div class="formContainer">
+        <div class="row">
+            <div class="labeltext" style="width:100%;padding-left:10px;">
+                <label style="height: 30px;font-size:24px;color:;background-color:;font-family:sans-serif;100;text-align:Center;">
+                    SURVEY LIST PAGE
+                </label>
+                <hr />
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div class="labeltext" style="width:10%;padding-left:10px;">
+                <input type="button" onclick="callDesignerPage()" value="New Checklist" style="width:100%; height: 30px;font-size:12px;color:#ffffff;background-color:#428bca;font-family:sans-serif;text-align:Center;line-height:none;" />
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="labeltext" style="width:80%;padding-left:10px;">
+                <!--  -->
+                <div style="height:320px;overflow:scroll;">
+                    <table class="table table-bordered table-condensed table-striped" style="border:3px solid #ccc;">
+                        <thead>
+                            <tr style="border:3px solid #ccc;">
+                                <th>Checklist Name</th>
+                                <th>No of Screens</th>
+                                <th>Device</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+</div>
+<!-- PANEL FOR GETTING INPUT ENDS HERE... ========================-->

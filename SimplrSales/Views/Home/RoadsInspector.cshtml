@@ -1,0 +1,192 @@
+﻿@{
+    ViewBag.Title = "RoadsInspector";
+}
+
+<h2>RoadsInspector</h2>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Roads API Inspector</title>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Roboto, Noto, sans-serif;
+        }
+
+        #map {
+            height: 500px;
+        }
+
+        #interpolate {
+            width: 2em;
+            height: 2em;
+        }
+
+        #coords {
+            resize: vertical;
+            min-height: 75px;
+            max-height: 200px;
+        }
+
+        .block {
+            clear: both;
+            margin: 1.5em auto;
+            text-align: center;
+        }
+
+        #legend {
+            float: center;
+            margin: 5px 15px;
+            font-size: 13px;
+        }
+
+        .button {
+            display: inline-block;
+            position: relative;
+            border: 0;
+            padding: 0 1.7em;
+            min-width: 120px;
+            height: 32px;
+            line-height: 32px;
+            border-radius: 2px;
+            font-size: 0.9em;
+            background-color: #fff;
+            color: #646464;
+        }
+
+            .button.narrow {
+                width: 60px;
+            }
+
+            .button.grey {
+                background-color: #eee;
+            }
+
+            .button.blue {
+                background-color: #4285f4;
+                color: #fff;
+            }
+
+            .button.green {
+                background-color: #0f9d58;
+                color: #fff;
+            }
+
+            .button.raised {
+                transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+                transition-delay: 0.2s;
+                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+            }
+
+                .button.raised:active {
+                    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+                    transition-delay: 0s;
+                }
+
+        .floating {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 5;
+            background-color: rgba(255, 255, 255, 0.75);
+            padding: 1px;
+            border: 1px solid #999;
+            text-align: center;
+            line-height: 18px;
+        }
+
+            .floating.panel {
+                width: 400px;
+            }
+
+        .coords-small {
+            width: 350px;
+        }
+
+        .coords-large {
+            width: 400px;
+        }
+
+        .button-div {
+            padding: 0px 50px;
+            width: 300px;
+            line-height: 40px;
+        }
+
+        #toggle {
+            width: 25px;
+            z-index: 10;
+            cursor: default;
+            font-size: 2em;
+            padding: 1px;
+            color: #999;
+            display: none;
+        }
+    </style>
+
+    <!-- COMMENTED AIzaSyC5XH-ALvr81IiuEDWekI2k91ujPeZL864 -->
+    <!--
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry&key=AIzaSyC5XH-ALvr81IiuEDWekI2k91ujPeZL864">
+    </script>
+    -->
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+     <script src="~/Scripts/Map/RoadsInspector.js"></script>
+
+    <script>
+
+    </script>
+    
+</head>
+<body>
+    <input type="text" id="cnt" />
+    <input type="text" id="cnt1" />
+    <input type="text" id="cnt2" />
+    <div class="floating" id="toggle">&mdash;</div>
+    <div id="panel">
+        <div class="block">
+            <strong>Sample Queries</strong>
+            <div id="button-div">
+                <button id="eg1" class="button raised blue">EXAMPLE 1</button>
+                <button id="eg2" class="button raised blue">EXAMPLE 2</button>
+                <button id="eg3" class="button raised blue">EXAMPLE 3</button>
+                <button id="eg4" class="button raised blue">EXAMPLE 4</button>
+            </div>
+        </div>
+        <form id="controls">
+            <div class="block">
+                <div>
+                    <strong><span id="requestURL">Request URL</span> or Path (Pipe Separated)</strong><br>
+                    <textarea id="coords" class="u-full-width coords-large" type="text" placeholder="-35.123,150.332 | 80.654,22.439" id="exampleEmailInput"></textarea>
+                </div>
+                <div>
+                    <label>Interpolate: </label>
+                    <input for="interpolate" id="interpolate" type="checkbox" checked />
+                </div>
+            </div>
+            <div>
+                <div class="block">
+                    <button id="plot" class="button raised blue">Plot a Course</button>
+                    <button id="distance" class="button raised blue">Toggle Distances</button>
+                </div>
+                <div id="legend">
+                    <img src="https://maps.google.com/mapfiles/ms/icons/green-dot.png" style="height:16px;"> Original
+                    <img src="https://maps.google.com/mapfiles/ms/icons/red-dot.png" /> Snapped
+                    <img src="https://maps.google.com/mapfiles/ms/icons/blue-dot.png" /> Interpolated
+                    <img src="https://maps.google.com/mapfiles/ms/icons/yellow-dot.png" /> Unsnappable
+                </div>
+                <div>
+                    <p id="warningMessage"></p>
+                    <p id="unsnappedPoints"></p>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="map">
+    </div>
+</body>
+</html>

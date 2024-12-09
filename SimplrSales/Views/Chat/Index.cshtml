@@ -1,0 +1,319 @@
+﻿@model IEnumerable<SimplrSales.Models.Chat.ChatModel>
+
+@{
+    ViewBag.Title = "Chat";
+    //Layout = "~/Views/Shared/_LayoutChat.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@*<div class="formContainer" style="height: 550px;overflow-y: scroll;">*@
+<div class="formContainer" style="height: 85vh;overflow-y: scroll;">
+    <!------ Include the above in your HEAD tag ---------->
+    @*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">*@
+    <div class="container app">
+        <div class="row app-one">
+            <div class="col-sm-4 side">
+                <div class="side-one">
+                    <div class="row heading">
+                        <div class="col-sm-3 col-xs-3 heading-avatar">
+                            <div class="heading-avatar-icon">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar6.png">
+                            </div>
+                        </div>
+                        <div class="col-sm-9 col-xs-9" style="margin-top:10px;">
+                            <span style="font-weight:bold;" id="SpanFromUserId"></span>
+                        </div>
+                        @*<div class="col-sm-1 col-xs-1  heading-dot  pull-right">
+                                <i class="fa fa-ellipsis-v fa-2x  pull-right" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-sm-2 col-xs-2 heading-compose  pull-right">
+                                <i class="fa fa-comments fa-2x  pull-right" aria-hidden="true"></i>
+                            </div>*@
+                    </div>
+                    @*<div class="row searchBox">
+                        <div class="col-sm-12 searchBox-inner">
+                            <div class="form-group has-feedback">
+                                <input id="searchText" type="text" class="form-control" name="searchText" placeholder="Search">
+                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                              </div>
+                        </div>
+                    </div>*@
+                    <div class="row sideBar">
+                        @foreach (var item in Model)
+                        {
+                            <div class="row sideBar-body">
+                                <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                                    <div class="avatar-icon">
+                                        <img src="https://bootdey.com/img/Content/avatar/avatar6.png">
+                                    </div>
+                                </div>
+                                <div class="col-sm-9 col-xs-9 sideBar-main">
+                                    <div class="row">
+                                        <div class="col-sm-8 col-xs-8 sideBar-name" onclick="ChatPerson('@item.UserID','@item.Code','@item.Name.Replace("'","")','@item.Department')">
+                                            <span class="name-meta">
+                                                @Html.DisplayFor(modelItem => item.Name)
+                                            </span>
+                                        </div>
+                                        @*<div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                                                <span class="time-meta pull-right">
+                                                    18:18
+                                                </span>
+                                            </div>*@
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-8 conversation">
+                <div class="row heading">
+                    <div class="col-sm-2 col-md-1 col-xs-3 heading-avatar" id="ToUserImageDivId" style="display:none">
+                        <div class="heading-avatar-icon">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar6.png">
+                        </div>
+                    </div>
+                    <div class="col-sm-8 col-xs-7 heading-name">
+
+                        <a class="heading-name-meta">
+                            <span id="SpanToUserName"></span>
+                        </a>
+                        <span class="heading-online">Online</span>
+                    </div>
+
+
+
+
+                    <div class="col-sm-1 col-xs-1  heading-dot pull-right" style="display:none">
+                        <i class="fa fa-ellipsis-v fa-2x  pull-right" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="row message" id="conversation">
+                    @*<div style="margin-top:2.5%;padding: 85px 0" id="SpanSelectCustDiv">*@
+                    <div style="padding: 170px 0" id="SpanSelectCustDiv">
+                        @*<span style="color:red;margin-left:45%;">Please Select Customer</span>*@
+                        <p class="chatHeader">Please Select Customer</p>
+                    </div>
+                    <div class="chat_area" id="ChatArea" style="background-color:white;height:83%;overflow-y:auto;display:none;">
+                    </div>
+
+
+                    <div class="row reply" style="display:none" id="textAreaDiv">
+                        <div class="col-sm-1 col-xs-1 reply-emojis " style="display:none">
+                            <i class="fa fa-smile-o fa-2x "></i>
+                        </div>
+                        <div class="col-sm-10 col-xs-10 reply-main">
+                            <textarea class="form-control" rows="1" id="message"></textarea>
+                            @*<textarea class="form-control emojionearea" rows="1" id="message"></textarea>*@
+                        </div>
+                        @*<div class="col-sm-1 col-xs-1 reply-recording">
+                                <i class="fa fa-microphone fa-2x" aria-hidden="true"></i>
+                            </div>*@
+                        <div class="col-sm-1 col-xs-1 reply-send">
+                            <i class="fa fa-send fa-2x" id="btnsend" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<input type="hidden" id="FromUserName" readonly />
+<input type="hidden" id="FromUserId" readonly />
+<input type="hidden" id="FromUserDepartment" readonly />
+<input type="hidden" id="SalesAgentCode" readonly />
+
+<input type="hidden" id="ToUserId" readonly />
+<input type="hidden" id="ToUserCode" readonly />
+<script src="~/Scripts/Chat/Chat.js"></script>
+
+<script src="https://use.fontawesome.com/45e03a14ce.js"></script>
+
+@section scripts {
+
+    <script src="~/Scripts/Chat/jquery-1.12.4.min.js"></script>
+
+    <link href="~/Content/Chat/emojionearea.min.css" rel="stylesheet" />
+    <script src="~/Scripts/Chat/jquery.min.js"></script>
+
+    <script src="~/Scripts/Chat/emojionearea.js"></script>
+    <script src="~/Scripts/Chat/emojionearea.min.js"></script>
+
+    <script src="~/Scripts/signalR/jquery.signalR-2.1.2.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+
+
+    <script type="text/javascript">
+        var url_GetChatHistory = '@Url.Content("~/Chat/GetChatHistory/")';
+        var url_SaveChatHistory = '@Url.Content("~/Chat/SaveChatHistory/")';
+
+        //$(document).ready(function () {
+        //    $(".emojionearea").emojioneArea({
+
+        //        pickerPosition: "right",
+        //        tonesStyle: "bullet",
+        //        events: {
+        //            keyup: function (editor, event) {
+        //                console.log(editor.html());
+        //                console.log(this.getText());
+        //            }
+        //        }
+        //    });
+        //});
+
+        //$(document).ready(function () {
+        //    $(".emojionearea").emojioneArea({
+
+        //        pickerPosition: "top",
+        //        filtersPosition: "bottom",
+
+        //    });
+
+        //});
+    </script>
+
+
+    <script>
+        $('#SpanFromUserId').text('@ViewBag.UserName');
+        $('#FromUserId').val('@ViewBag.UserId');
+        $('#SalesAgentCode').val('@ViewBag.SalesAgentCode');
+        $('#FromUserName').val('@ViewBag.UserId');
+        $('#FromUserDepartment').val('@ViewBag.Department');
+        //$('#FromUser').val('@ViewBag.UserName');
+
+        if ($('#FromUserDepartment').val() == null || $('#FromUserDepartment').val() == "") {
+            alert("Principal chat is not activated");
+        }
+        $(function () {
+            startChatHub();
+        });
+        function startChatHub() {
+
+            // Start the connection.
+            var chat = $.connection.chatHub;
+
+            chat.client.differentName = function (name) {
+                //
+                // showModalUserNickName();
+                return false;
+                // Prompts for different user name
+                chat.server.notify($('#FromUserName').val(), $.connection.hub.id);
+            };
+
+            // Create a function that the hub can call to broadcast chat messages.
+            chat.client.broadcastMessage = function (name, message, toUser, notificationId) {
+
+
+                //Interpret smileys
+                message = message.replace(":)", "<img src=\"/images/smile.gif\" class=\"smileys\" />");
+                message = message.replace(":D", "<img src=\"/images/laugh.gif\" class=\"smileys\" />");
+                message = message.replace(":o", "<img src=\"/images/cool.gif\" class=\"smileys\" />");
+                message = urlify(message);
+                //message = emojione.shortnameToImage(message);
+                //    message = emojione.unicodeToImage(message);
+                // message = emojione.toImage(message);
+                //if (webBrowserName != 'ie')
+                //    message = emojione.toImage(message);
+                getDateTime();
+                //
+
+                //alert(name + " - " + toUser + " - " + message + " - " + $("#FromUserName").val());
+                //alert($("#FromUserName").val() + " = " + name + " ==== " + $("#ToUserId").val() + " = " + name + " , " + $("#FromUserName").val() + " - " + toUser);
+                //alert(name + " - " + toUser + " - " + message);
+                if ($("#FromUserName").val() == name) {
+                    //$('#ChatArea').append('<div  style="text-align:right;color:green" class="border"><span style="color:green"></span> ' + message + " : " + '<span style="color:black">' + sendDateTime + '</span> </div><br/>');
+                    $('#ChatArea').append('<div class="row message-body"> <div class="col-sm-12 message-main-sender" style="margin-top: 5px;" >   <div class="sender">    <div class="message-text" style="line-height:20px;">  ' + message + '   </div>   <span class="message-time pull-right">   ' + sendDateTime + '   </span>   </div>     </div>      </div>');
+                }
+                else if ($("#ToUserId").val() == name && $("#FromUserName").val() == toUser) {
+                    $('#ChatArea').append('<div class="row message-body"><div class="col-sm-12 message-main-receiver" style="margin-top: 5px;"><div class="receiver"> <div class="message-text" style="line-height:20px;">  ' + message + '</div>  <span class="message-time pull-right">   ' + sendDateTime + '   </span>  </div>  </div> </div>');
+                    //$('#ChatArea').append('<div  style="color:orange" class="border"><span style="color:orange"></span> ' + message + " : " + '<span style="color:black">' + sendDateTime + '</span> </div><br/>');
+                    //UpdateHistory();
+                }
+
+
+
+
+                var elem = document.getElementById('ChatArea');
+                elem.scrollTop = elem.scrollHeight;
+            };
+
+            $.connection.hub.start().done(function () {
+
+                //Calls the notify method of the server
+                chat.server.notify('@ViewBag.UserId', $.connection.hub.id);
+                $('#btnsend').click(function () {
+                    if ($("#ToUserId").val() == "") {
+                        alert("Please select to user!");
+                        return;
+                    }
+                    if ($('#FromUserDepartment').val() == null || $('#FromUserDepartment').val() == "") {
+                        alert("Principal chat is not activated");
+                        return;
+                    }
+
+                    if ($('#message').val() != "") {
+                        chat.server.sendToSpecific($('#FromUserName').val(), $('#message').val(), $("#ToUserId").val(), "");//command
+                        //chat.server.sendToSpecific($('#FromUserName').val(), $('#message').val(), $("#ToUser").val(), $('#ToUserNotificationId').val());//command
+                        $('#sendImage').val($('#sendImage').val() + 1);
+                        SaveChatHistory();
+                    }
+
+                    $('#sendImage,#message').val('')
+                    $('.emojionearea-editor').html('');
+                });
+
+
+            }).fail(function (error) {
+                alert('Invocation of start failed. Error:' + error)
+            });
+        }
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        $(function () {
+            $(".heading-compose").click(function () {
+                $(".side-two").css({
+                    "left": "0"
+                });
+            });
+
+            $(".newMessage-back").click(function () {
+                $(".side-two").css({
+                    "left": "-100%"
+                });
+            });
+        })
+    </script>
+}
+
+
+
+<link href="~/Content/Chat/Chat.css" rel="stylesheet" />
+
+ 

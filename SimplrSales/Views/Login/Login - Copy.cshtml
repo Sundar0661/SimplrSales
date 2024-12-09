@@ -1,0 +1,272 @@
+﻿@{
+    ViewBag.Title = "Login";
+        //Layout = "~/Views/Shared/_LogIn.cshtml";
+}
+
+
+
+<html>
+<head>
+
+    <!-- for-mobile-apps -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- //for-mobile-apps -->
+    <link href="//fonts.googleapis.com/css?family=Abril+Fatface&subset=latin-ext" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' rel='stylesheet' type='text/css'>
+    <!-- font-awesome icons -->
+    <link href="~/Content/login/css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    @*<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <script src="js/jquery-2.1.4.min.js"></script>*@
+    <link href="~/Content/login/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="~/Content/login/js/jquery-2.1.4.min.js"></script>
+    @if (ViewBag.Message != null)
+    {
+        <script>
+
+            $(document).ready(function () {
+
+                alert('@ViewBag.Message');
+
+            });
+
+        </script>
+
+    }
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        form {
+            border: 3px solid #f1f1f1;
+            background-color: aliceblue;
+            opacity: 0.7;
+            filter: alpha(opacity=60);
+        }
+
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 3px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #002684;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+            button:hover {
+                opacity: 0.8;
+            }
+
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #005db7;
+        }
+
+        .imgcontainer {
+            text-align: center;
+            /*Todo*/
+            /*margin: 24px 0 12px 0;*/
+        }
+
+        img.avatar {
+            /*width: 40%;*/
+            width: 25%;
+            border-radius: 50%;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        /*Change styles for span and cancel button on extra small screens*/
+        @@media screen and (max-width: 300px) {
+            span .psw; {
+                display: block;
+                float: none;
+            }
+
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+ 
+@*<body background="~/Content/themes/base/images/Cin-skyline_night.jpg">*@
+    <body>
+    @* <body background="~/Content/themes/base/images/inpg11_frth.jpg">*@
+
+    @using (Html.BeginForm("loginform", "Login", FormMethod.Post))
+    {
+        
+@* <div class="imgcontainer">
+            <img src="~/Content/themes/base/images/Procter_&_Gamble.jpg" alt="Avatar" class="avatar">
+        </div>
+           
+
+        <div class="container">
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit">Login</button>
+            <label>
+                <p>
+                    <input type="checkbox" checked="checked" name="remember">
+                    Remember me
+                </p>
+            </label>
+        </div>*@
+
+
+        <div class="form-box">
+            <div class="form-group">
+                <div class="imgcontainer">
+                    <img src="~/Content/themes/base/images/Procter_&_Gamble.jpg" alt="Avatar" class="avatar">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="text" placeholder="Enter Username" name="uname" required>
+            </div>
+
+            <div class="form-group">
+                <input type="password" placeholder="Enter Password" name="psw" required>
+            </div>
+
+
+            <div style="width: 45%; display: inline-block;">
+                <div class="form-group">
+
+                    @* <input type="submit" class="btn btn-default submit-btn" value="Login" />*@
+                    <input type="submit" style="background-color: #002684; color: white;" value="Login" />
+                </div>
+            </div>
+
+            <div style="width: 45%; float: right">
+
+                <input type="checkbox" checked="checked" name="remember">
+                Remember me
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+           
+    }
+</body>
+</html>
+
+
+
+
+@*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">*@
+
+
+@*<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Frist Html Titutorial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+    <style type="text/css">
+       
+    </style>
+</head>
+
+<body>
+    <div class="form-box">
+        <div class="form-group">
+            <label for="usr">Name:</label>
+            <input type="text" class="form-control" id="usr">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd">
+        </div>
+        <div class="form-group">
+        <input type="submit" class="btn btn-default submit-btn" value="Submit"></input>
+        </div>
+    </div>
+</body>
+
+</html>*@
+
+
+<style>
+    body {
+        /*background-image: url(http://www.goturkeytourism.com/assets/hero/xwaterfalls-turkey.jpg.pagespeed.ic.St4Hoq28sZ.jpg);*/
+        background-image: url("/Content/themes/base/images/Cin-skyline_night.jpg" );
+        background-size: cover;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .form-box {
+        /*top: 50%;*/
+        top: 60%;
+        left: 50%;
+        position: absolute;
+        /* width: 500px;
+       height: 400px;*/
+        /*width: 350px;*/
+         width: 25%;
+        height: 220px;
+        margin-top: -200px;
+        background: rgba(255, 0, 0, 0.5);
+        background-color: aliceblue;
+        /*margin-left: -250px;*/
+        /*margin-left: -205px;*/
+         margin-left: -55px;
+        padding: 20px 30px;
+        line-height: 50px;
+    }
+
+        .form-box .form-group label {
+            color: #fff;
+        }
+
+        .form-box .form-group input {
+            border-radius: 0px;
+            height: 35px;
+            background: none;
+            color: #fff;
+        }
+
+    .submit-btn {
+        border-radius: 0px;
+        background: #fff!important;
+        color: red!important;
+        padding: 10px 25px;
+        font-weight: 600;
+    }
+</style>
+

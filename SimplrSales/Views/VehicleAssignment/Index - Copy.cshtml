@@ -1,0 +1,96 @@
+﻿@*@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}*@
+
+@{
+    ViewBag.Title = "FormView";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+
+<script type="text/javascript">
+    var qry = '@ViewBag.query';
+    var FormView = {};
+    var _UserID = '@Session["UserId"]';
+    FormView.UserID = '@Session["UserId"]';
+    var _screenName = "VehicleAssignmentList";
+    var currentScreenName = _screenName;
+    CurrentScreen_TabScreen_Name = _screenName;
+</script>
+
+
+
+
+
+
+<table id='table1' class="mytable">
+    <tbody class="connectedSortable">
+        <tr class="table1">
+            <th>col1</th>
+            <th>col2</th>
+            <th>col3</th>
+            <th>col4</th>
+        </tr>
+        <tr class="table1">
+            <td>a</td>
+            <td>b</td>
+            <td>c</td>
+            <td>d</td>
+        </tr>
+        <tr class="table1">
+            <td>e</td>
+            <td>f</td>
+            <td>g</td>
+            <td>h</td>
+        </tr>
+    </tbody>
+</table>
+<table id='table2' class="mytable">
+    <tbody class="connectedSortable">
+        <tr class="table2">
+            <th>COL1</th>
+            <th>COL2</th>
+            <th>COL3</th>
+            <th>COL4</th>
+        </tr>
+        <tr class="table2">
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr class="table2">
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+    </tbody>
+</table>
+
+<table id='table3' class="mytable">
+    <tbody class="connectedSortable">
+        <tr class="table3">
+            <th>COL1</th>
+            <th>COL2</th>
+            <th>COL3</th>
+            <th>COL4</th>
+        </tr>
+        <tr class="table3">
+            <td>11</td>
+            <td>22</td>
+            <td>33</td>
+            <td>44</td>
+        </tr>
+        <tr class="table3">
+            <td>55</td>
+            <td>66</td>
+            <td>77</td>
+            <td>88</td>
+        </tr>
+    </tbody>
+</table>
+<script src="~/Scripts/Main/VehicleAssignment.js"></script>
+
+

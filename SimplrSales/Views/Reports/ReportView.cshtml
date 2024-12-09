@@ -1,0 +1,52 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutReport.cshtml";
+}
+
+<script>
+    var screenName = '@ViewBag.ScreenName';
+    var _YearPickerLimit = '@ViewBag.YearPickerLimit';
+    var currentScreenName = screenName;
+    var _isLogin = '@ViewBag.isLogin';
+       $(document).ready(
+           function Print() {
+               var autoprint = '@Session["IsPrint"].ToString()';
+               if (autoprint == 'autoprint') {
+                   try {
+                       // alert("ok");
+                       var pfilename = '@Session["PrintFileUrl"]';
+                      // pfilename = pfilename + '/Reports/Test_InvoiceRep.pdf';
+                       // alert(pfilename);
+                       var h = screen.height;
+                       var w = screen.width;
+                       var opts = 'width=' + w + ',height=' + h + ',toolbar=0,menubar=0,location=1,status=1,scrollbars=1,resizable=1,left=0,top=0';
+
+                       //alert("ok1");
+                       var newWindow = window.open(pfilename, '_blank', opts);
+                       //  alert("ok2");
+                       newWindow.print();
+                       //  alert("ok3");
+                       window.close();
+                       return false;
+                   }
+                   catch (err) {
+                       alert(err);
+                   }
+               }
+           }
+    );
+
+
+</script>
+
+@inherits System.Web.Mvc.WebViewPage
+@using SimplrSales.Models;
+@{
+    ViewBag.Title = "ReportView";
+
+    
+}
+<div class="formContainer">
+   
+    @Html.Partial("ReportViewerWebForm")
+</div>
+

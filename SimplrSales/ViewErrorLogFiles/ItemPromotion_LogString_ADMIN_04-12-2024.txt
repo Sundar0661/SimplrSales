@@ -1,0 +1,120 @@
+Time: 04-12-2024 11:27:39 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select * from Gridfunctions where screenname =N'MAIN' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 04-12-2024 11:27:39 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Masters' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 04-12-2024 11:27:40 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Customers' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 04-12-2024 11:27:40 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Inventory' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 04-12-2024 11:27:40 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Sales' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 04-12-2024 11:27:41 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Payments' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 04-12-2024 11:27:41 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Data Transfer' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 04-12-2024 11:27:41 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Reports' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 04-12-2024 11:27:42 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Administration' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 04-12-2024 11:27:55 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ 
+-----------------------------------------------------------
+
+Time: 04-12-2024 11:28:10 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ 
+-----------------------------------------------------------
+
+Time: 04-12-2024 11:28:12 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select SalesPersonCode,SalesmanName,CreditNoteNo,CreditDate,CreditDate1,CustNo,CustName,GoodsReturnNo,SubTotal,Discount,GST,EWTAmt,TotalAmt,Remarks from   ( Select CreditNote.CreditNoteNo,Format(CreditNote.CreditDate,(Select DateFormatString From System)) as CreditDate,CreditDate as CreditDate1,CreditNote.CustNo,Customer.CustName,  CreditNote.GoodsReturnNo,round(CreditNote.SubTotal,2) as SubTotal,round(CreditNote.Discount,2) as Discount,round(CreditNote.GST,2) as GST,round(CreditNote.EWTAmt,2) as EWTAmt,round(CreditNote.TotalAmt,2) as TotalAmt,Customer.SalesAgent as SalesPersonCode,CreditNote.Remarks,S.Name as SalesmanName  from CreditNote  inner join Customer on Customer.custno =creditnote.custno 
+inner join Salesagent S on S.Code=Customer.SalesAgent
+where Customer.SalesAgent in  (select groupid from salesmangroup where userid='ADMIN') and ISNULL(void,0)=0  ) as Creditnotelist Where 1=1   Order by CreditDate1 DESC,CreditNoteNo DESC offset  0  rows Fetch next 10 rows only
+-----------------------------------------------------------
+
+Time: 04-12-2024 11:28:12 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select SalesPersonCode,SalesmanName,CreditNoteNo,CreditDate,CreditDate1,CustNo,CustName,GoodsReturnNo,SubTotal,Discount,GST,EWTAmt,TotalAmt,Remarks from   ( Select CreditNote.CreditNoteNo,Format(CreditNote.CreditDate,(Select DateFormatString From System)) as CreditDate,CreditDate as CreditDate1,CreditNote.CustNo,Customer.CustName,  CreditNote.GoodsReturnNo,round(CreditNote.SubTotal,2) as SubTotal,round(CreditNote.Discount,2) as Discount,round(CreditNote.GST,2) as GST,round(CreditNote.EWTAmt,2) as EWTAmt,round(CreditNote.TotalAmt,2) as TotalAmt,Customer.SalesAgent as SalesPersonCode,CreditNote.Remarks,S.Name as SalesmanName  from CreditNote  inner join Customer on Customer.custno =creditnote.custno 
+inner join Salesagent S on S.Code=Customer.SalesAgent
+where Customer.SalesAgent in  (select groupid from salesmangroup where userid='ADMIN') and ISNULL(void,0)=0  ) as Creditnotelist Where 1=1  
+-----------------------------------------------------------
+
+Time: 04-12-2024 11:28:12 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select SalesPersonCode,SalesmanName,CreditNoteNo,CreditDate,CreditDate1,CustNo,CustName,GoodsReturnNo,SubTotal,Discount,GST,EWTAmt,TotalAmt,Remarks from   ( Select CreditNote.CreditNoteNo,Format(CreditNote.CreditDate,(Select DateFormatString From System)) as CreditDate,CreditDate as CreditDate1,CreditNote.CustNo,Customer.CustName,  CreditNote.GoodsReturnNo,round(CreditNote.SubTotal,2) as SubTotal,round(CreditNote.Discount,2) as Discount,round(CreditNote.GST,2) as GST,round(CreditNote.EWTAmt,2) as EWTAmt,round(CreditNote.TotalAmt,2) as TotalAmt,Customer.SalesAgent as SalesPersonCode,CreditNote.Remarks,S.Name as SalesmanName  from CreditNote  inner join Customer on Customer.custno =creditnote.custno 
+inner join Salesagent S on S.Code=Customer.SalesAgent
+where Customer.SalesAgent in  (select groupid from salesmangroup where userid='ADMIN') and ISNULL(void,0)=0  ) as Creditnotelist Where 1=1   Order by CreditDate1 DESC,CreditNoteNo DESC
+-----------------------------------------------------------
+
+Time: 04-12-2024 11:28:22 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select '' asCustName,'' as Address,'' as SalesAgent,Format('2024-12-04',(Select DateFormatString From System)) as CreditDate ,0 as SubTotal,0 as Discount,0 as GST,0 as EWTAmt,0 as TotalAmt ,* from CreditNote inner join customer c on c.CustNo =  CreditNote.CustNo left join barangay b on c.Address3 = b.code left join country cn on c.Address4 = cn.code left join barangay br on c.City = br.code where CreditNoteNo =''    
+-----------------------------------------------------------
+
+Time: 04-12-2024 11:28:24 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+    
+-----------------------------------------------------------
+
+Time: 04-12-2024 11:28:24 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+   
+-----------------------------------------------------------
+
+Time: 04-12-2024 11:28:24 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+    
+-----------------------------------------------------------
+
+Time: 04-12-2024 11:28:25 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > CreditNoteNewForm :
+ select Code,Description as Text from Reason Where ReasonType ='RTN' and '' <> ''  Order By Code
+-----------------------------------------------------------
+

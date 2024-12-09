@@ -1,0 +1,46 @@
+Time: 27-10-2023 07:42:22 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName=''
+-----------------------------------------------------------
+
+Time: 27-10-2023 07:42:29 AM
+-----------------------------------------------------------
+Message: ReadRecord : 
+-----------------------------------------------------------
+
+Time: 27-10-2023 07:42:29 AM
+-----------------------------------------------------------
+Message: ReadRecord Exception : ExecuteReader: CommandText property has not been initialized
+-----------------------------------------------------------
+
+Time: 27-10-2023 07:42:31 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 27-10-2023 07:42:57 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 27-10-2023 07:47:39 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Customer'
+-----------------------------------------------------------
+
+Time: 27-10-2023 07:47:47 AM
+-----------------------------------------------------------
+Message: ReadRecord : select CustNo as [Customer No],CustName as [Customer Name],Address as [Address 1],Address2 as [Address 2],Address3 as [Address 3],Address4 as [Address 4],PostCode as [Postal Code],City,CountryCode as[Country Code],Phone,ContactPerson as[Contact Person], Channel,SubChannel as[Sub Channel],  PriceGroup as [Price Group],PaymentTerms as [Payment Terms],SalesAgent as [SalesMan Code],DBCode,DBName,Region as [RegionCode],AreaCode as [RegionName], case when Active=1 then 'ACTIVE' else 'INACTIVE' end as [Active],Longitude,Latitude,Discount,LandMark,OutletStatus from Customer where DistributorID=case when 'ALL' in ('','ALL') then DistributorID else 'ALL' end 
+and SalesAgent=case when 'ALL'in ('','ALL') then SalesAgent else 'ALL' end
+-----------------------------------------------------------
+
+Time: 27-10-2023 07:47:47 AM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 27-10-2023 07:47:49 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+

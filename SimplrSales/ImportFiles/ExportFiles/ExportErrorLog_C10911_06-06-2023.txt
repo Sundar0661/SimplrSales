@@ -1,0 +1,95 @@
+Time: 06-06-2023 12:08:51 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Customer'
+-----------------------------------------------------------
+
+Time: 06-06-2023 12:09:30 PM
+-----------------------------------------------------------
+Message: ReadRecord : select CustNo as [Customer No],CustName as [Customer Name],Address as [Address 1],Address2 as [Address 2],Address3 as [Address 3],Address4 as [Address 4],PostCode as [Postal Code],City,CountryCode as[Country Code],Phone,ContactPerson as[Contact Person], Channel,  PriceGroup as [Price Group],PaymentTerms as [Payment Terms],SalesAgent as [SalesMan Code],SearchName as [Search Name], Active,Longitude,Latitude,SubChannel as[Sub Channel],  Discount,LandMark,OutletStatus from Customer where DistributorID=case when 'ALL'='ALL' then DistributorID else 'ALL' end and SalesAgent=case when {SalesAgent}='ALL' then SalesAgent else {SalesAgent} end
+-----------------------------------------------------------
+
+Time: 06-06-2023 12:09:30 PM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Incorrect syntax near '}'.
+-----------------------------------------------------------
+
+Time: 06-06-2023 12:09:30 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 06-06-2023 12:09:30 PM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 06-06-2023 12:19:28 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Customer'
+-----------------------------------------------------------
+
+Time: 06-06-2023 12:20:46 PM
+-----------------------------------------------------------
+Message: ReadRecord : select CustNo as [Customer No],CustName as [Customer Name],Address as [Address 1],Address2 as [Address 2],Address3 as [Address 3],Address4 as [Address 4],PostCode as [Postal Code],City,CountryCode as[Country Code],Phone,ContactPerson as[Contact Person], Channel,  PriceGroup as [Price Group],PaymentTerms as [Payment Terms],SalesAgent as [SalesMan Code],SearchName as [Search Name], Active,Longitude,Latitude,SubChannel as[Sub Channel],  Discount,LandMark,OutletStatus from Customer where DistributorID=case when 'ALL'='ALL' then DistributorID else 'ALL' end and SalesAgent=case when {SalesAgent}='ALL' then SalesAgent else {SalesAgent} end
+-----------------------------------------------------------
+
+Time: 06-06-2023 12:20:47 PM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Incorrect syntax near '}'.
+-----------------------------------------------------------
+
+Time: 06-06-2023 12:20:47 PM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 06-06-2023 12:20:47 PM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 06-06-2023 12:22:08 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Customer'
+-----------------------------------------------------------
+
+Time: 06-06-2023 12:22:08 PM
+-----------------------------------------------------------
+Message: ReadRecord : select CustNo as [Customer No],CustName as [Customer Name],Address as [Address 1],Address2 as [Address 2],Address3 as [Address 3],Address4 as [Address 4],PostCode as [Postal Code],City,CountryCode as[Country Code],Phone,ContactPerson as[Contact Person], Channel,  PriceGroup as [Price Group],PaymentTerms as [Payment Terms],SalesAgent as [SalesMan Code],SearchName as [Search Name], Active,Longitude,Latitude,SubChannel as[Sub Channel],  Discount,LandMark,OutletStatus from Customer where DistributorID=case when 'ALL'='ALL' then DistributorID else 'ALL' end and SalesAgent=case when {SalesAgent}='ALL' then SalesAgent else {SalesAgent} end
+-----------------------------------------------------------
+
+Time: 06-06-2023 12:22:08 PM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Incorrect syntax near '}'.
+-----------------------------------------------------------
+
+Time: 06-06-2023 12:22:08 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 06-06-2023 12:22:08 PM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 06-06-2023 12:35:41 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Customer'
+-----------------------------------------------------------
+
+Time: 06-06-2023 12:35:41 PM
+-----------------------------------------------------------
+Message: ReadRecord : select CustNo as [Customer No],CustName as [Customer Name],Address as [Address 1],Address2 as [Address 2],Address3 as [Address 3],Address4 as [Address 4],PostCode as [Postal Code],City,CountryCode as[Country Code],Phone,ContactPerson as[Contact Person], Channel,  PriceGroup as [Price Group],PaymentTerms as [Payment Terms],SalesAgent as [SalesMan Code],SearchName as [Search Name], Active,Longitude,Latitude,SubChannel as[Sub Channel],  Discount,LandMark,OutletStatus from Customer where DistributorID=case when 'ALL'='ALL' then DistributorID else 'ALL' end and SalesAgent=case when ''='ALL' then SalesAgent else '' end
+-----------------------------------------------------------
+
+Time: 06-06-2023 12:35:42 PM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 06-06-2023 12:35:42 PM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+

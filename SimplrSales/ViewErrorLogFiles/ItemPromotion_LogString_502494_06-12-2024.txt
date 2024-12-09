@@ -1,0 +1,288 @@
+Time: 06-12-2024 03:40:32 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select * from Gridfunctions where screenname =N'MAIN' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:40:32 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Masters' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:40:32 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Customers' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:40:32 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Inventory' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:40:32 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Sales' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:40:33 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Payments' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:40:33 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Data Transfer' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:40:33 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Reports' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:40:33 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Administration' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:40:39 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ 
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:41:09 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ 
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:41:11 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > CustomerList_FORM_COMBOBOX_salesagent :
+ select Code,name as Text from salesagent  order by Name
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:41:12 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ SELECT DISTINCT CustGroup, CustNo,ThirdPartyCode ,CustName,ChineseName,Address,Address3, Address4 ,PostCode ,City,Phone,ContactPerson,CreditLimit,SalesmanName,  ProvisionalBalance,PriceGroup,PaymentTerms,PaymentMethod,SalesAgent,Location,Channel,SubChannel,OutletType,EWT,DiscountGroup,Active,DTG,DTG1  from ( select Distinct cg.Description as CustGroup , Customer.CustNo,CR.ThirdPartyCode ,Customer.CustName,Customer.ChineseName,Customer.[Address],Customer.Address2,BarangayName as Address3,Country.Name      as Address4,Customer.PostCode,customer.City as City,SalesAgent.Name AS SalesmanName,Customer.Phone,Customer.ContactPerson,Customer.CreditLimit,  Customer.ProvisionalBalance,Customer.PriceGroup, Customer.PaymentMethod,Customer.PaymentTerms,Customer.SalesAgent,Location.Name as Location,Channel.Description as Channel ,SubChannel.Description as  SubChannel ,OutletType,Customer.DiscountGroup,Customer.EWT,CASE WHEN Customer.Active ='1' THEN 'Yes' ELSE 'No' END AS Active,customer.DTG as DTG,customer.DTG as DTG1 from Customer left join Barangay   on Customer.Address3 =Barangay.Code left join Country on Country.Code=Customer.Address4  left join NodeTree on NodeTree.SalesmanTerritory=SalesAgent left join channel on Customer.channel=channel.Code left join SubChannel on Customer.subchannel=SubChannel.code left join Location on Location.Code=NodeTree.SalesOfficeID and NodeTree.SalesmanTerritory=SalesAgent left JOIN SalesManGroup SM ON SM.GroupId = Customer.SalesAgent Left Join Crossreference CR on CR.SimplrCode =Customer.CustNo and CR.CrossReferenceType ='CUSTOMER' LEFT join CustGroup cg on cg.Code=Customer.CustGroup left join SalesAgent on Customer.SalesAgent=SalesAgent.Code Where SM.UserId ='502494') as Customerlist Where 1=1    Order by DTG1 DESC,CustNo DESC offset  0  rows Fetch next 10 rows only
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:41:12 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ SELECT DISTINCT CustGroup, CustNo,ThirdPartyCode ,CustName,ChineseName,Address,Address3, Address4 ,PostCode ,City,Phone,ContactPerson,CreditLimit,SalesmanName,  ProvisionalBalance,PriceGroup,PaymentTerms,PaymentMethod,SalesAgent,Location,Channel,SubChannel,OutletType,EWT,DiscountGroup,Active,DTG,DTG1  from ( select Distinct cg.Description as CustGroup , Customer.CustNo,CR.ThirdPartyCode ,Customer.CustName,Customer.ChineseName,Customer.[Address],Customer.Address2,BarangayName as Address3,Country.Name      as Address4,Customer.PostCode,customer.City as City,SalesAgent.Name AS SalesmanName,Customer.Phone,Customer.ContactPerson,Customer.CreditLimit,  Customer.ProvisionalBalance,Customer.PriceGroup, Customer.PaymentMethod,Customer.PaymentTerms,Customer.SalesAgent,Location.Name as Location,Channel.Description as Channel ,SubChannel.Description as  SubChannel ,OutletType,Customer.DiscountGroup,Customer.EWT,CASE WHEN Customer.Active ='1' THEN 'Yes' ELSE 'No' END AS Active,customer.DTG as DTG,customer.DTG as DTG1 from Customer left join Barangay   on Customer.Address3 =Barangay.Code left join Country on Country.Code=Customer.Address4  left join NodeTree on NodeTree.SalesmanTerritory=SalesAgent left join channel on Customer.channel=channel.Code left join SubChannel on Customer.subchannel=SubChannel.code left join Location on Location.Code=NodeTree.SalesOfficeID and NodeTree.SalesmanTerritory=SalesAgent left JOIN SalesManGroup SM ON SM.GroupId = Customer.SalesAgent Left Join Crossreference CR on CR.SimplrCode =Customer.CustNo and CR.CrossReferenceType ='CUSTOMER' LEFT join CustGroup cg on cg.Code=Customer.CustGroup left join SalesAgent on Customer.SalesAgent=SalesAgent.Code Where SM.UserId ='502494') as Customerlist Where 1=1   
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:41:12 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ SELECT DISTINCT CustGroup, CustNo,ThirdPartyCode ,CustName,ChineseName,Address,Address3, Address4 ,PostCode ,City,Phone,ContactPerson,CreditLimit,SalesmanName,  ProvisionalBalance,PriceGroup,PaymentTerms,PaymentMethod,SalesAgent,Location,Channel,SubChannel,OutletType,EWT,DiscountGroup,Active,DTG,DTG1  from ( select Distinct cg.Description as CustGroup , Customer.CustNo,CR.ThirdPartyCode ,Customer.CustName,Customer.ChineseName,Customer.[Address],Customer.Address2,BarangayName as Address3,Country.Name      as Address4,Customer.PostCode,customer.City as City,SalesAgent.Name AS SalesmanName,Customer.Phone,Customer.ContactPerson,Customer.CreditLimit,  Customer.ProvisionalBalance,Customer.PriceGroup, Customer.PaymentMethod,Customer.PaymentTerms,Customer.SalesAgent,Location.Name as Location,Channel.Description as Channel ,SubChannel.Description as  SubChannel ,OutletType,Customer.DiscountGroup,Customer.EWT,CASE WHEN Customer.Active ='1' THEN 'Yes' ELSE 'No' END AS Active,customer.DTG as DTG,customer.DTG as DTG1 from Customer left join Barangay   on Customer.Address3 =Barangay.Code left join Country on Country.Code=Customer.Address4  left join NodeTree on NodeTree.SalesmanTerritory=SalesAgent left join channel on Customer.channel=channel.Code left join SubChannel on Customer.subchannel=SubChannel.code left join Location on Location.Code=NodeTree.SalesOfficeID and NodeTree.SalesmanTerritory=SalesAgent left JOIN SalesManGroup SM ON SM.GroupId = Customer.SalesAgent Left Join Crossreference CR on CR.SimplrCode =Customer.CustNo and CR.CrossReferenceType ='CUSTOMER' LEFT join CustGroup cg on cg.Code=Customer.CustGroup left join SalesAgent on Customer.SalesAgent=SalesAgent.Code Where SM.UserId ='502494') as Customerlist Where 1=1    Order by DTG1 DESC,CustNo DESC
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:39 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select FORMAT(getdate(),(Select DateFormatString from system)) as CSAValidity,'1' as Active,'STD' as PriceGroup  
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:41 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > CustomerNewForm_FORM_TABGROUP :
+ SELECT Display, Descriptions, Value FROM (Select 1 AS Display,  'General' as Descriptions, 'General' as Value, 1 ACC UNION 	Select 2 AS Display,'Communication' as Descriptions, 'Communication' as Value, 1 ACC UNION Select 3 AS Display,'Invoicing' as Descriptions, 'Invoicing' as Value, 1 ACC UNION Select 4 AS Display,'Payment' as Descriptions, 'Payment' as Value, 1 ACC UNION Select 5 AS Display,'Shipping' as Descriptions, 'Shipping' as Value, 1 ACC UNION Select 6 AS Display,'Contacts' as Descriptions, 'Contacts' as Value, 1 ACC UNION Select 7 AS Display,'IsDOB' as Descriptions, 'IsDOB' as Value, CASE WHEN AC.Access = 6 THEN 1 ELSE 0 END ACC FROM dbo.SalesAgent AC WITH(NOLOCK) WHERE UserID='502494' UNION Select  8 as Display,'Photo' as Descriptions, 'Photo' as Value, 1 ACC UNION Select  8 as Display,'License' as Descriptions, 'License' as Value, 1 ACC) A WHERE Acc = 1 AND 1=1  
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:45 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > CustomerNewForm_FORM_COMBOBOX_Channel :
+ 
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:45 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > CustomerNewForm_FORM_COMBOBOX_SubChannel :
+ 
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:45 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > CustomerNewForm_FORM_COMBOBOX_SalesAgent :
+ 
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:46 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > CustomerNewForm_FORM_COMBOBOX_State :
+ 
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:46 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > CustomerNewForm_FORM_COMBOBOX_PaymentTerms :
+ 
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:46 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > CustomerNewForm_FORM_COMBOBOX_PaymentMethod :
+ 
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:46 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > CustomerNewForm_FORM_COMBOBOX_ShipState :
+ select distinct Code as Code,Name as Text from States  Order by Code
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:48 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+    
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:48 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+   
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:48 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+    
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:48 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+    
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:49 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+   
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:49 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+    
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:49 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > CustomerNewForm_General_FORM_COMBOBOX_Channel :
+ select * from (Select Distinct Code as Code,Description as Text from Channel) as A  Order by Code
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:49 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > CustomerNewForm_General_FORM_COMBOBOX_SubChannel :
+ select * from (Select Distinct Code as Code,Description as Text from SubChannel) as B  Order by Code
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:49 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > CustomerNewForm_General_FORM_COMBOBOX_SalesAgent :
+ Select distinct GroupID as Code,SalesManGroup.GroupID +' - '+ SalesAgent.Name as Text from SalesManGroup inner join SalesAgent on SalesManGroup.GroupID=SalesAgent.Code WHERE SalesManGroup.UserID='502494'  Order by Code
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:49 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > CustomerNewForm_Region :
+ select Distinct top 1  DistributorID as [FormView.DistributorID],code as [FormView.SalesRegion] from Nodetree left join Region R ON R.Description=SalesRegion where SalesmanTerritory=''  
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:49 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > CustomerNewForm_General_FORM_COMBOBOX_SalesmanName :
+ select Code,Name from   ( select * from SalesAgent  ) as Customersalesagentnamelist Where 1=1  Order by Code
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:49 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > CustomerNewForm_General_FORM_COMBOBOX_State :
+ select distinct Code as Code,Name as Text from States  Order by Code
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:50 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > CustomerNewForm_General_FORM_COMBOBOX_CustGroup :
+ 
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:50 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > CustomerNewForm_General_FORM_COMBOBOX_GSTType :
+ Select 'Inclusive' as Code,'Inclusive' as Text UNION Select  'Exclusive' as Code,'Exclusive' as Text  Order by Code
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:50 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > CustomerNewForm_Communication_FORM_COMBOBOX_Category :
+ select * from (Select Distinct Code as Code,Description as Text from Category) as C  Order by Code
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:50 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > CustomerNewForm_Payment_FORM_COMBOBOX_PaymentTerms :
+ select * from (select Distinct Code as Code, Description as Text from PayTerms) as A  Order by Code
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:50 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > CustomerNewForm_Payment_FORM_COMBOBOX_PaymentMethod :
+ select * from (select Distinct Code as Code, Description as Text from PayMethod) as A  Order by Code
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:48:50 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > CustomerNewForm_Shipping_FORM_COMBOBOX_ShipState :
+ select distinct Code as Code,Name as Text from States  Order by Code
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:49:13 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+    
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:49:13 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+   
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:49:13 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+    
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:49:14 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+    
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:49:14 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+   
+-----------------------------------------------------------
+
+Time: 06-12-2024 03:49:14 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+    
+-----------------------------------------------------------
+

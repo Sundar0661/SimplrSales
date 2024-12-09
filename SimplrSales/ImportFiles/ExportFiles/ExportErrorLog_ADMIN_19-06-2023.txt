@@ -1,0 +1,28 @@
+Time: 19-06-2023 10:28:59 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Order Items'
+-----------------------------------------------------------
+
+Time: 19-06-2023 10:28:59 AM
+-----------------------------------------------------------
+Message: ReadRecord : select distinct SalesOfficeID from NodeTree where Salesmanterritory in (select groupid from Salesmangroup Where UserID='Order Items')
+-----------------------------------------------------------
+
+Time: 19-06-2023 11:34:25 AM
+-----------------------------------------------------------
+Message: ReadRecord : select [Customer No],[Distributor Customer No],[Customer Name (Trade Name)],[Customer Chinese Name (Registered Name)],[Address],[Address2],[Barangay],[City],[Province],[Barangay Code],[City Code],[Province Code],[Longitude],[Latitude],[Postal Code],[Contact Person],[Channel],[Sub Channel],[Outlet Type],[Parent Account Customer Code],[Parent Account Customer Name],[EWT],[Customer Discount Group],[Customer Payment Term],[Customer Payment Method],[TIN],[Price Group],[Credit Limit],[Region],[Territory],[Distributor],[Location],[Sales Territory],[DM],[ASM],[Supervisor],[Salesman Name (Employee)],[Product Code],[Distributor Product Code],[Product Name],[Category],[Brand],[Pack Conversion],[Case Conversion],[Product Price (Case)],[MDTNO],[Order No],[Order Date],[Delivery Date],[Invoice No],[Invoice Date],[Case Whole],[Pack Breakcase],[Total Pad],[Total Pack],[Gross],[Discount],[Gross Discount],[Vatable Amount],[EWT Amount],[VAT Amount],[Total Amount],[Void],[Void Date],[Customer Ref No],[Remarks] from (select Distinct [Customer No],[Distributor Customer No],[Customer Name (Trade Name)],[Customer Chinese Name (Registered Name)],[Address],[Address2],[Barangay],[City],[Province],[Barangay Code],[City Code],[Province Code],[Longitude],[Latitude],[Postal Code],[Contact Person],[Channel],[Sub Channel],[Outlet Type],[Parent Account Customer Code],[Parent Account Customer Name],[EWT],[Customer Discount Group],[Customer Payment Term],[Customer Payment Method],[TIN],[Price Group],[Credit Limit],[Region],[Territory],[Distributor],[Location],[Sales Territory],[DM],[ASM],[Supervisor],[Salesman Name (Employee)],[Product Code],[Distributor Produt Code] as [Distributor Product Code],[Product Name],[Category],[Brand],[Pack Conversion],[Case Conversion],[Product Price (Case)],[MDTNO],[Order No],[Order Date],[Delivery Date],[Invoice No],Case When ISNULL([Invoice No],'')='' Then '' Else [Invoice Date] end as [Invoice Date],[Case Whole],[Pack Breakcase],[Total Pad],[Total Pack],[Gross],[Discount],[Gross Discount],[Vatable Amount],[EWT Amount],[VAT Amount],[Total Amount],[Void],ISNULL(CONVERT(VARCHAR(23), Case When ISNULL(Void,0)=1 Then [Void Date] Else NULL End,103),'') as [Void Date],[Customer Ref No],[Remarks],[Line No]   
+from ExportOrdItem E inner join  SalesManGroup S on E.NodeTreeValue=S.GroupId Where S.AgentID=case when '172' in ('','ALL') then S.AgentID else '172' end 
+and CONVERT(DATE, E.[Order Date]) between '2023-06-19 00:00:00.000' and '2023-06-19 23:59:59.000') as A order by  A.[Order Date],A.[Customer No]
+
+-----------------------------------------------------------
+
+Time: 19-06-2023 11:34:26 AM
+-----------------------------------------------------------
+Message: strSteps  = done
+-----------------------------------------------------------
+
+Time: 19-06-2023 11:34:26 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+

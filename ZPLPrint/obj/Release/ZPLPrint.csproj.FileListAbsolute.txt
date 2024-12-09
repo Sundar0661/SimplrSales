@@ -1,0 +1,6 @@
+C:\sep\02092024\SimplrSales\ZPLPrint\bin\Release\ZPLPrint.dll
+C:\sep\02092024\SimplrSales\ZPLPrint\bin\Release\ZPLPrint.pdb
+C:\sep\02092024\SimplrSales\ZPLPrint\obj\Release\ZPLPrint.csproj.AssemblyReference.cache
+C:\sep\02092024\SimplrSales\ZPLPrint\obj\Release\ZPLPrint.csproj.CoreCompileInputs.cache
+C:\sep\02092024\SimplrSales\ZPLPrint\obj\Release\ZPLPrint.dll
+C:\sep\02092024\SimplrSales\ZPLPrint\obj\Release\ZPLPrint.pdb

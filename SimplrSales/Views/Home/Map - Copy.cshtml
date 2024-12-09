@@ -1,0 +1,271 @@
+﻿@{
+    ViewBag.Title = "Map";
+}
+
+@*<h2>Map</h2>*@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+</head>
+<body>
+    @*<h3>My Google Maps Demo</h3>*@
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+    <div id="content">
+        Hello world!
+    </div>
+
+    <script src="~/Scripts/aes.js"></script>
+    <script src="~/Scripts/jquery-1.11.1.min.js"></script>
+    <script>
+
+        var url_GetActionConfigData = '@Url.Content("~/ActionConfig/GetActionConfigData/")';
+        var map;
+        var marker;
+        var markers = [];
+        var image1 = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+        var image = 'http://localhost:52063/Images/simplrTruck.png';
+        var popup, Popup;
+
+        //var imageA = {
+        //    url: 'http://localhost:52063/Images/simplrTruck.png',
+        //    scaledSize: new google.maps.Size(50, 50),
+        //};
+
+
+        //var icon1 = {
+        //    //url: "../Images/simplrTruck.png", // url
+        //    url: 'http://localhost:52063/Images/simplrTruck.png',
+        //    scaledSize: new google.maps.Size(50, 50), // scaled size
+        //    origin: new google.maps.Point(0, 0), // origin
+        //    anchor: new google.maps.Point(0, 0) // anchor
+        //};
+
+        // Initialize and add the map
+        function initMap() {
+            // The location of Uluru
+
+            var uluru = { lat: 11.0494, lng: 77.0094 };
+            // The map, centered at Uluru
+            map = new google.maps.Map(
+              document.getElementById('map'), { zoom: 10, center: uluru });
+            // The marker, positioned at Uluru
+            marker = new google.maps.Marker({
+                position: uluru,
+                //icon: "http://localhost:52063/Images/simplrTruck.png",
+                // icon: imageA,
+                map: map
+            });
+            // markers.push(uluru);
+            execute(map);
+
+        }
+
+
+
+
+        /**
+         * Returns the Popup class.
+         *
+         * Unfortunately, the Popup class can only be defined after
+         * google.maps.OverlayView is defined, when the Maps API is loaded.
+         * This function should be called by initMap.
+         */
+        function createPopupClass() {
+
+            function Popup(position, content) {
+                this.position = position;
+
+                content.classList.add('popup-bubble');
+
+                // This zero-height div is positioned at the bottom of the bubble.
+                var bubbleAnchor = document.createElement('div');
+                bubbleAnchor.classList.add('popup-bubble-anchor');
+                bubbleAnchor.appendChild(content);
+
+                // This zero-height div is positioned at the bottom of the tip.
+                this.containerDiv = document.createElement('div');
+                this.containerDiv.classList.add('popup-container');
+                this.containerDiv.appendChild(bubbleAnchor);
+
+                // Optionally stop clicks, etc., from bubbling up to the map.
+                google.maps.OverlayView.preventMapHitsAndGesturesFrom(this.containerDiv);
+            }
+            // ES5 magic to extend google.maps.OverlayView.
+            Popup.prototype = Object.create(google.maps.OverlayView.prototype);
+
+            /** Called when the popup is added to the map. */
+            Popup.prototype.onAdd = function () {
+                this.getPanes().floatPane.appendChild(this.containerDiv);
+            };
+
+            /** Called when the popup is removed from the map. */
+            Popup.prototype.onRemove = function () {
+                if (this.containerDiv.parentElement) {
+                    this.containerDiv.parentElement.removeChild(this.containerDiv);
+                }
+            };
+
+            /** Called each frame when the popup needs to draw itself. */
+            Popup.prototype.draw = function () {
+                var divPosition = this.getProjection().fromLatLngToDivPixel(this.position);
+
+                // Hide the popup when it is far out of view.
+                var display =
+                    Math.abs(divPosition.x) < 4000 && Math.abs(divPosition.y) < 4000 ?
+                    'block' :
+                    'none';
+
+                if (display === 'block') {
+                    this.containerDiv.style.left = divPosition.x + 'px';
+                    this.containerDiv.style.top = divPosition.y + 'px';
+                }
+                if (this.containerDiv.style.display !== display) {
+                    this.containerDiv.style.display = display;
+                }
+            };
+
+            return Popup;
+        }
+
+        function setMapOnAll(map) {
+            marker.setMap(null);
+
+            //for (var i = 0; i < markers.length; i++) {
+            //    markers[i].setMap(map);
+            //}
+        }
+        function clearMarkers() {
+            setMapOnAll(null);
+        }
+        // var map1 = "";
+
+        function initMap2() {
+            var map1 = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: { lat: -33, lng: 151 }
+            });
+
+            var beachMarker = new google.maps.Marker({
+                position: { lat: -33.890, lng: 151.274 },
+                map: map1,
+                icon: image
+            });
+
+            execute(map1);
+        }
+        window.setInterval(function () {
+            execute(map);
+        }, 30000);
+
+        // clearInterval()
+
+
+        function execute(map) {
+            // alert("test");
+            // var qry = "SELECT AgentId,Latitude,Longitude,Position  FROM CustVisit WHERE TransDate IN (SELECT max(TransDate) FROM CustVisit)";
+            //var qry = "SELECT AgentId,Latitude,Longitude,Position   FROM CustVisit WHERE  TransDate in (SELECT max(TransDate) FROM CustVisit Where Format(TransDate,'yyyyMMdd') = Format(GetDate(),'yyyyMMdd'))";
+
+            var qry = "SELECT CustVisit.AgentId, Name, Latitude,Longitude , TransDate  FROM CustVisit  INNER JOIN SalesAgent ON CustVisit.AgentId = SalesAgent.Code  INNER JOIN (Select AgentId, max(TransDate) as MaxTransDate FROM CustVisit Where  Format(TransDate,'yyyyMMdd') = Format(GetDate(),'yyyyMMdd') Group by AgentID ) TCV ON CustVisit.AgentID = TCV.AgentID and CustVisit.TransDate = MaxTransDate Where Longitude <> 0 and Latitude <> 0";
+            var key = CryptoJS.enc.Utf8.parse('simplr8080808080');
+            var iv = CryptoJS.enc.Utf8.parse('simplr8080808080');
+            qry = CryptoJS.AES.encrypt(CryptoJS.enc.Utf8.parse(qry), key, { keySize: 128 / 8, iv: iv, mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 });
+            var params = "{'query':'" + qry + "'}";
+            $.ajax({
+                type: "POST",
+                url: url_GetActionConfigData,
+                data: params,
+                contentType: "application/json;charset=utf-8",
+                // dataType: "json",
+                async: false,
+                success: function (results) {
+                    // debugger;
+                    var executeQry = $.parseJSON(results);
+                    clearMarkers();
+                    var myLatLng = '';
+                    for (var i = 0; i < executeQry.length  ; i++) {
+                        myLatLng = { lat: executeQry[i].Latitude, lng: executeQry[i].Longitude };
+                        marker = new google.maps.Marker({
+                            position: myLatLng,
+                            map: map,
+                            title: executeQry[i].Name,
+                            //icon: icon1,
+                            // icon: image1,
+                            icon: "http://maps.google.com/mapfiles/ms/icons/truck.png",
+                           // label: executeQry[i].Name,
+                            // icon: "http://localhost:52063/Images/simplrTruck.png",
+                            title: "Agent : " + executeQry[i].AgentId + " , Lat : " + executeQry[i].Latitude + " , Lon : " + executeQry[i].Longitude
+                        });
+                       
+                        //Popup = createPopupClass();
+                        //popup = new Popup(
+                        //    new google.maps.LatLng(executeQry[i].Latitude, executeQry[i].Longitude),
+                        //    document.getElementById('content'));
+                        //  //  document.getElementById('content'));
+                        //popup.setMap(map);
+
+                    }
+                    //marker = new google.maps.Marker({
+                    //    position: myLatLng,
+                    //    map: map,
+                    //    //icon: icon1,
+                    //    // icon: image1,
+                    //    icon: "http://maps.google.com/mapfiles/ms/icons/truck.png",
+                    //    // icon: "http://localhost:52063/Images/simplrTruck.png",
+                    //    title: "Agent : " + executeQry[0].AgentId + " , Lat : " + executeQry[0].Latitude + " , Lon : " + executeQry[0].Longitude
+                    //});
+                    // markers.push(myLatLng);
+                    //var beachMarker = new google.maps.Marker({
+                    //    position: { lat: executeQry[0].Latitude, lng: executeQry[0].Longitude },
+                    //    map: map1,
+                    //    icon: image
+                    //});
+
+                    //var uluru = { lat: 11.3410, lng: 77.7172 };
+                    //// The map, centered at Uluru
+                    //var map = new google.maps.Map(
+                    //    document.getElementById('map'), { zoom: 4, center: uluru });
+                    //// The marker, positioned at Uluru
+                    //var marker = new google.maps.Marker({ position: uluru, map: map });
+
+                },
+                error: function (results, q, a) {
+                    alert("test : : " + results);
+                }
+
+            });
+
+        }
+
+
+
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDI9hx4Xgpd5p5p_H_7Uu0vQTCX4nIiyJk&callback=initMap">
+    </script>
+</body>
+</html>

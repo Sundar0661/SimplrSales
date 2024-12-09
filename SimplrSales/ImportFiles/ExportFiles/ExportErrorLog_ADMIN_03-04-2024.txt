@@ -1,0 +1,42 @@
+Time: 03-04-2024 02:42:42 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Attendance Report'
+-----------------------------------------------------------
+
+Time: 03-04-2024 02:44:00 PM
+-----------------------------------------------------------
+Message: ReadRecord : select distinct Region.Name as  Region, States.Name  as [State],Area.Name as Area,Territory.Name as  Territory,Territory.Code as [Territory Code],District.Name as District, District.code as [Disctrict Code], Town.name as City, town.Code as [City Code],SalesAgent.EmployeeType as Role,SalesAgent.Code as [User Name], SalesAgent.name as [Name], case when Attendance.transType= 'StartWork' then 'Present' when Attendance. TransType = 'Leave' then 'Leave'else ''  end  as [Present/Absent],convert(date,Attendance.TransDate) as Date, (case when pjpHdr.PJPPlan='Market work' then PJPHdr.BeatName else Null end ) as [Actual DB Beat], (case when pjpHdr.PJPPlan='Market work' then PJPHdr.StartTown else NULL end ) as  [Actual Town],(case when pjpHdr.PJPPlan='Market work' then PJPHdr.DBName else NULL end ) as [Actual DB Code], (case when pjpHdr.PJPPlan='Market work' then Distributor.DBtype else NULL end ) as [Actual DB Type], PJPHdr.routename as [Route Name], Customer.RouteCode as [Route Code],PJPHdr.starttown as [Start Town Name],town.Code as [Start Town Code],PJPHdr.WorkTown as [Working Town Name],town.code as  [Working Town Code], '' as [Route Name NH],'' as [Route Code NH],nh.StartTownCode as [NH Town Name],nh.NightTownId as [NH Town Code],'' as [Visit Plan], District.Name as [PJP District],District.code as [PJP District Code], PJPHdr.routename as [PJP Route Name],Customer.RouteCode
+as [PJP Route Code], '' as [PJP Route Name NH], '' as [PJP Route Code NH],PJPHdr.starttown as  [PJP Start Town Name], town.Code  as [PJP Start Town Code],PJPHdr.WorkTown as [PJP Working Town Name],Town.code as [PJP Working Town Code],NH.StartTownCode as [PJP NH Town Name], PJPHdr.NightTown as [PJP NH Town Code],PJPHdr.PJPPlan as [PJP Plan],PJPHdr.BeatName as [PJP Beat],PJPhdr.DBName as  [PJP DB Name], Distributor.distributorname as [PJP DB Code],(case when pjpHdr.IsDeviation=1 then PJPHdr.BeatName else '' end ) as [Deviation DB Beat], (case when pjpHdr.IsDeviation=1 then PJPHdr.DBName else '' end) as  [Deviation DB Code],(case when pjpHdr.IsDeviation=1 then PJPHdr.RouteName else '' end )as [Deviation Route Name], (case when pjpHdr.IsDeviation=1 then Customer.RouteCode else '' end ) as [Deviation Route Code], (case when pjpHdr.IsDeviation=1 then PJPHdr.RouteName else '' end ) as [Deviation Route Name NH],(case when pjpHdr.IsDeviation=1 then Customer.RouteCode else '' end ) as [Deviation Route Code NH],(case when pjpHdr.IsDeviation=1 then PJPHdr.StartTown else '' end ) as [Deviation Start Town],(case when pjpHdr.IsDeviation=1 then Town.Code else '' end )  as [Deviation Start Town Code], (case when pjpHdr.IsDeviation=1 then PJPHdr.WorkTown else '' end ) as  [Deviation Working Town], (case when pjpHdr.IsDeviation=1 then Town.code else '' end )as [Deviation Working Town Code],nh.StartTownCode as [Deviation NH Town],nh.NightTownId [Deviation NH Town Code],PJPHdr.status as [Status],PJPHdr.IsDeviation as  [Deviation Status],Attendance.Longitude as [GPS Latitude],Attendance.Longitude as [GPS Longitude], '' as [Mobile Date],pjphdr.dtg as [Creation Date],pjphdr.Agentid as [Modified By],pjphdr.modifydate as [Modified Date] 
+ from Attendance    
+inner join pjpHdr   on pjpHdr.agentId  = Attendance.agentid    
+inner join SalesAgent  on SalesAgent.Code =pjpHdr.Agentid 
+Inner Join dbo.Nodetree WITH(NOLOCK) on    ((SalesAgent.NodeTreeType = 'SALES TERRITORY ' and NodeTree.SalesManTerritory = SalesAgent.NodeTreeValue) OR  (SalesAgent.NodeTreeType = 'DISTRIBUTOR ' and NodeTree.DistributorID  = SalesAgent.NodeTreeValue)OR  (SalesAgent.NodeTreeType = 'SALES SUB REGION ' and NodeTree.SalesSubRegion  = SalesAgent.NodeTreeValue) OR  (SalesAgent.NodeTreeType = 'Area' and NodeTree.Area  = SalesAgent.NodeTreeValue))   
+inner join Distributor  D on D.distributorid =  Nodetree.SalesOfficeID 
+inner join LocationHierarchy LH on LH.City = D.GeoValueCode  
+inner join town on town.code like '%'+pjpHdr.StartTown+'%'   
+inner join District on   District.Code=town.DistrictCode     
+inner join Territory on Territory.Code=District.TerritoryCode   
+inner join Area on Area.Code=Territory.AreaCode    
+inner join States on States.Code=Area.StateCode     
+inner join Region on Region.Code=States.RegionCode   
+inner join customer on customer.RouteCode = PJPHdr.BeatName      
+inner join Distributor on Distributor.DistributorId = pjphdr.Dbname  
+left join NightTowns nh on nh.NightTownId =pjpHdr.NightTown 
+where  Attendance.transdate between '2024-03-01 00:00:00.000' and '2024-04-03 23:59:59.000'
+-----------------------------------------------------------
+
+Time: 03-04-2024 03:44:05 PM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+-----------------------------------------------------------
+
+Time: 03-04-2024 03:44:05 PM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 03-04-2024 03:44:05 PM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+

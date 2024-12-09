@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SimplrSalesEdmxModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="SimplrSalesEdmxEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="SalesOfficeProc" ReturnType="Collection(SimplrSalesEdmxModel.SalesOfficeProc_Result)" />
+    <FunctionImport Name="ExportQueryConfigProc" ReturnType="Collection(SimplrSalesEdmxModel.ExportQueryConfigProc_Result)" />
+  </EntityContainer>
+  <ComplexType Name="SalesOfficeProc_Result">
+    <Property Type="String" Name="Code" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="ExportQueryConfigProc_Result">
+    <Property Type="String" Name="TableName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="AliasName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Query" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="Boolean" Name="byDocument" Nullable="true" />
+    <Property Type="String" Name="DocumentFields" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="ExportKey" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ExportField" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DocumentQuery" Nullable="true" />
+    <Property Type="Boolean" Name="IsComplete" Nullable="true" />
+    <Property Type="Int32" Name="Sno" Nullable="true" />
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Boolean" Name="Autogenerate" Nullable="true" />
+  </ComplexType>
+</Schema>

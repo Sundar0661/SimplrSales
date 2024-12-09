@@ -1,0 +1,227 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<style>
+    .ibox-title {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #ffffff;
+    border-color: #e7eaec;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 2px 0 0;
+    color: inherit;
+    margin-bottom: 0;
+    padding: 15px 15px 7px;
+    min-height: 48px;
+}
+    .ibox-content {
+    color: inherit;
+     padding: 15px 20px 20px 20px; 
+    border-color: #e7eaec;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 0;
+}
+    .ibox {
+    clear: both;
+    margin-bottom: 25px;
+    margin-top: 0;
+    padding: 0;
+</style>*@
+
+<style>
+    .ibox-title {
+    /*-moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;*/
+     /*background-color: #ffffff;*/
+      background-color: #7ac0da5c;
+    
+    border-color: #e7eaec;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 2px 0 0;
+    color: inherit;
+    margin-bottom: 0;
+    padding: 15px 15px 7px;
+    min-height: 48px;
+}
+    .ibox-content {
+    background-color: #f2dede;
+    color: inherit;
+    /*padding: 15px 20px 20px 20px;*/ /*todo*/
+    border-color: #e7eaec;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 0;
+}
+    .ibox {
+    clear: both;
+    margin-bottom: 25px;
+    margin-top: 0;
+    padding: 0;
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+
+@*<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+ <div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+            <div id="chartContainer"></div>
+</div>
+</div>
+</div>
+*@
+
+@*<div class="container">*@
+<div class="">
+
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="ibox float-e-margins" style="background-color: gainsboro">
+                <div class="ibox-title">
+                    <span class="label label-success pull-right">Monthly</span>
+                    <h5>Income</h5>
+                </div>
+                <div class="ibox-content">
+                    <h1 class="no-margins">40 886,200</h1>
+                    <div class="stat-percent font-bold text-success">98% <i class="fa fa-bolt"></i></div>
+                    <small>Total income</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="ibox float-e-margins" style="background-color: gainsboro">
+                <div class="ibox-title">
+                    <span class="label label-info pull-right">Annual</span>
+                    <h5>Orders</h5>
+                </div>
+                <div class="ibox-content" >
+                    <h1 class="no-margins">275,800</h1>
+                    <div class="stat-percent font-bold text-info">20% <i class="fa fa-level-up"></i></div>
+                    <small>New orders</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="ibox float-e-margins" style="background-color: gainsboro">
+                <div class="ibox-title">
+                    <span class="label label-primary pull-right">Today</span>
+                    <h5>visits</h5>
+                </div>
+                <div class="ibox-content">
+                    <h1 class="no-margins">106,120</h1>
+                    <div class="stat-percent font-bold text-navy">44% <i class="fa fa-level-up"></i></div>
+                    <small>New visits</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="ibox float-e-margins" style="background-color: gainsboro">
+                <div class="ibox-title">
+                    <span class="label label-danger pull-right">Low value</span>
+                    <h5>User activity</h5>
+                </div>
+                <div class="ibox-content">
+                    <h1 class="no-margins">80,600</h1>
+                    <div class="stat-percent font-bold text-danger">38% <i class="fa fa-level-down"></i></div>
+                    <small>In first month</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <br />
+    <div class="row">
+        <div class="col-sm-6">
+            <canvas id="bar-chart" width="800" height="450"></canvas>
+        </div>
+        <div class="col-sm-6">
+
+            <canvas id="pie-chart" width="800" height="450"></canvas>
+
+        </div>
+    </div>
+   
+</div>
+<script type="text/javascript">
+
+    //window.onload = function () {
+    //    var chart = new CanvasJS.Chart("chartContainer", {
+    //        theme: "theme2",
+    //        animationEnabled: true,
+    //        title: {
+    //            text: "Column Chart in ASP.Net MVC using CanvasJS"
+    //        },
+    //        data: [
+    //        {
+    //            type: "column",
+    //            dataPoints: [
+    //                 { y: 6, label: "Apple" },
+    //                 { y: 4, label: "Mango" },
+    //                 { y: 5, label: "Orange" },
+    //                 { y: 7, label: "Banana" },
+    //                 { y: 4, label: "Pineapple" },
+    //                 { y: 6, label: "Pears" },
+    //                 { y: 7, label: "Grapes" },
+    //                 { y: 5, label: "Lychee" },
+    //                 { y: 4, label: "Jackfruit" }
+    //            ]
+    //        }
+    //        ]
+    //    });
+    //    chart.render();
+    //};
+
+
+    // Bar chart
+    new Chart(document.getElementById("bar-chart"), {
+        type: 'bar',
+        data: {
+            labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+            datasets: [
+              {
+                  label: "Population (millions)",
+                  backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
+                  data: [2478, 5267, 734, 784, 433]
+              }
+            ]
+        },
+        options: {
+            legend: { display: false },
+            title: {
+                display: true,
+                text: 'Predicted world population (millions) in 2050'
+            }
+        }
+    });
+
+    new Chart(document.getElementById("pie-chart"), {
+        type: 'pie',
+        data: {
+            labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+            datasets: [{
+                label: "Population (millions)",
+                backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
+                data: [2478, 5267, 734, 784, 433]
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Predicted world population (millions) in 2050'
+            }
+        }
+    });
+</script>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.bar {
+  fill: steelblue; /*#FECB69;*/
+}
+
+.bar:hover {
+  fill: brown;
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #fff;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+</style>
+<body>
+<script src="d3.v3.min.js"></script>
+<script>
+
+function InitializeBarChart(backgroundColor, width, height, fontSize, fontColor, yAxisLabel, barChartColor, content){
+	
+	try{
+			
+		var margin = {top: 20, right: 20, bottom: 200, left: 60},
+		    width = width,
+		    height = height-margin.bottom-margin.top;
+		
+		var x = d3.scale.ordinal()
+			.rangeRoundBands([0, width], .1);
+		
+		var y = d3.scale.linear()
+		    .range([height, 0]);
+		
+		var xAxis = d3.svg.axis()
+		    .scale(x)
+		    .orient("bottom");
+		
+		var yAxis = d3.svg.axis()
+		    .scale(y)
+		    .orient("left");
+		    //.ticks(10, "%");
+		
+		var svg = d3.select("body").append("svg")
+		    .attr("width", width + margin.left + margin.right)
+		    .attr("height", height + margin.top + margin.bottom)
+		  .append("g")
+		    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+		
+		//d3.tsv("data.tsv", type, function(error, data) {
+			
+		  var data = [];
+		  content = new String(content);
+		  var arr = content.split('##');
+		
+		  for(var i=0; i< arr.length; i++){
+			var str = new String(arr[i]);
+			str = str.replace(/@@/g, "'");
+			data.push(eval('(' +str+')'));
+		  }
+
+			//alert("data---->"+data);
+		  x.domain(data.map(function(d) { return d.letter; }));
+		  y.domain([0, d3.max(data, function(d) { return d.frequency; })]);
+		
+		svg.append("g")
+	      .attr("class", "x axis")
+	      .attr("transform", "translate(0," + height + ")")
+	      .style("fill", fontColor)
+	      .call(xAxis)
+	      .selectAll("text")
+	      .style("text-anchor", "end")
+	      .attr("dx", "-.8em")
+	      .attr("dy", "-.55em")
+	      .attr("transform", "rotate(-90)" );
+	      
+		/*svg.append("g")
+		 .attr("class", "x axis")
+	      .attr("transform", "translate(0," + height + ")")
+	      .style("fill", fontColor)
+	      .call(xAxis)
+	      .selectAll(".tick text")
+	      .call(wrap, margin.bottom-10)//x.rangeBand())
+	      .attr("y", 9)
+	      //.attr("x", 9)
+	      //.attr("dy", ".71em")
+	      .attr("dx", "-.8em")
+	      .attr("dy", "-.55em")
+	      .attr("transform", "rotate(-90)")
+	      .style("text-anchor", "end");
+	      /*.attr("class", "x axis")
+	      .attr("transform", "translate(0," + height + ")")
+	      .style("fill", fontColor)
+	      .call(xAxis)
+	      .selectAll(".tick text")
+	      .call(wrap, margin.bottom-10)//x.rangeBand())
+		  .attr("y", 9)
+	      //.attr("x", 9)
+	      //.attr("dy", ".71em")
+	      .attr("dx", "-.8em")
+	      .attr("dy", "-.55em")
+	      .attr("transform", "rotate(-90)")
+	      .style("text-anchor", "end");*/
+	    /*  
+		  svg.append("g")
+		      .attr("class", "x axis")
+		      .attr("transform", "translate(0," + height + ")")
+		      .style("fill", fontColor)
+		      .call(xAxis);
+		*/
+		  svg.append("g")
+		      .attr("class", "y axis")
+		      .style("fill", fontColor)
+		      .call(yAxis)
+		    .append("text")
+		      .attr("transform", "rotate(-90)")
+		      .attr("y", 6)
+		      .attr("dy", ".71em")
+		      .style("text-anchor", "end")
+		      .style("fill", fontColor)
+		      .text("");//yAxisLabel);//"Frequency");
+		
+		  svg.selectAll(".bar")
+		      .data(data)
+		    .enter().append("rect")
+		      .attr("class", "bar")
+		      .attr("x", function(d) { return x(d.letter); })
+		      .attr("width", x.rangeBand())
+		      .attr("y", function(d) { return y(d.frequency); })
+		      .attr("height", function(d) { return height - y(d.frequency); });
+		
+		//});
+		
+		document.body.style.backgroundColor = backgroundColor;
+		document.body.style.fontSize = fontSize;
+			
+		setTimeout(function(){
+			//toggle_visibility("bar", barChartColor);
+		},500);
+	}catch(e){
+		//alert('e ---> ' + e);
+	}
+}
+
+
+function wrap(text, width) {
+  text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        y = text.attr("y"),
+        dy = parseFloat(text.attr("dy")),
+        tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+      }
+    }
+  });
+}
+
+function type(d) {
+  d.frequency = +d.frequency;
+  return d;
+}
+
+
+function getElementsByClassName(node,classname) {
+  if (node.getElementsByClassName) { // use native implementation if available
+    return node.getElementsByClassName(classname);
+  } else {
+    return (function getElementsByClass(searchClass,node) {
+        if ( node == null )
+          node = document;
+        var classElements = [],
+            els = node.getElementsByTagName("*"),
+            elsLen = els.length,
+            pattern = new RegExp("(^|\\s)"+searchClass+"(\\s|$)"), i, j;
+
+        for (i = 0, j = 0; i < elsLen; i++) {
+          if ( pattern.test(els[i].className) ) {
+              classElements[j] = els[i];
+              j++;
+          }
+        }
+        return classElements;
+    })(classname, node);
+  }
+}
+function toggle_visibility(className,lineColor) {
+   var elements = getElementsByClassName(document, className),
+       n = elements.length;
+       
+       //alert('n -> ' + n);
+       
+   for (var i = 0; i < n; i++) {
+     var e = elements[i];
+	 e.style.fill = lineColor;
+   }
+}
+
+
+</script>
+
+
+</body>
+</html>

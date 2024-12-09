@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+    body {
+        font: 10px sans-serif;
+    }
+
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: #fff;
+        shape-rendering: crispEdges;
+    }
+
+    .x.axis path {
+        display: none;
+    }
+
+    .line {
+        fill: none;
+        stroke: steelblue;
+        stroke-width: 1.5px;
+    }
+</style>
+<body>
+    <script src="d3.v3.min.js"></script>
+    <script type="text/javascript" src="gauge.js"></script>
+    <script src="../../../Scripts/jquery-1.8.2.min.js"></script>
+    <script src="../../../Scripts/aes.js"></script>
+    <script src="../../CommonModel/CommonModel.js"></script>
+    <script>
+        var url_getFieldList = '../../../ActionConfig/getFieldList/';
+        var url_GetMultiSeriesLineChart = '../../../ActionConfig/GetMultiSeriesLineChart/';
+        var url_GetQueryConfigByScreenName = '../../../Common/GetQueryConfigByScreenName/';
+        var url_GetActionConfigData = '../../../ActionConfig/GetActionConfigData/';
+
+        var executeQry = '';
+        $(window).load(function () {
+
+            var scrName = window.location.toString();
+            // scrName = scrName.split('?')[1].split(' ')[0];
+            scrName = 'LineChart_DashBoard_CHART_MultiSeriesLineChart';
+            debugger;
+            var fieldCount = ['string', 'number', 'number', 'number', 'number', 'number'];
+
+            var query = "Select '20111001' as date, '63.5' as NewYork, '65.5' as SanFrancisco, '70.5' as Singapore";
+            query += " UNION Select '20111005' as date, '73.5' as NewYork, '65.5' as SanFrancisco, '70.5' as Singapore";
+
+
+            // var query = getQueryConfigByScreenName(this.screenName + "_FORM_CHART_SalesChart");
+            if (query != null && query != undefined && query != '') {
+                //query += ' ' + Titanium.App.Properties.getString('QueryConfig_' + this.screenName + '_FORM_CHART_SalesChart_GroupText');
+                //query += ' ' + Titanium.App.Properties.getString('QueryConfig_' + this.screenName + '_FORM_CHART_SalesChart_OrderText');
+                //COMMON.Log('chart query ---> ' + query);
+                var str = '';
+                str = getChartDataList(query);
+                if (str == '') {
+                    return '';
+                }
+                str = "'" + str + "'";
+                var backgroundColor = "", width = "", height = "", fontSize = "", fontColor = "", _URL = "";
+                backgroundColor = "white";
+                width = "'500'";
+                height = "'300'";
+                fontSize = "'22px'";
+                fontColor = "'black'";
+
+                //webView.evalJS("InitializeMultiSeriesLineChart("+backgroundColor+","+width+","+height+","+fontSize+","+fontColor+","+contents.text+")");
+                InitializeMultiSeriesLineChart(backgroundColor, width, height, fontSize, fontColor, str);
+            }
+        });
+
+        //
+        function InitializeMultiSeriesLineChart(backgroundColor, width, height, fontSize, fontColor, content) {
+
+            try {
+                //var margin = { top: 10, right: 80, bottom: 30, left: 50 },
+                //    width = width - margin.left - margin.right;//960 - margin.left - margin.right,
+                //height = height - margin.top - margin.bottom;//500 - margin.top - margin.bottom;
+                var margin = { top: 20, right: 80, bottom: 30, left: 50 },
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+                var parseDate = d3.time.format("%Y%m%d").parse;
+
+                /*var x = d3.time.scale()
+                    .range([0, width]);*/
+                var x = d3.scale.ordinal()
+                    .rangeRoundBands([0, width], 0);
+                var y = d3.scale.linear()
+                    .range([height, 0]);
+
+                var color = d3.scale.category10();
+
+                var xAxis = d3.svg.axis()
+                    .scale(x)
+                    .orient("bottom");
+
+                var yAxis = d3.svg.axis()
+                    .scale(y)
+                    .orient("left");
+
+                var line = d3.svg.line()
+                    .interpolate("basis")
+                    .x(function (d) { return x(d.date); })
+                    .y(function (d) { return y(d.temperature); });
+
+                var svg = d3.select("body").append("svg")
+                    .attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom)
+                  .append("g")
+                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+                //d3.tsv("data.tsv", function(error, data) {
+
+                var data = [];
+                content = new String(content);
+                var arr = content.split('##');
+
+                for (var i = 0; i < arr.length; i++) {
+                    var str = new String(arr[i]);
+                    // str = str.replace(/@@/g, "'");
+                    str = strReplace(str);
+                    data.push(eval('(' + str + ')'));
+                }
+
+                color.domain(d3.keys(data[0]).filter(function (key) { return key !== "date"; }));
+
+
+                var radius = 74,
+                    padding = 10;
+
+                var legend = d3.select("body").append("svg")
+                      .attr("class", "legend")
+                      .attr("width", radius * 2)
+                      .attr("height", radius * 5)
+                      .style("right", width)//'100px')
+                      .style("position", 'absolute')
+                    .selectAll("g")
+                      .data(color.domain().slice().reverse())
+                    .enter().append("g")
+                      .attr("transform", function (d, i) { return "translate(0," + i * 20 + ")"; });
+
+                legend.append("rect")
+                    .attr("width", 18)
+                    .attr("height", 18)
+                    .style("fill", color);
+                //.style("fill", '#ff0');
+
+                legend.append("text")
+                    .attr("x", 24)
+                    .attr("y", 9)
+                    .attr("dy", ".35em")
+                    .style("fill", fontColor)
+                    .text(function (d) { return d; });
+
+
+                data.forEach(function (d) {
+                    d.date = d.date;//parseDate(d.date);
+                });
+
+
+
+
+                var cities = color.domain().map(function (name) {
+                    return {
+                        name: name,
+                        values: data.map(function (d) {
+                            return { date: d.date, temperature: +d[name] };
+                        })
+                    };
+                });
+
+                //x.domain(d3.extent(data, function(d) {return d.date;}));
+                x.domain(data.map(function (d) { return d.date; }));
+
+                y.domain([
+                  d3.min(cities, function (c) { return d3.min(c.values, function (v) { return v.temperature; }); }),
+                  d3.max(cities, function (c) { return d3.max(c.values, function (v) { return v.temperature; }); })
+                ]);
+
+
+                //alert(xAxis);
+
+
+
+                svg.append("g")
+                    .attr("class", "x axis")
+                    .attr("transform", "translate(0," + height + ")")
+                    .style("fill", fontColor)
+                    .call(xAxis);
+
+                svg.append("g")
+                    .attr("class", "y axis")
+                    .style("fill", fontColor)
+                    .call(yAxis)
+                  .append("text")
+                    .attr("transform", "rotate(-90)")
+                    .attr("y", 6)
+                    .attr("dy", ".71em")
+                    .style("text-anchor", "end")
+                    .style("fill", fontColor)
+                    .text("");//Temperature (ºF)");
+
+                var city = svg.selectAll(".city")
+                    .data(cities)
+                  .enter().append("g")
+                    .attr("class", "city");
+
+                city.append("path")
+                    .attr("class", "line")
+                    .attr("d", function (d) { return line(d.values); })
+                    .style("stroke", function (d) { return color(d.name); });
+
+                city.append("text")
+                    .datum(function (d) { return { name: d.name, value: d.values[d.values.length - 1] }; })
+                    .attr("transform", function (d) { return "translate(" + x(d.value.date) + "," + y(d.value.temperature) + ")"; })
+                    .attr("x", 3)
+                    .attr("dy", ".35em")
+                    .style("fill", fontColor)
+                    .text(function (d) { return d.name; });
+                //});
+
+                document.body.style.backgroundColor = backgroundColor;
+                document.body.style.fontSize = fontSize;
+                document.body.style.color = fontColor;
+            } catch (e) {
+                alert('e ----> ' + e);
+            }
+
+        }
+    </script>

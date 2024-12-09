@@ -1,0 +1,20 @@
+Time: 26-03-2024 11:26:16 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Holiday Master'
+-----------------------------------------------------------
+
+Time: 26-03-2024 11:26:23 AM
+-----------------------------------------------------------
+Message: ReadRecord : Select HM.DistributorID as Code,D.DistributorName as Description,HM.Year as Year,Format(HM.HolidayDate,'MM/dd/yyyy') as 'Holiday Date',[Desc] AS 'Description' from HolidayMaster HM inner join Distributor D on HM.DistributorID=D.DistributorID where HM.HolidayDate  BETWEEN  '2024-03-01 00:00:00.000' and '2024-03-26 23:59:59.000' 
+-----------------------------------------------------------
+
+Time: 26-03-2024 11:26:24 AM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 26-03-2024 11:28:44 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+

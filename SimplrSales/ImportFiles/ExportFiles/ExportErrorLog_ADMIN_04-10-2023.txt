@@ -1,0 +1,20 @@
+Time: 04-10-2023 10:11:13 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Stock Report Super to Sub DB Cartoon'
+-----------------------------------------------------------
+
+Time: 04-10-2023 10:11:54 AM
+-----------------------------------------------------------
+Message: ReadRecord : Exec [Export_StockReportSupertoSubDBReportOnlyCTN]  '2023-10-03 00:00:00.000','2023-10-03 23:59:59.000','ADMIN','NATIONAL','Bangaladesh'
+-----------------------------------------------------------
+
+Time: 04-10-2023 10:11:57 AM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 04-10-2023 10:13:40 AM
+-----------------------------------------------------------
+Message: AutoExport dttoexcel = Worksheet names cannot be more than 31 characters
+-----------------------------------------------------------
+

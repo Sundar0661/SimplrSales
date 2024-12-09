@@ -1,0 +1,134 @@
+﻿@{
+    ViewBag.Title = "Form1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<script>
+    $(".topBar").text("Home / Form1 ");
+</script>
+<div class="container" style="width: 100%;" >
+
+    <form class="well form-horizontal" method="post" id="contact_form">
+        <fieldset>
+
+            <!-- Form Name -->
+            <legend>Contact Us Today!</legend>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">First Name</label>
+
+                <div class="input-group" style="width: 35%;">
+                    <input name="first_name" placeholder="First Name" class="form-control" type="text">
+                </div>
+
+            </div>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Last Name</label>
+
+                <div class="input-group" style="width: 35%;">
+                    <input name="last_name" placeholder="Last Name" class="form-control" type="text">
+                </div>
+
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label">E-Mail</label>
+
+                <div class="input-group" style="width: 35%;">
+                    <input name="email" placeholder="E-Mail Address" class="form-control" type="text">
+                </div>
+
+            </div>
+
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Phone #</label>
+
+                <div class="input-group" style="width: 35%;">
+                    <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
+                </div>
+
+            </div>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Address</label>
+
+                <div class="input-group" style="width: 35%;">
+                    <input name="address" placeholder="Address" class="form-control" type="text">
+                </div>
+
+            </div>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">City</label>
+
+                <div class="input-group" style="width: 35%;">
+                    <input name="city" placeholder="city" class="form-control" type="text">
+                </div>
+
+            </div>
+
+            <!-- Select Basic -->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">State</label>
+
+                <div class="input-group" style="width: 35%;">
+                    <select name="state" class="form-control selectpicker">
+                        <option value=" ">Please select your state</option>
+                        <option>Alabama</option>
+                        <option>Alaska</option>
+                        <option>Arizona</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Zip Code</label>
+
+                <div class="input-group" style="width: 35%;">
+                    <input name="zip" placeholder="Zip Code" class="form-control" type="text">
+                </div>
+
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label">Website or domain name</label>
+
+                <div class="input-group" style="width: 35%;">
+                    <input name="website" placeholder="Website or domain name" class="form-control" type="text">
+                </div>
+
+            </div>
+
+
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label"></label>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-warning">Send <span class="glyphicon glyphicon-send"></span></button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+</div>
+

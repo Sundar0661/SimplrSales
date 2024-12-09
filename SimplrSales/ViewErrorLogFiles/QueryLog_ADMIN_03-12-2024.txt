@@ -1,0 +1,1528 @@
+03-12-2024 08:04:54 AM: select SystemValue from systemlist where code ='YearPickerLimit' and SolutionName='SALES-WEB'
+
+03-12-2024 08:05:55 AM: SELECT * FROM MessageConfig  where solutionName='SALES-WEB'  order by ScreenName
+
+03-12-2024 08:06:10 AM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard%'  order by ScreenName, FieldName
+
+03-12-2024 08:06:10 AM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard%'  order by roworder
+
+03-12-2024 08:06:11 AM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 08:06:11 AM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'EXECUTELOG'
+
+03-12-2024 08:06:12 AM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'MainMenuLoad'
+
+03-12-2024 08:06:13 AM: select * from Gridfunctions where screenname =N'MAIN' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+03-12-2024 08:06:13 AM: select * from Gridfunctions where screenname =N'Customers' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+03-12-2024 08:06:13 AM: select * from Gridfunctions where screenname =N'Products' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+03-12-2024 08:06:13 AM: select * from Gridfunctions where screenname =N'Inventory' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+03-12-2024 08:06:16 AM: select * from Gridfunctions where screenname =N'Sales' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+03-12-2024 08:06:16 AM: select * from Gridfunctions where screenname =N'Payments' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+03-12-2024 08:06:16 AM: select * from Gridfunctions where screenname =N'Data Transfer' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+03-12-2024 08:06:17 AM: select * from Gridfunctions where screenname =N'Reports' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+03-12-2024 08:06:17 AM: select * from Gridfunctions where screenname =N'Administration' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+03-12-2024 08:06:24 AM: select * from SystemList
+
+03-12-2024 08:06:24 AM: select * from System
+
+03-12-2024 08:06:27 AM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='Web_DashBoard_01_FORM'
+
+03-12-2024 08:06:29 AM: SELECT * FROM ActionConfig WHERE ScreenName='Web_DashBoard_01' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 08:06:29 AM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='Web_DashBoard_01' and Language = 'English' and (AccessLevel is null or AccessLevel ='6')  order by displayno
+
+03-12-2024 08:06:29 AM: SELECT * FROM FormConfig where  ScreenName='Web_DashBoard_01' and Language = 'English' ORDER BY ScreenName, DisplayNo
+
+03-12-2024 08:06:30 AM: SELECT * FROM ActionConfig WHERE ScreenName='undefined' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 08:06:30 AM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'
+
+03-12-2024 08:07:02 AM: SELECT * FROM ActionConfig WHERE ScreenName='Main' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 08:07:07 AM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard_01%'  order by ScreenName, FieldName
+
+03-12-2024 08:07:08 AM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard_01%'  order by roworder
+
+03-12-2024 08:07:08 AM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 08:07:08 AM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'ExportDataForm%'  order by ScreenName, FieldName
+
+03-12-2024 08:07:09 AM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'ExportDataForm%'  order by roworder
+
+03-12-2024 08:07:09 AM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 08:07:09 AM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='ExportDataForm_FORM'
+
+03-12-2024 08:07:10 AM: 
+SELECT 'ALL' as DistributorID,'ALL' as SalesOfficeID,'ALL' as SalesAgent, 'Excel' as FileType,format(getdate(),'dd/MM/yyyy') as FromDate,format(getdate(),'dd/MM/yyyy')  as ToDate  
+
+03-12-2024 08:07:10 AM: SELECT * FROM ActionConfig WHERE ScreenName='ExportDataForm' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 08:07:10 AM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='ExportDataForm' and Language = 'English' and (AccessLevel is null or AccessLevel ='6')  order by displayno
+
+03-12-2024 08:08:41 AM: select ISNULL(COUNT(FieldName),0) cnt from ListConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData' and fieldname = 'isUpDown'
+
+03-12-2024 08:08:42 AM: select ISNULL(COUNT(FieldName),0) cnt from SEARCHConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'
+
+03-12-2024 08:08:42 AM: select DateFormatString, TimeFormatString, DateTimeFormatString from system
+
+03-12-2024 08:08:42 AM: exec  sp_ExportDistributorDD 'ADMIN'  
+
+03-12-2024 08:08:43 AM: EXEC [sp_ExportSalesOfficeID] 'ADMIN',''  
+
+03-12-2024 08:08:43 AM: SELECT 'ALL' as Code,'ALL' as Text,1 as DP UNION select Distinct SalesmanTerritory   as Code,SalesmanTerritory+' - '+Name as Text,2 as DP  from NodeTree N Inner Join SalesAgent Sa on Sa.NodeTreeValue=N.SalesmanTerritory inner join SalesmanGroup G on G.GroupID=N.SalesmanTerritory and  G.UserId ='ADMIN'  and N.SalesOfficeID= case when '' in ('ALL','') then  N.SalesOfficeID else '' end and  N.DistributorID=case when '' in ('ALL','') then N.DistributorID else '' end  Order by DP, Code
+
+03-12-2024 08:08:49 AM: Select 'csv' as Code, 'CSV' as Text Union Select 'xlsx' as Code,'Excel' as Text  Order By Code
+
+03-12-2024 08:08:50 AM: exec  sp_ExportDistributorDD 'ADMIN'  
+
+03-12-2024 08:08:50 AM: EXEC [sp_ExportSalesOfficeID] 'ADMIN','ALL'  
+
+03-12-2024 08:08:50 AM: SELECT 'ALL' as Code,'ALL' as Text,1 as DP UNION select Distinct SalesmanTerritory   as Code,SalesmanTerritory+' - '+Name as Text,2 as DP  from NodeTree N Inner Join SalesAgent Sa on Sa.NodeTreeValue=N.SalesmanTerritory inner join SalesmanGroup G on G.GroupID=N.SalesmanTerritory and  G.UserId ='ADMIN'  and N.SalesOfficeID= case when '' in ('ALL','') then  N.SalesOfficeID else '' end and  N.DistributorID=case when 'ALL' in ('ALL','') then N.DistributorID else 'ALL' end  Order by DP, Code
+
+03-12-2024 08:08:51 AM: EXEC [sp_ExportSalesOfficeID] 'ADMIN','ALL'  
+
+03-12-2024 08:08:51 AM: SELECT 'ALL' as Code,'ALL' as Text,1 as DP UNION select Distinct SalesmanTerritory   as Code,SalesmanTerritory+' - '+Name as Text,2 as DP  from NodeTree N Inner Join SalesAgent Sa on Sa.NodeTreeValue=N.SalesmanTerritory inner join SalesmanGroup G on G.GroupID=N.SalesmanTerritory and  G.UserId ='ADMIN'  and N.SalesOfficeID= case when 'ALL' in ('ALL','') then  N.SalesOfficeID else 'ALL' end and  N.DistributorID=case when 'ALL' in ('ALL','') then N.DistributorID else 'ALL' end  Order by DP, Code
+
+03-12-2024 08:08:51 AM: SELECT 'ALL' as Code,'ALL' as Text,1 as DP UNION select Distinct SalesmanTerritory   as Code,SalesmanTerritory+' - '+Name as Text,2 as DP  from NodeTree N Inner Join SalesAgent Sa on Sa.NodeTreeValue=N.SalesmanTerritory inner join SalesmanGroup G on G.GroupID=N.SalesmanTerritory and  G.UserId ='ADMIN'  and N.SalesOfficeID= case when 'ALL' in ('ALL','') then  N.SalesOfficeID else 'ALL' end and  N.DistributorID=case when 'ALL' in ('ALL','') then N.DistributorID else 'ALL' end  Order by DP, Code
+
+03-12-2024 08:08:52 AM: Select 'csv' as Code, 'CSV' as Text Union Select 'xlsx' as Code,'Excel' as Text  Order By Code
+
+03-12-2024 08:08:53 AM: select * from formconfig where screenname like 'ExportDataForm' and fieldname like 'LstExportData'
+
+03-12-2024 08:08:54 AM: select * from listconfig where  solutionname='SALES-WEB' and  screenname ='ExportDataForm_LISTVIEW_LstExportData' and Language ='English' and (AccessLevel is null or AccessLevel ='6') order by displayno
+
+03-12-2024 08:08:54 AM: select SystemValue from systemlist where code ='PaginationLimit' and SolutionName='SALES-WEB'
+
+03-12-2024 08:08:54 AM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='ExportDataForm_LISTVIEW_LstExportData' and SolutionName = 'SALES-WEB'
+
+03-12-2024 08:08:55 AM: select Distinct E.AliasName  from ExportQueryConfig E inner join ExportGroup E1 on E.AliasName=E1.AliasName And E1.Access=(select top 1 Access from Salesagent Where UserID='ADMIN') Where E.IsActive =1   Order by AliasName 
+
+03-12-2024 08:08:55 AM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (select Distinct E.AliasName  from ExportQueryConfig E inner join ExportGroup E1 on E.AliasName=E1.AliasName And E1.Access=(select top 1 Access from Salesagent Where UserID='ADMIN') Where E.IsActive =1  ) rs
+
+03-12-2024 08:08:56 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:08:56 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:08:56 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:08:56 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:08:57 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:08:57 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:08:57 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:08:57 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:08:58 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:08:58 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:08:58 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:08:58 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:08:59 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:08:59 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:08:59 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:08:59 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:08:59 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:00 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:00 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:00 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:00 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:01 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:01 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:01 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:01 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:02 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:02 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:02 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:03 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:03 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:03 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:03 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:03 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:04 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:04 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:04 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:04 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:05 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:05 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:05 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:05 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:06 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:06 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:06 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:07 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:07 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:07 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:07 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:08 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:08 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:08 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:08 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:09 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:09 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:09 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:09 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:10 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:10 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:10 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:10 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:11 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:11 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:11 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:11 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:12 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:12 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:12 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:12 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:13 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:13 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:13 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:13 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:14 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:14 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:14 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:14 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:15 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:15 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:15 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:15 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:09:17 AM: SELECT * FROM FormConfig where  ScreenName='ExportDataForm' and Language = 'English' ORDER BY ScreenName, DisplayNo
+
+03-12-2024 08:20:26 AM: select SystemValue from systemlist where code ='YearPickerLimit' and SolutionName='SALES-WEB'
+
+03-12-2024 08:20:28 AM: SELECT * FROM MessageConfig  where solutionName='SALES-WEB'  order by ScreenName
+
+03-12-2024 08:20:29 AM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard%'  order by ScreenName, FieldName
+
+03-12-2024 08:20:29 AM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard%'  order by roworder
+
+03-12-2024 08:20:29 AM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 08:20:30 AM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'EXECUTELOG'
+
+03-12-2024 08:20:31 AM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'MainMenuLoad'
+
+03-12-2024 08:20:31 AM: select * from Gridfunctions where screenname =N'MAIN' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+03-12-2024 08:20:32 AM: select * from Gridfunctions where screenname =N'Customers' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+03-12-2024 08:20:32 AM: select * from Gridfunctions where screenname =N'Products' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+03-12-2024 08:20:32 AM: select * from Gridfunctions where screenname =N'Inventory' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+03-12-2024 08:20:32 AM: select * from Gridfunctions where screenname =N'Sales' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+03-12-2024 08:20:33 AM: select * from Gridfunctions where screenname =N'Payments' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+03-12-2024 08:20:33 AM: select * from Gridfunctions where screenname =N'Data Transfer' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+03-12-2024 08:20:33 AM: select * from Gridfunctions where screenname =N'Reports' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+03-12-2024 08:20:33 AM: select * from Gridfunctions where screenname =N'Administration' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+03-12-2024 08:20:39 AM: select * from SystemList
+
+03-12-2024 08:20:39 AM: select * from System
+
+03-12-2024 08:20:40 AM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='Web_DashBoard_01_FORM'
+
+03-12-2024 08:20:41 AM: SELECT * FROM ActionConfig WHERE ScreenName='Web_DashBoard_01' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 08:20:41 AM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='Web_DashBoard_01' and Language = 'English' and (AccessLevel is null or AccessLevel ='6')  order by displayno
+
+03-12-2024 08:20:41 AM: SELECT * FROM FormConfig where  ScreenName='Web_DashBoard_01' and Language = 'English' ORDER BY ScreenName, DisplayNo
+
+03-12-2024 08:20:41 AM: SELECT * FROM ActionConfig WHERE ScreenName='undefined' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 08:20:42 AM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'
+
+03-12-2024 08:20:53 AM: SELECT * FROM ActionConfig WHERE ScreenName='Main' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 08:20:57 AM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard_01%'  order by ScreenName, FieldName
+
+03-12-2024 08:20:57 AM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard_01%'  order by roworder
+
+03-12-2024 08:20:58 AM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 08:20:58 AM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'ExportDataForm%'  order by ScreenName, FieldName
+
+03-12-2024 08:20:58 AM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'ExportDataForm%'  order by roworder
+
+03-12-2024 08:20:58 AM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 08:20:58 AM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='ExportDataForm_FORM'
+
+03-12-2024 08:20:58 AM: 
+SELECT 'ALL' as DistributorID,'ALL' as SalesOfficeID,'ALL' as SalesAgent, 'Excel' as FileType,format(getdate(),'dd/MM/yyyy') as FromDate,format(getdate(),'dd/MM/yyyy')  as ToDate  
+
+03-12-2024 08:20:59 AM: SELECT * FROM ActionConfig WHERE ScreenName='ExportDataForm' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 08:20:59 AM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='ExportDataForm' and Language = 'English' and (AccessLevel is null or AccessLevel ='6')  order by displayno
+
+03-12-2024 08:21:01 AM: select ISNULL(COUNT(FieldName),0) cnt from ListConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData' and fieldname = 'isUpDown'
+
+03-12-2024 08:21:01 AM: select ISNULL(COUNT(FieldName),0) cnt from SEARCHConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'
+
+03-12-2024 08:21:01 AM: select DateFormatString, TimeFormatString, DateTimeFormatString from system
+
+03-12-2024 08:21:02 AM: exec  sp_ExportDistributorDD 'ADMIN'  
+
+03-12-2024 08:21:02 AM: EXEC [sp_ExportSalesOfficeID] 'ADMIN',''  
+
+03-12-2024 08:21:03 AM: SELECT 'ALL' as Code,'ALL' as Text,1 as DP UNION select Distinct SalesmanTerritory   as Code,SalesmanTerritory+' - '+Name as Text,2 as DP  from NodeTree N Inner Join SalesAgent Sa on Sa.NodeTreeValue=N.SalesmanTerritory inner join SalesmanGroup G on G.GroupID=N.SalesmanTerritory and  G.UserId ='ADMIN'  and N.SalesOfficeID= case when '' in ('ALL','') then  N.SalesOfficeID else '' end and  N.DistributorID=case when '' in ('ALL','') then N.DistributorID else '' end  Order by DP, Code
+
+03-12-2024 08:21:04 AM: Select 'csv' as Code, 'CSV' as Text Union Select 'xlsx' as Code,'Excel' as Text  Order By Code
+
+03-12-2024 08:21:04 AM: exec  sp_ExportDistributorDD 'ADMIN'  
+
+03-12-2024 08:21:04 AM: EXEC [sp_ExportSalesOfficeID] 'ADMIN','ALL'  
+
+03-12-2024 08:21:05 AM: SELECT 'ALL' as Code,'ALL' as Text,1 as DP UNION select Distinct SalesmanTerritory   as Code,SalesmanTerritory+' - '+Name as Text,2 as DP  from NodeTree N Inner Join SalesAgent Sa on Sa.NodeTreeValue=N.SalesmanTerritory inner join SalesmanGroup G on G.GroupID=N.SalesmanTerritory and  G.UserId ='ADMIN'  and N.SalesOfficeID= case when '' in ('ALL','') then  N.SalesOfficeID else '' end and  N.DistributorID=case when 'ALL' in ('ALL','') then N.DistributorID else 'ALL' end  Order by DP, Code
+
+03-12-2024 08:21:05 AM: EXEC [sp_ExportSalesOfficeID] 'ADMIN','ALL'  
+
+03-12-2024 08:21:06 AM: SELECT 'ALL' as Code,'ALL' as Text,1 as DP UNION select Distinct SalesmanTerritory   as Code,SalesmanTerritory+' - '+Name as Text,2 as DP  from NodeTree N Inner Join SalesAgent Sa on Sa.NodeTreeValue=N.SalesmanTerritory inner join SalesmanGroup G on G.GroupID=N.SalesmanTerritory and  G.UserId ='ADMIN'  and N.SalesOfficeID= case when 'ALL' in ('ALL','') then  N.SalesOfficeID else 'ALL' end and  N.DistributorID=case when 'ALL' in ('ALL','') then N.DistributorID else 'ALL' end  Order by DP, Code
+
+03-12-2024 08:21:06 AM: SELECT 'ALL' as Code,'ALL' as Text,1 as DP UNION select Distinct SalesmanTerritory   as Code,SalesmanTerritory+' - '+Name as Text,2 as DP  from NodeTree N Inner Join SalesAgent Sa on Sa.NodeTreeValue=N.SalesmanTerritory inner join SalesmanGroup G on G.GroupID=N.SalesmanTerritory and  G.UserId ='ADMIN'  and N.SalesOfficeID= case when 'ALL' in ('ALL','') then  N.SalesOfficeID else 'ALL' end and  N.DistributorID=case when 'ALL' in ('ALL','') then N.DistributorID else 'ALL' end  Order by DP, Code
+
+03-12-2024 08:21:07 AM: Select 'csv' as Code, 'CSV' as Text Union Select 'xlsx' as Code,'Excel' as Text  Order By Code
+
+03-12-2024 08:21:08 AM: select * from formconfig where screenname like 'ExportDataForm' and fieldname like 'LstExportData'
+
+03-12-2024 08:21:08 AM: select * from listconfig where  solutionname='SALES-WEB' and  screenname ='ExportDataForm_LISTVIEW_LstExportData' and Language ='English' and (AccessLevel is null or AccessLevel ='6') order by displayno
+
+03-12-2024 08:21:09 AM: select SystemValue from systemlist where code ='PaginationLimit' and SolutionName='SALES-WEB'
+
+03-12-2024 08:21:09 AM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='ExportDataForm_LISTVIEW_LstExportData' and SolutionName = 'SALES-WEB'
+
+03-12-2024 08:21:09 AM: select Distinct E.AliasName  from ExportQueryConfig E inner join ExportGroup E1 on E.AliasName=E1.AliasName And E1.Access=(select top 1 Access from Salesagent Where UserID='ADMIN') Where E.IsActive =1   Order by AliasName 
+
+03-12-2024 08:21:09 AM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (select Distinct E.AliasName  from ExportQueryConfig E inner join ExportGroup E1 on E.AliasName=E1.AliasName And E1.Access=(select top 1 Access from Salesagent Where UserID='ADMIN') Where E.IsActive =1  ) rs
+
+03-12-2024 08:21:10 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:10 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:10 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:10 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:11 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:11 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:11 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:11 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:12 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:12 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:12 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:12 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:13 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:13 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:13 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:13 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:13 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:14 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:14 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:14 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:14 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:15 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:15 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:15 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:15 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:16 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:16 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:16 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:16 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:16 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:17 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:17 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:17 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:18 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:18 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:18 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:18 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:18 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:19 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:19 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:19 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:20 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:20 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:20 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:20 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:21 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:21 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:21 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:21 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:21 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:22 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:22 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:22 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:22 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:23 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:23 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:24 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:24 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:25 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:25 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:25 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:25 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:26 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:26 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:26 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:26 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:27 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:27 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:27 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:27 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:28 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:28 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:28 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:28 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:29 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:29 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:29 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:29 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:30 AM: select * from SearchConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:30 AM: select * from SortConfig where  ScreenName = 'ExportDataForm_LISTVIEW_LstExportData'   order by displayno
+
+03-12-2024 08:21:35 AM: SELECT * FROM FormConfig where  ScreenName='ExportDataForm' and Language = 'English' ORDER BY ScreenName, DisplayNo
+
+03-12-2024 08:47:45 AM: EXEC [sp_ExportSalesOfficeID] 'ADMIN','C10000'  
+
+03-12-2024 08:47:48 AM: SELECT 'ALL' as Code,'ALL' as Text,1 as DP UNION select Distinct SalesmanTerritory   as Code,SalesmanTerritory+' - '+Name as Text,2 as DP  from NodeTree N Inner Join SalesAgent Sa on Sa.NodeTreeValue=N.SalesmanTerritory inner join SalesmanGroup G on G.GroupID=N.SalesmanTerritory and  G.UserId ='ADMIN'  and N.SalesOfficeID= case when '' in ('ALL','') then  N.SalesOfficeID else '' end and  N.DistributorID=case when 'C10000' in ('ALL','') then N.DistributorID else 'C10000' end  Order by DP, Code
+
+03-12-2024 08:47:51 AM: SELECT 'ALL' as Code,'ALL' as Text,1 as DP UNION select Distinct SalesmanTerritory   as Code,SalesmanTerritory+' - '+Name as Text,2 as DP  from NodeTree N Inner Join SalesAgent Sa on Sa.NodeTreeValue=N.SalesmanTerritory inner join SalesmanGroup G on G.GroupID=N.SalesmanTerritory and  G.UserId ='ADMIN'  and N.SalesOfficeID= case when 'C10000' in ('ALL','') then  N.SalesOfficeID else 'C10000' end and  N.DistributorID=case when 'C10000' in ('ALL','') then N.DistributorID else 'C10000' end  Order by DP, Code
+
+03-12-2024 09:48:19 AM: select SystemValue from systemlist where code ='YearPickerLimit' and SolutionName='WMS-WEB'
+
+03-12-2024 09:48:34 AM: SELECT * FROM MessageConfig  where solutionName='WMS-WEB'  order by ScreenName
+
+03-12-2024 09:48:35 AM: SELECT * FROM ColorConfig  where solutionName='WMS-WEB' and ScreenName like 'Web_DashBoard%'  order by ScreenName, FieldName
+
+03-12-2024 09:48:35 AM: SELECT * FROM ColorConfig  where solutionName='WMS-WEB' and ScreenName like 'Web_DashBoard%'  order by roworder
+
+03-12-2024 09:48:35 AM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 09:48:35 AM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='WMS-WEB'   and ScreenName = 'EXECUTELOG'
+
+03-12-2024 09:48:36 AM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='WMS-WEB'   and ScreenName = 'MainMenuLoad'
+
+03-12-2024 09:48:36 AM: select * from Gridfunctions where screenname ='MAIN' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+
+03-12-2024 09:48:36 AM: select * from Gridfunctions where screenname ='Picking' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+
+03-12-2024 09:48:36 AM: select * from Gridfunctions where screenname ='Product' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+
+03-12-2024 09:48:36 AM: select * from Gridfunctions where screenname ='Customer' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+
+03-12-2024 09:48:36 AM: select * from Gridfunctions where screenname ='Masters' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+
+03-12-2024 09:48:37 AM: select * from Gridfunctions where screenname ='Inventory' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+
+03-12-2024 09:48:37 AM: select * from Gridfunctions where screenname ='Receiving' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+
+03-12-2024 09:48:37 AM: select * from Gridfunctions where screenname ='Data Transfer' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+
+03-12-2024 09:48:37 AM: select * from Gridfunctions where screenname ='Put Away' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+
+03-12-2024 09:48:37 AM: select * from Gridfunctions where screenname ='Sales' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+
+03-12-2024 09:48:37 AM: select * from Gridfunctions where screenname ='Transfer' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+
+03-12-2024 09:48:37 AM: select * from Gridfunctions where screenname ='Stock Take' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+
+03-12-2024 09:48:37 AM: select * from Gridfunctions where screenname ='Administration' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+
+03-12-2024 09:48:37 AM: select * from Gridfunctions where screenname ='Reports' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+
+03-12-2024 09:48:43 AM: TempStoreFormView : 
+
+03-12-2024 09:48:43 AM: select * from SystemList
+
+03-12-2024 09:48:43 AM: select * from System
+
+03-12-2024 09:48:44 AM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='Web_DashBoard_01_FORM'
+
+03-12-2024 09:48:44 AM: SELECT * FROM ActionConfig WHERE ScreenName='Web_DashBoard_01' and solutionname like 'WMS-WEB'  ORDER By  DisplayNo
+
+03-12-2024 09:48:44 AM: select * from FormConfig where  solutionname='WMS-WEB' and  screenname ='Web_DashBoard_01' and Language = 'English' and (AccessLevel is null or AccessLevel ='5')  order by displayno
+
+03-12-2024 09:48:44 AM: SELECT * FROM FormConfig where  ScreenName='Web_DashBoard_01' and Language = 'English' ORDER BY ScreenName, DisplayNo
+
+03-12-2024 09:48:44 AM: SELECT * FROM ActionConfig WHERE ScreenName='undefined' and solutionname like 'WMS-WEB'  ORDER By  DisplayNo
+
+03-12-2024 09:48:44 AM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='WMS-WEB'
+
+03-12-2024 09:48:55 AM: SELECT * FROM ActionConfig WHERE ScreenName='Main' and solutionname like 'WMS-WEB'  ORDER By  DisplayNo
+
+03-12-2024 09:49:00 AM: SELECT * FROM ColorConfig  where solutionName='WMS-WEB' and ScreenName like 'Web_DashBoard_01%'  order by ScreenName, FieldName
+
+03-12-2024 09:49:00 AM: SELECT * FROM ColorConfig  where solutionName='WMS-WEB' and ScreenName like 'Web_DashBoard_01%'  order by roworder
+
+03-12-2024 09:49:00 AM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 09:49:00 AM: SELECT * FROM ColorConfig  where solutionName='WMS-WEB' and ScreenName like 'InventoryAdjustmentType1List%'  order by ScreenName, FieldName
+
+03-12-2024 09:49:00 AM: SELECT * FROM ColorConfig  where solutionName='WMS-WEB' and ScreenName like 'InventoryAdjustmentType1List%'  order by roworder
+
+03-12-2024 09:49:00 AM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 09:49:00 AM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='InventoryAdjustmentType1List_FORM'
+
+03-12-2024 09:49:00 AM: SELECT * FROM ActionConfig WHERE ScreenName='InventoryAdjustmentType1List' and solutionname like 'WMS-WEB'  ORDER By  DisplayNo
+
+03-12-2024 09:49:00 AM: select * from FormConfig where  solutionname='WMS-WEB' and  screenname ='InventoryAdjustmentType1List' and Language = 'English' and (AccessLevel is null or AccessLevel ='5')  order by displayno
+
+03-12-2024 09:49:02 AM: select ISNULL(COUNT(FieldName),0) cnt from ListConfig where  ScreenName = 'InventoryAdjustmentType1List_LISTVIEW_LstInventoryAdjustment' and fieldname = 'isUpDown'
+
+03-12-2024 09:49:02 AM: select ISNULL(COUNT(FieldName),0) cnt from SEARCHConfig where  ScreenName = 'InventoryAdjustmentType1List_LISTVIEW_LstInventoryAdjustment'
+
+03-12-2024 09:49:02 AM: select * from formconfig where screenname like 'InventoryAdjustmentType1List' and fieldname like 'LstInventoryAdjustment'
+
+03-12-2024 09:49:02 AM: select * from listconfig where  solutionname='WMS-WEB' and  screenname ='InventoryAdjustmentType1List_LISTVIEW_LstInventoryAdjustment' and Language ='English' and (AccessLevel is null or AccessLevel ='5') order by displayno
+
+03-12-2024 09:49:02 AM: select SystemValue from systemlist where code ='PaginationLimit' and SolutionName='WMS-WEB'
+
+03-12-2024 09:49:02 AM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='InventoryAdjustmentType1List_LISTVIEW_LstInventoryAdjustment' and SolutionName = 'WMS-WEB'
+
+03-12-2024 09:49:02 AM: Select  DocNo,DTG,DTG1,AgentID,Exported,IsConfirmed,DocType,Distributor,ConfirmedBy from  (select Distinct StockAdjustmentHdr.DocNo,Format(StockAdjustmentHdr.DTG,(Select DateFormatString From System)) as DTG,StockAdjustmentHdr.DTG as DTG1,StockAdjustmentHdr.AgentID,Exported,    'No' as IsConfirmed,DocType,S.Name as Distributor,StockAdjustmentHdr.ConfirmedBy as ConfirmedBy   from StockAdjustmentHdr INNER JOIN SALESAGENT S ON S.CODE=StockAdjustmentHdr.AGENTID inner join StockAdjustmentdet SD on StockAdjustmentHdr.DocNo=SD.DocNo inner join GoodsInvn G on SD.ItemNo=G.ItemNo and G.Location=SD.Location inner join Item I on G.ItemNo=I.ItemNo  and isnull(ISConfirmed,0)=0 and isnull(void,0)=0)as A WHERE 1=1   order by DocNo desc offset  0  rows Fetch next 10 rows only
+
+03-12-2024 09:49:02 AM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (Select  DocNo,DTG,DTG1,AgentID,Exported,IsConfirmed,DocType,Distributor,ConfirmedBy from  (select Distinct StockAdjustmentHdr.DocNo,Format(StockAdjustmentHdr.DTG,(Select DateFormatString From System)) as DTG,StockAdjustmentHdr.DTG as DTG1,StockAdjustmentHdr.AgentID,Exported,    'No' as IsConfirmed,DocType,S.Name as Distributor,StockAdjustmentHdr.ConfirmedBy as ConfirmedBy   from StockAdjustmentHdr INNER JOIN SALESAGENT S ON S.CODE=StockAdjustmentHdr.AGENTID inner join StockAdjustmentdet SD on StockAdjustmentHdr.DocNo=SD.DocNo inner join GoodsInvn G on SD.ItemNo=G.ItemNo and G.Location=SD.Location inner join Item I on G.ItemNo=I.ItemNo  and isnull(ISConfirmed,0)=0 and isnull(void,0)=0)as A WHERE 1=1  ) rs
+
+03-12-2024 09:49:02 AM: select * from SearchConfig where  ScreenName = 'InventoryAdjustmentType1List_LISTVIEW_LstInventoryAdjustment'   order by displayno
+
+03-12-2024 09:49:03 AM: select * from SortConfig where  ScreenName = 'InventoryAdjustmentType1List_LISTVIEW_LstInventoryAdjustment'   order by displayno
+
+03-12-2024 09:49:03 AM: SELECT * FROM FormConfig where  ScreenName='InventoryAdjustmentType1List' and Language = 'English' ORDER BY ScreenName, DisplayNo
+
+03-12-2024 09:49:09 AM: SELECT * FROM ColorConfig  where solutionName='WMS-WEB' and ScreenName like 'InventoryAdjustmentType1List%'  order by ScreenName, FieldName
+
+03-12-2024 09:49:09 AM: SELECT * FROM ColorConfig  where solutionName='WMS-WEB' and ScreenName like 'InventoryAdjustmentType1List%'  order by roworder
+
+03-12-2024 09:49:09 AM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 09:49:09 AM: SELECT * FROM ColorConfig  where solutionName='WMS-WEB' and ScreenName like 'InventoryAdjustmentType1Form%'  order by ScreenName, FieldName
+
+03-12-2024 09:49:09 AM: SELECT * FROM ColorConfig  where solutionName='WMS-WEB' and ScreenName like 'InventoryAdjustmentType1Form%'  order by roworder
+
+03-12-2024 09:49:09 AM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 09:49:09 AM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='InventoryAdjustmentType1Form_FORM'
+
+03-12-2024 09:49:09 AM: Delete from InventoryAdjustmentTemp; select SH.DocNo,'General' as DocType,SD.AdjustmentType,SDE.Location,SDE.BinNo,SDE.PalletNo,SDE.ItemNo,Item.ItemName,SDE.UOM,SDE.LotNo,SDE.ExpiryDate,SD.Reason,SDE.Qty,0 AS Inventory from StockAdjustmentHdr SH left join stockadjustmentdetexp SDE ON SDE.DocNo=SH.DocNo left join stockadjustmentdet SD ON SD.DocNo=SH.DocNo left join Item  ON Item.ItemNo=SDE.ItemNo  where SH.DocNo = 'MDO0000001'  
+
+03-12-2024 09:49:09 AM: SELECT * FROM ActionConfig WHERE ScreenName='InventoryAdjustmentType1Form' and solutionname like 'WMS-WEB'  ORDER By  DisplayNo
+
+03-12-2024 09:49:09 AM: select * from FormConfig where  solutionname='WMS-WEB' and  screenname ='InventoryAdjustmentType1Form' and Language = 'English' and (AccessLevel is null or AccessLevel ='5')  order by displayno
+
+03-12-2024 09:49:10 AM: select ISNULL(COUNT(FieldName),0) cnt from ListConfig where  ScreenName = 'InventoryAdjustmentType1Form_LISTVIEW_Item' and fieldname = 'isUpDown'
+
+03-12-2024 09:49:10 AM: select ISNULL(COUNT(FieldName),0) cnt from SEARCHConfig where  ScreenName = 'InventoryAdjustmentType1Form_LISTVIEW_Item'
+
+03-12-2024 09:49:11 AM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='WMS-WEB'   and ScreenName = 'InventoryAdjustmentType1Form_FORM_COMBOBOX_AgentID'
+
+03-12-2024 09:49:11 AM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='WMS-WEB'   and ScreenName = 'InventoryAdjustmentType1Form_FORM_COMBOBOX_TransNo'
+
+03-12-2024 09:49:11 AM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='WMS-WEB'   and ScreenName = 'InventoryAdjustmentType1Form_FORM_COMBOBOX_Exported'
+
+03-12-2024 09:49:11 AM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='WMS-WEB'   and ScreenName = 'InventoryAdjustmentType1Form_FORM_COMBOBOX_DTG'
+
+03-12-2024 09:49:11 AM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='WMS-WEB'   and ScreenName = 'InventoryAdjustmentType1Form_FORM_COMBOBOX_IsConfirmed'
+
+03-12-2024 09:49:12 AM: select * from formconfig where screenname like 'InventoryAdjustmentType1Form' and fieldname like 'Item'
+
+03-12-2024 09:49:12 AM: select * from listconfig where  solutionname='WMS-WEB' and  screenname ='InventoryAdjustmentType1Form_LISTVIEW_Item' and Language ='English' and (AccessLevel is null or AccessLevel ='5') order by displayno
+
+03-12-2024 09:49:12 AM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='InventoryAdjustmentType1Form_LISTVIEW_Item' and SolutionName = 'WMS-WEB'
+
+03-12-2024 09:49:12 AM: Select Distinct StockAdjustmentDet.AdjustmentType,SDE.Location,SDE.BinNo,SDE.ItemNo,Item.ItemName,SDE.UOM,SDE.Qty,SDE.PalletNo,SDE.LotNo,Format(SDE.ExpiryDate,(Select Dateformatstring from system)) as ExpiryDate,(select Case When (select Count(*) from ExpiryItem Where Location=SDE.Location and ItemNo=SDE.ItemNo and BinNo =StockAdjustmentDet.BinNo and LotNo=SDE.LotNo and ISNULL (PalletNo,'')=ISNULL (SDE.PalletNo,''))>0  Then (select Sum(Qty) From ExpiryItem Where Location=SDE.Location and ItemNo=SDE.ItemNo and BinNo=StockAdjustmentDet.BinNo and LotNo=SDE.LotNo and ISNULL (PalletNo,'')=ISNULL (SDE.PalletNo,'')) Else 0 End )as Inventory,StockAdjustmentDet.Reason from StockAdjustmentDetExp SDE inner join StockAdjustmentDet on SDE.DocNo=StockAdjustmentDet.DocNo and SDE.ItemNo=StockAdjustmentDet.ItemNo and SDE.UOM=StockAdjustmentDet.UOM and SDE.BinNo =StockAdjustmentDet.BinNo and SDE.Location=StockAdjustmentDet.Location and SDE.AdjustmentType=StockAdjustmentDet.AdjustmentType inner join Item on Item.ItemNo=StockAdjustmentDet.ItemNo Left join ExpiryItem on Item.ItemNo=ExpiryItem.ItemNo and ExpiryItem.BinNo=StockAdjustmentDet.BinNo and ExpiryItem.Location=StockAdjustmentDet.Location where StockAdjustmentDet.DocNo ='MDO0000001' and IsNULL(SDE.ItemNo,'')<>''   Order by ItemNo
+
+03-12-2024 09:49:12 AM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (Select Distinct StockAdjustmentDet.AdjustmentType,SDE.Location,SDE.BinNo,SDE.ItemNo,Item.ItemName,SDE.UOM,SDE.Qty,SDE.PalletNo,SDE.LotNo,Format(SDE.ExpiryDate,(Select Dateformatstring from system)) as ExpiryDate,(select Case When (select Count(*) from ExpiryItem Where Location=SDE.Location and ItemNo=SDE.ItemNo and BinNo =StockAdjustmentDet.BinNo and LotNo=SDE.LotNo and ISNULL (PalletNo,'')=ISNULL (SDE.PalletNo,''))>0  Then (select Sum(Qty) From ExpiryItem Where Location=SDE.Location and ItemNo=SDE.ItemNo and BinNo=StockAdjustmentDet.BinNo and LotNo=SDE.LotNo and ISNULL (PalletNo,'')=ISNULL (SDE.PalletNo,'')) Else 0 End )as Inventory,StockAdjustmentDet.Reason from StockAdjustmentDetExp SDE inner join StockAdjustmentDet on SDE.DocNo=StockAdjustmentDet.DocNo and SDE.ItemNo=StockAdjustmentDet.ItemNo and SDE.UOM=StockAdjustmentDet.UOM and SDE.BinNo =StockAdjustmentDet.BinNo and SDE.Location=StockAdjustmentDet.Location and SDE.AdjustmentType=StockAdjustmentDet.AdjustmentType inner join Item on Item.ItemNo=StockAdjustmentDet.ItemNo Left join ExpiryItem on Item.ItemNo=ExpiryItem.ItemNo and ExpiryItem.BinNo=StockAdjustmentDet.BinNo and ExpiryItem.Location=StockAdjustmentDet.Location where StockAdjustmentDet.DocNo ='MDO0000001' and IsNULL(SDE.ItemNo,'')<>''  ) rs
+
+03-12-2024 09:49:12 AM: select * from SearchConfig where  ScreenName = 'InventoryAdjustmentType1Form_LISTVIEW_Item'   order by displayno
+
+03-12-2024 09:49:12 AM: select * from SortConfig where  ScreenName = 'InventoryAdjustmentType1Form_LISTVIEW_Item'   order by displayno
+
+03-12-2024 09:49:12 AM: select * from SearchConfig where  ScreenName = 'InventoryAdjustmentType1Form_LISTVIEW_Item'   order by displayno
+
+03-12-2024 09:49:13 AM: select * from SortConfig where  ScreenName = 'InventoryAdjustmentType1Form_LISTVIEW_Item'   order by displayno
+
+03-12-2024 09:49:13 AM: SELECT * FROM FormConfig where  ScreenName='InventoryAdjustmentType1Form' and Language = 'English' ORDER BY ScreenName, DisplayNo
+
+03-12-2024 09:51:55 AM: select QueryText + ' ' + isnull(GroupText,'') + ' ' + isnull(OrderText,'') from Queryconfig where screenname ='InventoryAdjustment_SaveBtn_USER_VALIDATE'
+
+03-12-2024 09:52:19 AM: Select CASE WHEN (select IsConfirmed from StockAdjustmenthdr where DocNo = 'MDO0000001') = '1' THEN 0 ELSE 1 END as Response    
+
+03-12-2024 09:53:15 AM: select QueryText + ' ' + isnull(GroupText,'') + ' ' + isnull(OrderText,'') from Queryconfig where screenname ='InventoryAdjustment_SaveBtn_USER_VALIDATE'
+
+03-12-2024 09:53:15 AM: Select CASE WHEN (select IsConfirmed from StockAdjustmenthdr where DocNo = 'MDO0000001') = '1' THEN 0 ELSE 1 END as Response    
+
+03-12-2024 12:15:27 PM: select SystemValue from systemlist where code ='YearPickerLimit' and SolutionName='SALES-WEB'
+
+03-12-2024 12:16:05 PM: SELECT * FROM MessageConfig  where solutionName='SALES-WEB'  order by ScreenName
+
+03-12-2024 12:16:06 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard%'  order by ScreenName, FieldName
+
+03-12-2024 12:16:06 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard%'  order by roworder
+
+03-12-2024 12:16:06 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 12:16:06 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'EXECUTELOG'
+
+03-12-2024 12:16:06 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'MainMenuLoad'
+
+03-12-2024 12:16:06 PM: select * from Gridfunctions where screenname ='MAIN' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 12:16:06 PM: select * from Gridfunctions where screenname ='Customers' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 12:16:07 PM: select * from Gridfunctions where screenname ='Products' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 12:16:07 PM: select * from Gridfunctions where screenname ='Inventory' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 12:16:07 PM: select * from Gridfunctions where screenname ='Sales' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 12:16:07 PM: select * from Gridfunctions where screenname ='Payments' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 12:16:07 PM: select * from Gridfunctions where screenname ='Data Transfer' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 12:16:07 PM: select * from Gridfunctions where screenname ='Reports' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 12:16:07 PM: select * from Gridfunctions where screenname ='Administration' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 12:16:07 PM: select * from Gridfunctions where screenname ='Function Settings' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 12:16:12 PM: select * from SystemList
+
+03-12-2024 12:16:12 PM: select * from System
+
+03-12-2024 12:16:16 PM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='Web_DashBoard_01_FORM'
+
+03-12-2024 12:16:16 PM: exec LoginAlert 'ADMIN'  
+
+03-12-2024 12:16:16 PM: SELECT * FROM ActionConfig WHERE ScreenName='Web_DashBoard_01' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 12:16:16 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='Web_DashBoard_01' and Language = 'English' and (AccessLevel is null or AccessLevel ='14')  order by displayno
+
+03-12-2024 12:16:19 PM: SELECT * FROM FormConfig where  ScreenName='Web_DashBoard_01' and Language = 'English' ORDER BY ScreenName, DisplayNo
+
+03-12-2024 12:16:24 PM: select QueryText + ' ' + isnull(GroupText,'') + ' ' + isnull(OrderText,'') from Queryconfig where screenname ='SalesOrderForm_ValiOrder'
+
+03-12-2024 12:16:24 PM: select case when (select void from orderhdr where OrdNo='002PSS03O0016701')=1 then 0 else 1 end as Response  
+
+03-12-2024 12:16:24 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'
+
+03-12-2024 12:17:40 PM: SELECT * FROM ActionConfig WHERE ScreenName='Main' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 12:17:45 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard_01%'  order by ScreenName, FieldName
+
+03-12-2024 12:17:45 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard_01%'  order by roworder
+
+03-12-2024 12:17:45 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 12:17:45 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by ScreenName, FieldName
+
+03-12-2024 12:17:45 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by roworder
+
+03-12-2024 12:17:45 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 12:17:45 PM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='InventoryForm_FORM'
+
+03-12-2024 12:17:46 PM: select * from GoodsInvn where ItemNo= ''    
+
+03-12-2024 12:17:46 PM: SELECT * FROM ActionConfig WHERE ScreenName='InventoryForm' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 12:17:46 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='InventoryForm' and Language = 'English' and (AccessLevel is null or AccessLevel ='14')  order by displayno
+
+03-12-2024 12:17:47 PM: select ISNULL(COUNT(FieldName),0) cnt from ListConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item' and fieldname = 'isUpDown'
+
+03-12-2024 12:17:47 PM: select ISNULL(COUNT(FieldName),0) cnt from SEARCHConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'
+
+03-12-2024 12:17:47 PM: Select Distinct Location.Code,Name as Text from Location Inner Join LocationGroup on Location.Code=LocationGroup.GroupID where LocationGroup.UserID='ADMIN'  Order by Code
+
+03-12-2024 12:17:47 PM: select * from formconfig where screenname like 'InventoryForm' and fieldname like 'Item'
+
+03-12-2024 12:17:47 PM: select * from listconfig where  solutionname='SALES-WEB' and  screenname ='InventoryForm_LISTVIEW_Item' and Language ='English' and (AccessLevel is null or AccessLevel ='14') order by displayno
+
+03-12-2024 12:17:47 PM: select SystemValue from systemlist where code ='PaginationLimit' and SolutionName='SALES-WEB'
+
+03-12-2024 12:17:47 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='InventoryForm_LISTVIEW_Item' and SolutionName = 'SALES-WEB'
+
+03-12-2024 12:17:48 PM: select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1   order by ItemNo ASC
+
+03-12-2024 12:17:48 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1  ) rs
+
+03-12-2024 12:17:48 PM: SELECT * FROM FormConfig where  ScreenName='InventoryForm' and Language = 'English' ORDER BY ScreenName, DisplayNo
+
+03-12-2024 01:41:54 PM: select SystemValue from systemlist where code ='YearPickerLimit' and SolutionName='SALES-WEB'
+
+03-12-2024 01:42:10 PM: SELECT * FROM MessageConfig  where solutionName='SALES-WEB'  order by ScreenName
+
+03-12-2024 01:42:11 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard%'  order by ScreenName, FieldName
+
+03-12-2024 01:42:11 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard%'  order by roworder
+
+03-12-2024 01:42:11 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 01:42:11 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'EXECUTELOG'
+
+03-12-2024 01:42:11 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'MainMenuLoad'
+
+03-12-2024 01:42:11 PM: select * from Gridfunctions where screenname ='MAIN' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 01:42:12 PM: select * from Gridfunctions where screenname ='Customers' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 01:42:12 PM: select * from Gridfunctions where screenname ='Products' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 01:42:12 PM: select * from Gridfunctions where screenname ='Inventory' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 01:42:12 PM: select * from Gridfunctions where screenname ='Sales' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 01:42:12 PM: select * from Gridfunctions where screenname ='Payments' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 01:42:12 PM: select * from Gridfunctions where screenname ='Data Transfer' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 01:42:12 PM: select * from Gridfunctions where screenname ='Reports' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 01:42:12 PM: select * from Gridfunctions where screenname ='Administration' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 01:42:12 PM: select * from Gridfunctions where screenname ='Function Settings' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 01:42:22 PM: select * from SystemList
+
+03-12-2024 01:42:22 PM: select * from System
+
+03-12-2024 01:42:23 PM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='Web_DashBoard_01_FORM'
+
+03-12-2024 01:42:23 PM: exec LoginAlert 'ADMIN'  
+
+03-12-2024 01:42:24 PM: SELECT * FROM ActionConfig WHERE ScreenName='Web_DashBoard_01' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 01:42:24 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='Web_DashBoard_01' and Language = 'English' and (AccessLevel is null or AccessLevel ='14')  order by displayno
+
+03-12-2024 01:42:26 PM: SELECT * FROM FormConfig where  ScreenName='Web_DashBoard_01' and Language = 'English' ORDER BY ScreenName, DisplayNo
+
+03-12-2024 01:42:26 PM: select QueryText + ' ' + isnull(GroupText,'') + ' ' + isnull(OrderText,'') from Queryconfig where screenname ='SalesOrderForm_ValiOrder'
+
+03-12-2024 01:42:26 PM: select case when (select void from orderhdr where OrdNo='002PSS03O0016701')=1 then 0 else 1 end as Response  
+
+03-12-2024 01:42:26 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'
+
+03-12-2024 01:43:13 PM: SELECT * FROM ActionConfig WHERE ScreenName='Main' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 01:43:17 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard_01%'  order by ScreenName, FieldName
+
+03-12-2024 01:43:17 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard_01%'  order by roworder
+
+03-12-2024 01:43:17 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 01:43:17 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by ScreenName, FieldName
+
+03-12-2024 01:43:17 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by roworder
+
+03-12-2024 01:43:17 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 01:43:17 PM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='InventoryForm_FORM'
+
+03-12-2024 01:43:17 PM: select * from GoodsInvn where ItemNo= ''    
+
+03-12-2024 01:43:17 PM: SELECT * FROM ActionConfig WHERE ScreenName='InventoryForm' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 01:43:17 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='InventoryForm' and Language = 'English' and (AccessLevel is null or AccessLevel ='14')  order by displayno
+
+03-12-2024 01:43:19 PM: select ISNULL(COUNT(FieldName),0) cnt from ListConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item' and fieldname = 'isUpDown'
+
+03-12-2024 01:43:19 PM: select ISNULL(COUNT(FieldName),0) cnt from SEARCHConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'
+
+03-12-2024 01:43:19 PM: Select Distinct Location.Code,Name as Text from Location Inner Join LocationGroup on Location.Code=LocationGroup.GroupID where LocationGroup.UserID='ADMIN'  Order by Code
+
+03-12-2024 01:43:19 PM: select * from formconfig where screenname like 'InventoryForm' and fieldname like 'Item'
+
+03-12-2024 01:43:20 PM: select * from listconfig where  solutionname='SALES-WEB' and  screenname ='InventoryForm_LISTVIEW_Item' and Language ='English' and (AccessLevel is null or AccessLevel ='14') order by displayno
+
+03-12-2024 01:43:20 PM: select SystemValue from systemlist where code ='PaginationLimit' and SolutionName='SALES-WEB'
+
+03-12-2024 01:43:20 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='InventoryForm_LISTVIEW_Item' and SolutionName = 'SALES-WEB'
+
+03-12-2024 01:43:20 PM: select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1   order by ItemNo ASC
+
+03-12-2024 01:43:20 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1  ) rs
+
+03-12-2024 01:43:20 PM: SELECT * FROM FormConfig where  ScreenName='InventoryForm' and Language = 'English' ORDER BY ScreenName, DisplayNo
+
+03-12-2024 01:43:32 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by ScreenName, FieldName
+
+03-12-2024 01:43:32 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by roworder
+
+03-12-2024 01:43:33 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 01:43:33 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='InventoryForm_LISTVIEW_Item' and SolutionName = 'SALES-WEB'
+
+03-12-2024 01:43:33 PM: select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT006'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT006'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT006'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT006'   ) as Inventoryform where 1=1   order by ItemNo ASC
+
+03-12-2024 01:43:33 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT006'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT006'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT006'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT006'   ) as Inventoryform where 1=1  ) rs
+
+03-12-2024 01:43:33 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:43:33 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:43:33 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:43:33 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:43:34 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:43:34 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:43:34 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:43:34 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:43:34 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:43:34 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:43:34 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:43:34 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:44:14 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by ScreenName, FieldName
+
+03-12-2024 01:44:14 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by roworder
+
+03-12-2024 01:44:14 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 01:44:14 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='InventoryForm_LISTVIEW_Item' and SolutionName = 'SALES-WEB'
+
+03-12-2024 01:44:14 PM: select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT004'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT004'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT004'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT004'   ) as Inventoryform where 1=1   order by ItemNo ASC
+
+03-12-2024 01:44:14 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT004'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT004'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT004'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT004'   ) as Inventoryform where 1=1  ) rs
+
+03-12-2024 01:44:39 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:44:39 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:47:44 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:47:44 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:47:45 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:47:45 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:48:07 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:48:08 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:48:11 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:48:12 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:51:49 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:51:49 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:52:07 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:52:07 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:53:14 PM: SELECT * FROM ActionConfig WHERE ScreenName='Main' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 01:53:18 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by ScreenName, FieldName
+
+03-12-2024 01:53:18 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by roworder
+
+03-12-2024 01:53:18 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 01:53:18 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by ScreenName, FieldName
+
+03-12-2024 01:53:18 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by roworder
+
+03-12-2024 01:53:18 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 01:53:18 PM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='InventoryForm_FORM'
+
+03-12-2024 01:53:18 PM: select * from GoodsInvn where ItemNo= '6250030001'    
+
+03-12-2024 01:53:18 PM: SELECT * FROM ActionConfig WHERE ScreenName='InventoryForm' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 01:53:18 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='InventoryForm' and Language = 'English' and (AccessLevel is null or AccessLevel ='14')  order by displayno
+
+03-12-2024 01:53:19 PM: select ISNULL(COUNT(FieldName),0) cnt from ListConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item' and fieldname = 'isUpDown'
+
+03-12-2024 01:53:19 PM: select ISNULL(COUNT(FieldName),0) cnt from SEARCHConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'
+
+03-12-2024 01:53:20 PM: Select Distinct Location.Code,Name as Text from Location Inner Join LocationGroup on Location.Code=LocationGroup.GroupID where LocationGroup.UserID='ADMIN'  Order by Code
+
+03-12-2024 01:53:20 PM: Select Distinct Location.Code,Name as Text from Location Inner Join LocationGroup on Location.Code=LocationGroup.GroupID where LocationGroup.UserID='ADMIN'  Order by Code
+
+03-12-2024 01:53:20 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by ScreenName, FieldName
+
+03-12-2024 01:53:20 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by roworder
+
+03-12-2024 01:53:20 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 01:53:20 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='InventoryForm_LISTVIEW_Item' and SolutionName = 'SALES-WEB'
+
+03-12-2024 01:53:20 PM: select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-RSD03'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-RSD03'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-RSD03'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-RSD03'   ) as Inventoryform where 1=1   order by ItemNo ASC
+
+03-12-2024 01:53:20 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-RSD03'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-RSD03'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-RSD03'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-RSD03'   ) as Inventoryform where 1=1  ) rs
+
+03-12-2024 01:57:10 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 01:57:10 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:34:05 PM: select SystemValue from systemlist where code ='YearPickerLimit' and SolutionName='SALES-WEB'
+
+03-12-2024 02:34:08 PM: SELECT * FROM MessageConfig  where solutionName='SALES-WEB'  order by ScreenName
+
+03-12-2024 02:34:08 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard%'  order by ScreenName, FieldName
+
+03-12-2024 02:34:09 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard%'  order by roworder
+
+03-12-2024 02:34:09 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 02:34:09 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'EXECUTELOG'
+
+03-12-2024 02:34:10 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'MainMenuLoad'
+
+03-12-2024 02:34:10 PM: select * from Gridfunctions where screenname ='MAIN' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:34:10 PM: select * from Gridfunctions where screenname ='Customers' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:34:10 PM: select * from Gridfunctions where screenname ='Products' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:34:10 PM: select * from Gridfunctions where screenname ='Inventory' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:34:10 PM: select * from Gridfunctions where screenname ='Sales' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:34:10 PM: select * from Gridfunctions where screenname ='Payments' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:34:10 PM: select * from Gridfunctions where screenname ='Data Transfer' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:34:10 PM: select * from Gridfunctions where screenname ='Reports' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:34:11 PM: select * from Gridfunctions where screenname ='Administration' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:34:11 PM: select * from Gridfunctions where screenname ='Function Settings' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:34:16 PM: select * from SystemList
+
+03-12-2024 02:34:16 PM: select * from System
+
+03-12-2024 02:34:17 PM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='Web_DashBoard_01_FORM'
+
+03-12-2024 02:34:17 PM: exec LoginAlert 'ADMIN'  
+
+03-12-2024 02:34:18 PM: SELECT * FROM ActionConfig WHERE ScreenName='Web_DashBoard_01' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 02:34:18 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='Web_DashBoard_01' and Language = 'English' and (AccessLevel is null or AccessLevel ='14')  order by displayno
+
+03-12-2024 02:34:20 PM: SELECT * FROM FormConfig where  ScreenName='Web_DashBoard_01' and Language = 'English' ORDER BY ScreenName, DisplayNo
+
+03-12-2024 02:34:20 PM: select QueryText + ' ' + isnull(GroupText,'') + ' ' + isnull(OrderText,'') from Queryconfig where screenname ='SalesOrderForm_ValiOrder'
+
+03-12-2024 02:34:20 PM: select case when (select void from orderhdr where OrdNo='002PSS03O0016701')=1 then 0 else 1 end as Response  
+
+03-12-2024 02:34:20 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'
+
+03-12-2024 02:34:36 PM: SELECT * FROM ActionConfig WHERE ScreenName='Main' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 02:34:39 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard_01%'  order by ScreenName, FieldName
+
+03-12-2024 02:34:39 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard_01%'  order by roworder
+
+03-12-2024 02:34:39 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 02:34:39 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by ScreenName, FieldName
+
+03-12-2024 02:34:39 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by roworder
+
+03-12-2024 02:34:39 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 02:34:39 PM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='InventoryForm_FORM'
+
+03-12-2024 02:34:39 PM: select * from GoodsInvn where ItemNo= ''    
+
+03-12-2024 02:34:39 PM: SELECT * FROM ActionConfig WHERE ScreenName='InventoryForm' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 02:34:39 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='InventoryForm' and Language = 'English' and (AccessLevel is null or AccessLevel ='14')  order by displayno
+
+03-12-2024 02:34:41 PM: select ISNULL(COUNT(FieldName),0) cnt from ListConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item' and fieldname = 'isUpDown'
+
+03-12-2024 02:34:41 PM: select ISNULL(COUNT(FieldName),0) cnt from SEARCHConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'
+
+03-12-2024 02:34:41 PM: Select Distinct Location.Code,Name as Text from Location Inner Join LocationGroup on Location.Code=LocationGroup.GroupID where LocationGroup.UserID='ADMIN'  Order by Code
+
+03-12-2024 02:34:41 PM: select * from formconfig where screenname like 'InventoryForm' and fieldname like 'Item'
+
+03-12-2024 02:34:41 PM: select * from listconfig where  solutionname='SALES-WEB' and  screenname ='InventoryForm_LISTVIEW_Item' and Language ='English' and (AccessLevel is null or AccessLevel ='14') order by displayno
+
+03-12-2024 02:34:41 PM: select SystemValue from systemlist where code ='PaginationLimit' and SolutionName='SALES-WEB'
+
+03-12-2024 02:34:41 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='InventoryForm_LISTVIEW_Item' and SolutionName = 'SALES-WEB'
+
+03-12-2024 02:34:41 PM: select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1   order by ItemNo ASC
+
+03-12-2024 02:34:41 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1  ) rs
+
+03-12-2024 02:34:41 PM: SELECT * FROM FormConfig where  ScreenName='InventoryForm' and Language = 'English' ORDER BY ScreenName, DisplayNo
+
+03-12-2024 02:34:46 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by ScreenName, FieldName
+
+03-12-2024 02:34:46 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by roworder
+
+03-12-2024 02:34:46 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 02:34:46 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='InventoryForm_LISTVIEW_Item' and SolutionName = 'SALES-WEB'
+
+03-12-2024 02:34:47 PM: select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT004'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT004'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT004'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT004'   ) as Inventoryform where 1=1   order by ItemNo ASC
+
+03-12-2024 02:34:47 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT004'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT004'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT004'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT004'   ) as Inventoryform where 1=1  ) rs
+
+03-12-2024 02:36:35 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:36:36 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:42:00 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:42:43 PM: select SystemValue from systemlist where code ='YearPickerLimit' and SolutionName='SALES-WEB'
+
+03-12-2024 02:42:47 PM: SELECT * FROM MessageConfig  where solutionName='SALES-WEB'  order by ScreenName
+
+03-12-2024 02:42:48 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard%'  order by ScreenName, FieldName
+
+03-12-2024 02:42:48 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard%'  order by roworder
+
+03-12-2024 02:42:48 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 02:42:49 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'EXECUTELOG'
+
+03-12-2024 02:42:49 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'MainMenuLoad'
+
+03-12-2024 02:42:49 PM: select * from Gridfunctions where screenname ='MAIN' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:42:49 PM: select * from Gridfunctions where screenname ='Customers' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:42:49 PM: select * from Gridfunctions where screenname ='Products' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:42:50 PM: select * from Gridfunctions where screenname ='Inventory' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:42:50 PM: select * from Gridfunctions where screenname ='Sales' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:42:50 PM: select * from Gridfunctions where screenname ='Payments' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:42:50 PM: select * from Gridfunctions where screenname ='Data Transfer' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:42:50 PM: select * from Gridfunctions where screenname ='Reports' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:42:50 PM: select * from Gridfunctions where screenname ='Administration' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:42:50 PM: select * from Gridfunctions where screenname ='Function Settings' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:42:56 PM: select * from SystemList
+
+03-12-2024 02:42:56 PM: select * from System
+
+03-12-2024 02:42:59 PM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='Web_DashBoard_01_FORM'
+
+03-12-2024 02:42:59 PM: exec LoginAlert 'ADMIN'  
+
+03-12-2024 02:43:00 PM: SELECT * FROM ActionConfig WHERE ScreenName='Web_DashBoard_01' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 02:43:00 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='Web_DashBoard_01' and Language = 'English' and (AccessLevel is null or AccessLevel ='14')  order by displayno
+
+03-12-2024 02:43:02 PM: SELECT * FROM FormConfig where  ScreenName='Web_DashBoard_01' and Language = 'English' ORDER BY ScreenName, DisplayNo
+
+03-12-2024 02:43:02 PM: select QueryText + ' ' + isnull(GroupText,'') + ' ' + isnull(OrderText,'') from Queryconfig where screenname ='SalesOrderForm_ValiOrder'
+
+03-12-2024 02:43:02 PM: select case when (select void from orderhdr where OrdNo='002PSS03O0016701')=1 then 0 else 1 end as Response  
+
+03-12-2024 02:43:02 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'
+
+03-12-2024 02:43:21 PM: SELECT * FROM ActionConfig WHERE ScreenName='Main' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 02:43:26 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard_01%'  order by ScreenName, FieldName
+
+03-12-2024 02:43:26 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard_01%'  order by roworder
+
+03-12-2024 02:43:26 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 02:43:26 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by ScreenName, FieldName
+
+03-12-2024 02:43:26 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by roworder
+
+03-12-2024 02:43:26 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 02:43:26 PM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='InventoryForm_FORM'
+
+03-12-2024 02:43:27 PM: select * from GoodsInvn where ItemNo= ''    
+
+03-12-2024 02:43:27 PM: SELECT * FROM ActionConfig WHERE ScreenName='InventoryForm' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 02:43:27 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='InventoryForm' and Language = 'English' and (AccessLevel is null or AccessLevel ='14')  order by displayno
+
+03-12-2024 02:43:28 PM: select ISNULL(COUNT(FieldName),0) cnt from ListConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item' and fieldname = 'isUpDown'
+
+03-12-2024 02:43:28 PM: select ISNULL(COUNT(FieldName),0) cnt from SEARCHConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'
+
+03-12-2024 02:43:28 PM: Select Distinct Location.Code,Name as Text from Location Inner Join LocationGroup on Location.Code=LocationGroup.GroupID where LocationGroup.UserID='ADMIN'  Order by Code
+
+03-12-2024 02:43:28 PM: select * from formconfig where screenname like 'InventoryForm' and fieldname like 'Item'
+
+03-12-2024 02:43:29 PM: select * from listconfig where  solutionname='SALES-WEB' and  screenname ='InventoryForm_LISTVIEW_Item' and Language ='English' and (AccessLevel is null or AccessLevel ='14') order by displayno
+
+03-12-2024 02:43:29 PM: select SystemValue from systemlist where code ='PaginationLimit' and SolutionName='SALES-WEB'
+
+03-12-2024 02:43:29 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='InventoryForm_LISTVIEW_Item' and SolutionName = 'SALES-WEB'
+
+03-12-2024 02:43:29 PM: select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1   order by ItemNo ASC
+
+03-12-2024 02:43:29 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1  ) rs
+
+03-12-2024 02:43:29 PM: SELECT * FROM FormConfig where  ScreenName='InventoryForm' and Language = 'English' ORDER BY ScreenName, DisplayNo
+
+03-12-2024 02:43:32 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by ScreenName, FieldName
+
+03-12-2024 02:43:32 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by roworder
+
+03-12-2024 02:43:33 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 02:43:33 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='InventoryForm_LISTVIEW_Item' and SolutionName = 'SALES-WEB'
+
+03-12-2024 02:43:33 PM: select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT004'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT004'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT004'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT004'   ) as Inventoryform where 1=1   order by ItemNo ASC
+
+03-12-2024 02:43:33 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT004'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT004'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT004'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT004'   ) as Inventoryform where 1=1  ) rs
+
+03-12-2024 02:44:09 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:44:09 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:48:37 PM: select SystemValue from systemlist where code ='YearPickerLimit' and SolutionName='SALES-WEB'
+
+03-12-2024 02:48:39 PM: SELECT * FROM MessageConfig  where solutionName='SALES-WEB'  order by ScreenName
+
+03-12-2024 02:48:40 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard%'  order by ScreenName, FieldName
+
+03-12-2024 02:48:40 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard%'  order by roworder
+
+03-12-2024 02:48:40 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 02:48:41 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'EXECUTELOG'
+
+03-12-2024 02:48:41 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'MainMenuLoad'
+
+03-12-2024 02:48:41 PM: select * from Gridfunctions where screenname ='MAIN' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:48:41 PM: select * from Gridfunctions where screenname ='Customers' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:48:41 PM: select * from Gridfunctions where screenname ='Products' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:48:41 PM: select * from Gridfunctions where screenname ='Inventory' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:48:41 PM: select * from Gridfunctions where screenname ='Sales' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:48:41 PM: select * from Gridfunctions where screenname ='Payments' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:48:42 PM: select * from Gridfunctions where screenname ='Data Transfer' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:48:42 PM: select * from Gridfunctions where screenname ='Reports' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:48:42 PM: select * from Gridfunctions where screenname ='Administration' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:48:42 PM: select * from Gridfunctions where screenname ='Function Settings' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:48:47 PM: select * from SystemList
+
+03-12-2024 02:48:47 PM: select * from System
+
+03-12-2024 02:48:48 PM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='Web_DashBoard_01_FORM'
+
+03-12-2024 02:48:48 PM: exec LoginAlert 'ADMIN'  
+
+03-12-2024 02:48:49 PM: SELECT * FROM ActionConfig WHERE ScreenName='Web_DashBoard_01' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 02:48:49 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='Web_DashBoard_01' and Language = 'English' and (AccessLevel is null or AccessLevel ='14')  order by displayno
+
+03-12-2024 02:48:51 PM: SELECT * FROM FormConfig where  ScreenName='Web_DashBoard_01' and Language = 'English' ORDER BY ScreenName, DisplayNo
+
+03-12-2024 02:48:51 PM: select QueryText + ' ' + isnull(GroupText,'') + ' ' + isnull(OrderText,'') from Queryconfig where screenname ='SalesOrderForm_ValiOrder'
+
+03-12-2024 02:48:51 PM: select case when (select void from orderhdr where OrdNo='002PSS03O0016701')=1 then 0 else 1 end as Response  
+
+03-12-2024 02:48:51 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'
+
+03-12-2024 02:49:01 PM: SELECT * FROM ActionConfig WHERE ScreenName='Main' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 02:49:05 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard_01%'  order by ScreenName, FieldName
+
+03-12-2024 02:49:05 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard_01%'  order by roworder
+
+03-12-2024 02:49:05 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 02:49:05 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by ScreenName, FieldName
+
+03-12-2024 02:49:05 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by roworder
+
+03-12-2024 02:49:05 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 02:49:05 PM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='InventoryForm_FORM'
+
+03-12-2024 02:49:05 PM: select * from GoodsInvn where ItemNo= ''    
+
+03-12-2024 02:49:05 PM: SELECT * FROM ActionConfig WHERE ScreenName='InventoryForm' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 02:49:05 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='InventoryForm' and Language = 'English' and (AccessLevel is null or AccessLevel ='14')  order by displayno
+
+03-12-2024 02:49:06 PM: select ISNULL(COUNT(FieldName),0) cnt from ListConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item' and fieldname = 'isUpDown'
+
+03-12-2024 02:49:07 PM: select ISNULL(COUNT(FieldName),0) cnt from SEARCHConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'
+
+03-12-2024 02:49:07 PM: Select Distinct Location.Code,Name as Text from Location Inner Join LocationGroup on Location.Code=LocationGroup.GroupID where LocationGroup.UserID='ADMIN'  Order by Code
+
+03-12-2024 02:49:07 PM: select * from formconfig where screenname like 'InventoryForm' and fieldname like 'Item'
+
+03-12-2024 02:49:08 PM: select * from listconfig where  solutionname='SALES-WEB' and  screenname ='InventoryForm_LISTVIEW_Item' and Language ='English' and (AccessLevel is null or AccessLevel ='14') order by displayno
+
+03-12-2024 02:49:08 PM: select SystemValue from systemlist where code ='PaginationLimit' and SolutionName='SALES-WEB'
+
+03-12-2024 02:49:08 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='InventoryForm_LISTVIEW_Item' and SolutionName = 'SALES-WEB'
+
+03-12-2024 02:49:08 PM: select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1   order by ItemNo ASC
+
+03-12-2024 02:49:09 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1  ) rs
+
+03-12-2024 02:49:09 PM: SELECT * FROM FormConfig where  ScreenName='InventoryForm' and Language = 'English' ORDER BY ScreenName, DisplayNo
+
+03-12-2024 02:49:13 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by ScreenName, FieldName
+
+03-12-2024 02:49:13 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by roworder
+
+03-12-2024 02:49:13 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 02:49:13 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='InventoryForm_LISTVIEW_Item' and SolutionName = 'SALES-WEB'
+
+03-12-2024 02:49:14 PM: select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT004'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT004'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT004'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT004'   ) as Inventoryform where 1=1   order by ItemNo ASC
+
+03-12-2024 02:49:14 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT004'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT004'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT004'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT004'   ) as Inventoryform where 1=1  ) rs
+
+03-12-2024 02:49:20 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:49:20 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:49:37 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:49:37 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:49:41 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:49:41 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:49:41 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:49:41 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:49:41 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:49:42 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:49:42 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:49:42 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:49:42 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:49:42 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:57:24 PM: select SystemValue from systemlist where code ='YearPickerLimit' and SolutionName='SALES-WEB'
+
+03-12-2024 02:57:26 PM: SELECT * FROM MessageConfig  where solutionName='SALES-WEB'  order by ScreenName
+
+03-12-2024 02:57:26 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard%'  order by ScreenName, FieldName
+
+03-12-2024 02:57:26 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard%'  order by roworder
+
+03-12-2024 02:57:27 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 02:57:27 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'EXECUTELOG'
+
+03-12-2024 02:57:27 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'MainMenuLoad'
+
+03-12-2024 02:57:27 PM: select * from Gridfunctions where screenname ='MAIN' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:57:27 PM: select * from Gridfunctions where screenname ='Customers' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:57:27 PM: select * from Gridfunctions where screenname ='Products' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:57:28 PM: select * from Gridfunctions where screenname ='Inventory' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:57:28 PM: select * from Gridfunctions where screenname ='Sales' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:57:28 PM: select * from Gridfunctions where screenname ='Payments' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:57:28 PM: select * from Gridfunctions where screenname ='Data Transfer' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:57:28 PM: select * from Gridfunctions where screenname ='Reports' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:57:29 PM: select * from Gridfunctions where screenname ='Administration' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:57:29 PM: select * from Gridfunctions where screenname ='Function Settings' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+
+03-12-2024 02:57:32 PM: select * from SystemList
+
+03-12-2024 02:57:33 PM: select * from System
+
+03-12-2024 02:57:33 PM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='Web_DashBoard_01_FORM'
+
+03-12-2024 02:57:34 PM: exec LoginAlert 'ADMIN'  
+
+03-12-2024 02:57:34 PM: SELECT * FROM ActionConfig WHERE ScreenName='Web_DashBoard_01' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 02:57:34 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='Web_DashBoard_01' and Language = 'English' and (AccessLevel is null or AccessLevel ='14')  order by displayno
+
+03-12-2024 02:57:36 PM: SELECT * FROM FormConfig where  ScreenName='Web_DashBoard_01' and Language = 'English' ORDER BY ScreenName, DisplayNo
+
+03-12-2024 02:57:36 PM: select QueryText + ' ' + isnull(GroupText,'') + ' ' + isnull(OrderText,'') from Queryconfig where screenname ='SalesOrderForm_ValiOrder'
+
+03-12-2024 02:57:36 PM: select case when (select void from orderhdr where OrdNo='002PSS03O0016701')=1 then 0 else 1 end as Response  
+
+03-12-2024 02:57:36 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'
+
+03-12-2024 02:58:07 PM: SELECT * FROM ActionConfig WHERE ScreenName='Main' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 02:58:11 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard_01%'  order by ScreenName, FieldName
+
+03-12-2024 02:58:11 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard_01%'  order by roworder
+
+03-12-2024 02:58:11 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 02:58:11 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by ScreenName, FieldName
+
+03-12-2024 02:58:11 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by roworder
+
+03-12-2024 02:58:11 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 02:58:11 PM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='InventoryForm_FORM'
+
+03-12-2024 02:58:12 PM: select * from GoodsInvn where ItemNo= ''    
+
+03-12-2024 02:58:12 PM: SELECT * FROM ActionConfig WHERE ScreenName='InventoryForm' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+03-12-2024 02:58:12 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='InventoryForm' and Language = 'English' and (AccessLevel is null or AccessLevel ='14')  order by displayno
+
+03-12-2024 02:58:13 PM: select ISNULL(COUNT(FieldName),0) cnt from ListConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item' and fieldname = 'isUpDown'
+
+03-12-2024 02:58:13 PM: select ISNULL(COUNT(FieldName),0) cnt from SEARCHConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'
+
+03-12-2024 02:58:14 PM: Select Distinct Location.Code,Name as Text from Location Inner Join LocationGroup on Location.Code=LocationGroup.GroupID where LocationGroup.UserID='ADMIN'  Order by Code
+
+03-12-2024 02:58:14 PM: select * from formconfig where screenname like 'InventoryForm' and fieldname like 'Item'
+
+03-12-2024 02:58:14 PM: select * from listconfig where  solutionname='SALES-WEB' and  screenname ='InventoryForm_LISTVIEW_Item' and Language ='English' and (AccessLevel is null or AccessLevel ='14') order by displayno
+
+03-12-2024 02:58:15 PM: select SystemValue from systemlist where code ='PaginationLimit' and SolutionName='SALES-WEB'
+
+03-12-2024 02:58:15 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='InventoryForm_LISTVIEW_Item' and SolutionName = 'SALES-WEB'
+
+03-12-2024 02:58:15 PM: select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1   order by ItemNo ASC
+
+03-12-2024 02:58:15 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1  ) rs
+
+03-12-2024 02:58:15 PM: SELECT * FROM FormConfig where  ScreenName='InventoryForm' and Language = 'English' ORDER BY ScreenName, DisplayNo
+
+03-12-2024 02:58:21 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by ScreenName, FieldName
+
+03-12-2024 02:58:21 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'InventoryForm%'  order by roworder
+
+03-12-2024 02:58:21 PM: Exception : Invalid column name 'roworder'.
+
+03-12-2024 02:58:21 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='InventoryForm_LISTVIEW_Item' and SolutionName = 'SALES-WEB'
+
+03-12-2024 02:58:21 PM: select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT004'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT004'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT004'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT004'   ) as Inventoryform where 1=1   order by ItemNo ASC
+
+03-12-2024 02:58:21 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT004'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT004'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT004'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT004'   ) as Inventoryform where 1=1  ) rs
+
+03-12-2024 02:58:23 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:58:23 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:58:23 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:58:23 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:58:23 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:58:23 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:58:23 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:58:23 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:58:23 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:58:23 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:58:24 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:58:24 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:58:24 PM: select * from SearchConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+
+03-12-2024 02:58:24 PM: select * from SortConfig where  ScreenName = 'InventoryForm_LISTVIEW_Item'   order by displayno
+

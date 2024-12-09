@@ -1,0 +1,22 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutReport.cshtml";
+}
+
+<script>
+    var screenName = '@ViewBag.ScreenName';
+    var _YearPickerLimit = '@ViewBag.YearPickerLimit';
+    var currentScreenName = screenName;
+    var _isLogin = '@ViewBag.isLogin';
+</script>
+
+
+
+@inherits System.Web.Mvc.WebViewPage
+@using SimplrSales.Models;
+@{
+    ViewBag.Title = "ReportView";
+}
+<div class="formContainer" >
+    @Html.Partial("ReportViewerWebForm")
+</div>
+

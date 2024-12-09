@@ -1,0 +1,11 @@
+Time: 16-10-2023 02:25:49 PM
+-----------------------------------------------------------
+Message: Customer Price Should be numeric,Line No: 1
+Customer Price Should be numeric,Line No: 2
+Customer Price Should be numeric,Line No: 3
+Customer Price Should be numeric,Line No: 4
+Customer Price Should be numeric,Line No: 5
+Customer Price Should be numeric,Line No: 6
+
+-----------------------------------------------------------
+

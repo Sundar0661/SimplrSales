@@ -1,0 +1,26 @@
+{
+   "name": "CATEGORY",
+   "children": [
+    {
+     "name": "FLV",
+     "children": [
+      {"name": "SUNKIST SPKLG ORA CAN 325MLX24", "size": 40},
+      {"name": "NUTRISOY ALMOND 1LX12", "size": 30},
+      {"name": "NUTRISOY ALMOND TWP 1LX12", "size": 20},
+      {"name": "NUTRISOY ALMOND 500ML X 12", "size": 10},
+      {"name": "ZESTA 325MLX24", "size": 50}
+     ]
+    },
+    {
+     "name": "CBN",
+     "children": [
+      {"name": "F&N ORANGE REGULAR 24X500ML", "size": 13},
+      {"name": "F&N GRAPE REGULAR 24X500ML", "size": 84},
+      {"name": "100PLUS TANGERINE 12X1.5L", "size": 33},
+      {"name": "100PLUS REGULAR 12X1.5L", "size": 66},
+      {"name": "100PLUS REGULAR 24X325ML", "size": 69},
+      {"name": "100PLUS LEMON LIME 12X1.5L", "size": 32}      
+     ]
+    }      
+   ]
+  }

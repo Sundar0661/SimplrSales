@@ -1,0 +1,215 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>d3.js gauges</title>
+
+    <style>
+        body {
+            font: 10px arial;
+        }
+    </style>
+
+    <script type="text/javascript" src="d3.js"></script>
+    <script type="text/javascript" src="gauge.js"></script>
+    <script src="../../../Scripts/jquery-1.8.2.min.js"></script>
+    <script src="../../../Scripts/aes.js"></script>
+    <script src="../../CommonModel/CommonModel.js"></script>
+    <script>
+        var url_getFieldList = '../../../ActionConfig/getFieldList/';
+        var url_GetQueryConfigByScreenName = '../../../Common/GetQueryConfigByScreenName/';
+        var url_GetActionConfigData = '../../../ActionConfig/GetActionConfigData/';
+
+        var executeQry = '';
+        $(window).load(function () {
+
+              
+            var scrName = window.location.toString();
+             scrName = scrName.split('?')[1].split(' ')[0];
+           // scrName = 'LineChart_DashBoard_CHART_Gauge';
+
+            var fieldCount = ['string', 'string', 'string', 'string'];
+            var label = '', minVal = '', maxVal = '', value = '';
+            //backgroundColor,width,height,fontSize,fontColor,label,minVal,maxVal,value
+            var query = getQueryConfigByScreenName(scrName);
+            //alert(query); 
+            var chartGetString = setQueryConfig(scrName);
+            if (query != null && query != undefined && query != '') {
+                query += ' ' + chartGetString['QueryConfig_' + scrName + '_GroupText'];
+                query += ' ' + chartGetString['QueryConfig_' + scrName + '_OrderText'];
+
+                //COMMON.Log('chart query ---> ' + query);
+                var str = '', i = 0;
+                //label, -100 as [min], 100 as [max]
+                //var db = commonObj.dbConnectionObj.createDataBaseConnection();
+                execute(query);
+                dbDataRows = executeQry;
+                for (var j = 0; j < dbDataRows.length; j++) {
+                    //while (dbDataRows.isValidRow()) {
+                    if (label != '') {
+                        label += ",";
+                        minVal += ",";
+                        maxVal += ",";
+                        value += ",";
+                    }
+                    label += dbDataRows[j].label;
+                    minVal += dbDataRows[j].min;
+                    maxVal += dbDataRows[j].max;
+                    //value += dbDataRows.fieldByName('value');
+                    value += (dbDataRows[j].value == '' || dbDataRows[j].value == 'null' || dbDataRows[j].value == null) ? 0 : dbDataRows[j].value;
+                    // dbDataRows.next();
+                }
+                // dbDataRows.close();
+                //db.close();
+                label = "'" + label + "'";
+                minVal = "'" + minVal + "'";
+                maxVal = "'" + maxVal + "'";
+                value = "'" + value + "'";
+            }
+                var backgroundColor = "", width = "", height = "", fontSize = "", fontColor = "", _URL = "";
+                backgroundColor = "white";
+                width = "'500'";
+                height = "'300'";
+                fontSize = "'22px'";
+                fontColor = "'black'";
+
+                InitializeGauge(backgroundColor, width, height, fontSize, fontColor, label, minVal, maxVal, value);
+           // }
+
+
+        });
+        try {
+
+            var arr  = [
+                { name: "gauges1", label: "Gauges1", min: 0, max: 100, value: 30 },
+                { name: "gauges2", label: "Gauges2", min: 0, max: 100, value: 50 },
+                { name: "gauges3", label: "Gauges3", min: 0, max: 100, value: 75 },
+                //{name:"memory", label:"Memory", min:30, max:100},
+
+            ];
+
+            var gauges = [];
+
+            function createGauge(name, label, min, max, value) {
+                var config =
+                {
+                    size: 180,//168,
+                    label: label,
+                    min: undefined != min ? min : 0,
+                    max: undefined != max ? max : 100,
+                    value: undefined != value ? value : 50,
+                    minorTicks: 5
+
+                };
+
+                var range = config.max - config.min;
+                /*config.yellowZones = [{ from: config.min + range*0.75, to: config.min + range*0.9 }];
+                config.redZones = [{ from: config.min + range*0.9, to: config.max }];
+                */
+                config.redZones = [{ from: config.min + 0, to: config.min + range * 0.5 }];
+                config.yellowZones = [{ from: config.min + range * 0.5, to: config.min + range * 0.7 }];
+                config.greenZones = [{ from: config.min + range * 0.7, to: config.max }];
+
+
+                gauges[name] = new Gauge(name + "GaugeContainer", config);
+                gauges[name].render();
+            }
+
+            function createGauges() {
+                var GaugeContainer = document.getElementById("GaugeContainer");
+                var GaugeContainerContent = '';
+                GaugeContainer.innerHTML = '';
+                gauges = [];
+
+                for (var i = 0; i < arr.length; i++) {
+                    GaugeContainerContent += '<span id="' + arr[i].name + 'GaugeContainer"></span>';
+
+                }
+
+                //alert('GaugeContainerContent --> ' + GaugeContainerContent);
+
+                if (GaugeContainerContent != '') {
+                    GaugeContainer.innerHTML = GaugeContainerContent;
+                    for (var i = 0; i < arr.length; i++) {
+                        if (arr[i].name != null && arr[i].name != undefined && arr[i].name != '' && arr[i].label != null && arr[i].label != undefined && arr[i].label != '') {
+                            createGauge(arr[i].name, arr[i].label, arr[i].min, arr[i].max, arr[i].value);
+                        }
+                    }
+                }
+                //updateGauges();
+
+                //alert(x.innerHTML//
+                //createGauge("memory", "Memory");
+                //createGauge("cpu", "CPU");
+                //createGauge("network", "Network");
+                //createGauge("test", "Test", -50, 50 );
+            }
+
+            function updateGauges() {
+                for (var key in gauges) {
+                    var value = gauges[key].config.value;//getRandomValue(gauges[key]);
+                    gauges[key].redraw(value);
+                }
+            }
+
+            function getRandomValue(gauge) {
+                var overflow = 0; //10;
+                return gauge.config.min - overflow + (gauge.config.max - gauge.config.min + overflow * 2) * Math.random();
+            }
+
+            function initialize() {
+                //createGauges();
+                //updateGauges();
+                //setTimeout(updateGauges,1000);
+            }
+
+            function InitializeGauge(backgroundColor, width, height, fontSize, fontColor, label, minVal, maxVal, value) {
+
+                //alert(label+ ' - ' + minVal + ' - '+ maxVal + ' - ' + value);
+
+
+                arr = [];
+
+                var arrLabel = label.replace("'", '').replace("'", '').split(",");
+                var arrMinVal = minVal.replace("'", '').replace("'", '').split(",");
+                var arrMaxVal = maxVal.replace("'", '').replace("'", '').split(",");
+                var arrValue = value.replace("'", '').replace("'", '').split(",");
+                 
+                for (var i = 0; i < arrLabel.length; i++) {
+                    arr.push({ name: arrLabel[i], label: arrLabel[i], min: parseInt(arrMinVal[i]), max: parseInt(arrMaxVal[i]), value: parseInt(arrValue[i]) });
+                }
+
+
+                
+                //alert(arr.length);
+
+                document.body.style.backgroundColor = backgroundColor;
+                document.body.style.fontSize = fontSize;
+
+                setTimeout(createGauges, 1000);
+                setTimeout(updateGauges, 2000);
+                //setInterval(updateGauges, 5000);
+
+
+
+            }
+        } catch (e) {
+            console.log(e);
+            //alert(e);
+        }
+    </script>
+
+
+</head>
+
+<body onload="initialize()">
+
+    <div id='GaugeContainer'></div>
+    <!--<span id="memoryGaugeContainer"></span>
+    <span id="cpuGaugeContainer"></span>
+    <span id="networkGaugeContainer"></span>
+    <span id="testGaugeContainer"></span>-->
+</body>
+
+</html>

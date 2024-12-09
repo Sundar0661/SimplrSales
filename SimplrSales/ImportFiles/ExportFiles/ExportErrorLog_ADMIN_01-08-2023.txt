@@ -1,0 +1,77 @@
+Time: 01-08-2023 10:57:06 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='PO'
+-----------------------------------------------------------
+
+Time: 01-08-2023 10:57:12 AM
+-----------------------------------------------------------
+Message: ReadRecord : Select Distinct POHdr.VendorID  as [Vendor Code],
+POHdr.PoNo as [PO No], PODet.ItemNo as [Item No]  ,
+Item.DefBin as [Default Bin],  PODet.Qty-PODet.DeliQty as [Qty],
+Location as [Location]    
+from POHdr inner join PODet on PODet.PONo=POHdr.PONo   
+ inner join Item on Item.ItemNo=podet.ItemNo    
+ Where  Isnull(void,0)=0 AND PODet.Qty-PODet.DeliQty>0 and CONVERT(Date,POHdr.PODt) 
+ between '2023-08-01 00:00:00.000' and '2023-08-01 23:59:59.000'   Order by POHdr.PONo
+-----------------------------------------------------------
+
+Time: 01-08-2023 10:57:16 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 01-08-2023 11:05:38 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Export Invoice'
+-----------------------------------------------------------
+
+Time: 01-08-2023 11:05:38 AM
+-----------------------------------------------------------
+Message: ReadRecord : Select Distinct Orderhdr.CustID  as [Customer No],Orderhdr.OrdNo as [Sales Invoice Number], OrdItem.ItemNo as [Item No]  ,  OrdItem.Qty-OrdItem.DeliQty as [Order Qty], Item.DefBin as [Default Bin],Location as [Location],  Format(Orderhdr.DeliveryDate,(Select DateFormatString from system)) as [Delivery Date]   from Orderhdr inner join Orditem on Orditem.OrdNo=Orderhdr.Ordno    inner join Item on Item.ItemNo=Orditem.ItemNo        Where isnull(OrderHdr.PickingStatus,0)<8 and Isnull(void,0)=0  AND OrdItem.Qty-OrdItem.DeliQty>0  and CONVERT(Date,Orderhdr.DeliveryDate) between '2023-08-01 00:00:00.000' and '2023-08-01 23:59:59.000' Order by OrderHdr.OrdNo
+-----------------------------------------------------------
+
+Time: 01-08-2023 11:10:27 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 01-08-2023 11:10:27 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 01-08-2023 12:01:26 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Export Invoice'
+-----------------------------------------------------------
+
+Time: 01-08-2023 12:01:26 PM
+-----------------------------------------------------------
+Message: ReadRecord : Select Distinct Orderhdr.CustID  as [Customer No],Orderhdr.OrdNo as [Sales Invoice Number], OrdItem.ItemNo as [Item No]  ,  OrdItem.Qty-OrdItem.DeliQty as [Order Qty], Item.DefBin as [Default Bin],Location as [Location],  Format(Orderhdr.DeliveryDate,(Select DateFormatString from system)) as [Delivery Date]   from Orderhdr inner join Orditem on Orditem.OrdNo=Orderhdr.Ordno    inner join Item on Item.ItemNo=Orditem.ItemNo        Where isnull(OrderHdr.PickingStatus,0)<8 and Isnull(void,0)=0  AND OrdItem.Qty-OrdItem.DeliQty>0  and CONVERT(Date,Orderhdr.DeliveryDate) between '2023-08-01 00:00:00.000' and '2023-08-01 23:59:59.000' Order by OrderHdr.OrdNo
+-----------------------------------------------------------
+
+Time: 01-08-2023 12:01:26 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 01-08-2023 12:04:40 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Export Invoice'
+-----------------------------------------------------------
+
+Time: 01-08-2023 12:04:40 PM
+-----------------------------------------------------------
+Message: ReadRecord : Select Distinct Orderhdr.CustID  as [Customer No],Orderhdr.OrdNo as [Sales Invoice Number], OrdItem.ItemNo as [Item No]  ,  OrdItem.Qty-OrdItem.DeliQty as [Order Qty], Item.DefBin as [Default Bin],Location as [Location],  Format(Orderhdr.DeliveryDate,(Select DateFormatString from system)) as [Delivery Date]   from Orderhdr inner join Orditem on Orditem.OrdNo=Orderhdr.Ordno    inner join Item on Item.ItemNo=Orditem.ItemNo        Where isnull(OrderHdr.PickingStatus,0)<8 and Isnull(void,0)=0  AND OrdItem.Qty-OrdItem.DeliQty>0  and CONVERT(Date,Orderhdr.DeliveryDate) between '2023-08-01 00:00:00.000' and '2023-08-01 23:59:59.000' Order by OrderHdr.OrdNo
+-----------------------------------------------------------
+
+Time: 01-08-2023 12:04:40 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 01-08-2023 12:04:40 PM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+

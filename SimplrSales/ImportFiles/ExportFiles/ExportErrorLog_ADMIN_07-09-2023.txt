@@ -1,0 +1,48 @@
+Time: 07-09-2023 08:45:54 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='BWIW Report'
+-----------------------------------------------------------
+
+Time: 07-09-2023 08:46:06 AM
+-----------------------------------------------------------
+Message: ReadRecord : select  Format(OrderDate,(Select ExportDateformatstring from system)) as OrderDate,B.Cluster,B.Area,B.Territory,Territorycode,B.Town,DBCode,DBName,DBType,SRCode,SRName,SRPositionCode,RouteCode,RouteName,CustomerCode,CustomerName,Channel,subChannel,InvoiceNo,	Category,Brand,SKUCode,SKUName,DeliveryUOM,NoofSKUinCTN,WeightperSKUgm,SKUTP,OrderQty,OrderVol,OrderValue,OrderCashDiscount,DeliveryConfirmationDate,	DeliveryDate,DeliveryQty,DeliveryVol,DeliveryValue,DeliveryCashDiscount,FreeQuantity,DeliveryValueAfterDiscount,IsNull(DeliveryDisper,0) as WSCashDiscount from BWIWRep B 
+where Convert(Date,OrderDate) between '2023-08-01 00:00:00.000' and '2023-08-31 23:59:59.000'   
+and IsNull(DbCode,'')=case when 'ALL'='ALL' then IsNull(DbCode,'')else 'ALL' end
+and IsNull(SRCode,'')=case when 'ALL'='ALL' then  IsNull(SRCode,'') else 'ALL'      end
+order by OrderDate desc,DBCode,InvoiceNo
+-----------------------------------------------------------
+
+Time: 07-09-2023 08:49:05 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='BWIW Report'
+-----------------------------------------------------------
+
+Time: 07-09-2023 08:54:01 AM
+-----------------------------------------------------------
+Message: ReadRecord : select  Format(OrderDate,(Select ExportDateformatstring from system)) as OrderDate,B.Cluster,B.Area,B.Territory,Territorycode,B.Town,DBCode,DBName,DBType,SRCode,SRName,SRPositionCode,RouteCode,RouteName,CustomerCode,CustomerName,Channel,subChannel,InvoiceNo,	Category,Brand,SKUCode,SKUName,DeliveryUOM,NoofSKUinCTN,WeightperSKUgm,SKUTP,OrderQty,OrderVol,OrderValue,OrderCashDiscount,DeliveryConfirmationDate,	DeliveryDate,DeliveryQty,DeliveryVol,DeliveryValue,DeliveryCashDiscount,FreeQuantity,DeliveryValueAfterDiscount,IsNull(DeliveryDisper,0) as WSCashDiscount from BWIWRep B 
+where Convert(Date,OrderDate) between '2023-08-01 00:00:00.000' and '2023-08-31 23:59:59.000'   
+and IsNull(DbCode,'')=case when 'ALL'='ALL' then IsNull(DbCode,'')else 'ALL' end
+and IsNull(SRCode,'')=case when 'ALL'='ALL' then  IsNull(SRCode,'') else 'ALL'      end
+order by OrderDate desc,DBCode,InvoiceNo
+-----------------------------------------------------------
+
+Time: 07-09-2023 08:57:28 AM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 07-09-2023 08:57:49 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 07-09-2023 08:59:15 AM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 07-09-2023 08:59:36 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+

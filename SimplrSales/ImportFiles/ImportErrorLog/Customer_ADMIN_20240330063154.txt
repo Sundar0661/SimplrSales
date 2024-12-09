@@ -1,0 +1,5 @@
+Time: 30-03-2024 06:33:06 AM
+-----------------------------------------------------------
+Message: Update Customer set AllowPDC='0', AllowFT='0', Active='1', ToPDA='1', GSTType='Inclusive', ZoneCode='STD', CountryCode='PHILIPPINES', Balance='0', DTG='30-03-2024 09:02:32', StockTakeRequired='0', IsParent='0', Channel=N'SSS-C', SubChannel=N'', OutletType=N'', AllowCash='1', AllowMaxDtdChk='1', EWT='0', CustNo=N'064-11744', CustName=N'ERNA ARDEZ STORE', Address=N'NA', Address3=N'043416029', Address4=N'043400000', PostCode=N'4005', City=N'043416000', CreditLimit='0', PriceGroup=N'064-STANDARD', PaymentTerms=N'COD', PaymentMethod=N'CASH', SalesAgent=N'064-PSS06', SearchName=N'ERNA ARDEZ STORE', ChineseName=N'ERNA ARDEZ STORE', Cheque=N'1', DistributorId=N'503000290', ParentAccountCode=N'', Cash=N'1', CustomerTIN=N'' Where 1=1 and CustNo='064-11744' --- 0 --- Conversion from string "The conversion of a varchar data" to type 'Double' is not valid.
+-----------------------------------------------------------
+

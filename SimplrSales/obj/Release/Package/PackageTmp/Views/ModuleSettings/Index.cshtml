@@ -1,0 +1,118 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    var url_GetModuleConfig = '@Url.Content("~/ModuleSettings/GetModuleConfig/")';
+</script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<script type="text/javascript">
+    
+</script>
+
+
+
+
+<div class="formContainer">
+    <div id="ModuleSettingsId"></div>
+
+    <input type="button" value="save" onclick="dddd();" />
+</div>
+
+<script src="~/Scripts/Main/ModuleSettings.js"></script>
+
+<script type="text/javascript">
+    var qry = '@ViewBag.query';
+    var FormView = {};
+    var _UserID = '@Session["UserId"]';
+    FormView.UserID = '@Session["UserId"]';
+    FormView.URL = '@Session["URL"]';
+    FormView.PlanoGramURL = '@Session["PlanoGramURL"]';
+    var _screenName = "ModuleSettingsList";
+    var currentScreenName = _screenName;
+    CurrentScreen_TabScreen_Name = _screenName;
+    currentScreenName = 'ModuleSettingsReportForm';
+</script>
+
+<script>
+
+
+</script>
+
+<style>
+    body {
+        font-family: Arial;
+    }
+
+    ul.tree li {
+        list-style-type: none;
+        position: relative;
+    }
+
+        ul.tree li ul {
+            display: none;
+        }
+
+        ul.tree li.open > ul {
+            display: block;
+        }
+
+        ul.tree li a {
+            color: black;
+            text-decoration: none;
+        }
+
+            ul.tree li a:before {
+                height: 1em;
+                padding: 0 .1em;
+                font-size: .8em;
+                display: block;
+                position: absolute;
+                left: -1.3em;
+                top: .2em;
+            }
+
+        ul.tree li > a:not(:last-child):before {
+            content: '+';
+        }
+
+        ul.tree li.open > a:not(:last-child):before {
+            content: '-';
+        }
+</style>
+
+
+
+<style>
+    body {
+        margin: 0 auto;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 3px;
+    }
+
+        ul.tree li:before {
+            height: 1em;
+            width: 12px;
+            border-bottom: 1px dashed;
+            content: "";
+            display: inline-block;
+            top: -0.3em;
+        }
+
+        ul.tree li {
+            border-left: 1px dashed;
+        }
+
+            ul.tree li:last-child:before {
+                border-left: 1px dashed;
+            }
+
+            ul.tree li:last-child {
+                border-left: none;
+            }
+</style>

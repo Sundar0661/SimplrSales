@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+
+    <style>
+        .ButtonStyle {
+            width: 20%;
+            height: 40px;
+            float: left;
+            font-size: 14px;
+        }
+    </style>
+
+    <script src="../../CommonModel/VariableAndJsDeclaration.js"></script>
+
+    <script type="text/javascript">
+        $(window).load(function () {
+            var parameter = window.location.toString();
+            //  var parameter = "http://localhost:52063/Charts/Charts/MultiChart/index.html?Web_SalesDashboard_CHART_MultiChartMTD&{@MenuCode@:@Administration@,@UserID@:@sales1@,@URL@:@http://13.67.95.127/KeeSongSimplrSalesService/Photo/@}&{@FormView@:{@MenuCode@:@Administration@,@UserID@:@sales1@,@URL@:@http://13.67.95.127/KeeSongSimplrSalesService/Photo/@,@FilterDate@:@2020-05-05@,@Title@:@@,@LstSales@:@@,@LstSalesCat@:@@,@LstSalesItem@:@@}}"
+            // var parameter = "http://localhost:52063/Charts/Charts/MultiChart/index.html?Web_DashBoard_CHART_MultiChartMTD&{@MenuCode@:@Administration@,@UserID@:@sales1@,@URL@:@http://13.67.95.127/KeeSongSimplrSalesService/Photo/@}&{@FormView@:{@MenuCode@:@Administration@,@UserID@:@sales1@,@URL@:@http://13.67.95.127/KeeSongSimplrSalesService/Photo/@,@Title@:@@,@LstCustomerMaster@:{@CustNo@:@160@,@CustName@:@Ministry of Defence@,@Address@:@5 Depot Road, #15-01 Tower B, Defence Technology Towers@,@Address2@:@@,@Address3@:@@,@PaymentTerms@:@COD@,@PostCode@:@@,@City@:@@,@CountryCode@:@@,@Phone@:@@,@ContactPerson@:@@,@Segment@:@@,@Utility_Fee@:@@,@commission_percent@:@@,@FieldName@:@LstCustomerMaster@}}}"
+            //debugger;
+            scrName = parameter.split('?')[1].split(' ')[0];
+            scrName = scrName.split('&')[0];
+            _screenName = scrName;
+            var formView = parameter.split('&')[1].replace(/@#/g, '"');
+            FormView = $.parseJSON(formView);
+            agentID = FormView.UserID;
+            var params = parameter.split('&')[2].replace(/@#/g, '"');
+            Params = $.parseJSON(params);
+            ////var parameter = "http://localhost:52063/Charts/Charts/MultiChart/index.html?Web_SalesDashboard_CHART_MultiChartMTD&{@MenuCode@:@Administration@,@UserID@:@sales1@,@URL@:@http://13.67.95.127/KeeSongSimplrSalesService/Photo/@}&{@FormView@:{@MenuCode@:@Administration@,@UserID@:@sales1@,@URL@:@http://13.67.95.127/KeeSongSimplrSalesService/Photo/@,@FilterDate@:@2020-05-05@,@Title@:@@,@LstSales@:@@,@LstSalesCat@:@@,@LstSalesItem@:@@}}"
+            //scrName = "Web_DashBoard_CHART_MultiChartMTD";
+            //var formView = "{@MenuCode@:@Administration@,@UserID@:@sales1@,@URL@:@http://13.67.95.127/KeeSongSimplrSalesService/Photo/@}".replace(/@/g, '"');;
+            //FormView = $.parseJSON(formView);
+            //var params = "{@FormView@:{@MenuCode@:@Administration@,@UserID@:@sales1@,@URL@:@http://13.67.95.127/KeeSongSimplrSalesService/Photo/@,@Title@:@@,@LstCustomerMaster@:{@CustNo@:@160@,@CustName@:@Ministry of Defence@,@Address@:@5 Depot Road, #15-01 Tower B, Defence Technology Towers@,@Address2@:@@,@Address3@:@@,@PaymentTerms@:@COD@,@PostCode@:@@,@City@:@@,@CountryCode@:@@,@Phone@:@@,@ContactPerson@:@@,@Segment@:@@,@Utility_Fee@:@@,@commission_percent@:@@,@FieldName@:@LstCustomerMaster@}}}".replace(/@/g, '"');;
+            //Params = $.parseJSON(params);
+
+            // var query = "select 'Agent1' as AgentName ,'SalesTarget1' as SalesTarget , 'CurMonTarget1' as CurMonTarget union select 'Agent2' as AgentName ,'SalesTarget2' as SalesTarget , 'CurMonTarget2' as CurMonTarget";
+            // var query = "select 'Agent1' as AgentName ,'18' as SalesTarget , '23' as CurMonTarget union select 'Agent2' as AgentName ,'29' as SalesTarget , '33' as CurMonTarget union select 'Agent3' as AgentName ,'24' as SalesTarget , '15' as CurMonTarget union select 'Agent4' as AgentName ,'10' as SalesTarget , '16' as CurMonTarget";
+
+            var query = getQueryConfigByScreenName(scrName);
+            if (query != null && query != undefined && query != '') {
+                var str1 = "", str2 = "";
+                query = formatQueryString(query, "");
+                execute(query);
+                dbDataRows = executeQry;
+                if (dbDataRows != null) {
+                    for (var j = 0; j < dbDataRows.length; j++) {
+                        if (str1 == '') {
+                            str1 = '{';
+                        } else {
+                            str1 += '##{';
+                        }
+                        str1 += 'label:@@' + dbDataRows[j].AgentName + '@@, y: ' + dbDataRows[j].SalesTarget + ',color:@@' + dbDataRows[j].Color + '@@ }';
+                        if (str2 == '') {
+                            str2 = '{';
+                        } else {
+                            str2 += '##{';
+                        }
+                        str2 += 'label:@@' + dbDataRows[j].AgentName + '@@, y: ' + dbDataRows[j].CurMonTarget + ',color:@@' + dbDataRows[j].Color + '@@ }';
+                    }
+                    str1 = "'" + str1 + "'";
+                    str2 = "'" + str2 + "'";
+                    InitializeNewBarChart(str1, str2);
+                }
+            }
+        });
+        /*** Change type "column" to "bar", "area", "line" or "pie"***/
+        var _chartType = "column";//"line";
+        var arr1 = [], arr2 = [];
+
+        function UpdateChart(_type) {
+            //alert(_type);
+            _chartType = _type;
+            var chart = new CanvasJS.Chart("chartContainer", {
+                title: {
+                    text: ""
+                },
+
+
+                data: [  //array of dataSeries
+                    { //dataSeries - first quarter
+                        type: _chartType,//"column",
+                        name: "Sales Target",
+                        dataPoints: [
+                            { label: "Agent1", y: 18, fillColor: "green" },
+                            { label: "Agent2", y: 29, fillColor: "green" },
+                            { label: "Agent3", y: 40, fillColor: "green" },
+                            { label: "Agent4", y: 34, fillColor: "green" },
+                            { label: "Agent5", y: 24, fillColor: "green" }
+                        ]
+                    },
+
+                    { //dataSeries - second quarter
+
+                        type: _chartType,
+                        name: "Actual Target",
+                        dataPoints: [
+                            { label: "Agent1", y: 23, fillColor: "yellow" },
+                            { label: "Agent2", y: 33, fillColor: "yellow" },
+                            { label: "Agent3", y: 48, fillColor: "yellow" },
+                            { label: "Agent4", y: 37, fillColor: "yellow" },
+                            { label: "Agent5", y: 20, fillColor: "yellow" }
+                        ]
+                    }
+                ]
+            });
+
+            chart.render();
+        }
+
+        function UpdateChartbyTarget(argArr) {
+            //alert(_type);
+            //_chartType = _type;
+            var chart = new CanvasJS.Chart("chartContainer",
+                {
+                    title: {
+                        text: ""
+                    },
+                    animationEnabled: true,
+                    /*axisY: {
+                      title: "Reserves(MMbbl)"
+                    },*/
+
+                    axisX: {
+                        labelMaxWidth: 40,
+                        labelWrap: false
+                    },
+                    legend: {
+                        verticalAlign: "bottom",
+                        horizontalAlign: "center"
+                    },
+                    theme: "theme2",
+                    data: [
+
+                        {
+                            type:  "bar",
+                            //showInLegend: true,
+                            //legendMarkerColor: "grey",
+                            //legendText: "MMbbl = one million barrels",
+                            dataPoints: argArr
+                            /*[
+                            {y: 297571, label: "Venezuela"},
+                            {y: 267017,  label: "Saudi" },
+                            {y: 175200,  label: "Canada"},
+                            {y: 154580,  label: "Iran"},
+                            {y: 116000,  label: "Russia"},
+                            {y: 97800, label: "UAE"},
+                            {y: 20682,  label: "US"},
+                            {y: 20350,  label: "China"}
+                            ]*/
+                        }
+                    ]
+                });
+
+            chart.render();
+        }
+
+        window.onload = function () {
+            //UpdateChart('column');
+        };
+
+
+    </script>
+    <script type="text/javascript" src="canvasjs.min.js"></script>
+
+</head>
+<body>
+
+    <!--
+    <select onchange="UpdateChart(this.value)">
+        <option value="column">Column</option>
+        <option value="bar">Bar</option>
+        <option value="area">Area</option>
+        <option value="line">Line</option>
+        <option value="pie">Pie</option>
+    </select>
+    -->
+    <!--
+      <div id="btn" style="height: 40px; width: 100%; border:1px solid #e8e8e8;">
+
+            <button title="Column" onclick="UpdateChartbyTarget('column', arr1, arr2);" class="ButtonStyle">Column</button>
+            <button title="Bar" onclick="UpdateChartbyTarget('bar', arr1, arr2);" class="ButtonStyle">Bar</button>
+            <button title="Area" onclick="UpdateChartbyTarget('area', arr1, arr2);" class="ButtonStyle">Area</button>
+            <button title="Line" onclick="UpdateChartbyTarget('line', arr1, arr2);" class="ButtonStyle">Line</button>
+            <button title="Pie" onclick="UpdateChartbyTarget('pie', arr1, arr2);" class="ButtonStyle">Pie</button>
+
+      </div>
+     -->
+    <!--<div id="chartContainer" style="height: 300px; width: 100%;">
+    </div>-->
+
+    <div id="chartContainer" style="min-height:380px;">
+    </div>
+
+    <script>
+
+        function InitializeNewBarChart(SalesTarget, CurMonTarget) {
+
+
+            SalesTarget = new String(SalesTarget);
+            var arr = SalesTarget.split('##');
+            for (var i = 0; i < arr.length; i++) {
+                var str = new String(arr[i]);
+                str = strReplace(str);
+                //  str = str.replace(/@@/g, "'");
+                arr1.push(eval('(' + str + ')'));
+                //salesData.push(eval('(' +str+')'));
+            }
+
+            CurMonTarget = new String(CurMonTarget);
+            var arr = CurMonTarget.split('##');
+            for (var i = 0; i < arr.length; i++) {
+                var str = new String(arr[i]);
+                // str = str.replace(/@@/g, "'");
+                str = strReplace(str);
+                arr2.push(eval('(' + str + ')'));
+                //salesData.push(eval('(' +str+')'));
+            }
+
+
+            UpdateChartbyTarget(arr1);
+            //dashboard('#dashboard',freqData);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+﻿@model SimplrSales.Controllers.TestModel
+
+@{
+    ViewBag.Title = "Test";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@* <div id="form">
+    <form action="" method="post" name="registration" class="register">
+        <fieldset>*@
+            <label for="Student">Name py:</label>
+            <input name="Student" />
+            <label for="Matric_no">Matric number:</label>
+            <input name="Matric_no" />
+            <label for="Email">Email:</label>
+            <input name="Email" />
+            <label for="Username">Username:</label>
+            <input name="Username" />
+            <label for="Password">Password:</label>
+            <input name="Password" type="password" />
+            <input name="regbutton" type="button" class="button" value="Register" />
+      @*  </fieldset>
+    </form>
+</div>*@
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<style>
+    #form {
+    background-color: #FFF;
+    height: 600px;
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 0px;
+    text-align:center;
+}
+label {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 18px;
+    color: #333;
+    height: 20px;
+    width: 200px;
+    margin-top: 5px;
+    margin-left: 10px;
+    text-align: right;
+    clear: both;
+    float:left;
+    margin-right:15px;
+}
+input {
+    height: 20px;
+    width: 300px;
+    border: 1px solid #000;
+    margin-top: 10px;
+    float: left;
+}
+input[type=button] {
+    float:none;
+}
+</style>

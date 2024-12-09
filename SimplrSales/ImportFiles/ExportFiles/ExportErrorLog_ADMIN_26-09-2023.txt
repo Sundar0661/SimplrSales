@@ -1,0 +1,40 @@
+Time: 26-09-2023 12:23:49 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from SalesAgent where UserID='ADMIN' and Active ='1'
+-----------------------------------------------------------
+
+Time: 26-09-2023 12:24:08 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='ActivityLog'
+-----------------------------------------------------------
+
+Time: 26-09-2023 12:39:11 PM
+-----------------------------------------------------------
+Message: ReadRecord : Select Distinct  (Select  CV.AgentId + ' - ' + Salesagent.Name as Salesagent from Salesagent where Code= CV.AgentId) as SalesAgent,CV.TransDate as TransTime,CV.CustID as CustNo,C.CustName as CustomerName,CV.TransType as Action,CV.TransNo as ReferenceNo,CV.Longitude,CV.Latitude,CV.LocDeviation as Deviation,CV.Position as Address,'0' as Duration,CV.TransDate as SystemDate from CustVisit CV inner join Customer C on CV.CustID=C.CustNo Inner Join SalesAgent SA on SA.NodeTreeValue=C.SalesAgent where SA.Code in (Select GroupID  from SalesManGroup where UserID='ADMIN' Union select Code From Salesagent where UserID='ADMIN') and CV.TransDate BETWEEN  '2023-09-25 00:00:00.000' and '2023-09-25 23:59:59.000'
+-----------------------------------------------------------
+
+Time: 26-09-2023 12:39:11 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 26-09-2023 12:39:53 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from SalesAgent where UserID='ADMIN' and Active ='1'
+-----------------------------------------------------------
+
+Time: 26-09-2023 12:39:53 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='ActivityLog'
+-----------------------------------------------------------
+
+Time: 26-09-2023 12:39:54 PM
+-----------------------------------------------------------
+Message: ReadRecord : Select Distinct  (Select  CV.AgentId + ' - ' + Salesagent.Name as Salesagent from Salesagent where Code= CV.AgentId) as SalesAgent,CV.TransDate as TransTime,CV.CustID as CustNo,C.CustName as CustomerName,CV.TransType as Action,CV.TransNo as ReferenceNo,CV.Longitude,CV.Latitude,CV.LocDeviation as Deviation,CV.Position as Address,'0' as Duration,CV.TransDate as SystemDate from CustVisit CV inner join Customer C on CV.CustID=C.CustNo Inner Join SalesAgent SA on SA.NodeTreeValue=C.SalesAgent where SA.NodeTreeValue in (Select GroupID  from SalesManGroup where UserID='ADMIN' Union select Code From Salesagent where UserID='ADMIN') and CV.TransDate BETWEEN  '2023-09-25 00:00:00.000' and '2023-09-26 23:59:59.000'
+-----------------------------------------------------------
+
+Time: 26-09-2023 12:39:55 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+

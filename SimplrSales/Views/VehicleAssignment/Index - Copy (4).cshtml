@@ -1,0 +1,350 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<script type="text/javascript">
+    var qry = '@ViewBag.query';
+    var FormView = {};
+    var _UserID = '@Session["UserId"]';
+    FormView.UserID = '@Session["UserId"]';
+    var _screenName = "VehicleAssignmentList";
+    var currentScreenName = _screenName;
+    CurrentScreen_TabScreen_Name = _screenName;
+</script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<div class="formContainer">
+
+    <div class="row" style="margin-left: 0px;">
+        <div class="labeltext" style="width: 10%">
+            <label>Delivery Date</label>
+        </div>
+        <div class="labeltext" style="width: 15%">
+            <input type="text" id="DeliveryDate" class="datepicker" />
+        </div>
+        <div class="labeltext" style="width: 1%">
+        </div>
+        <div class="labeltext" style="width: 10%">
+            <button type="button" class="btn btn-default btn-sm" style="background-color: #f9f9f9">OK</button>
+        </div>
+    </div>
+
+
+    <div style="width: 100%; display: none">
+        <div id="div1" style="width: 49.7%; height: 350px; display: inline-block; margin-top: 5px; border-style: solid; border-color: forestgreen; border-width: 10px 10px 10px 10px;">
+            <div style="background-color: forestgreen; height: 30px;">
+                <a href="#" style="color: white;"><span class="glyphicon glyphicon-print"></span></a>
+                <a href="#" onclick="RemoveVehiclTable(1);" style="float: right; color: red;"><span class="glyphicon glyphicon-remove"></span></a>
+            </div>
+            <div style="height: 300px; overflow-y: scroll">
+                <table id='table1' class="mytable table table-striped table-bordered tableId" style="width: 99%; margin-left: 4px;">
+                    <tbody class="connectedSortable">
+                        <tr class="table1">
+                            <th>col1</th>
+                            <th>col2</th>
+                            <th>col3</th>
+                            <th>col4</th>
+                        </tr>
+                        <tr class="table1">
+                            <td>a</td>
+                            <td>b</td>
+                            <td>c</td>
+                            <td>d</td>
+                        </tr>
+                        <tr class="table1">
+                            <td>e</td>
+                            <td>f</td>
+                            <td>g</td>
+                            <td>h</td>
+                        </tr>
+                        <tr class="table1">
+                            <td>a</td>
+                            <td>b</td>
+                            <td>c</td>
+                            <td>d</td>
+                        </tr>
+                        <tr class="table1">
+                            <td>e</td>
+                            <td>f</td>
+                            <td>g</td>
+                            <td>h</td>
+                        </tr>
+                        <tr class="table1">
+                            <td>a</td>
+                            <td>b</td>
+                            <td>c</td>
+                            <td>d</td>
+                        </tr>
+                        <tr class="table1">
+                            <td>e</td>
+                            <td>f</td>
+                            <td>g</td>
+                            <td>h</td>
+                        </tr>
+                        <tr class="table1">
+                            <td>a</td>
+                            <td>b</td>
+                            <td>c</td>
+                            <td>d</td>
+                        </tr>
+                        <tr class="table1">
+                            <td>e</td>
+                            <td>f</td>
+                            <td>g</td>
+                            <td>h</td>
+                        </tr>
+                        <tr class="table1">
+                            <td>a</td>
+                            <td>b</td>
+                            <td>c</td>
+                            <td>d</td>
+                        </tr>
+                        <tr class="table1">
+                            <td>e</td>
+                            <td>f</td>
+                            <td>g</td>
+                            <td>hwwwwwwwwww</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="div2" style="width: 49.7%; height: 350px; display: inline-block; margin-top: 5px; border-style: solid; border-color: forestgreen; border-width: 10px 10px 10px 10px;">
+            <div style="background-color: forestgreen; height: 30px;">
+
+                <a href="#" style="color: white;"><span class="glyphicon glyphicon-print"></span></a>
+                <a href="#" onclick="RemoveVehiclTable(2);" style="float: right; color: red;"><span class="glyphicon glyphicon-remove"></span></a>
+
+            </div>
+            <div style="height: 300px; overflow-y: scroll">
+                <table id='table2' class="mytable table table-striped table-bordered tableId" style="width: 99%; margin-left: 4px;">
+                    <tbody class="connectedSortable">
+                        <tr class="table2">
+                            <th>COL1</th>
+                            <th>COL2</th>
+                            <th>COL3</th>
+                            <th>COL4</th>
+                        </tr>
+                        <tr class="table2">
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr class="table2">
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="div3" style="width: 49.7%; height: 350px; display: inline-block; margin-top: 5px; border-style: solid; border-color: forestgreen; border-width: 10px 10px 10px 10px;">
+            <div style="background-color: forestgreen; height: 30px;">
+                <a href="#" style="color: white;"><span class="glyphicon glyphicon-print"></span></a>
+                <a href="#" onclick="RemoveVehiclTable(3);" style="float: right; color: red;"><span class="glyphicon glyphicon-remove"></span></a>
+            </div>
+            <div style="height: 300px; overflow-y: scroll">
+                <table id='table3' class="mytable table table-striped table-bordered tableId" style="width: 99%; margin-left: 4px;">
+                    <tbody class="connectedSortable">
+                        <tr class="table3">
+                            <th>COL1</th>
+                            <th>COL2</th>
+                            <th>COL3</th>
+                            <th>COL4</th>
+                        </tr>
+                        <tr class="table3">
+                            <td>11</td>
+                            <td>22</td>
+                            <td>33</td>
+                            <td>44</td>
+                        </tr>
+                        <tr class="table3">
+                            <td>55</td>
+                            <td>66</td>
+                            <td>77</td>
+                            <td>88</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+
+        <div id="div4" style="width: 49.7%; height: 350px; display: inline-block; margin-top: 5px; border-style: solid; border-color: forestgreen; border-width: 10px 10px 10px 10px;">
+            <div style="background-color: forestgreen; height: 30px;">
+                <a href="#" style="color: white;"><span class="glyphicon glyphicon-print"></span></a>
+                <a href="#" onclick="RemoveVehiclTable(4);" style="float: right; color: red;"><span class="glyphicon glyphicon-remove"></span></a>
+            </div>
+            <div style="height: 300px; overflow-y: scroll">
+                <table id='table4' class="table table-striped table-bordered tableId" style="width: 99%; margin-left: 4px;">
+                    <tbody class="connectedSortable">
+                        <tr class="table3">
+                            <th>COL1</th>
+                            <th>COL2</th>
+                            <th>COL3</th>
+                            <th>COL4</th>
+                        </tr>
+                        <tr class="table3">
+                            <td>1w1</td>
+                            <td>2w2</td>
+                            <td>3w3</td>
+                            <td>4w4</td>
+                        </tr>
+                        <tr class="table3">
+                            <td>5w5</td>
+                            <td>6w6</td>
+                            <td>7w7</td>
+                            <td>8w8</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div style="width: 100%" id="aass">
+        @* <div id="aass"></div>*@
+    </div>
+</div>
+
+<script src="~/Scripts/Main/VehicleAssignment.js"></script>
+
+
+@*<style>
+    .mytable a:link {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .mytable a:visited {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .mytable a:active, .mytable a:hover {
+        color: #bd5a35;
+        text-decoration: underline;
+    }
+
+    table.mytable {
+        width: 90%;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #666;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 12px;
+        background: #eaebec;
+        border: #ccc 1px solid;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        -moz-box-shadow: 10px 10px 5px #888;
+        -webkit-box-shadow: 10px 10px 5px #888;
+        box-shadow: 10px 10px 5px #888;
+    }
+
+    .mytable th {
+        color: #fff;
+        padding: 21px 25px 22px 25px;
+        border-top: 1px solid #fafafa;
+        border-bottom: 1px solid #e0e0e0;
+        background: #191970;
+    }
+
+        .mytable th:first-child {
+            text-align: center;
+            padding-left: 20px;
+        }
+
+    .mytable tr {
+        text-align: center;
+        padding-left: 20px;
+    }
+
+        .mytable tr td:first-child {
+            text-align: center;
+            padding-left: 20px;
+            border-left: 0;
+        }
+
+        .mytable tr td {
+            padding: 18px;
+            border-top: 1px solid #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+            border-left: 1px solid #e0e0e0;
+            background: #fafafa;
+            background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafa fa));
+            background: -moz-linear-gradient(top, #fbfbfb, #fafafa);
+        }
+
+        .mytable tr.even td {
+            background: #f6f6f6;
+            background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6 f6));
+            background: -moz-linear-gradient(top, #f8f8f8, #f6f6f6);
+        }
+
+        .mytable tr:last-child td {
+            border-bottom: 0;
+        }
+
+            .mytable tr:last-child td:first-child {
+                -moz-border-radius-bottomleft: 3px;
+                -webkit-border-bottom-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+            }
+
+            .mytable tr:last-child td:last-child {
+                -moz-border-radius-bottomright: 3px;
+                -webkit-border-bottom-right-radius: 3px;
+                border-bottom-right-radius: 3px;
+            }
+
+        .mytable tr:hover td {
+            background: #f2f2f2;
+            transform: scale(1.01);
+            padding-left: 20px;
+            outline: 1px solid #191970;
+            -moz-box-shadow: 10px 10px 5px #888;
+            -webkit-box-shadow: 10px 10px 5px #888;
+            box-shadow: 10px 10px 5px #888;
+        }
+</style>*@
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+<link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+<link href="~/Content/FormViewList.css" rel="stylesheet" />
+@section Scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".datepicker").datepicker({
+                dateFormat: "dd/mm/yy",
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "-60:+0",
+                setDate: new Date()
+            });
+        });
+        DatePicker();
+    </script>
+
+}

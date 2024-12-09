@@ -1,0 +1,156 @@
+﻿@{
+    ViewBag.Title = "FormView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*<input type="button" value="Clear" onclick="ClickClearFuncton();" />*@
+
+
+<div class="formContainer">
+    <div id="tabMenuId"></div>
+    <div id="FormConfig_@ViewBag.ScreenName"></div>
+</div>
+
+
+@*<link href="https://code.jquery.com/ui/1.12.0-rc.2/themes/smoothness/jquery-ui.css" rel="stylesheet" />*@
+@*<link href="~/Content/popup/jquery-ui.css" rel="stylesheet" />*@
+
+<link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+<link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+@section Scripts{
+    @*   <script src="https://code.jquery.com/ui/1.12.0-rc.2/jquery-ui.min.js"></script>*@
+    @*    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>*@
+
+    @*<script src="~/Scripts/jquery-ui-1.8.24.js"></script>
+    <script src="~/Scripts/jquery-ui-1.8.24.min.js"></script>*@
+
+    <script type="text/javascript">
+        var _rowItemData = '@ViewBag.RowItemData';
+        var _screenName = '@ViewBag.ScreenName';
+        _rowItemData = quoteReplace(_rowItemData);
+
+        var _divId = "FormConfig_" + _screenName;
+        var pageCount = 0;
+        $(document).ready(function () {
+            $(".datepicker").datepicker({
+                dateFormat: "dd/mm/yy",
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "-60:+0"
+            });
+            $(".monthyearpicker").datepicker({
+                dateFormat: "dd/mm/yy",
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "-60:+0"
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+
+            $('#dialog').dialog({
+                autoOpen: false,
+                width: "50%",
+                resizable: false,
+                title: 'Details',
+                modal: true,
+                closeOnEscape: true,
+                open: function (event, ui) {
+                },
+                beforeClose: function (event, ui) {
+                    $('#dialogHiddenId').show();
+                },
+                buttons: {
+                    "Close": function () {
+                        $('#dialog').dialog('close');
+                    }
+                }
+            });
+        });
+
+        $('#messageDialog').dialog({
+            autoOpen: false,
+            width: "30%",
+            resizable: false,
+            title: 'Message',
+            modal: true,
+            //closeOnEscape: true,
+            open: function (event, ui) {
+            },
+            buttons: {
+                "Ok": function () {
+                    $(this).dialog('close');
+                }
+            }
+        });
+
+    </script>
+    <script type="text/javascript">
+        GetFormConfig("FormConfig_" + _screenName, _screenName);
+        //debugger;
+        var formData = '@ViewBag.FormData';
+         if (formData != "") {
+             formData = quoteReplace(formData);
+             formData = $.parseJSON(formData);
+             AssignFormData(formData);
+         }
+
+         //if (_rowItemData != "")
+         //    GetEditFormData();
+         //function GetEditFormData() {
+         //    $.ajax({
+         //        type: 'POST',
+         //        url: url_GetEditFormData,
+         //        data: { ScreenName: _screenName + "_FORM", data: _rowItemData },
+         //        dataType: 'json',
+         //        async: false,
+         //        success: function (data) {
+         //            if (data != null) {
+         //                AssignFormData(data);
+         //            }
+         //        }
+         //    });
+         //}
+
+    </script>
+}
+
+
+
+
+
+
+<style>
+    input-group {
+        display: block;
+    }
+
+    .input-group.input-group-unstyled input.form-control {
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+
+    .input-group-unstyled .input-group-addon {
+        border-radius: 4px;
+        border: 0px;
+        background-color: transparent;
+    }
+</style>
+
+
+<style>
+    ::placeholder {
+        color: red;
+        opacity: 1; /* Firefox */
+    }
+
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: red;
+    }
+
+    ::-ms-input-placeholder { /* Microsoft Edge */
+        color: red;
+    }
+</style>

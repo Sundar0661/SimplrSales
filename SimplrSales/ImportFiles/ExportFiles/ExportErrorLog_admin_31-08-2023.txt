@@ -1,0 +1,85 @@
+Time: 31-08-2023 07:58:48 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Open Po Report'
+-----------------------------------------------------------
+
+Time: 31-08-2023 07:59:54 AM
+-----------------------------------------------------------
+Message: ReadRecord : select PONo as [Po Number],OI.POLineNo as [PO Line Item],I.MaterialNumber as [Material No],I.ItemName as [Description],VendorItemNo as [Vendor SKU],ShipDistrict as [Sales District], format(OH.OrdDt,'dd/MM/yyyy') as [PO Date], format(OH.DTG,'hh:mm:ss') as [PO Time], Format(OH.DTG,'dd/MM/yyyy hh:mm:ss') as [SO DateTime],  Qty as [PO Qty],isnull(DeliQty,0) as [Open PO Qty],(Qty-isnull(DeliQty,0)) as [Open ASN Qty],I.VendorNo as [Vendor],isnull(OH.Remarks,'') as [Remarks],'' as [Recovery Date], Format(OH.DeliveryDate,'dd/MM/yyyy') as [Scheduled H/O Date],Format(GETDATE(),'dd/MM/yyyy')  as [Date Create],'' as [Last Update]  from OrderHdr OH inner join OrdItem OI on OI.OrdNo=OH.OrdNo inner join Item I on I.ItemNo=OI.ItemNo
+-----------------------------------------------------------
+
+Time: 31-08-2023 07:59:59 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 31-08-2023 08:04:43 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 31-08-2023 08:07:08 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Open Po Report'
+-----------------------------------------------------------
+
+Time: 31-08-2023 08:07:20 AM
+-----------------------------------------------------------
+Message: ReadRecord : select PONo as [Po Number],OI.POLineNo as [PO Line Item],I.MaterialNumber as [Material No],I.ItemName as [Description],VendorItemNo as [Vendor SKU],ShipDistrict as [Sales District], format(OH.OrdDt,'dd/MM/yyyy') as [PO Date], format(OH.DTG,'hh:mm:ss') as [PO Time], Format(OH.DTG,'dd/MM/yyyy hh:mm:ss') as [SO DateTime],  Qty as [PO Qty],isnull(DeliQty,0) as [Open PO Qty],(Qty-isnull(DeliQty,0)) as [Open ASN Qty],I.VendorNo as [Vendor],isnull(OH.Remarks,'') as [Remarks],'' as [Recovery Date], Format(OH.DeliveryDate,'dd/MM/yyyy') as [Scheduled H/O Date],Format(GETDATE(),'dd/MM/yyyy')  as [Date Create],'' as [Last Update]  from OrderHdr OH inner join OrdItem OI on OI.OrdNo=OH.OrdNo inner join Item I on I.ItemNo=OI.ItemNo
+-----------------------------------------------------------
+
+Time: 31-08-2023 08:07:28 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 31-08-2023 08:17:18 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 31-08-2023 08:17:37 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Open Po Report'
+-----------------------------------------------------------
+
+Time: 31-08-2023 08:17:38 AM
+-----------------------------------------------------------
+Message: ReadRecord : select PONo as [Po Number],OI.POLineNo as [PO Line Item],I.MaterialNumber as [Material No],I.ItemName as [Description],VendorItemNo as [Vendor SKU],ShipDistrict as [Sales District], format(OH.OrdDt,'dd/MM/yyyy') as [PO Date], format(OH.DTG,'hh:mm:ss') as [PO Time], Format(OH.DTG,'dd/MM/yyyy hh:mm:ss') as [SO DateTime],  Qty as [PO Qty],isnull(DeliQty,0) as [Open PO Qty],(Qty-isnull(DeliQty,0)) as [Open ASN Qty],I.VendorNo as [Vendor],isnull(OH.Remarks,'') as [Remarks],'' as [Recovery Date], Format(OH.DeliveryDate,'dd/MM/yyyy') as [Scheduled H/O Date],Format(GETDATE(),'dd/MM/yyyy')  as [Date Create],'' as [Last Update]  from OrderHdr OH inner join OrdItem OI on OI.OrdNo=OH.OrdNo inner join Item I on I.ItemNo=OI.ItemNo
+-----------------------------------------------------------
+
+Time: 31-08-2023 08:17:38 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 31-08-2023 08:18:10 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Open Po Report'
+-----------------------------------------------------------
+
+Time: 31-08-2023 08:18:22 AM
+-----------------------------------------------------------
+Message: ReadRecord : select PONo as [Po Number],OI.POLineNo as [PO Line Item],I.MaterialNumber as [Material No],I.ItemName as [Description],VendorItemNo as [Vendor SKU],ShipDistrict as [Sales District], format(OH.OrdDt,'dd/MM/yyyy') as [PO Date], format(OH.DTG,'hh:mm:ss') as [PO Time], Format(OH.DTG,'dd/MM/yyyy hh:mm:ss') as [SO DateTime],  Qty as [PO Qty],isnull(DeliQty,0) as [Open PO Qty],(Qty-isnull(DeliQty,0)) as [Open ASN Qty],I.VendorNo as [Vendor],isnull(OH.Remarks,'') as [Remarks],'' as [Recovery Date], Format(OH.DeliveryDate,'dd/MM/yyyy') as [Scheduled H/O Date],Format(GETDATE(),'dd/MM/yyyy')  as [Date Create],'' as [Last Update]  from OrderHdr OH inner join OrdItem OI on OI.OrdNo=OH.OrdNo inner join Item I on I.ItemNo=OI.ItemNo
+-----------------------------------------------------------
+
+Time: 31-08-2023 08:18:24 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 31-08-2023 08:19:12 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Open Po Report'
+-----------------------------------------------------------
+
+Time: 31-08-2023 08:19:28 AM
+-----------------------------------------------------------
+Message: ReadRecord : select PONo as [Po Number],OI.POLineNo as [PO Line Item],I.MaterialNumber as [Material No],I.ItemName as [Description],VendorItemNo as [Vendor SKU],ShipDistrict as [Sales District], format(OH.OrdDt,'dd/MM/yyyy') as [PO Date], format(OH.DTG,'hh:mm:ss') as [PO Time], Format(OH.DTG,'dd/MM/yyyy hh:mm:ss') as [SO DateTime],  Qty as [PO Qty],isnull(DeliQty,0) as [Open PO Qty],(Qty-isnull(DeliQty,0)) as [Open ASN Qty],I.VendorNo as [Vendor],isnull(OH.Remarks,'') as [Remarks],'' as [Recovery Date], Format(OH.DeliveryDate,'dd/MM/yyyy') as [Scheduled H/O Date],Format(GETDATE(),'dd/MM/yyyy')  as [Date Create],'' as [Last Update]  from OrderHdr OH inner join OrdItem OI on OI.OrdNo=OH.OrdNo inner join Item I on I.ItemNo=OI.ItemNo
+-----------------------------------------------------------
+
+Time: 31-08-2023 08:19:39 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+

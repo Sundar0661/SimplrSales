@@ -1,0 +1,5 @@
+Time: 19-03-2024 08:40:39 AM
+-----------------------------------------------------------
+Message: insert into OrderHdr(CompanyNo,MDTNO,DTG,Department,Remarks,OrdDt,OrdNo,AgentId,PayTerms,Discount,TotalAmt,DeliveryDate,PONo,SubTotal,Gst,LocationCode,CustId) values('0', 'ADMIN', '19-03-2024 19:10:06', '0', N'test', '2024-03-16 00:00:00', N'SO000014', N'SO000014', N'CASH', '0', '0', '2024-03-20 00:00:00', N'PO00004', '0', '0', N'WH', N'C-K002') --- 0 --- Conversion from string "The conversion of a varchar data" to type 'Double' is not valid.
+-----------------------------------------------------------
+

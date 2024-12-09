@@ -1,0 +1,98 @@
+D:\Source\SimplrSales\SimplrExportBLL\bin\Release\SimplrExportBLL.dll
+D:\Source\SimplrSales\SimplrExportBLL\bin\Release\SimplrExportBLL.pdb
+D:\Source\SimplrSales\SimplrExportBLL\obj\Release\SimplrExportBLL.dll
+D:\Source\SimplrSales\SimplrExportBLL\obj\Release\SimplrExportBLL.pdb
+D:\Source\SimplrSales\SimplrExportBLL\obj\Release\SimplrExportBLL.csprojResolveAssemblyReference.cache
+D:\Source\SimplrSales\SimplrExportBLL\obj\Release\SimplrExportBLL.csproj.ResolveComReference.cache
+D:\Source\SimplrSales\SimplrExportBLL\bin\Release\BouncyCastle.Crypto.dll
+D:\Source\SimplrSales\SimplrExportBLL\bin\Release\ClosedXML.dll
+D:\Source\SimplrSales\SimplrExportBLL\bin\Release\ClosedXML.Report.dll
+D:\Source\SimplrSales\SimplrExportBLL\bin\Release\DocumentFormat.OpenXml.dll
+D:\Source\SimplrSales\SimplrExportBLL\bin\Release\ExcelNumberFormat.dll
+D:\Source\SimplrSales\SimplrExportBLL\bin\Release\MoreLinq.dll
+D:\Source\SimplrSales\SimplrExportBLL\bin\Release\System.Linq.Dynamic.Core.dll
+D:\Source\SimplrSales\SimplrExportBLL\bin\Release\System.ValueTuple.dll
+D:\Source\SimplrSales\SimplrExportBLL\bin\Release\ClosedXML.pdb
+D:\Source\SimplrSales\SimplrExportBLL\bin\Release\ClosedXML.xml
+D:\Source\SimplrSales\SimplrExportBLL\bin\Release\DocumentFormat.OpenXml.xml
+D:\Source\SimplrSales\SimplrExportBLL\bin\Release\ExcelNumberFormat.xml
+D:\Source\SimplrSales\SimplrExportBLL\bin\Release\MoreLinq.xml
+D:\Source\SimplrSales\SimplrExportBLL\bin\Release\System.Linq.Dynamic.Core.pdb
+D:\Source\SimplrSales\SimplrExportBLL\bin\Release\System.Linq.Dynamic.Core.xml
+D:\Source\SimplrSales\SimplrExportBLL\bin\Release\System.ValueTuple.xml
+D:\Source\SimplrSales\SimplrExportBLL\bin\Release\EPPlus.dll
+D:\Final Copy\16012024\SimplrSales\SimplrExportBLL\bin\Release\SimplrExportBLL.dll
+D:\Final Copy\16012024\SimplrSales\SimplrExportBLL\bin\Release\SimplrExportBLL.pdb
+D:\Final Copy\16012024\SimplrSales\SimplrExportBLL\bin\Release\BouncyCastle.Crypto.dll
+D:\Final Copy\16012024\SimplrSales\SimplrExportBLL\bin\Release\ClosedXML.dll
+D:\Final Copy\16012024\SimplrSales\SimplrExportBLL\bin\Release\ClosedXML.Report.dll
+D:\Final Copy\16012024\SimplrSales\SimplrExportBLL\bin\Release\DocumentFormat.OpenXml.dll
+D:\Final Copy\16012024\SimplrSales\SimplrExportBLL\bin\Release\EPPlus.dll
+D:\Final Copy\16012024\SimplrSales\SimplrExportBLL\bin\Release\ExcelNumberFormat.dll
+D:\Final Copy\16012024\SimplrSales\SimplrExportBLL\bin\Release\MoreLinq.dll
+D:\Final Copy\16012024\SimplrSales\SimplrExportBLL\bin\Release\System.Linq.Dynamic.Core.dll
+D:\Final Copy\16012024\SimplrSales\SimplrExportBLL\bin\Release\System.ValueTuple.dll
+D:\Final Copy\16012024\SimplrSales\SimplrExportBLL\bin\Release\ClosedXML.pdb
+D:\Final Copy\16012024\SimplrSales\SimplrExportBLL\bin\Release\ClosedXML.xml
+D:\Final Copy\16012024\SimplrSales\SimplrExportBLL\bin\Release\DocumentFormat.OpenXml.xml
+D:\Final Copy\16012024\SimplrSales\SimplrExportBLL\bin\Release\ExcelNumberFormat.xml
+D:\Final Copy\16012024\SimplrSales\SimplrExportBLL\bin\Release\MoreLinq.xml
+D:\Final Copy\16012024\SimplrSales\SimplrExportBLL\bin\Release\System.Linq.Dynamic.Core.pdb
+D:\Final Copy\16012024\SimplrSales\SimplrExportBLL\bin\Release\System.Linq.Dynamic.Core.xml
+D:\Final Copy\16012024\SimplrSales\SimplrExportBLL\bin\Release\System.ValueTuple.xml
+D:\Final Copy\16012024\SimplrSales\SimplrExportBLL\obj\Release\SimplrExportBLL.csproj.AssemblyReference.cache
+D:\Final Copy\16012024\SimplrSales\SimplrExportBLL\obj\Release\SimplrExportBLL.csproj.ResolveComReference.cache
+D:\Final Copy\16012024\SimplrSales\SimplrExportBLL\obj\Release\SimplrExportBLL.csproj.CoreCompileInputs.cache
+D:\Final Copy\16012024\SimplrSales\SimplrExportBLL\obj\Release\SimplrExportBLL.csproj.CopyComplete
+D:\Final Copy\16012024\SimplrSales\SimplrExportBLL\obj\Release\SimplrExportBLL.dll
+D:\Final Copy\16012024\SimplrSales\SimplrExportBLL\obj\Release\SimplrExportBLL.pdb
+E:\21022024\SimplrSales\SimplrExportBLL\bin\Release\SimplrExportBLL.dll
+E:\21022024\SimplrSales\SimplrExportBLL\bin\Release\SimplrExportBLL.pdb
+E:\21022024\SimplrSales\SimplrExportBLL\bin\Release\BouncyCastle.Crypto.dll
+E:\21022024\SimplrSales\SimplrExportBLL\bin\Release\ClosedXML.dll
+E:\21022024\SimplrSales\SimplrExportBLL\bin\Release\ClosedXML.Report.dll
+E:\21022024\SimplrSales\SimplrExportBLL\bin\Release\DocumentFormat.OpenXml.dll
+E:\21022024\SimplrSales\SimplrExportBLL\bin\Release\EPPlus.dll
+E:\21022024\SimplrSales\SimplrExportBLL\bin\Release\ExcelNumberFormat.dll
+E:\21022024\SimplrSales\SimplrExportBLL\bin\Release\MoreLinq.dll
+E:\21022024\SimplrSales\SimplrExportBLL\bin\Release\System.Linq.Dynamic.Core.dll
+E:\21022024\SimplrSales\SimplrExportBLL\bin\Release\System.ValueTuple.dll
+E:\21022024\SimplrSales\SimplrExportBLL\bin\Release\ClosedXML.pdb
+E:\21022024\SimplrSales\SimplrExportBLL\bin\Release\ClosedXML.xml
+E:\21022024\SimplrSales\SimplrExportBLL\bin\Release\DocumentFormat.OpenXml.xml
+E:\21022024\SimplrSales\SimplrExportBLL\bin\Release\ExcelNumberFormat.xml
+E:\21022024\SimplrSales\SimplrExportBLL\bin\Release\MoreLinq.xml
+E:\21022024\SimplrSales\SimplrExportBLL\bin\Release\System.Linq.Dynamic.Core.pdb
+E:\21022024\SimplrSales\SimplrExportBLL\bin\Release\System.Linq.Dynamic.Core.xml
+E:\21022024\SimplrSales\SimplrExportBLL\bin\Release\System.ValueTuple.xml
+E:\21022024\SimplrSales\SimplrExportBLL\obj\Release\SimplrExportBLL.csproj.AssemblyReference.cache
+E:\21022024\SimplrSales\SimplrExportBLL\obj\Release\SimplrExportBLL.csproj.ResolveComReference.cache
+E:\21022024\SimplrSales\SimplrExportBLL\obj\Release\SimplrExportBLL.csproj.CoreCompileInputs.cache
+E:\21022024\SimplrSales\SimplrExportBLL\obj\Release\SimplrExportBLL.csproj.CopyComplete
+E:\21022024\SimplrSales\SimplrExportBLL\obj\Release\SimplrExportBLL.dll
+E:\21022024\SimplrSales\SimplrExportBLL\obj\Release\SimplrExportBLL.pdb
+C:\sep\02092024\SimplrSales\SimplrExportBLL\bin\Release\SimplrExportBLL.dll
+C:\sep\02092024\SimplrSales\SimplrExportBLL\bin\Release\SimplrExportBLL.pdb
+C:\sep\02092024\SimplrSales\SimplrExportBLL\bin\Release\BouncyCastle.Crypto.dll
+C:\sep\02092024\SimplrSales\SimplrExportBLL\bin\Release\ClosedXML.dll
+C:\sep\02092024\SimplrSales\SimplrExportBLL\bin\Release\ClosedXML.Report.dll
+C:\sep\02092024\SimplrSales\SimplrExportBLL\bin\Release\DocumentFormat.OpenXml.dll
+C:\sep\02092024\SimplrSales\SimplrExportBLL\bin\Release\EPPlus.dll
+C:\sep\02092024\SimplrSales\SimplrExportBLL\bin\Release\ExcelNumberFormat.dll
+C:\sep\02092024\SimplrSales\SimplrExportBLL\bin\Release\MoreLinq.dll
+C:\sep\02092024\SimplrSales\SimplrExportBLL\bin\Release\System.Linq.Dynamic.Core.dll
+C:\sep\02092024\SimplrSales\SimplrExportBLL\bin\Release\System.ValueTuple.dll
+C:\sep\02092024\SimplrSales\SimplrExportBLL\bin\Release\ClosedXML.pdb
+C:\sep\02092024\SimplrSales\SimplrExportBLL\bin\Release\ClosedXML.xml
+C:\sep\02092024\SimplrSales\SimplrExportBLL\bin\Release\DocumentFormat.OpenXml.xml
+C:\sep\02092024\SimplrSales\SimplrExportBLL\bin\Release\ExcelNumberFormat.xml
+C:\sep\02092024\SimplrSales\SimplrExportBLL\bin\Release\MoreLinq.xml
+C:\sep\02092024\SimplrSales\SimplrExportBLL\bin\Release\System.Linq.Dynamic.Core.pdb
+C:\sep\02092024\SimplrSales\SimplrExportBLL\bin\Release\System.Linq.Dynamic.Core.xml
+C:\sep\02092024\SimplrSales\SimplrExportBLL\bin\Release\System.ValueTuple.xml
+C:\sep\02092024\SimplrSales\SimplrExportBLL\obj\Release\SimplrExportBLL.csproj.AssemblyReference.cache
+C:\sep\02092024\SimplrSales\SimplrExportBLL\obj\Release\SimplrExportBLL.csproj.ResolveComReference.cache
+C:\sep\02092024\SimplrSales\SimplrExportBLL\obj\Release\SimplrExportBLL.csproj.CoreCompileInputs.cache
+C:\sep\02092024\SimplrSales\SimplrExportBLL\obj\Release\SimplrExportBLL.csproj.CopyComplete
+C:\sep\02092024\SimplrSales\SimplrExportBLL\obj\Release\SimplrExportBLL.dll
+C:\sep\02092024\SimplrSales\SimplrExportBLL\obj\Release\SimplrExportBLL.pdb

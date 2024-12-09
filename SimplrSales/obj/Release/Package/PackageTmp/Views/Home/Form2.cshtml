@@ -1,0 +1,125 @@
+﻿@{
+    ViewBag.Title = "Form";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    $(".topBar").text("Home / Form2 ");
+</script>
+<style>
+    .container1 {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+
+    #label1 {
+        padding-left: 437px;
+    }
+</style>
+
+@*<div style="transform: translate(22%, 0%);">*@
+
+@*<div class="container1" id="divId">
+    <div style="text-align: left;">
+        <label>Text</label>
+        <div style="width: 100%;">
+            <input style="width: 100%;" type="text">
+       </div>
+    </div>
+    <div style="text-align: left;">
+        <label>Search</label>
+        <div style="width: 100%;">
+            <input type="search" style="width: 100%;">
+        </div>
+    </div>
+    <div style="text-align: left;">
+        <label>To</label><label id="label1">To</label><br>
+        <input type="email" style="width: 49%;" />
+
+        <input type="email" style="width: 50%;" />
+    </div>
+    <div style="text-align: left;">
+        <label>URL</label>
+        <div style="width: 100%;">
+            <input style="width: 100%;" type="url">
+        </div>
+    </div>
+    <div style="text-align: left;">
+        <label>Telephone</label>
+        <div style="width: 100%;">
+            <input style="width: 100%;" type="tel">
+        </div>
+    </div>
+    <div style="text-align: left;">
+        <label>Password</label>
+        <div style="width: 100%;">
+            <input style="width: 100%;" type="password">
+        </div>
+    </div>
+    <div style="text-align: left;">
+        <label>Number</label>
+        <div style="width: 100%;">
+            <input style="width: 100%;" type="number">
+        </div>
+    </div>
+    <div style="text-align: left;">
+        <label>Date and time</label>
+        <div style="width: 100%;">
+            <input style="width: 100%;" type="datetime-local">
+        </div>
+    </div>
+    <div style="text-align: left;">
+        <label>Date</label>
+        <div style="width: 100%;">
+            <input style="width: 100%;" type="date">
+        </div>
+    </div>
+    <div style="text-align: left;">
+        <label>Month</label>
+        <div style="width: 100%;">
+            <input style="width: 100%;" type="month">
+        </div>
+    </div>
+    <div style="text-align: left;">
+        <label>Week</label>
+        <div style="width: 100%;">
+            <input style="width: 100%;" type="week">
+        </div>
+    </div>
+    <div style="text-align: left;">
+        <label>Time</label>
+        <div style="width: 100%;">
+            <input style="width: 100%;" type="time">
+        </div>
+    </div>
+    <div style="text-align: left;">
+        <label>Color</label>
+        <div style="width: 100%;">
+            <input style="width: 100%;" type="color">
+        </div>
+    </div>
+</div>*@
+
+@*</div>*@
+
+
+
+<div id="form">
+    <div id="FormDivId">
+    </div>
+</div>
+
+<script src="~/Scripts/Main/Formstatus.js"></script>
+
+<script type="text/javascript">
+    getFormstatusList("../Home/GetFormstatusList", "FormDivId");
+    // GetFormConfig1("../Customer/GetCustoerFormList", "FormDivId1");
+
+
+    var url_GetDropDownListValue = '@Url.Content("~/Customer/GetDropDownListValue")';
+
+
+</script>
+ 
+

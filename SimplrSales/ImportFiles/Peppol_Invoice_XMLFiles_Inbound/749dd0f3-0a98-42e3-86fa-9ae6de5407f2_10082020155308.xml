@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StandardBusinessDocument xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+  <StandardBusinessDocumentHeader>
+    <HeaderVersion>1.0</HeaderVersion>
+    <Sender>
+      <Identifier Authority="iso6523-actorid-upis">0195:SGUEN201209520R</Identifier>
+    </Sender>
+    <Receiver>
+      <Identifier Authority="iso6523-actorid-upis">0195:SGUEN201209520R</Identifier>
+    </Receiver>
+    <DocumentIdentification>
+      <Standard>urn:oasis:names:specification:ubl:schema:xsd:Invoice-2</Standard>
+      <TypeVersion>2.1</TypeVersion>
+      <InstanceIdentifier>b0f952ba-df85-450a-b543-8fddc362c277</InstanceIdentifier>
+      <Type>Invoice</Type>
+      <CreationDateAndTime>2020-08-10T15:52:01+00:00</CreationDateAndTime>
+    </DocumentIdentification>
+    <BusinessScope>
+      <Scope>
+        <Type>DOCUMENTID</Type>
+        <InstanceIdentifier>urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##urn:cen.eu:en16931:2017#conformant#urn:fdc:peppol.eu:2017:poacc:billing:international:sg:3.0::2.1</InstanceIdentifier>
+        <Identifier>busdox-docid-qns</Identifier>
+      </Scope>
+      <Scope>
+        <Type>PROCESSID</Type>
+        <InstanceIdentifier>urn:fdc:peppol.eu:2017:poacc:billing:01:1.0</InstanceIdentifier>
+        <Identifier>cenbii-procid-ubl</Identifier>
+      </Scope>
+    </BusinessScope>
+  </StandardBusinessDocumentHeader>
+  <Invoice xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http:www.w3.org/2001/XMLSchema-instance">
+    <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+    <cbc:CustomizationID>urn:cen.eu:en16931:2017#conformant#urn:fdc:peppol.eu:2017:poacc:billing:international:sg:3.0</cbc:CustomizationID>
+    <cbc:ProfileID>urn:fdc:peppol.eu:2017:poacc:billing:01:1.0</cbc:ProfileID>
+    <cbc:ID>S2I00067</cbc:ID>
+    <cbc:IssueDate>2020-02-02</cbc:IssueDate>
+    <cbc:DueDate>2020-02-02</cbc:DueDate>
+    <cbc:InvoiceTypeCode>380</cbc:InvoiceTypeCode>
+    <cbc:DocumentCurrencyCode>SGD</cbc:DocumentCurrencyCode>
+    <cbc:AccountingCost>102035</cbc:AccountingCost>
+    <cbc:BuyerReference>123</cbc:BuyerReference>
+    <cac:InvoicePeriod>
+      <cbc:StartDate>2020-02-02</cbc:StartDate>
+      <cbc:EndDate>2020-02-02</cbc:EndDate>
+    </cac:InvoicePeriod>
+    <cac:OrderReference>
+      <cbc:ID>
+      </cbc:ID>
+      <cbc:SalesOrderID>
+      </cbc:SalesOrderID>
+    </cac:OrderReference>
+    <cac:BillingReference>
+      <cac:InvoiceDocumentReference>
+        <cbc:ID>S2I00067</cbc:ID>
+        <cbc:IssueDate>2020-02-02</cbc:IssueDate>
+      </cac:InvoiceDocumentReference>
+    </cac:BillingReference>
+    <cac:DespatchDocumentReference>
+      <cbc:ID>S2I00067</cbc:ID>
+    </cac:DespatchDocumentReference>
+    <cac:ReceiptDocumentReference>
+      <cbc:ID>654</cbc:ID>
+    </cac:ReceiptDocumentReference>
+    <cac:OriginatorDocumentReference>
+      <cbc:ID>753</cbc:ID>
+    </cac:OriginatorDocumentReference>
+    <cac:ContractDocumentReference>
+      <cbc:ID>Contract321</cbc:ID>
+    </cac:ContractDocumentReference>
+    <cac:AccountingSupplierParty>
+      <cac:Party>
+        <cbc:EndpointID schemeID="0088">5790000436064</cbc:EndpointID>
+        <cac:PartyIdentification>
+          <cbc:ID schemeID="0035">5790000436071</cbc:ID>
+        </cac:PartyIdentification>
+        <cac:PartyName>
+          <cbc:Name>Simplr Sales Demo</cbc:Name>
+        </cac:PartyName>
+        <cac:PostalAddress>
+          <cbc:StreetName>No. 3 Jalan Besut</cbc:StreetName>
+          <cbc:AdditionalStreetName>No. 3 Jalan Besut</cbc:AdditionalStreetName>
+          <cbc:CityName>Jurong Town</cbc:CityName>
+          <cbc:PostalZone>
+          </cbc:PostalZone>
+          <cbc:CountrySubentity>Singapore</cbc:CountrySubentity>
+          <cac:AddressLine>
+            <cbc:Line>Sales department</cbc:Line>
+          </cac:AddressLine>
+          <cac:Country>
+            <cbc:IdentificationCode>SG</cbc:IdentificationCode>
+          </cac:Country>
+        </cac:PostalAddress>
+        <cac:PartyLegalEntity>
+          <cbc:RegistrationName>Simplr Sales Demo</cbc:RegistrationName>
+        </cac:PartyLegalEntity>
+        <cac:Contact>
+          <cbc:Name>
+          </cbc:Name>
+          <cbc:Telephone>marketing@uiccp.com</cbc:Telephone>
+          <cbc:ElectronicMail>+65 6265 1648</cbc:ElectronicMail>
+        </cac:Contact>
+      </cac:Party>
+    </cac:AccountingSupplierParty>
+    <cac:AccountingCustomerParty>
+      <cac:Party>
+        <cbc:EndpointID schemeID="0088">230665</cbc:EndpointID>
+        <cac:PartyIdentification>
+          <cbc:ID schemeID="0035">230665</cbc:ID>
+        </cac:PartyIdentification>
+        <cac:PartyName>
+          <cbc:Name>181 AQUARIUM</cbc:Name>
+        </cac:PartyName>
+        <cac:PostalAddress>
+          <cbc:StreetName>#01-1184, 233 ANG MO KIO AVENUE 3</cbc:StreetName>
+          <cbc:AdditionalStreetName>
+          </cbc:AdditionalStreetName>
+          <cbc:CityName>Singapore</cbc:CityName>
+          <cbc:PostalZone>560233</cbc:PostalZone>
+          <cbc:CountrySubentity>SG</cbc:CountrySubentity>
+          <cac:AddressLine>
+            <cbc:Line>Accounting department</cbc:Line>
+          </cac:AddressLine>
+          <cac:Country>
+            <cbc:IdentificationCode>SG</cbc:IdentificationCode>
+          </cac:Country>
+        </cac:PostalAddress>
+        <cac:PartyLegalEntity>
+          <cbc:RegistrationName>IMDA</cbc:RegistrationName>
+        </cac:PartyLegalEntity>
+        <cac:Contact>
+          <cbc:Name>
+          </cbc:Name>
+          <cbc:Telephone>
+          </cbc:Telephone>
+          <cbc:ElectronicMail>STD</cbc:ElectronicMail>
+        </cac:Contact>
+      </cac:Party>
+    </cac:AccountingCustomerParty>
+    <cac:PayeeParty>
+      <cac:PartyIdentification>
+        <cbc:ID schemeID="0035">Payee</cbc:ID>
+      </cac:PartyIdentification>
+      <cac:PartyName>
+        <cbc:Name>
+        </cbc:Name>
+      </cac:PartyName>
+      <cac:PartyLegalEntity>
+        <cbc:CompanyID>
+        </cbc:CompanyID>
+      </cac:PartyLegalEntity>
+    </cac:PayeeParty>
+    <cac:Delivery>
+      <cbc:ActualDeliveryDate>2020-02-02</cbc:ActualDeliveryDate>
+      <cac:DeliveryLocation>
+        <cbc:ID schemeID="0035">230665</cbc:ID>
+        <cac:Address>
+          <cbc:StreetName>#01-1184, 233 ANG MO KIO AVENUE 3</cbc:StreetName>
+          <cbc:AdditionalStreetName>
+          </cbc:AdditionalStreetName>
+          <cbc:CityName>SINGAPORE</cbc:CityName>
+          <cbc:PostalZone>560233</cbc:PostalZone>
+          <cbc:CountrySubentity>SG</cbc:CountrySubentity>
+          <cac:AddressLine>
+            <cbc:Line>Delivery department</cbc:Line>
+          </cac:AddressLine>
+          <cac:Country>
+            <cbc:IdentificationCode>SG</cbc:IdentificationCode>
+          </cac:Country>
+        </cac:Address>
+      </cac:DeliveryLocation>
+      <cac:DeliveryParty>
+        <cac:PartyName>
+          <cbc:Name>
+          </cbc:Name>
+        </cac:PartyName>
+      </cac:DeliveryParty>
+    </cac:Delivery>
+    <cac:PaymentTerms>
+      <cbc:Note>30</cbc:Note>
+    </cac:PaymentTerms>
+    <cac:TaxTotal>
+      <cbc:TaxAmount currencyID="SGD">1.61</cbc:TaxAmount>
+      <cac:TaxSubtotal>
+        <cbc:TaxableAmount currencyID="SGD">23</cbc:TaxableAmount>
+        <cbc:TaxAmount currencyID="SGD">1.61</cbc:TaxAmount>
+        <cac:TaxCategory>
+          <cbc:ID>SR</cbc:ID>
+          <cbc:Percent>7</cbc:Percent>
+          <cac:TaxScheme>
+            <cbc:ID>GST</cbc:ID>
+          </cac:TaxScheme>
+        </cac:TaxCategory>
+      </cac:TaxSubtotal>
+    </cac:TaxTotal>
+    <cac:LegalMonetaryTotal>
+      <cbc:LineExtensionAmount currencyID="SGD">23</cbc:LineExtensionAmount>
+      <cbc:TaxExclusiveAmount currencyID="SGD">23</cbc:TaxExclusiveAmount>
+      <cbc:TaxInclusiveAmount currencyID="SGD">24.61</cbc:TaxInclusiveAmount>
+      <cbc:AllowanceTotalAmount currencyID="SGD">0</cbc:AllowanceTotalAmount>
+      <cbc:ChargeTotalAmount currencyID="SGD">0.00</cbc:ChargeTotalAmount>
+      <cbc:PrepaidAmount currencyID="SGD">0.00</cbc:PrepaidAmount>
+      <cbc:PayableRoundingAmount currencyID="SGD">0.0</cbc:PayableRoundingAmount>
+      <cbc:PayableAmount currencyID="SGD">24.61</cbc:PayableAmount>
+    </cac:LegalMonetaryTotal>
+    <cac:InvoiceLine>
+      <cbc:ID>23052123</cbc:ID>
+      <cbc:InvoicedQuantity unitCode="H87">5</cbc:InvoicedQuantity>
+      <cbc:LineExtensionAmount currencyID="SGD">11.5</cbc:LineExtensionAmount>
+      <cbc:AccountingCost> Cost id 654</cbc:AccountingCost>
+      <cac:InvoicePeriod>
+        <cbc:StartDate>2020-02-02</cbc:StartDate>
+        <cbc:EndDate>2020-02-02</cbc:EndDate>
+      </cac:InvoicePeriod>
+      <cac:OrderLineReference>
+        <cbc:LineID>10000</cbc:LineID>
+      </cac:OrderLineReference>
+      <cac:DocumentReference>
+        <cbc:ID schemeID="ABZ">AB-123</cbc:ID>
+        <cbc:DocumentTypeCode>130</cbc:DocumentTypeCode>
+      </cac:DocumentReference>
+      <cac:AllowanceCharge>
+        <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+        <cbc:AllowanceChargeReasonCode>100</cbc:AllowanceChargeReasonCode>
+        <cbc:AllowanceChargeReason>Line discount</cbc:AllowanceChargeReason>
+        <cbc:MultiplierFactorNumeric>0</cbc:MultiplierFactorNumeric>
+        <cbc:Amount currencyID="SGD">0</cbc:Amount>
+        <cbc:BaseAmount currencyID="SGD">11.5</cbc:BaseAmount>
+      </cac:AllowanceCharge>
+      <cac:Item>
+        <cbc:Name>JERHIGH BLUEBERRY</cbc:Name>
+        <cac:SellersItemIdentification>
+          <cbc:ID>23052123</cbc:ID>
+        </cac:SellersItemIdentification>
+        <cac:StandardItemIdentification>
+          <cbc:ID schemeID="0160">23052123</cbc:ID>
+        </cac:StandardItemIdentification>
+        <cac:OriginCountry>
+          <cbc:IdentificationCode>CH</cbc:IdentificationCode>
+        </cac:OriginCountry>
+        <cac:CommodityClassification>
+          <cbc:ItemClassificationCode listID="MP">43211503</cbc:ItemClassificationCode>
+        </cac:CommodityClassification>
+        <cac:ClassifiedTaxCategory>
+          <cbc:ID>SR</cbc:ID>
+          <cbc:Percent>7</cbc:Percent>
+          <cac:TaxScheme>
+            <cbc:ID>GST</cbc:ID>
+          </cac:TaxScheme>
+        </cac:ClassifiedTaxCategory>
+      </cac:Item>
+      <cac:Price>
+        <cbc:PriceAmount currencyID="SGD">2.3</cbc:PriceAmount>
+        <cbc:BaseQuantity unitCode="H87">1</cbc:BaseQuantity>
+      </cac:Price>
+    </cac:InvoiceLine>
+    <cac:InvoiceLine>
+      <cbc:ID>23071027</cbc:ID>
+      <cbc:InvoicedQuantity unitCode="H87">5</cbc:InvoicedQuantity>
+      <cbc:LineExtensionAmount currencyID="SGD">11.5</cbc:LineExtensionAmount>
+      <cbc:AccountingCost> Cost id 654</cbc:AccountingCost>
+      <cac:InvoicePeriod>
+        <cbc:StartDate>2020-02-02</cbc:StartDate>
+        <cbc:EndDate>2020-02-02</cbc:EndDate>
+      </cac:InvoicePeriod>
+      <cac:OrderLineReference>
+        <cbc:LineID>20000</cbc:LineID>
+      </cac:OrderLineReference>
+      <cac:DocumentReference>
+        <cbc:ID schemeID="ABZ">AB-123</cbc:ID>
+        <cbc:DocumentTypeCode>130</cbc:DocumentTypeCode>
+      </cac:DocumentReference>
+      <cac:AllowanceCharge>
+        <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+        <cbc:AllowanceChargeReasonCode>100</cbc:AllowanceChargeReasonCode>
+        <cbc:AllowanceChargeReason>Line discount</cbc:AllowanceChargeReason>
+        <cbc:MultiplierFactorNumeric>0</cbc:MultiplierFactorNumeric>
+        <cbc:Amount currencyID="SGD">0</cbc:Amount>
+        <cbc:BaseAmount currencyID="SGD">11.5</cbc:BaseAmount>
+      </cac:AllowanceCharge>
+      <cac:Item>
+        <cbc:Name>JERHIGH DUCK STICK</cbc:Name>
+        <cac:SellersItemIdentification>
+          <cbc:ID>23071027</cbc:ID>
+        </cac:SellersItemIdentification>
+        <cac:StandardItemIdentification>
+          <cbc:ID schemeID="0160">23071027</cbc:ID>
+        </cac:StandardItemIdentification>
+        <cac:OriginCountry>
+          <cbc:IdentificationCode>CH</cbc:IdentificationCode>
+        </cac:OriginCountry>
+        <cac:CommodityClassification>
+          <cbc:ItemClassificationCode listID="MP">43211503</cbc:ItemClassificationCode>
+        </cac:CommodityClassification>
+        <cac:ClassifiedTaxCategory>
+          <cbc:ID>SR</cbc:ID>
+          <cbc:Percent>7</cbc:Percent>
+          <cac:TaxScheme>
+            <cbc:ID>GST</cbc:ID>
+          </cac:TaxScheme>
+        </cac:ClassifiedTaxCategory>
+      </cac:Item>
+      <cac:Price>
+        <cbc:PriceAmount currencyID="SGD">2.3</cbc:PriceAmount>
+        <cbc:BaseQuantity unitCode="H87">1</cbc:BaseQuantity>
+      </cac:Price>
+    </cac:InvoiceLine>
+  </Invoice>
+</StandardBusinessDocument>

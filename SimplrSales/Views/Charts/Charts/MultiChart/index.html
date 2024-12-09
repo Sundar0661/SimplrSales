@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<!--<meta name="viewport" content="width=device-width, initial-scale=0.45"> -->
+	
+	<!--<meta name="viewport" content="width=device-width, initial-scale=0.7">-->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=0.5">
+	
+  <style>
+  	.ButtonStyle{
+  		width:20%; 
+  		height: 40px;
+  		float: left; 
+  		font-size: 14px; 
+  	}
+  </style>
+  
+  <script type="text/javascript">
+  /*** Change type "column" to "bar", "area", "line" or "pie"***/
+  var	_chartType = "column";//"line";
+  var arr1=[], arr2=[];
+  
+  function UpdateChart(_type){
+  	//alert(_type);
+  	_chartType = _type;
+  	var chart = new CanvasJS.Chart("chartContainer", {
+  	  animationEnabled: true,	            
+      title:{
+        text: ""              
+      },
+      axisX: {          
+          lineColor: "#000000",
+          labelFontColor: "#000000",          
+        },
+        axisY: {        
+          lineColor: "#000000",
+          labelFontColor: "#000000",     
+        },
+		 
+      data: [  //array of dataSeries     
+      { //dataSeries - first quarter
+       type: _chartType,//"column",
+       name: "Sales Target",
+       dataPoints: [
+       { label: "Agent1", y: 18 },
+       { label: "Agent2", y: 29 },
+       { label: "Agent3", y: 40 },                                    
+       { label: "Agent4", y: 34 },
+       { label: "Agent5", y: 24 }
+       ]
+     },
+     
+     { //dataSeries - second quarter
+
+      type: _chartType,
+      name: "Actual Target",                
+      dataPoints: [
+      { label: "Agent1", y: 23 },
+      { label: "Agent2", y: 33 },
+      { label: "Agent3", y: 48 },                                    
+      { label: "Agent4", y: 37 },
+      { label: "Agent5", y: 20 }
+      ]
+    }
+    ]
+  });
+
+    chart.render();
+  }
+  
+  function UpdateChartbyTarget(_type, SalesTarget, CurMonTarget){
+  	//alert(_type);
+  	_chartType = _type;
+  	var chart = new CanvasJS.Chart("chartContainer", {            
+      title:{
+        text: ""              
+      },
+      axisX: {          
+          lineColor: "#000000",
+          labelFontColor: "#000000",          
+        },
+        axisY: {        
+          lineColor: "#000000",
+          labelFontColor: "#000000",     
+        },
+		
+	  toolTip:{   
+		content: "<p style='font-size:14px;'><b>{y}</b><p>"      
+	  },
+		 
+      data: [  //array of dataSeries     
+      { //dataSeries - first quarter
+       type: _chartType,//"column",
+       name: "Sales Target",
+       dataPoints: SalesTarget
+      },{ //dataSeries - second quarter
+       type: _chartType,
+       name: "Actual Target",                
+       dataPoints: CurMonTarget
+      }
+    ]
+  });
+
+    chart.render();
+  }
+  
+  window.onload = function () {
+    //UpdateChart('column');
+  };
+  
+  
+  </script>
+  <script type="text/javascript" src="canvasjs.min.js"></script>
+  
+</head>
+<body>
+	
+	<!--
+	<select onchange="UpdateChart(this.value)">
+		<option value="column">Column</option>
+		<option value="bar">Bar</option>
+		<option value="area">Area</option>
+		<option value="line">Line</option>
+		<option value="pie">Pie</option>
+	</select>
+	-->
+  		<!--
+  <div id="btn" style="height: 40px; width: 100%; border:1px solid #e8e8e8;">
+  		
+  		<button title="Column" onclick="UpdateChartbyTarget('column', arr1, arr2);" class="ButtonStyle">Column</button>
+  		<button title="Bar" onclick="UpdateChartbyTarget('bar', arr1, arr2);" class="ButtonStyle">Bar</button>
+  		<button title="Area" onclick="UpdateChartbyTarget('area', arr1, arr2);" class="ButtonStyle">Area</button>
+  		<button title="Line" onclick="UpdateChartbyTarget('line', arr1, arr2);" class="ButtonStyle">Line</button>
+  		<button title="Pie" onclick="UpdateChartbyTarget('pie', arr1, arr2);" class="ButtonStyle">Pie</button>
+  		
+  </div>	
+  		-->
+  <!--<div id="chartContainer" style="height: 300px; width: 100%;">
+  </div>-->
+  <div id="chartContainer" style="height: 60%; width: 100%;">
+  </div>
+  
+  <script>
+  
+  	function InitializeMultiChart(SalesTarget, CurMonTarget){
+  		
+		
+		SalesTarget = new String(SalesTarget);
+  		var arr = SalesTarget.split('##');
+	  	for(var i=0; i< arr.length; i++){
+			var str = new String(arr[i]);
+			str = str.replace(/@@/g, "'");
+			arr1.push(eval('(' +str+')'));
+			//salesData.push(eval('(' +str+')'));
+	  	}
+	  	
+	  	CurMonTarget = new String(CurMonTarget);
+  		var arr = CurMonTarget.split('##');
+	  	for(var i=0; i< arr.length; i++){
+			var str = new String(arr[i]);
+			str = str.replace(/@@/g, "'");
+			arr2.push(eval('(' +str+')'));
+			//salesData.push(eval('(' +str+')'));
+	  	}
+  	
+  		UpdateChartbyTarget('column', arr1, arr2);
+		//dashboard('#dashboard',freqData);
+	}
+  </script>
+</body>
+</html>

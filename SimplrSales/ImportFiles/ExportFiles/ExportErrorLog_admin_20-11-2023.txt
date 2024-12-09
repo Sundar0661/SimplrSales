@@ -1,0 +1,20 @@
+Time: 20-11-2023 02:23:57 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='ExportInvoice'
+-----------------------------------------------------------
+
+Time: 20-11-2023 02:23:58 PM
+-----------------------------------------------------------
+Message: ReadRecord : select [Invoice No],[Process Date],[Customer Code],[Customer Ref],[Expected Delivery Date],[Actual Delivery Date],[Warehouse],[Stock Code],[Ship Qty],[UOM],[Item Price] ,[Tax Code],[Discount (%)]  from (select I.InvNo as [Invoice No],format(I.InvDt,(Select DateFormatString from system)) as [Process Date],OH.CustId as [Customer Code],OH.PONo as [Customer Ref],format(oh.DeliveryDate,(Select DateFormatString from system)) as [Expected Delivery Date],format(oh.DeliveryDate,(Select DateFormatString from system)) as [Actual Delivery Date],item.PrimaryLoc as [Warehouse],item.VendorItemNo as [Stock Code],cast(OI.Qty as nvarchar(50)) as [Ship Qty],Item.BaseUOM as [UOM],cast(Item.UnitPrice as nvarchar(50)) as [Item Price],'0' as [Tax Code],'0' as  [Discount (%)] from Invoice I    inner join OrderHdr OH on I.OrdNo=OH.OrdNo   inner join Orditem OI on oh.OrdNo=OI.OrdNo  inner join Item on Item.ItemNo=OI.ItemNo    where isnull(Status,0)=1 and ISNULL(I.EDIDocStatus,'')='A' and Convert(Date,InvDt) between  '2023-10-01 00:00:00.000' and '2023-11-20 23:59:59.000')A
+-----------------------------------------------------------
+
+Time: 20-11-2023 02:23:59 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 20-11-2023 02:24:00 PM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+

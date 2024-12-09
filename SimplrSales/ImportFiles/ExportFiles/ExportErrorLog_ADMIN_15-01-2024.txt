@@ -1,0 +1,60 @@
+Time: 15-01-2024 03:57:37 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Holiday Master'
+-----------------------------------------------------------
+
+Time: 15-01-2024 03:57:38 PM
+-----------------------------------------------------------
+Message: ReadRecord : Select HM.DistributorID as Code,D.DistributorName as Description,HM.Year as Year,Format(HM.HolidayDate,'MM/dd/yyyy') as 'Holiday Date',[Desc] AS 'Description' from HolidayMaster HM inner join Distributor D on HM.DistributorID=D.DistributorID where HM.HolidayDate  BETWEEN  '2023-12-01 00:00:00.000' and '2024-01-15 23:59:59.000' 
+-----------------------------------------------------------
+
+Time: 15-01-2024 03:57:38 PM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 15-01-2024 03:58:13 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='OrderHdr'
+-----------------------------------------------------------
+
+Time: 15-01-2024 03:58:13 PM
+-----------------------------------------------------------
+Message: ReadRecord : select Distinct N.DistributorID as Distributor_ID,SA.UserID as [Sales Agent ID],O.OrdNo as [Order No],  Case When N.SalesOfficeID Like '064-%' then Replace(N.SalesOfficeID,'064-','')  else   case when  N.SalesOfficeID Like '065-%' then Replace(N.SalesOfficeID,'065-','') else   case when  N.SalesOfficeID Like '048-%' then Replace(N.SalesOfficeID,'048-','')else   case when  N.SalesOfficeID Like '069-%' then Replace(N.SalesOfficeID,'069-','')else   case when  N.SalesOfficeID Like '070-%' then Replace(N.SalesOfficeID,'070-','')else   case when  N.SalesOfficeID Like '072-%' then Replace(N.SalesOfficeID,'072-','') Else  Replace(N.SalesOfficeID,'021-','') End End End End End End as Location,  Format(O.OrdDt,'MM/dd/yyyy') as [Order Date],Format(O.DeliveryDate,'MM/dd/yyyy') as [Delivery Date],O.PayTerms as [Payment Term Code],  O.CustID as [Customer No],OI.ItemNo as [Product Code],Cast((OI.Qty * U.BaseQty) as Integer)/Cast(UB.BaseQty as integer) as BulkQty,  Cast((OI.Qty * U.BaseQty) as Integer)%Cast(UB.BaseQty as integer) as LooseQty,  Format(GetDate(),'MM/dd/yyyy') as [System Date],'ePO' as DefaultUser from OrderHDr O inner join OrdItem OI on O.OrdNO=OI.OrdNo Inner join MDT on MDT.MDTNO=O.MDTNo   inner join NodeTree N On N.SalesManTerritory=O.agentID inner join SalesAgent SA on SA.Code=O.AgentID inner join Item I on I.ItemNO=OI.ItemNO   Inner join UOM U on U.ItemNO=OI.ItemNO and U.UOM=OI.UOM Inner join UOM UB on UB.ItemNO=OI.ItemNO and UB.UOM=I.BulkUOM where N.SalesManTerritory  in (select Distinct GroupID from SalesManGroup where UserID='ADMIN')  and (O.OrdNO Not Like '064-%' and O.OrdNo Not Like '021-%')and O.OrdDt  BETWEEN  '2023-12-01 00:00:00.000' and '2024-01-15 23:59:59.000' and O.Void <> 1 
+-----------------------------------------------------------
+
+Time: 15-01-2024 03:58:13 PM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 15-01-2024 03:59:24 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Customer'
+-----------------------------------------------------------
+
+Time: 15-01-2024 03:59:24 PM
+-----------------------------------------------------------
+Message: ReadRecord : select CustNo as [Customer No],CustName as [Customer Name],Address as [Address 1],Address2 as [Address 2],Address3 as [Address 3],Address4 as [Address 4],PostCode as [Postal Code],City,CountryCode as[Country Code],Phone,ContactPerson as[Contact Person], Channel,SubChannel as[Sub Channel],  PriceGroup as [Price Group],PaymentTerms as [Payment Terms],SalesAgent as [SalesMan Code],DBCode,DBName,Region as [RegionCode],AreaCode as [RegionName], case when Active=1 then 'ACTIVE' else 'INACTIVE' end as [Active],Longitude,Latitude,Discount,LandMark,OutletStatus from Customer
+-----------------------------------------------------------
+
+Time: 15-01-2024 04:00:54 PM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 15-01-2024 05:06:17 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Customer'
+-----------------------------------------------------------
+
+Time: 15-01-2024 05:06:18 PM
+-----------------------------------------------------------
+Message: ReadRecord : select CustNo as [Customer No],CustName as [Customer Name],Address as [Address 1],Address2 as [Address 2],Address3 as [Address 3],Address4 as [Address 4],PostCode as [Postal Code],City,CountryCode as[Country Code],Phone,ContactPerson as[Contact Person], Channel,SubChannel as[Sub Channel],  PriceGroup as [Price Group],PaymentTerms as [Payment Terms],SalesAgent as [SalesMan Code],DBCode,DBName,Region as [RegionCode],AreaCode as [RegionName], case when Active=1 then 'ACTIVE' else 'INACTIVE' end as [Active],Longitude,Latitude,Discount,LandMark,OutletStatus from Customer
+-----------------------------------------------------------
+
+Time: 15-01-2024 05:07:31 PM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+

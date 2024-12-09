@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "SignIndex";
+}
+
+<script type="text/javascript">
+     var url_Login = '@Url.Content("~/Home/SignIn/")';
+    //var url_Login = '@Url.Content("~/Home/Index/")';
+    //debugger;
+    localStorage.setItem("name", "PVMSFA"); //saves to the database, key/value
+    document.write(localStorage.getItem("name")); //Hello World!
+    localStorage.removeItem("name"); //deletes the matching item from the database
+
+    function setCookie(key, value) {
+        var expires = new Date();
+        expires.setTime(expires.getTime() + (1 * 24 * 60 * 60 * 1000));
+        document.cookie = key + '=' + encodeURIComponent(value) + ';expires=' + expires.toUTCString();
+
+    }
+
+    function logInFun()
+    {
+        window.location = url_Login;
+    }
+    //alert("Index : " + getCookie("LogInType"));
+
+    setCookie('LogInType', "PVMSFA");
+    //setCookie('LogInType', "PVMLiveSFA");
+    //setCookie('LogInType', "SFANew");
+    logInFun();
+
+    //alert("Index 1 : " + getCookie("LogInType"));
+
+    function getCookie(key) {
+        var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+        return keyValue ? decodeURIComponent(keyValue[2]) : null;
+    }
+</script>

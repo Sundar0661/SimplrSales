@@ -1,0 +1,5 @@
+Time: 18-07-2024 01:25:59 PM
+-----------------------------------------------------------
+Message: insert into SOTemp(CompanyNo,DeliQty,MDTNO,DTG,Department,UserId,Remarks,OrdDt,PayTerms,Discount,TotalAmt,DeliveryDate,PONo,OrdNo,SubTotal,Gst,Qty,Price,Location,[LineNo],ItemNo,UOM,LocationCode,CurrencyCode,ShipAdd,CustId,AgentId) values('0', '0', 'ADMIN', '18-07-2024 15:47:28', '0', 'ADMIN', N'', '2024-07-17 00:00:00', N'CASH', '0', '0', '2024-07-18 00:00:00', N'2024-131', N'2024-131', '0', '0', '160', '0', N'WMS-001', '17', N'480651833377-9', N'CASE', N'WMS-001', N'', N'', N'ISCI0035', N'OFII01') --- 0 --- Conversion from string "The conversion of a varchar data" to type 'Double' is not valid.
+-----------------------------------------------------------
+

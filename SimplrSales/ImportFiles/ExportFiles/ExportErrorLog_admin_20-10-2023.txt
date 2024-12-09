@@ -1,0 +1,27 @@
+Time: 20-10-2023 03:44:49 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='PO'
+-----------------------------------------------------------
+
+Time: 20-10-2023 03:44:50 PM
+-----------------------------------------------------------
+Message: ReadRecord : Select Distinct POHdr.VendorID  as [Vendor Code],
+POHdr.PoNo as [PO No], PODet.ItemNo as [Item No]  ,
+Item.DefBin as [Default Bin],  PODet.Qty-PODet.DeliQty as [Qty],
+Location as [Location]    
+from POHdr inner join PODet on PODet.PONo=POHdr.PONo   
+ inner join Item on Item.ItemNo=podet.ItemNo    
+ Where  Isnull(void,0)=0 AND PODet.Qty-PODet.DeliQty>0 and CONVERT(Date,POHdr.PODt) 
+ between '2023-10-20 00:00:00.000' and '2023-10-20 23:59:59.000'   Order by POHdr.PONo
+-----------------------------------------------------------
+
+Time: 20-10-2023 03:44:50 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 20-10-2023 03:44:51 PM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+

@@ -1,0 +1,5 @@
+Time: 02-12-2024 04:00:46 PM
+ValidateQry : select case when cast('2024-12-02' as date)>=cast('' as date) then 1 else 0 end as Response  
+PerformAction completed
+
+

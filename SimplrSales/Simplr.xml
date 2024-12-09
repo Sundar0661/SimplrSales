@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<configuration>
+		<ConnectionString key="ConnectionString" value="Data Source=simplrdb.southeastasia.cloudapp.azure.com;Initial Catalog=SimplrULDEV;User ID=sa;password=Simplr12345@;Connect Timeout=120" />
+		<Image key="Image" value="C:\Simplr_Unilever\Webservice\SimplrULTest2-Webservices\TestSimplrULTest2SalesSync\GridIconFolder\SALES\" />
+		<DisplayImagesFolder key="DisplayImagesFolder" value="C:\Simplr_Unilever\LoginUAT2\DeviceImages" />
+		<GridIconFolder key="GridIconFolder" value="C:\Simplr_Unilever\Webservice\SimplrULTest2-Webservices\TestSimplrULTest2SalesSync\GridIconFolder\SALES\" />
+		<NoOfInstance key="NoOfInstance" value="5" />
+		<PositionOfInstance key="PositionOfInstance" value="1" />
+		<SyncFolderPath key="SyncFolderPath" value="D:\My Projects\SIMPLR WAREHOUSE\3. WebServices\SyncByInstance\DLL Files\" />
+
+</configuration>

@@ -1,0 +1,36 @@
+E:\30032024\SimplrSales\Code128\bin\Debug\Code128.dll
+E:\30032024\SimplrSales\Code128\bin\Debug\Code128.pdb
+E:\30032024\SimplrSales\Code128\obj\Debug\Code128.csproj.CoreCompileInputs.cache
+E:\30032024\SimplrSales\Code128\obj\Debug\Code128.dll
+E:\30032024\SimplrSales\Code128\obj\Debug\Code128.pdb
+E:\30032024\SimplrSales\Code128\obj\Debug\Code128.csproj.AssemblyReference.cache
+D:\April 2024\01042024\SimplrSales\Code128\bin\Debug\Code128.dll
+D:\April 2024\01042024\SimplrSales\Code128\bin\Debug\Code128.pdb
+D:\April 2024\01042024\SimplrSales\Code128\obj\Debug\Code128.csproj.AssemblyReference.cache
+D:\April 2024\01042024\SimplrSales\Code128\obj\Debug\Code128.csproj.CoreCompileInputs.cache
+D:\April 2024\01042024\SimplrSales\Code128\obj\Debug\Code128.dll
+D:\April 2024\01042024\SimplrSales\Code128\obj\Debug\Code128.pdb
+D:\April 2024\02042024\SimplrSales\Code128\bin\Debug\Code128.dll
+D:\April 2024\02042024\SimplrSales\Code128\bin\Debug\Code128.pdb
+D:\April 2024\02042024\SimplrSales\Code128\obj\Debug\Code128.csproj.CoreCompileInputs.cache
+D:\April 2024\02042024\SimplrSales\Code128\obj\Debug\Code128.dll
+D:\April 2024\02042024\SimplrSales\Code128\obj\Debug\Code128.pdb
+D:\April 2024\02042024\SimplrSales\Code128\obj\Debug\Code128.csproj.AssemblyReference.cache
+D:\April 2024\03042024\SimplrSales\Code128\bin\Debug\Code128.dll
+D:\April 2024\03042024\SimplrSales\Code128\bin\Debug\Code128.pdb
+D:\April 2024\03042024\SimplrSales\Code128\obj\Debug\Code128.csproj.AssemblyReference.cache
+D:\April 2024\03042024\SimplrSales\Code128\obj\Debug\Code128.csproj.CoreCompileInputs.cache
+D:\April 2024\03042024\SimplrSales\Code128\obj\Debug\Code128.dll
+D:\April 2024\03042024\SimplrSales\Code128\obj\Debug\Code128.pdb
+D:\April 2024\06042024\05042024\SimplrSales\Code128\bin\Debug\Code128.dll
+D:\April 2024\06042024\05042024\SimplrSales\Code128\bin\Debug\Code128.pdb
+D:\April 2024\06042024\05042024\SimplrSales\Code128\obj\Debug\Code128.csproj.AssemblyReference.cache
+D:\April 2024\06042024\05042024\SimplrSales\Code128\obj\Debug\Code128.csproj.CoreCompileInputs.cache
+D:\April 2024\06042024\05042024\SimplrSales\Code128\obj\Debug\Code128.dll
+D:\April 2024\06042024\05042024\SimplrSales\Code128\obj\Debug\Code128.pdb
+D:\April 2024\08042024\SimplrSales\Code128\bin\Debug\Code128.dll
+D:\April 2024\08042024\SimplrSales\Code128\bin\Debug\Code128.pdb
+D:\April 2024\08042024\SimplrSales\Code128\obj\Debug\Code128.csproj.AssemblyReference.cache
+D:\April 2024\08042024\SimplrSales\Code128\obj\Debug\Code128.csproj.CoreCompileInputs.cache
+D:\April 2024\08042024\SimplrSales\Code128\obj\Debug\Code128.dll
+D:\April 2024\08042024\SimplrSales\Code128\obj\Debug\Code128.pdb

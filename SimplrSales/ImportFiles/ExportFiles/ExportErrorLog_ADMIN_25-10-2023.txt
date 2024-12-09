@@ -1,0 +1,65 @@
+Time: 25-10-2023 10:33:04 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Customer'
+-----------------------------------------------------------
+
+Time: 25-10-2023 10:33:25 AM
+-----------------------------------------------------------
+Message: ReadRecord : select CustNo as [Customer No],CustName as [Customer Name],Address as [Address 1],Address2 as [Address 2],Address3 as [Address 3],Address4 as [Address 4],PostCode as [Postal Code],City,CountryCode as[Country Code],Phone,ContactPerson as[Contact Person], Channel,SubChannel as[Sub Channel],  PriceGroup as [Price Group],PaymentTerms as [Payment Terms],SalesAgent as [SalesMan Code],DBCode,DBName,Region as [RegionCode],AreaCode as [RegionName], case when Active=1 then 'ACTIVE' else 'INACTIVE' end as [Active],Longitude,Latitude,Discount,LandMark,OutletStatus from Customer where DistributorID=case when 'ALL'='ALL' then DistributorID else 'ALL' end and SalesAgent=case when ''='ALL' then SalesAgent else '' end
+-----------------------------------------------------------
+
+Time: 25-10-2023 10:33:53 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 25-10-2023 10:33:56 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 25-10-2023 10:36:02 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Customer'
+-----------------------------------------------------------
+
+Time: 25-10-2023 10:36:03 AM
+-----------------------------------------------------------
+Message: ReadRecord : select CustNo as [Customer No],CustName as [Customer Name],Address as [Address 1],Address2 as [Address 2],Address3 as [Address 3],Address4 as [Address 4],PostCode as [Postal Code],City,CountryCode as[Country Code],Phone,ContactPerson as[Contact Person], Channel,SubChannel as[Sub Channel],  PriceGroup as [Price Group],PaymentTerms as [Payment Terms],SalesAgent as [SalesMan Code],DBCode,DBName,Region as [RegionCode],AreaCode as [RegionName], case when Active=1 then 'ACTIVE' else 'INACTIVE' end as [Active],Longitude,Latitude,Discount,LandMark,OutletStatus from Customer where DistributorID=case when 'ALL'='ALL' then DistributorID else 'ALL' end and SalesAgent=case when ''='ALL' then SalesAgent else '' end
+-----------------------------------------------------------
+
+Time: 25-10-2023 10:36:03 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 25-10-2023 10:36:05 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 25-10-2023 10:38:45 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from SalesAgent where UserID='ADMIN' and Active ='1'
+-----------------------------------------------------------
+
+Time: 25-10-2023 10:38:45 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Customer'
+-----------------------------------------------------------
+
+Time: 25-10-2023 10:38:47 AM
+-----------------------------------------------------------
+Message: ReadRecord : select CustNo as [Customer No],CustName as [Customer Name],Address as [Address 1],Address2 as [Address 2],Address3 as [Address 3],Address4 as [Address 4],PostCode as [Postal Code],City,CountryCode as[Country Code],Phone,ContactPerson as[Contact Person], Channel,SubChannel as[Sub Channel],  PriceGroup as [Price Group],PaymentTerms as [Payment Terms],SalesAgent as [SalesMan Code],DBCode,DBName,Region as [RegionCode],AreaCode as [RegionName], case when Active=1 then 'ACTIVE' else 'INACTIVE' end as [Active],Longitude,Latitude,Discount,LandMark,OutletStatus from Customer where DistributorID=case when 'ALL'='ALL' then DistributorID else 'ALL' end and SalesAgent=case when 'ADMIN'='ALL' then SalesAgent else 'ADMIN' end
+-----------------------------------------------------------
+
+Time: 25-10-2023 10:38:47 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 25-10-2023 10:38:49 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+

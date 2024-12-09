@@ -1,0 +1,162 @@
+Time: 21-11-2024 07:59:13 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Modify Outlet Report'
+-----------------------------------------------------------
+
+Time: 21-11-2024 07:59:14 AM
+-----------------------------------------------------------
+Message: ReadRecord : select Distinct C.CustNo  as [Outlet Code],case when nc.Custname=c.CustName then nc.Custname+'@0' else nc.Custname+'@1' end as [Outlet Name],case when nc.address=c.address then nc.address+'@0' else nc.address+'@1' end as [Address 1],case when nc.Address2=c.address2 then nc.address2+'@0' else nc.address2+'@1' end as  [Address 2],C.address3 as [Address  3] ,case when nc.Pin=c.PostCode then nc.Pin+'@0' else nc.Pin+'@1' end as [Pin  Code],case when nc.latitude=c.latitude then cast(nc.latitude as varchar)+'@0' else cast(nc.latitude as varchar)+'@1' end as [GPS Latitude],case when nc.longitude=c.longitude then cast(nc.longitude as varchar)+'@0' else cast(nc.longitude as varchar)+'@1' end as [GPS Longitude],nc.DigitalPayment  as [Digital Payment],nc.servicetype as [Service Type],C.ImageFile as  Image, nc.ManPower as [Man Power],nc.ServiceType as [Pack type],case when nc.GSTCustGroup=c.GSTCustGroup then nc.GSTCustGroup+'@0' else nc.GSTCustGroup+'@1' end as GSTN ,C.Custno  as Id,C.RouteCode as Beat, C.RouteName as [Beat Name],C.DBCode  as [DB Code],nc.BillingMode as [Billing Mode],C.Contactperson as [Contact Name],NCC.MobileNo [Contact NO],case when nc.OutletType=c.OutletType then nc.OutletType+'@0' else nc.OutletType+'@1' end as [RE Type],Concat  (nc.InActive,'',nc.Modify) as Status,concat (nc.icecream,'',nc.Colddrink,'' ,nc.Chocolate) as [Visicooler],Nc.AgentID as [created By],nc.AgentId as [Last Modified BY] , C.dtg as [creation Date], nc.EditDate as [Last Modified Date],'' as [ MOb Date Time ],C.TerritoryName as Territory,C.areaname as Area,C.Region  as [Region],C.CompanyCustNo as [Company Customer No] from Customer C inner  join newcust nc on  nc.CustID = C.custno LEFT join re_update Re on Re.Custno =  NC.custid     LEFT join  NewCustContacts NCC on NCC.CustNo = C.Custno LEFT  join SalesAgent a on a.code = c.salesagent     LEFT JOIN  SalesmanDistributorMapping SDM  on SDM.Code=A.Code LEFT JOIN  Distributor D  on  d.DistributorID=SDM.DistributorID   LEFT JOIN  Region R   on R.Code = D.Branch LEFT join  SubDistributor SD   on SD.DistributorID=D.DistributorID where convert(date,nc.EditDate) between '2024-11-01 00:00:00.000' and '2024-11-21 23:59:59.000' and isnull(D.Branch,'')=Case when 'ALL'='ALL' then  isnull(D.Branch,'') else 'ALL' end and isnull(D.DistributorID,'')=case when 'ALL'='ALL' then isnull(D.DistributorID,'') else 'ALL' end and isnull(SD.SubDistributorID,'')=case when 'ALL'='ALL' then isnull(SD.SubDistributorID,'') else 'ALL' end and isnull(A.Code,'')=case when 'ALL'='ALL' then isnull(A.Code,'') else 'ALL' end
+-----------------------------------------------------------
+
+Time: 21-11-2024 07:59:15 AM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 21-11-2024 07:59:16 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:00:11 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Modify Outlet Report'
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:00:16 AM
+-----------------------------------------------------------
+Message: ReadRecord : select Distinct C.CustNo  as [Outlet Code],case when nc.Custname=c.CustName then nc.Custname+'@0' else nc.Custname+'@1' end as [Outlet Name],case when nc.address=c.address then nc.address+'@0' else nc.address+'@1' end as [Address 1],case when nc.Address2=c.address2 then nc.address2+'@0' else nc.address2+'@1' end as  [Address 2],C.address3 as [Address  3] ,case when nc.Pin=c.PostCode then nc.Pin+'@0' else nc.Pin+'@1' end as [Pin  Code],case when nc.latitude=c.latitude then cast(nc.latitude as varchar)+'@0' else cast(nc.latitude as varchar)+'@1' end as [GPS Latitude],case when nc.longitude=c.longitude then cast(nc.longitude as varchar)+'@0' else cast(nc.longitude as varchar)+'@1' end as [GPS Longitude],nc.DigitalPayment  as [Digital Payment],nc.servicetype as [Service Type],C.ImageFile as  Image, nc.ManPower as [Man Power],nc.ServiceType as [Pack type],case when nc.GSTCustGroup=c.GSTCustGroup then nc.GSTCustGroup+'@0' else nc.GSTCustGroup+'@1' end as GSTN ,C.Custno  as Id,C.RouteCode as Beat, C.RouteName as [Beat Name],C.DBCode  as [DB Code],nc.BillingMode as [Billing Mode],C.Contactperson as [Contact Name],NCC.MobileNo [Contact NO],case when nc.OutletType=c.OutletType then nc.OutletType+'@0' else nc.OutletType+'@1' end as [RE Type],Concat  (nc.InActive,'',nc.Modify) as Status,concat (nc.icecream,'',nc.Colddrink,'' ,nc.Chocolate) as [Visicooler],Nc.AgentID as [created By],nc.AgentId as [Last Modified BY] , C.dtg as [creation Date], nc.EditDate as [Last Modified Date],'' as [ MOb Date Time ],C.TerritoryName as Territory,C.areaname as Area,C.Region  as [Region],C.CompanyCustNo as [Company Customer No] from Customer C inner  join newcust nc on  nc.CustID = C.custno LEFT join re_update Re on Re.Custno =  NC.custid     LEFT join  NewCustContacts NCC on NCC.CustNo = C.Custno LEFT  join SalesAgent a on a.code = c.salesagent     LEFT JOIN  SalesmanDistributorMapping SDM  on SDM.Code=A.Code LEFT JOIN  Distributor D  on  d.DistributorID=SDM.DistributorID   LEFT JOIN  Region R   on R.Code = D.Branch LEFT join  SubDistributor SD   on SD.DistributorID=D.DistributorID where convert(date,nc.EditDate) between '2024-11-01 00:00:00.000' and '2024-11-21 23:59:59.000' and isnull(D.Branch,'')=Case when 'ALL'='ALL' then  isnull(D.Branch,'') else 'ALL' end and isnull(D.DistributorID,'')=case when 'ALL'='ALL' then isnull(D.DistributorID,'') else 'ALL' end and isnull(SD.SubDistributorID,'')=case when 'ALL'='ALL' then isnull(SD.SubDistributorID,'') else 'ALL' end and isnull(A.Code,'')=case when 'ALL'='ALL' then isnull(A.Code,'') else 'ALL' end
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:00:17 AM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:00:44 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:03:50 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Modify Outlet Report'
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:03:51 AM
+-----------------------------------------------------------
+Message: ReadRecord : select Distinct C.CustNo  as [Outlet Code],case when nc.Custname=c.CustName then nc.Custname+'@0' else nc.Custname+'@1' end as [Outlet Name],case when nc.address=c.address then nc.address+'@0' else nc.address+'@1' end as [Address 1],case when nc.Address2=c.address2 then nc.address2+'@0' else nc.address2+'@1' end as  [Address 2],C.address3 as [Address  3] ,case when nc.Pin=c.PostCode then nc.Pin+'@0' else nc.Pin+'@1' end as [Pin  Code],case when nc.latitude=c.latitude then cast(nc.latitude as varchar)+'@0' else cast(nc.latitude as varchar)+'@1' end as [GPS Latitude],case when nc.longitude=c.longitude then cast(nc.longitude as varchar)+'@0' else cast(nc.longitude as varchar)+'@1' end as [GPS Longitude],nc.DigitalPayment  as [Digital Payment],nc.servicetype as [Service Type],C.ImageFile as  Image, nc.ManPower as [Man Power],nc.ServiceType as [Pack type],case when nc.GSTCustGroup=c.GSTCustGroup then nc.GSTCustGroup+'@0' else nc.GSTCustGroup+'@1' end as GSTN ,C.Custno  as Id,C.RouteCode as Beat, C.RouteName as [Beat Name],C.DBCode  as [DB Code],nc.BillingMode as [Billing Mode],C.Contactperson as [Contact Name],NCC.MobileNo [Contact NO],case when nc.OutletType=c.OutletType then nc.OutletType+'@0' else nc.OutletType+'@1' end as [RE Type],Concat  (nc.InActive,'',nc.Modify) as Status,concat (nc.icecream,'',nc.Colddrink,'' ,nc.Chocolate) as [Visicooler],Nc.AgentID as [created By],nc.AgentId as [Last Modified BY] , C.dtg as [creation Date], nc.EditDate as [Last Modified Date],'' as [ MOb Date Time ],C.TerritoryName as Territory,C.areaname as Area,C.Region  as [Region],C.CompanyCustNo as [Company Customer No] from Customer C inner  join newcust nc on  nc.CustID = C.custno LEFT join re_update Re on Re.Custno =  NC.custid     LEFT join  NewCustContacts NCC on NCC.CustNo = C.Custno LEFT  join SalesAgent a on a.code = c.salesagent     LEFT JOIN  SalesmanDistributorMapping SDM  on SDM.Code=A.Code LEFT JOIN  Distributor D  on  d.DistributorID=SDM.DistributorID   LEFT JOIN  Region R   on R.Code = D.Branch LEFT join  SubDistributor SD   on SD.DistributorID=D.DistributorID where convert(date,nc.EditDate) between '2024-11-01 00:00:00.000' and '2024-11-21 23:59:59.000' and isnull(D.Branch,'')=Case when 'ALL'='ALL' then  isnull(D.Branch,'') else 'ALL' end and isnull(D.DistributorID,'')=case when 'ALL'='ALL' then isnull(D.DistributorID,'') else 'ALL' end and isnull(SD.SubDistributorID,'')=case when 'ALL'='ALL' then isnull(SD.SubDistributorID,'') else 'ALL' end and isnull(A.Code,'')=case when 'ALL'='ALL' then isnull(A.Code,'') else 'ALL' end
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:03:52 AM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:04:05 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:09:36 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Modify Outlet Report'
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:09:38 AM
+-----------------------------------------------------------
+Message: ReadRecord : select Distinct C.CustNo  as [Outlet Code],case when nc.Custname=c.CustName then nc.Custname+'@0' else nc.Custname+'@1' end as [Outlet Name],case when nc.address=c.address then nc.address+'@0' else nc.address+'@1' end as [Address 1],case when nc.Address2=c.address2 then nc.address2+'@0' else nc.address2+'@1' end as  [Address 2],C.address3 as [Address  3] ,case when nc.Pin=c.PostCode then nc.Pin+'@0' else nc.Pin+'@1' end as [Pin  Code],case when nc.latitude=c.latitude then cast(nc.latitude as varchar)+'@0' else cast(nc.latitude as varchar)+'@1' end as [GPS Latitude],case when nc.longitude=c.longitude then cast(nc.longitude as varchar)+'@0' else cast(nc.longitude as varchar)+'@1' end as [GPS Longitude],nc.DigitalPayment  as [Digital Payment],nc.servicetype as [Service Type],C.ImageFile as  Image, nc.ManPower as [Man Power],nc.ServiceType as [Pack type],case when nc.GSTCustGroup=c.GSTCustGroup then nc.GSTCustGroup+'@0' else nc.GSTCustGroup+'@1' end as GSTN ,C.Custno  as Id,C.RouteCode as Beat, C.RouteName as [Beat Name],C.DBCode  as [DB Code],nc.BillingMode as [Billing Mode],C.Contactperson as [Contact Name],NCC.MobileNo [Contact NO],case when nc.OutletType=c.OutletType then nc.OutletType+'@0' else nc.OutletType+'@1' end as [RE Type],Concat  (nc.InActive,'',nc.Modify) as Status,concat (nc.icecream,'',nc.Colddrink,'' ,nc.Chocolate) as [Visicooler],Nc.AgentID as [created By],nc.AgentId as [Last Modified BY] , C.dtg as [creation Date], nc.EditDate as [Last Modified Date],'' as [ MOb Date Time ],C.TerritoryName as Territory,C.areaname as Area,C.Region  as [Region],C.CompanyCustNo as [Company Customer No] from Customer C inner  join newcust nc on  nc.CustID = C.custno LEFT join re_update Re on Re.Custno =  NC.custid     LEFT join  NewCustContacts NCC on NCC.CustNo = C.Custno LEFT  join SalesAgent a on a.code = c.salesagent     LEFT JOIN  SalesmanDistributorMapping SDM  on SDM.Code=A.Code LEFT JOIN  Distributor D  on  d.DistributorID=SDM.DistributorID   LEFT JOIN  Region R   on R.Code = D.Branch LEFT join  SubDistributor SD   on SD.DistributorID=D.DistributorID where convert(date,nc.EditDate) between '2024-11-01 00:00:00.000' and '2024-11-21 23:59:59.000' and isnull(D.Branch,'')=Case when 'ALL'='ALL' then  isnull(D.Branch,'') else 'ALL' end and isnull(D.DistributorID,'')=case when 'ALL'='ALL' then isnull(D.DistributorID,'') else 'ALL' end and isnull(SD.SubDistributorID,'')=case when 'ALL'='ALL' then isnull(SD.SubDistributorID,'') else 'ALL' end and isnull(A.Code,'')=case when 'ALL'='ALL' then isnull(A.Code,'') else 'ALL' end
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:09:38 AM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:10:03 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:13:11 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Modify Outlet Report'
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:13:13 AM
+-----------------------------------------------------------
+Message: ReadRecord : select Distinct C.CustNo  as [Outlet Code],case when nc.Custname=c.CustName then nc.Custname+'@0' else nc.Custname+'@1' end as [Outlet Name],case when nc.address=c.address then nc.address+'@0' else nc.address+'@1' end as [Address 1],case when nc.Address2=c.address2 then nc.address2+'@0' else nc.address2+'@1' end as  [Address 2],C.address3 as [Address  3] ,case when nc.Pin=c.PostCode then nc.Pin+'@0' else nc.Pin+'@1' end as [Pin  Code],case when nc.latitude=c.latitude then cast(nc.latitude as varchar)+'@0' else cast(nc.latitude as varchar)+'@1' end as [GPS Latitude],case when nc.longitude=c.longitude then cast(nc.longitude as varchar)+'@0' else cast(nc.longitude as varchar)+'@1' end as [GPS Longitude],nc.DigitalPayment  as [Digital Payment],nc.servicetype as [Service Type],C.ImageFile as  Image, nc.ManPower as [Man Power],nc.ServiceType as [Pack type],case when nc.GSTCustGroup=c.GSTCustGroup then nc.GSTCustGroup+'@0' else nc.GSTCustGroup+'@1' end as GSTN ,C.Custno  as Id,C.RouteCode as Beat, C.RouteName as [Beat Name],C.DBCode  as [DB Code],nc.BillingMode as [Billing Mode],C.Contactperson as [Contact Name],NCC.MobileNo [Contact NO],case when nc.OutletType=c.OutletType then nc.OutletType+'@0' else nc.OutletType+'@1' end as [RE Type],Concat  (nc.InActive,'',nc.Modify) as Status,concat (nc.icecream,'',nc.Colddrink,'' ,nc.Chocolate) as [Visicooler],Nc.AgentID as [created By],nc.AgentId as [Last Modified BY] , C.dtg as [creation Date], nc.EditDate as [Last Modified Date],'' as [ MOb Date Time ],C.TerritoryName as Territory,C.areaname as Area,C.Region  as [Region],C.CompanyCustNo as [Company Customer No] from Customer C inner  join newcust nc on  nc.CustID = C.custno LEFT join re_update Re on Re.Custno =  NC.custid     LEFT join  NewCustContacts NCC on NCC.CustNo = C.Custno LEFT  join SalesAgent a on a.code = c.salesagent     LEFT JOIN  SalesmanDistributorMapping SDM  on SDM.Code=A.Code LEFT JOIN  Distributor D  on  d.DistributorID=SDM.DistributorID   LEFT JOIN  Region R   on R.Code = D.Branch LEFT join  SubDistributor SD   on SD.DistributorID=D.DistributorID where convert(date,nc.EditDate) between '2024-11-01 00:00:00.000' and '2024-11-21 23:59:59.000' and isnull(D.Branch,'')=Case when 'ALL'='ALL' then  isnull(D.Branch,'') else 'ALL' end and isnull(D.DistributorID,'')=case when 'ALL'='ALL' then isnull(D.DistributorID,'') else 'ALL' end and isnull(SD.SubDistributorID,'')=case when 'ALL'='ALL' then isnull(SD.SubDistributorID,'') else 'ALL' end and isnull(A.Code,'')=case when 'ALL'='ALL' then isnull(A.Code,'') else 'ALL' end
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:13:14 AM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:13:21 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:16:48 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Modify Outlet Report'
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:16:49 AM
+-----------------------------------------------------------
+Message: ReadRecord : select Distinct C.CustNo  as [Outlet Code],case when nc.Custname=c.CustName then nc.Custname+'@0' else nc.Custname+'@1' end as [Outlet Name],case when nc.address=c.address then nc.address+'@0' else nc.address+'@1' end as [Address 1],case when nc.Address2=c.address2 then nc.address2+'@0' else nc.address2+'@1' end as  [Address 2],C.address3 as [Address  3] ,case when nc.Pin=c.PostCode then nc.Pin+'@0' else nc.Pin+'@1' end as [Pin  Code],case when nc.latitude=c.latitude then cast(nc.latitude as varchar)+'@0' else cast(nc.latitude as varchar)+'@1' end as [GPS Latitude],case when nc.longitude=c.longitude then cast(nc.longitude as varchar)+'@0' else cast(nc.longitude as varchar)+'@1' end as [GPS Longitude],nc.DigitalPayment  as [Digital Payment],nc.servicetype as [Service Type],C.ImageFile as  Image, nc.ManPower as [Man Power],nc.ServiceType as [Pack type],case when nc.GSTCustGroup=c.GSTCustGroup then nc.GSTCustGroup+'@0' else nc.GSTCustGroup+'@1' end as GSTN ,C.Custno  as Id,C.RouteCode as Beat, C.RouteName as [Beat Name],C.DBCode  as [DB Code],nc.BillingMode as [Billing Mode],C.Contactperson as [Contact Name],NCC.MobileNo [Contact NO],case when nc.OutletType=c.OutletType then nc.OutletType+'@0' else nc.OutletType+'@1' end as [RE Type],Concat  (nc.InActive,'',nc.Modify) as Status,concat (nc.icecream,'',nc.Colddrink,'' ,nc.Chocolate) as [Visicooler],Nc.AgentID as [created By],nc.AgentId as [Last Modified BY] , C.dtg as [creation Date], nc.EditDate as [Last Modified Date],'' as [ MOb Date Time ],C.TerritoryName as Territory,C.areaname as Area,C.Region  as [Region],C.CompanyCustNo as [Company Customer No] from Customer C inner  join newcust nc on  nc.CustID = C.custno LEFT join re_update Re on Re.Custno =  NC.custid     LEFT join  NewCustContacts NCC on NCC.CustNo = C.Custno LEFT  join SalesAgent a on a.code = c.salesagent     LEFT JOIN  SalesmanDistributorMapping SDM  on SDM.Code=A.Code LEFT JOIN  Distributor D  on  d.DistributorID=SDM.DistributorID   LEFT JOIN  Region R   on R.Code = D.Branch LEFT join  SubDistributor SD   on SD.DistributorID=D.DistributorID where convert(date,nc.EditDate) between '2024-11-01 00:00:00.000' and '2024-11-21 23:59:59.000' and isnull(D.Branch,'')=Case when 'ALL'='ALL' then  isnull(D.Branch,'') else 'ALL' end and isnull(D.DistributorID,'')=case when 'ALL'='ALL' then isnull(D.DistributorID,'') else 'ALL' end and isnull(SD.SubDistributorID,'')=case when 'ALL'='ALL' then isnull(SD.SubDistributorID,'') else 'ALL' end and isnull(A.Code,'')=case when 'ALL'='ALL' then isnull(A.Code,'') else 'ALL' end
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:16:49 AM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:16:59 AM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:17:22 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Modify Outlet Report'
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:17:23 AM
+-----------------------------------------------------------
+Message: ReadRecord : select Distinct C.CustNo  as [Outlet Code],case when nc.Custname=c.CustName then nc.Custname+'@0' else nc.Custname+'@1' end as [Outlet Name],case when nc.address=c.address then nc.address+'@0' else nc.address+'@1' end as [Address 1],case when nc.Address2=c.address2 then nc.address2+'@0' else nc.address2+'@1' end as  [Address 2],C.address3 as [Address  3] ,case when nc.Pin=c.PostCode then nc.Pin+'@0' else nc.Pin+'@1' end as [Pin  Code],case when nc.latitude=c.latitude then cast(nc.latitude as varchar)+'@0' else cast(nc.latitude as varchar)+'@1' end as [GPS Latitude],case when nc.longitude=c.longitude then cast(nc.longitude as varchar)+'@0' else cast(nc.longitude as varchar)+'@1' end as [GPS Longitude],nc.DigitalPayment  as [Digital Payment],nc.servicetype as [Service Type],C.ImageFile as  Image, nc.ManPower as [Man Power],nc.ServiceType as [Pack type],case when nc.GSTCustGroup=c.GSTCustGroup then nc.GSTCustGroup+'@0' else nc.GSTCustGroup+'@1' end as GSTN ,C.Custno  as Id,C.RouteCode as Beat, C.RouteName as [Beat Name],C.DBCode  as [DB Code],nc.BillingMode as [Billing Mode],C.Contactperson as [Contact Name],NCC.MobileNo [Contact NO],case when nc.OutletType=c.OutletType then nc.OutletType+'@0' else nc.OutletType+'@1' end as [RE Type],Concat  (nc.InActive,'',nc.Modify) as Status,concat (nc.icecream,'',nc.Colddrink,'' ,nc.Chocolate) as [Visicooler],Nc.AgentID as [created By],nc.AgentId as [Last Modified BY] , C.dtg as [creation Date], nc.EditDate as [Last Modified Date],'' as [ MOb Date Time ],C.TerritoryName as Territory,C.areaname as Area,C.Region  as [Region],C.CompanyCustNo as [Company Customer No] from Customer C inner  join newcust nc on  nc.CustID = C.custno LEFT join re_update Re on Re.Custno =  NC.custid     LEFT join  NewCustContacts NCC on NCC.CustNo = C.Custno LEFT  join SalesAgent a on a.code = c.salesagent     LEFT JOIN  SalesmanDistributorMapping SDM  on SDM.Code=A.Code LEFT JOIN  Distributor D  on  d.DistributorID=SDM.DistributorID   LEFT JOIN  Region R   on R.Code = D.Branch LEFT join  SubDistributor SD   on SD.DistributorID=D.DistributorID where convert(date,nc.EditDate) between '2024-11-01 00:00:00.000' and '2024-11-21 23:59:59.000' and isnull(D.Branch,'')=Case when 'ALL'='ALL' then  isnull(D.Branch,'') else 'ALL' end and isnull(D.DistributorID,'')=case when 'ALL'='ALL' then isnull(D.DistributorID,'') else 'ALL' end and isnull(SD.SubDistributorID,'')=case when 'ALL'='ALL' then isnull(SD.SubDistributorID,'') else 'ALL' end and isnull(A.Code,'')=case when 'ALL'='ALL' then isnull(A.Code,'') else 'ALL' end
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:17:24 AM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:17:24 AM
+-----------------------------------------------------------
+Message: AutoExport Table Name = Index and length must refer to a location within the string.
+Parameter name: length
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:29:36 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Modify Outlet Report'
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:29:36 AM
+-----------------------------------------------------------
+Message: ReadRecord : select Distinct C.CustNo  as [Outlet Code],case when isnull(nc.Custname,'')=isnull(c.CustName,'') then isnull(nc.Custname,'')+'@0' else isnull(nc.Custname,'')+'@1' end as [Outlet Name],case when isnull(nc.address,'')=isnull(c.address,'') then isnull(nc.address,'')+'@0' else isnull(nc.address,'')+'@1' end as [Address 1],case when isnull(nc.Address2,'')=isnull(c.address2,'') then isnull(nc.address2,'')+'@0' else isnull(nc.address2,'')+'@1' end as  [Address 2],C.address3 as [Address  3] ,case when isnull(nc.Pin,'')=isnull(c.PostCode,'') then isnull(nc.Pin,'')+'@0' else isnull(nc.Pin,'')+'@1' end as [Pin  Code],case when isnull(nc.latitude,'')=isnull(c.latitude,'') then cast(isnull(nc.latitude,'') as varchar)+'@0' else cast(isnull(nc.latitude,'') as varchar)+'@1' end as [GPS Latitude],case when isnull(nc.longitude,'')=isnull(c.longitude,'') then cast(isnull(nc.longitude,'') as varchar)+'@0' else cast(isnull(nc.longitude,'') as varchar)+'@1' end as [GPS Longitude],nc.DigitalPayment  as [Digital Payment],nc.servicetype as [Service Type],C.ImageFile as  Image, nc.ManPower as [Man Power],nc.ServiceType as [Pack type],case when isnull(nc.GSTCustGroup,'')=isnull(c.GSTCustGroup,'') then isnull(nc.GSTCustGroup,'')+'@0' else isnull(nc.GSTCustGroup,'')+'@1' end as GSTN ,C.Custno  as Id,C.RouteCode as Beat, C.RouteName as [Beat Name],C.DBCode  as [DB Code],nc.BillingMode as [Billing Mode],C.Contactperson as [Contact Name],NCC.MobileNo [Contact NO],case when isnull(nc.OutletType,'')=isnull(c.OutletType,'') then isnull(nc.OutletType,'')+'@0' else isnull(nc.OutletType,'')+'@1' end as [RE Type],Concat  (nc.InActive,'',nc.Modify) as Status,concat (nc.icecream,'',nc.Colddrink,'' ,nc.Chocolate) as [Visicooler],Nc.AgentID as [created By],nc.AgentId as [Last Modified BY] , C.dtg as [creation Date], nc.EditDate as [Last Modified Date],'' as [ MOb Date Time ],C.TerritoryName as Territory,C.areaname as Area,C.Region  as [Region],C.CompanyCustNo as [Company Customer No] from Customer C inner  join newcust nc on  nc.CustID = C.custno LEFT join re_update Re on Re.Custno =  NC.custid     LEFT join  NewCustContacts NCC on NCC.CustNo = C.Custno LEFT  join SalesAgent a on a.code = c.salesagent     LEFT JOIN  SalesmanDistributorMapping SDM  on SDM.Code=A.Code LEFT JOIN  Distributor D  on  d.DistributorID=SDM.DistributorID   LEFT JOIN  Region R   on R.Code = D.Branch LEFT join  SubDistributor SD   on SD.DistributorID=D.DistributorID where convert(date,nc.EditDate) between '2024-11-01 00:00:00.000' and '2024-11-21 23:59:59.000' and isnull(D.Branch,'')=Case when 'ALL'='ALL' then  isnull(D.Branch,'') else 'ALL' end and isnull(D.DistributorID,'')=case when 'ALL'='ALL' then isnull(D.DistributorID,'') else 'ALL' end and isnull(SD.SubDistributorID,'')=case when 'ALL'='ALL' then isnull(SD.SubDistributorID,'') else 'ALL' end and isnull(A.Code,'')=case when 'ALL'='ALL' then isnull(A.Code,'') else 'ALL' end
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:29:39 AM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 21-11-2024 08:29:39 AM
+-----------------------------------------------------------
+Message: AutoExport Table Name = Index and length must refer to a location within the string.
+Parameter name: length
+-----------------------------------------------------------
+

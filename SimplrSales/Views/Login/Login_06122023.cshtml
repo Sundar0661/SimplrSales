@@ -1,0 +1,519 @@
+﻿@{
+    ViewBag.Title = "Login";
+    //Layout = "~/Views/Shared/_LogIn.cshtml";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+@*<a href="self.close();">Close this Window</a>
+    <button class="gohome-btn" onclick="goback()" id="gobtn">
+        Go Back
+    </button>
+    <script type="text/javascript">
+        function goback() {
+
+            alert("");
+            self.close();
+                window.close();
+            }
+    </script>
+    <input type="button" onclick="return quitBox('quit');" value="Close This Window/Tab" />
+
+
+    <script language="javascript">
+
+    function quitBox(cmd)
+    {
+        if (cmd=='quit')
+        {
+           window.opener.postMessage('location', '*');
+           window.open(location, '_self').close();
+        }
+        return false;
+    }*@
+
+
+@if (ViewBag.Message != null)
+{
+    <script>
+        //$(document).ready(function () {
+        if ('@ViewBag.Message' != "" && '@ViewBag.Message' == "Session time expired!") {
+            alert('@ViewBag.Message');
+        }
+        //});
+    </script>
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="~/Content/Boostrap.css">
+<link href="~/Content/font/font-awesome.min.css" rel="stylesheet" />
+
+@*</style>*@
+@*<link href="~/Content/Dynamic.css" rel="stylesheet" />*@
+
+<style>
+    .imgcontainer {
+        text-align: center;
+        margin: -15% 5% 5% 35%;
+    }
+
+    .input-group-text {
+        background-color: white !important;
+        /*border:none !important;*/
+        border-left: none !important;
+        /*border-bottom:1px solid #ced4da !important;
+        border-top:1px solid #ced4da !important;*/
+    }
+
+    .input-group-text-eye {
+        background-color: white !important;
+        /*border:none !important;*/
+        border-right: none !important;
+        /*border-bottom:1px solid #ced4da !important;
+        border-top:1px solid #ced4da !important;*/
+    }
+
+    .form-control {
+        border-left: none !important;
+    }
+
+    .form-control-eye {
+        border-right: none !important;
+    }
+
+    button {
+        background-color: #2c89a7;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border-radius: 15px !important;
+        cursor: pointer;
+        width: 100%;
+        font-size: 22px;
+        font-family: tahoma;
+    }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+    @@import "bourbon";
+
+    body {
+        //background: #eee !important;
+        background-image: radial-gradient(white, #2c89a7);
+    }
+
+    .wrapper {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    .form-signin {
+        max-width: 35%;
+        padding: 15px 35px 45px;
+        margin: 0 auto;
+        background-color: #448ea747;
+        border-radius: 25px;
+        border: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .form-signin-heading, .checkbox {
+        margin-bottom: 30px;
+    }
+
+    .checkbox {
+        font-weight: normal;
+    }
+
+    .form-control {
+        position: relative;
+        font-size: 16px;
+        height: auto;
+        padding: 10px;
+        z-index: 2;
+    }
+
+    input[type="text"] {
+        margin-bottom: -1px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    input[type="password"] {
+        @* margin-bottom: 20px;
+        *@ margin-bottom: -1px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+</style>
+
+
+@*<h1>TeaM LeaD</h1>
+
+    <img src="~/Images/new/happy-new-year-gif-img.gif" />*@
+
+
+<div class="wrapper form-signin" style="margin-top: 10%">
+
+
+    @* <form class="form-signin">*@
+    @using (Html.BeginForm("loginform", "Login", FormMethod.Post))
+    {
+
+        <div class="imgcontainer" style="border-radius: 50%; background-color: #2c89a7; width: 25%; height: inherit;top:0;">
+            @*<img src="~/Logo/simplrLoginLogo.png" style="width: 60%; margin-top: 25%;margin-bottom:25%;align-content:center;" />*@
+
+            @*<div class="unileverdiv" style="display:none">
+                    <img src="~/Images/UnileverLoginLogo.png" style="width: 60%; margin-top: 25%;margin-bottom:25%;align-content:center;" />
+                </div>
+                <div class="MMdiv" style="display:none">
+                    <img src="~/Images/MassMarketing.png" style="width: 60%; margin-top: 25%;margin-bottom:25%;align-content:center;" />
+                </div>*@
+
+            @*<div class="simplrdiv" style="display:none">
+                    <img src="~/Images/SimplrLogo.png" style="width: 75%; margin-top: 25%;margin-bottom:25%;align-content:center;">
+                </div>*@
+            <div class="simplrdiv" style="display:none">
+                <img src=@ViewBag.LoginLogo style="width: 75%; margin-top: 25%;margin-bottom:25%;align-content:center;">
+            </div>
+        </div>
+
+        <div style="width: 100%">
+
+            @*<div class="unileverdiv" style="display: none">
+                    <label style="color: #544949; font-size: 2em; text-align: center; display: block; font-weight: bold; color: #544949; font-family: VAGRounded; color: #4a3c3c; font-size: 2em; text-align: center; display: block; font-weight: bold; font-family: tahoma;">V5 System</label>
+                </div>*@
+            <div class="simplrHeaderdiv" style="display: none">
+                <label style="color: #544949; font-size: 2em; text-align: center; display: block; font-weight: bold; color: #544949; font-family: VAGRounded; color: #4a3c3c; font-size: 2em; text-align: center; display: block; font-weight: bold; font-family: tahoma;">
+                    @ViewBag.LoginTitle
+                </label>
+            </div>
+            @*<label style="color: #544949; font-size: 2em; text-align: center; display: block; font-weight: bold; color: #544949; font-family: VAGRounded; color: #4a3c3c; font-size: 2em; text-align: center; display: block; font-weight: bold; font-family: tahoma;">Simplr Sales</label>*@
+            @* <label style="color: #544949; font-size: 2em; text-align: center; display: block; font-weight: bold; color: #544949; font-family: VAGRounded; color: #4a3c3c; font-size: 2em; text-align: center; display: block; font-weight: bold; font-family: tahoma;">V5 System</label>*@
+            <br />
+
+            @*<input type="text" placeholder="Enter User ID" id="uname" name="uname" style="width: 100%; height: 7%; border-radius: 7px;" required>
+                <div style="height: 1%"></div>
+                <input type="password" placeholder="Enter Password" id="psw" name="psw" style="width: 100%; height: 7%; border-radius: 7px;" required>*@
+            @*<span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span>*@
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text input-group-text-name"><i class="fa fa-user" aria-hidden="true"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Username" id="uname" name="uname" required>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text input-group-text-name"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                </div>
+                <input type="password" class="form-control form-control-eye" placeholder="Password" id="psw" name="psw" required>
+                <div class="input-group-prepend">
+                    <span class="input-group-text input-group-text-eye" style="cursor:pointer;"><i id="pass-status" class="fa fa-eye" aria-hidden="true" onclick="viewPassword('psw')"></i></span>
+                </div>
+            </div>
+           
+           
+
+            <input type="hidden" class="form-control" id="ipaddress" name="ipaddress">
+            <input type="hidden" class="form-control" id="latitude" name="latitude">
+            <input type="hidden" class="form-control" id="longitude" name="longitude" >
+            
+             
+            <label id="InvaildMsg" style="color: red;text-align:center"></label>
+
+            <button type="submit" onclick="return AssignSystemListDeviceSystemList();">Login</button>
+            @if (Session["ProjectName"].ToString() == "PVM")
+            {
+                <div id="ADLoginDiv" >
+                    <label style="margin-left:48%">
+                        OR
+                    </label>
+                    <button type="submit" onclick="return ContinuewithADLogin();">Continue with AD Login</button>
+                </div>
+            }
+            <label>
+                @*<p>
+                        <input type="checkbox" checked="checked" name="remember">
+                        Remember me
+                    </p>*@
+
+            </label>
+            @*<label for="forgetpassword">ForgetPassword</label>*@
+            
+            @*<div class="input-group mb-3">
+                <button type="submit" onclick="return ForgetPWD();">Forget Password</button>
+            </div>*@
+
+            @*<div class="row">
+                <div class="labeltext" style="width:10%;">
+                    <input type="text" style="width:100%;height: 30px;font-size:12px;color:#1f1f1f;background-color:#ffffff;font-family:sans-serif;text-align:Left;"
+                           id="txtOTP" />
+                </div>
+                <div class="labeltext" style="width:10%;float:left">
+                   
+                    <input type="text" style="width:100%;height: 30px;font-size:12px;color:#1f1f1f;background-color:#ffffff;font-family:sans-serif;text-align:Left;"
+                           id="txtNewPwd" />
+                </div>
+                <div class="labeltext" style="width:10%;float:left">
+                    
+                    <input type="text" style="width:100%;height: 30px;font-size:12px;color:#1f1f1f;background-color:#ffffff;font-family:sans-serif;text-align:Left;"
+                           id="txtNewConfPwd" />
+                </div>
+            </div>*@
+          
+            <div style="color: white;">
+                <p>All rights reserved</p>
+                <p>
+                    Copyright &copy; Simplr Solutions Pte Ltd
+                    <script type="text/javascript">document.write(new Date().getFullYear())</script>
+                </p>
+                @*<p>Copyright &copy; Simplr Solutions Pte Ltd 2019</p>*@
+
+
+            </div>
+        </div>
+    }
+    @* </form>*@
+
+</div>
+
+@*font-awesome.min.css -- eyecon symbol*@
+
+<script src="~/Scripts/jquery-1.8.2.min.js"></script>
+<script src="~/Scripts/Main/FormConfig.js"></script>
+<script src="~/Scripts/Main/Common.js"></script>
+@*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">*@
+<script type="text/javascript">
+
+    if ('@TempData["SessionTimeOut"]' == "1") {
+        alert('Your Session is expired.');
+    }
+
+    if ('@Session["ProjectName"]' == "unilever") {
+        $('.imgcontainer').hide();
+        $('.unileverdiv').show();
+    }
+        @*else if ('@Session["ProjectName"]' == "MassMarketing") {
+        $('.MMdiv,.simplrHeaderdiv').show();
+    }*@
+    else {
+        $('.simplrdiv,.simplrHeaderdiv').show();
+    }
+
+    // debugger;
+    if ('@ViewBag.Message' != '') {
+        $('#InvaildMsg').text('@ViewBag.Message');
+        // alert('@ViewBag.Message');
+    }
+    @*   if ('@Session["WebBrowserName"]' == "InternetExplorer") {
+        $('#IEDivId').show();
+        $("#psw1").prop('required', false);
+        $("#psw").prop('required', true);
+
+    }
+    else {
+        $("#psw1").prop('required', true);
+        $("#psw").prop('required', false);
+        $('#IEDivId').hide();
+        $('#NonIEDivId').show();
+    }*@
+
+    // document.cookie = "";
+    setCookie('FormView', JSON.stringify(""))
+    var url_ActionConfig = '@Url.Content("~/Common/ActionConfig")';
+    var url_AssignSLandDSL = '@Url.Content("~/LogIn/AssignSLandDSL")';
+    var url_GetSystemList = '@Url.Content("~/LogIn/GetSystemList")';
+    var url_GetDeviceSystemList = '@Url.Content("~/LogIn/GetDeviceSystemList")';
+    var url_ForgotPassword = '@Url.Content("~/Form/UpdateForgetPassword")';
+    //var url_UpdateForgetPassword = '@Url.Content("~/Form/UpdateForgetPassword")';
+
+    //ActionConfigEvent("", "", "Login", "", "formTextboxfocus");
+    //$("#" + returnData).focus();
+    var _objData = {};
+
+  //function ForgetPWD() {
+  //    //debugger;
+  //    //GetList(url_GetSystemList);
+  //      var varUserID = document.getElementById("uname").value;
+  //      //ForgetPWDInsert(varUserID);
+
+
+  //    debugger;
+  //    $.ajax({
+  //        type: 'POST',
+  //        url: url_ForgotPassword,
+  //        async: false,
+  //        data: { ObjData: JSON.stringify(_objData) },
+  //        dataType: 'json',
+  //        error: function(err)
+  //        {
+  //            window.open("Views/login/ForgotPassword.cshtml", '_self');
+  //            alert(err);
+  //        },
+  //        success: function (data) {
+  //            window.open("ForgotPassword.cshtml", '_blank');
+  //            //if (data != null) {
+  //            //    for (var i = 0; i < data.length; i++) {
+  //            //        _objData[data[i].Code] = data[i].SystemValue;
+  //            //    }
+  //            //}
+  //        }
+  //    });
+  //    //UpdateForgetPassword(varUserID);
+  //  }
+
+    function AssignSystemListDeviceSystemList() {
+        //debugger;
+        //GetList(url_GetSystemList);
+        //GetList(url_GetDeviceSystemList);
+        //GetList(url_AssignSLandDSL);
+        @*if ('@Session["WebBrowserName"]' != "InternetExplorer") {
+            $("#psw").val($("#psw1").val());
+        }*@
+
+        //var ret = checkPassword($('#psw').val());
+        //return ret;
+        return true;
+    }
+
+
+    function GetList(url) {
+        $.ajax({
+            type: 'POST',
+            url: url,
+            async: false,
+            data: { ObjData: JSON.stringify(_objData) },
+            dataType: 'json',
+            success: function (data) {
+                if (data != null) {
+                    for (var i = 0; i < data.length; i++) {
+                        _objData[data[i].Code] = data[i].SystemValue;
+                    }
+                }
+            }
+        });
+    }
+
+    $(document).on('click', '.toggle-password', function () {
+        $(this).toggleClass("fa-eye fa-eye-slash");
+        var input = $("#psw");
+        input.attr('type') === 'password' ? input.prop('type', 'text') : input.prop('type', 'password')
+    });
+
+    function setCookie(key, value) {
+        var expires = new Date();
+        expires.setTime(expires.getTime() + (1 * 24 * 60 * 60 * 1000));
+        document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+    }
+
+    setCookie('MainMenuId', "");
+    setCookie('SubMenuId', "");
+
+
+    var url_SignIndex = '@Url.Content("~/Home/SignIndex/")';
+
+    function ContinuewithADLogin() {
+        setCookie('LogInType', "PVMSFA");
+        window.location = url_SignIndex;
+    }
+
+    load();
+
+    function load() {
+        $.getJSON("http://jsonip.com/?callback=?", function (data, x, y, z) {
+            $("#ipaddress").val(data.ip);
+            GetLatLong(data.ip)
+        });
+    }
+
+    function GetLatLong(ip) {
+        $.getJSON('https://ipapi.co/' + ip + '/json', function (data) {
+            $("#latitude").val(data.latitude);
+            $("#longitude").val(data.longitude);
+        });
+    }
+
+</script>
+
+
+
+
+@*<div >
+
+
+            <input type="password" id="password-field">
+
+
+            <i id="pass-status" class="fa fa-eye" aria-hidden="true" onclick="viewPassword()"></i>
+
+    </div>*@
+
+<style>
+    /*html, body {
+      height: 100%;
+      background: #212121;
+      margin: 0px;
+    }*/
+    .first-example, .second-example, .third-example {
+        margin-bottom: 10px;
+    }
+    /*body {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }*/
+
+    /*input {
+      width: 250px;
+      padding: 15px 12px;
+      font-size:22px;
+    }*/
+    .faq {
+        color: white;
+        font-size: 27px;
+        margin-left: 8px;
+    }
+    /*#validation-txt{
+      color:red;
+      font-size:18px;
+      width: 300px;
+    }
+    #password-3{
+      -webkit-text-security: disc;
+        -moz-text-security:circle;
+         text-security:circle;
+    }
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }*/
+</style>
+<script>
+    function viewPassword(id) {
+        var passwordInput = document.getElementById(id);
+        var passStatus = document.getElementById('pass-status');
+
+        if (passwordInput.type == 'password') {
+            passwordInput.type = 'text';
+            //passStatus.className = 'fa fa-eye-slash';
+            passStatus.className = 'fa fa-eye';
+
+        }
+        else {
+            passwordInput.type = 'password';
+            //passStatus.className = 'fa fa-eye';
+            passStatus.className = 'fa fa-eye-slash';
+        }
+    }
+</script>
+
+
+<style>
+    /*password default eye removed*/
+    input[type=password]::-ms-reveal,
+    input[type=password]::-ms-clear {
+        display: none;
+    }
+</style>

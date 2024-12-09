@@ -1,0 +1,1039 @@
+﻿@{
+    ViewBag.Title = "Survey";
+}
+
+<style>
+    textarea {
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+
+    textarea {
+        padding: 5px;
+        max-width: 100%;
+        line-height: 1.5;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-shadow: 1px 1px 1px #999;
+    }
+
+    #makeMeDraggable {
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+
+    .makeMeDraggabletest {
+        width: 200px;
+        height: 40px;
+        background: white;
+    }
+
+    .makeMeDraggableLabel {
+        width: 200px;
+        height: 50px;
+        border-style: ridge;
+    }
+
+    .makeMeDraggableDropdown {
+        width: 200px;
+        height: 50px;
+        border-style: ridge;
+    }
+
+    .makeMeDraggabletext {
+        width: 200px;
+        height: 40px;
+        background: white;
+        border-style: ridge;
+    }
+
+    .makeMeDraggabledatetime {
+        width: 200px;
+        height: 35px;
+        background: white;
+        border-style: ridge;
+    }
+
+    .makeMeDraggablePicture {
+        width: 75px;
+        height: 75px;
+        background: white;
+        border: 1px solid black;
+    }
+
+    .makeMeDraggableSlider {
+        width: 65px;
+        height: 65px;
+        background: white;
+        border: 1px solid black;
+    }
+
+    .makeMeDraggablePhoto {
+        width: 75px;
+        height: 75px;
+        background: lightgray;
+        border: 1px solid black;
+    }
+
+    .makeMeDraggableListBox {
+        /*width: 150px;*/
+        width: 100px;
+        height: 100px;
+        background: white;
+        border-style: ridge;
+    }
+
+
+    .ui-dialog-titlebar-close {
+        visibility: hidden;
+    }
+
+    .indication_style {
+        border: 5px solid lightgray;
+    }
+
+    .indication_backcolor {
+        background-color: blue;
+        color: white;
+    }
+</style>
+
+<!--  SURVEY PAGE PURPOSE-->
+<script src="~/Scripts/Main/Survey.js"></script>
+
+
+@section Scripts{
+
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+    <script>
+        var url_GetCheckListDetails = '@Url.Content("~/Survey/GetCheckListDetails/")';
+        var url_ExecuteNonQuerys = '@Url.Content("~/Survey/ExecuteNonQuerys/")';
+        var url_SurveyList = '@Url.Content("~/Survey/SurveyList/")';
+        var url_Image_PlusIcon = '@Url.Content("~/Images/Survey/addIcon.png")';
+        var url_Image_Slider = '@Url.Content("~/Images/Survey/sliderIcon.png")';
+        var url_Image_DropdownIcon = '@Url.Content("~/Images/Survey/dropdown_Icon.png")';
+
+        var url_Image_DeleteIcon = '@Url.Content("~/Images/Survey/deleteIcon.png")';
+        var url_Image_PrintIcon = '@Url.Content("~/Images/Survey/PrintIcon.png")';
+        var url_GetPosDataMapDetails = '@Url.Content("~/Survey/GetPosDataMapDetails/")';
+
+        //var Survey_Uploaded_Image_Location = '@ViewBag.Survey_Upload_Image_Location';
+
+        var url_Imagefile_Upload = '@Url.Content("~/Survey/ImageFileUpload/")';
+
+
+        var _screenName = "SurveyList";
+        $(document).ready(function () {
+            //debugger;
+
+            document.getElementById("Input_div").style.display = "block";
+            var qry_chkname = decodeURI(getQueryString("ChecklistName"));
+           // alert(qry_chkname);
+
+            var qry = "select distinct isnull(description,'') as description from POSTheme where ThemeName='" + qry_chkname + "'";
+            //var qry = "select distinct FieldSQL from POSDatamap where FieldCode='" + Data +
+            //"'   and IsPDA =0 "
+            execute(qry);
+            
+            dbDataRows = executeQry;
+
+            //dropDown_Clear("cboTableColumnId");
+
+            if (dbDataRows.length > 0) {
+               // var length = dbDataRows.length;
+                //  for (var i = 0; i < length; i++) {
+                var tmpdesc = dbDataRows[0].description.replace(/(")/g, "'");
+                document.getElementById("description").value = tmpdesc;
+                    //sel.options.add(dbDataRows[i].value);
+                  //  cboAddTableColumn();
+              //  }
+            }
+
+            var qry_noofscreen = decodeURI(getQueryString("NoofScreens"));
+            var IsActive = decodeURI(getQueryString("Active"));
+            qry_chkname = qry_chkname == "null" ? "" : qry_chkname;
+            qry_noofscreen = qry_noofscreen == "null" ? "" : qry_noofscreen;
+
+            if (IsActive == "Yes")
+            {
+                document.getElementById("chkactive").checked = true;
+            }
+            if (qry_chkname != null && qry_chkname != "" && qry_chkname != undefined) {
+
+                document.getElementById("txtChecklistName").style.backgroundColor = "#ccc";
+                document.getElementById("txtChecklistName").readOnly = true;
+                document.getElementById("txtChecklistName").value = qry_chkname;
+                document.getElementById("txtNoofScreens").value = qry_noofscreen;
+            }
+            else
+            {
+                document.getElementById("txtChecklistName").readOnly = false;
+                document.getElementById("txtChecklistName").style.backgroundColor = "White";
+            }
+            document.getElementById("mogrify_reportbackground").style.display = "none";
+
+            //debugger;
+            get_posdataMap();
+
+
+
+        })
+
+        function callCopyNewSurvey() {
+            var valChecklistName = document.getElementById("txtChecklistName").value;
+            var valNewSurveyName = document.getElementById("txtNewSurveyName").value;
+            if (valNewSurveyName == null || valNewSurveyName == '') {
+                //alert("Enter New Survey Name.");
+
+                var obj = {};
+                obj.title = "Information";
+                obj.message = "Enter New Survey Name.";
+                showAlertMessage_survey(obj);
+               
+
+                document.getElementById("txtNewSurveyName").focus();
+                return;
+            }
+            else if (valNewSurveyName.toUpperCase() == valChecklistName.toUpperCase())
+            {
+               // alert("Same Survey name entered. So Please Enter Different Survey Name.");
+
+                var obj = {};
+                obj.title = "Information";
+                obj.message = "Same Survey name entered. So Please Enter Different Survey Name.";
+                showAlertMessage_survey(obj);
+
+                document.getElementById("txtNewSurveyName").focus();
+                return;
+            }
+            NewSurvey_Insert(valChecklistName, valNewSurveyName);
+        }
+
+        function callSurveyActive()
+        {
+            //alert("test");
+            try {
+                var valChecklistName = document.getElementById("txtChecklistName").value;
+                //var valNewSurveyName = document.getElementById("txtNewSurveyName").value;
+                var valSurveyActive = document.getElementById("chkactive").checked;
+
+                var valDescription = document.getElementById("description").value;
+
+                // alert(valSurveyActive);
+                if (valChecklistName == null) {
+                   // alert(" Enter Survey Name/Click Active Status");
+
+                    var obj = {};
+                    obj.title = "Information";
+                    obj.message = " Enter Survey Name/Click Active Status";
+                    showAlertMessage_survey(obj);
+
+                    //document.getElementById("txtNewSurveyName").focus();
+                    return;
+                }
+                //else if (valNewSurveyName.toUpperCase() == valChecklistName.toUpperCase()) {
+                //    alert("Same Survey name entered. So Please Enter Different Survey Name.");
+                //    document.getElementById("txtNewSurveyName").focus();
+                //    return;
+                //}
+                //alert(chkactive)
+                ActiveSurvey_Save(valChecklistName, valSurveyActive, valDescription);
+            }
+            catch (ex)
+            {
+              //  alert(ex.message);
+
+
+            }
+        }
+
+        function callDesignerPage()
+        {
+            var valChecklistName = document.getElementById("txtChecklistName").value;
+            if (valChecklistName == null || valChecklistName == '') {
+
+              //  alert("Enter Checklist Name.");
+
+                var obj = {};
+                obj.title = "Information";
+                obj.message = "Enter Checklist Name.";
+                showAlertMessage_survey(obj);
+
+                document.getElementById("txtChecklistName").focus();
+                return;
+            }
+            else {
+                ChecklistName = valChecklistName;
+            }
+
+            try {
+                var valDesc = '';
+                valDesc = document.getElementById("description").value;
+                //alert(valDesc);
+                if (valDesc == null || valDesc == '') {
+
+                    // alert("Enter Checklist Name.");
+                    // document.getElementById("txtChecklistName").focus();
+                    // return;
+                }
+                else {
+                    descrip = valDesc;
+                }
+            } catch (e) {
+
+            }
+
+            try {
+                var valActive = false;
+                valActive = document.getElementById("chkactive").checked;
+                //alert(valDesc);
+                if (valActive == null || valActive == '') {
+
+                    // alert("Enter Checklist Name.");
+                    // document.getElementById("txtChecklistName").focus();
+                    // return;
+                }
+                else {
+                    val_active = valActive;
+                }
+            } catch (e) {
+
+            }
+
+
+            var valNoofScreens = document.getElementById("txtNoofScreens").value;
+            if (valNoofScreens == null || valNoofScreens == '') {
+                //alert('assign here.......')
+                //alert("Enter Number of Screens.");
+
+                var obj = {};
+                obj.title = "Information";
+                obj.message = "Enter Number of Screens.";
+                showAlertMessage_survey(obj);
+
+                document.getElementById("txtNoofScreens").focus();
+                //NoofScreens = 1;return;
+                return;
+            }
+            else {
+                NoofScreens = parseInt(valNoofScreens);
+            }
+
+            document.getElementById("Input_div").style.display = "none";
+            document.getElementById("mogrify_reportbackground").style.display = "block";
+
+            SetProperties(lastOpenControlId);
+            //$(init);
+            document.getElementById("tab_defaultOpen").click();
+
+            prev_next_Buttons_State();
+
+            prepare_Page_Loading();
+
+        }
+
+        function callSurveyListPage() {
+            //window.location(url_SurveyList);
+            window.location = url_SurveyList;
+        }
+
+        var getQueryString = function (field) {
+            var href = window.location.href;
+            var reg = new RegExp('[?&]' + field + '=([^&#]*)', 'i');
+            var string = reg.exec(href);
+            return string ? string[1] : null;
+        };
+
+        function openTab(evt, tabName) {
+            //debugger;
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        function isNumber(evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+
+}
+
+<!-- PANEL FOR GETTING INPUT STARTS HERE... ========================-->
+<div id="Input_div" align="center">
+
+    <div class="formContainer_survey">
+        <div class="row">
+            <div class="labeltext" style="width:100%;">
+                <label style="height: 30px;font-size:24px;color:;background-color:;font-family:sans-serif;text-align:Center;">
+                    SURVEY PAGE
+                </label>
+                <div class="labeltext" style="width:100%">
+                    <hr>
+                </div>
+            </div>
+
+        </div>
+        <table style="border:none;">
+            <tr style="border:none;">
+                <td style="border:none;">
+        <div class="row">
+            <div class="labeltext" style="width:35%;">
+                <label style="height: 30px;font-size:14px;color:;background-color:;font-family:sans-serif;0;text-align:Left;">
+                    Checklist Name
+                </label>
+            </div>
+            <div class="labeltext" style="width:65%;">
+                <input type="text" style="width:100%;height: 30px;font-size:12px;color:#1f1f1f;background-color:#ffffff;font-family:sans-serif;text-align:Left;"
+                       id="txtChecklistName" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="labeltext" style="width:35%;">
+                <label style="height: 30px;font-size:14px;color:;background-color:;font-family:sans-serif;0;text-align:Left;">
+                    No of Screens
+                </label>
+            </div>
+            <div class="labeltext" style="width:65%;">
+                <input type="text" style="width:100%;height: 30px;font-size:12px;color:#1f1f1f;background-color:#ffffff;font-family:sans-serif;text-align:Left;"
+                       id="txtNoofScreens" onkeypress="return isNumber(event)" />
+            </div>
+
+        </div>
+       
+        <div class="row">
+            <div class="labeltext" style="width:35%;">
+                <label style="height: 30px;font-size:14px;color:;background-color:;font-family:sans-serif;0;text-align:Left;">
+                    Active
+                </label>
+            </div>
+
+            <div class="labeltext" style="width:65%;">
+                <input type="checkbox" id="chkactive" />
+            </div>
+
+            @*<div class="checkbox" align="left" >
+                <input type="checkbox"  color:#1f1f1f;background-color:#ffffff;font-family:sans-serif;text-align:Left;"
+                       id="chkactive" />
+            </div>*@
+        </div>
+                    </td>
+                <td style="border:none;" id="hgt">
+                    <div class="row">
+                        <div class="labeltext" style="width:20%;">
+                            <label style="height: 30px;font-size:14px;color:;background-color:;font-family:sans-serif;0;text-align:Left;">
+                                Description
+                            </label>
+                        </div>
+
+                        <div class="labeltext" style="width:80%;">
+                            <textarea id="description" style="width:100%;height: 100px;font-size:12px;color:#1f1f1f;background-color:#ffffff;font-family:sans-serif;text-align:Left;"></textarea>
+                           
+                        </div>
+
+                       
+
+                        @*<div class="checkbox" align="left" >
+            <input type="checkbox"  color:#1f1f1f;background-color:#ffffff;font-family:sans-serif;text-align:Left;"
+                   id="chkactive" />
+        </div>*@
+                    </div>
+                </td>
+                </tr>
+            <tr>
+                <td colspan="2" style="border:none;">
+                    <div style="float:right;width:400px;">
+                        <div class="labeltext" style="width:34%;">
+                            @*<input type="button" onclick="callSurveyActive()" value="Save" style="width:85%; height: 30px;font-size:12px;color:#ffffff;background-color:#428bca;font-family:sans-serif;text-align:Center;line-height:none;" />*@
+                            <Button value="Cancel" onclick="callSurveyActive();" id="updateSts" style="width:130px;height: 40px; font-size: 14px; color: #ffffff; background-color: #008000; font-family: Poppins-Light.ttf; text-align: Center; line-height: none; border-radius: 5px;"><i class="fa fa-pencil"></i> | Update Status</Button>
+                        </div>
+
+                        <div class="labeltext" style="width:33%;">
+                            @*<input type="button" onclick="callDesignerPage()" value="Designer" style="width:85%; height: 30px;font-size:12px;color:#ffffff;background-color:#428bca;font-family:sans-serif;text-align:Center;line-height:none;" />*@
+                            <Button value="Cancel" onclick="callDesignerPage();" style="width:130px; height: 40px; font-size: 14px; color: #ffffff; background-color: #4B0082; font-family: Poppins-Light.ttf; text-align: Center; line-height: none; border-radius: 5px;"><i class="fa fa-gear"></i> | Designer</Button>
+                        </div>
+
+                        <div class="labeltext" style="width:33%;">
+                            @*<input type="button" onclick="callSurveyListPage()" value="Cancel" style="width:85%; height: 30px;font-size:12px;color:#ffffff;background-color:#428bca;font-family:sans-serif;text-align:Center;line-height:none;" />*@
+                            <Button value="Cancel" onclick="callSurveyListPage();" style="width:130px; height: 40px; font-size: 14px; color: #ffffff; background-color: #ff0000; font-family: Poppins-Light.ttf; text-align: Center; line-height: none; border-radius: 5px;"><i class="fa fa-close"></i> | Cancel</Button>
+                        </div>
+
+                    </div>
+                </td>
+            </tr>
+            <tr id="newSurvey">
+                <td colspan="2">
+                    <div class="row" style="width:50%;">
+                        <div class="labeltext" style="width:35%;">
+                            <label style="height: 30px;font-size:14px;color:;background-color:;font-family:sans-serif;0;text-align:Left;">
+                                New Survey Name
+                            </label>
+                        </div>
+
+                        <div class="labeltext" style="width:65%;">
+                            <input type="text" style="width:100%;height: 30px;font-size:12px;color:#1f1f1f;background-color:#ffffff;font-family:sans-serif;text-align:Left;"
+                                   id="txtNewSurveyName" />
+                        </div>
+
+                    </div>
+                    <div class="labeltext" style="float:right">
+                        @*<input type="button" onclick="callCopyNewSurvey()" value="Copy Survey" style="width:85%; height: 30px;font-size:12px;color:#ffffff;background-color:#428bca;font-family:sans-serif;text-align:Center;line-height:none;" />*@
+                        <Button value="Cancel" onclick="callCopyNewSurvey();" style="width:130px; height: 40px; font-size: 14px; color: #000000; background-color: #FFFF00; font-family: Poppins-Light.ttf; text-align: Center; line-height: none; border-radius: 5px; "><i class="fa fa-copy"></i> | Copy Survey</Button>
+                    </div>
+                </td>
+            </tr>
+            </table>
+    </div>
+    
+    
+        </div>
+
+</div>
+<!-- PANEL FOR GETTING INPUT ENDS HERE... ========================-->
+
+
+<div id="mogrify_reportbackground" style="height:700px;">
+    @*<br />*@
+    <div id="mogrify_padding">
+
+
+
+        <div style="padding-left:60px;background-color:white;">
+            <div id="TableWindowDivId" style="background-color:white;position: absolute;height:350px;width:360px;border:3px solid #9FD7FC;display:none">
+                <div style="height:28px;width:100%">
+                    <label style="float:left">Columns</label>
+                    <img src="~/Images/Survey/closeIcon.png" onclick="ColumnColletionsClose()" style="width:25px;height:25px;float: right;" />
+                </div>
+                <br />
+                <div style="height:10px;width:100%">
+                    <input type="text" id="TableColumnId" style="width:80%;float:left" />&nbsp;&nbsp;&nbsp;
+                    <img src="~/Images/Survey/addIcon.png" onclick="AddTableColumn()" style="width:25px;height:25px;" />
+                </div>
+                <br />
+                <br />
+                <div id="TableColumnDivId" style="width:100%;overflow:scroll;height:200px;border:1px solid #ccc;">
+                </div>
+                <div style="float: right;">
+                    <img src="~/Images/Survey/deleteIcon.png" onclick="RemoveTableColumn_Grid_Fields()" style="width:25px;height:25px;" />
+                </div>
+            </div>
+        </div>
+
+
+        <div id="table_row">
+            <div id="table_col_toolbox">
+                <div id="mogrify_toolbox">
+                    @*  TOOL BOX "*@
+                    <table style="border:3px solid #9FD7FC;">
+                        <tr>
+                            <td style="border:2px solid lightgray;align-content:center;">
+                                <button type="button" style="background-color:white;" class="btn toolbox_Horizontal_button_space"
+                                        onclick="QuestionsEvent();">
+                                    <div style="float:left;">
+                                        <img src="~/Images/Survey/questionIcon.png" style="width:20px;height:20px;" />
+                                        &nbsp;Question
+                                    </div>
+                                </button>
+                            </td>
+                            <td style="border:2px solid lightgray;align-content:center;">
+                                <button type="button" style="background-color:white;" class="btn toolbox_Horizontal_button_space"
+                                        onclick="labelEvent();">
+                                    <div style="float:left;">
+                                        <img src="~/Images/Survey/labelIcon.png" style="width:20px;height:20px;" />&nbsp;Label
+                                    </div>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:2px solid lightgray;align-content:center;">
+                                <button type="button" style="background-color:white;"
+                                        class="btn toolbox_Horizontal_button_space" onclick="textBoxEvent();">
+                                    <div style="float:left;">
+                                        <img src="~/Images/Survey/textboxIcon.png" style="width:20px;height:20px;" />&nbsp;Text Box
+                                    </div>
+
+                                </button>
+                            </td>
+                            <td style="border:2px solid lightgray;align-content:center;">
+                                <button type="button" style="background-color:white;"
+                                        class="btn toolbox_Horizontal_button_space" onclick="NumberBoxEvent();">
+                                    <div style="float:left;">
+                                        <img src="~/Images/Survey/numberIcon.png" style="width:20px;height:20px;" />&nbsp;Number Box
+                                    </div>
+
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:2px solid lightgray;align-content:center;">
+                                <button type="button" style="background-color:white;" class="btn toolbox_Horizontal_button_space"
+                                        onclick="DropDownEvent();">
+                                    <div style="float:left;">
+                                        <img src="~/Images/Survey/dropdownIcon.png" style="width:20px;height:20px;" />&nbsp;DropDown Box
+                                    </div>
+                                </button>
+                            </td>
+                            <td style="border:2px solid lightgray;align-content:center;">
+                                <button type="button" style="background-color:white;" class="btn toolbox_Horizontal_button_space"
+                                        onclick="ListBoxEvent();">
+                                    <div style="float:left;">
+                                        <img src="~/Images/Survey/listIcon.png" style="width:20px;height:20px;" />&nbsp;List Box
+                                    </div>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:2px solid lightgray;align-content:center;">
+                                <button type="button" style="background-color:white;" class="btn toolbox_Horizontal_button_space"
+                                        onclick="OptionButtonEvent();">
+                                    <div style="float:left;">
+                                        <img src="~/Images/Survey/optionIcon.png" style="width:20px;height:20px;" />&nbsp;OptionButton
+                                    </div>
+                                </button>
+                            </td>
+                            <td style="border:2px solid lightgray;align-content:center;">
+                                <button type="button" style="background-color:white;" class="btn toolbox_Horizontal_button_space"
+                                        onclick="CheckBoxEvent();">
+                                    <div style="float:left;">
+                                        <img src="~/Images/Survey/checkIcon.png" style="width:20px;height:20px;" />&nbsp;Check Box
+                                    </div>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:2px solid lightgray;align-content:center;">
+                                <button type="button" style="background-color:white;" class="btn toolbox_Horizontal_button_space"
+                                        onclick="PictureEvent();">
+                                    <div style="float:left;">
+                                        <img src="~/Images/Survey/pictureIcon.png" style="width:20px;height:20px;" />&nbsp;Picture
+                                    </div>
+                                </button>
+                            </td>
+                            <td style="border:2px solid lightgray;align-content:center;">
+                                <button type="button" style="background-color:white;" class="btn toolbox_Horizontal_button_space"
+                                        onclick="GridEvent();">
+                                    <div style="float:left;">
+                                        <img src="~/Images/Survey/gridIcon.png" style="width:20px;height:20px;" />&nbsp;Grid
+                                    </div>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:2px solid lightgray;align-content:center;">
+                                <button type="button" style="background-color:white;" class="btn toolbox_Horizontal_button_space"
+                                        onclick="PhotoEvent();">
+                                    <div style="float:left;">
+                                        <img src="~/Images/Survey/photoIcon.png" style="width:20px;height:20px;" />&nbsp;Photo
+                                    </div>
+                                </button>
+                            </td>
+                            <td style="border:2px solid lightgray;align-content:center;">
+                                <button type="button" style="background-color:white;" class="btn toolbox_Horizontal_button_space"
+                                        onclick="DateTimeEvent();">
+                                    <div style="float:left;">
+                                        <img src="~/Images/Survey/datetimeIcon.png" style="width:20px;height:20px;" />&nbsp;DateTime
+                                    </div>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:2px solid lightgray;align-content:center;">
+                                <button type="button" style="background-color:white;" class="btn toolbox_Horizontal_button_space"
+                                        onclick="SliderEvent();">
+                                    <div style="float:left;">
+                                        <img src="~/Images/Survey/sliderIcon.png" style="width:20px;height:20px;" />&nbsp;Slider
+                                    </div>
+                                </button>
+                            </td>
+                            <td style="border:2px solid lightgray;align-content:center;"></td>
+                        </tr>
+                    </table>
+                    @*</div>*@
+                </div>
+
+                <!-- TOOL BOX -->
+                <br />
+                <div id="mogrify_properties" style="height:325px;">
+                    @*  PROPERTIES *@
+                    <!--position: absolute;left:15px;top:15px;-->
+                    <div class="tab">
+                        <button class="tablinks active" id="tab_defaultOpen" onclick="openTab(event, 'TabText')">Text</button>
+                        <button class="tablinks" id="tab_Color" onclick="openTab(event, 'TabColor')">Color</button>
+                        <button class="tablinks" id="tab_Size" onclick="openTab(event, 'TabSize')">Size</button>
+                        <button class="tablinks" id="tab_Data" onclick="openTab(event, 'TabData')">Data</button>
+                        <button class="tablinks" id="tab_Link" style="display:block;" onclick="openTab(event, 'TabLink')">Link</button>
+                    </div>
+
+                    <div id="TabText" class="tabcontent">
+                        <div id="TapTextDivId">
+                        </div>
+                    </div>
+
+                    <div id="TabColor" class="tabcontent">
+                        <div id="TapColorDivId" style="width:100%">
+                        </div>
+                    </div>
+
+                    <div id="TabSize" class="tabcontent">
+                        <div id="TapSizeDivId" style="width:100%">
+                        </div>
+                    </div>
+
+                    <div id="TabData" class="tabcontent">
+                        <div id="TapDataDivId" style="width:100%">
+                        </div>
+                    </div>
+
+                    <div id="TabLink" class="tabcontent">
+                        <div id="TapLinkDivId" style="width:100%">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div id="table_col_report">
+                <!--style="background-color:white"-->
+                <div id="mogrify_report">
+                    @* REPORT *@
+
+                    <!-- class="vertical-horizontal-center"-->
+                    <!-- display:flex;align-items:center;justify-content:center;-->
+                    <!-- overflow: auto;-->
+                    <!--<div id="TestId"
+                         style="position:relative;height: 540px;background-color:white;border:3px solid #ccc;overflow: auto;">
+                    </div>-->
+
+                    <div id="TestId"
+                         style="position:relative;height: 540px;background-color:white;border:3px solid #ccc;overflow-y: scroll;overflow-x: hidden;">
+                    </div>
+
+                    @*<br />*@
+                    <div style="float:left;padding-top:10px;">
+                        <img src="~/Images/Survey/prevIcon.png" id="PrevWindowButtonId" onclick="PrevWindowEvent()" style="width:25px;height:25px;" />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <img src="~/Images/Survey/nextIcon.png" id="NextWindowButtonId" onclick="NextWindowEvent()" style="width:25px;height:25px;" />
+                    </div>
+
+                    <div style="float:right;padding-top:15px;">
+                        <!-- onclick="SaveMethod()"-->
+                        @*<button type="button" value="Save" class="btn btn-rounded btn-primary" style="height:35px;background-color:#109BF8;width:100%" onclick="SaveMethod()">
+            Save
+        </button>*@
+                        <Button value="Save" onclick="SaveMethod();" style="width: 100px; height: 40px; font-size: 14px; color: #ffffff; background-color: #008000; font-family: Poppins-Light.ttf; text-align: Center; line-height: none; border-radius: 5px;"><i class="fa fa-save"></i> | Save</Button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="table_col_treeview">
+                <div class="mogrify_treeview">
+                    @* TREE VIEW *@
+                    <!-- style="border:1px solid red;height: 580px;"-->
+                    <div style="overflow: auto;border:3px solid #ccc;height: 610px;">
+                        <ul id="treeview"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*</div>*@
+
+<div id="RightClickmenu">
+    <button type="button" class="btn btn-danger" onclick="RemoveControls();">Delete</button>
+</div>
+
+
+<script>
+
+    $(document).ready(function () {
+        console.log("ready!");
+        $('#description').height($('#hgt').height());
+        var stype = '@Session["screenType"]';
+       // alert(stype);
+        console.log(stype);
+        if (stype == 'new') {
+            $('#newSurvey').hide();
+            $('#updateSts').hide();
+        }
+        else {
+            $('#newSurvey').show();
+            $('#updateSts').show();
+        }
+    });
+
+    var i = document.getElementById("RightClickmenu").style;
+
+    function menu(x, y) {
+
+        //document.getElementById("RightClickmenu").style.display = "block";
+        //$('#' + "RightClickmenu").css({
+        //    position: 'relative',
+        //    left: x,
+        //    top: y,
+
+        //});
+
+        document.getElementById("RightClickmenu").style.display = "block";
+        $('#' + "RightClickmenu").css({
+            left: x,
+            top: y,
+        });
+    }
+
+
+    // TREE VIEW JS
+
+
+
+
+
+</script>
+
+
+<style>
+    #RightClickmenu {
+        /*visibility: hidden;*/
+        display: none;
+        /*opacity: 0;*/
+        position: fixed;
+        background: #fff;
+        color: #555;
+        font-family: sans-serif;
+        font-size: 11px;
+        -webkit-transition: opacity .5s ease-in-out;
+        -moz-transition: opacity .5s ease-in-out;
+        -ms-transition: opacity .5s ease-in-out;
+        -o-transition: opacity .5s ease-in-out;
+        transition: opacity .5s ease-in-out;
+        -webkit-box-shadow: 2px 2px 2px 0px rgba(143, 144, 145, 1);
+        -moz-box-shadow: 2px 2px 2px 0px rgba(143, 144, 145, 1);
+        box-shadow: 2px 2px 2px 0px rgba(143, 144, 145, 1);
+        padding: 0px;
+        border: 1px solid #C6C6C6;
+    }
+
+        #RightClickmenu a {
+            display: block;
+            color: #555;
+            text-decoration: none;
+            /*padding: 6px 8px 6px 30px;*/
+            padding: 6px 8px 6px 23px;
+            /*width: 250px;*/
+            width: 80px;
+            position: relative;
+        }
+</style>
+
+
+
+<style>
+    .vertical-horizontal-center {
+        margin: 0;
+        position: absolute;
+        top: 30%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        left: 50%;
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    /*#Input_div
+    {
+        background: #ffffff;
+        width: 1200px;
+        height: 400px;
+        margin: 0 auto;
+    }*/
+
+    .formContainer_survey {
+        width: 98%;
+        height: auto;
+        /*height: 100%;*/
+        /* padding: 57px; */
+        border: 2px solid #e7e7e7;
+        padding-top: 12px;
+        /*border-radius: 20px;*/
+        border-radius: 5px;
+        /*margin-left: 17px;*/
+        /*margin-left: 1%;*/
+        margin-bottom: 5px;
+    }
+
+    #mogrify_reportbackground {
+        /*background: #8888ff;*/
+        background: #f7f9fb;
+        width: 1280px;
+        height: 650px;
+        margin: 0 auto;
+        /*overflow: scroll;*/
+        border: 3px solid #CCC;
+    }
+
+    #mogrify_padding {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100%;
+        height: 50%;
+        display: table;
+        /*border:5px solid yellow;*/
+    }
+
+    #table_row {
+        display: table-row;
+        width: auto;
+        clear: both;
+    }
+
+
+    #table_col_toolbox {
+        float: left;
+        display: table-column;
+        width: 420px;
+    }
+
+    #mogrify_toolbox {
+        background: #FFFFFF;
+        width: 400px;
+        height: 310px;
+        margin: 0 auto;
+        padding-top: 0px;
+        /*border: 3px solid lightgray;*/
+    }
+
+    .toolbox_Vertical_button_space {
+        padding-bottom: 6px;
+    }
+
+    .toolbox_Horizontal_button_space {
+        margin-left: 8px;
+    }
+
+    #mogrify_properties {
+        background: #FFFFFF;
+        width: 400px;
+        height: 270px;
+        margin: 0 auto;
+        border: 3px solid #9FD7FC;
+    }
+
+    #table_col_report {
+        float: left;
+        display: table-column;
+        width: 540px;
+    }
+
+    #mogrify_report {
+        /*background: #8888ff;*/
+        background: #f7f9fb;
+        width: 520px;
+        height: 580px;
+        margin: 0 auto;
+    }
+
+
+    .table_col_treeview {
+        float: left;
+        display: table-column;
+        width: 300px;
+        /*border:1px solid red;*/
+    }
+
+    .mogrify_treeview {
+        background: #FFFFFF;
+        width: 280px;
+        height: 620px;
+        margin: 0 auto;
+    }
+
+
+    #mogrify_tool_label {
+        border: 1px solid black;
+        width: 50px;
+        height: 50px;
+    }
+
+    .mogrify_reportA {
+        /*height: 1200px;*/
+        height: 600px;
+    }
+
+    .change_Color {
+        color: red;
+    }
+</style>
+
+
+
+
+@*tab*@
+<style>
+    body {
+        font-family: Arial;
+    }
+
+    /* Style the tab */
+    .tab {
+        overflow: hidden;
+        /*border: 1px solid #ccc;*/
+        /*background-color: #f1f1f1;*/
+        background-color: #FFFFFF;
+        border-bottom: 1px solid lightgray;
+    }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            /*background-color: inherit;*/
+            background-color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+            /* Change background color of buttons on hover */
+            .tab button:hover {
+                background-color: #ddd;
+            }
+
+            /* Create an active/current tablink class */
+            .tab button.active {
+                background-color: #FFFFFF;
+                border-bottom: 5px solid #5FA1FC;
+            }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        /*border: 3px solid #ccc;*/
+        border-top: none;
+    }
+</style>
+

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Bar Chart with Negative Values</title>
+<style>
+
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.area {
+  fill: steelblue;
+}
+
+</style>
+<body>
+<script src="d3.v3.min.js"></script>
+<script>
+
+function InitializeAreaChart(backgroundColor,width,height,fontSize,fontColor,areaColor,content){
+		
+	var margin = {top: 0, right: 5, bottom: 30, left: 40},
+	    width = width,//960 - margin.left - margin.right,
+	    height = height;//500 - margin.top - margin.bottom;
+	
+	var parseDate = d3.time.format("%d-%b-%y").parse;
+	
+	var x = d3.time.scale()
+	    .range([0, width]);
+	
+	var y = d3.scale.linear()
+	    .range([height, 0]);
+	
+	var xAxis = d3.svg.axis()
+	    .scale(x)
+	    .orient("bottom");
+	
+	var yAxis = d3.svg.axis()
+	    .scale(y)
+	    .orient("left");
+	
+	var area = d3.svg.area()
+	    .x(function(d) { return x(d.date); })
+	    .y0(height)
+	    .y1(function(d) { return y(d.close); });
+	
+	var svg = d3.select("body").append("svg")
+	    .attr("width", width + margin.left + margin.right)
+	    .attr("height", height + margin.top + margin.bottom)
+	  .append("g")
+	    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+	
+	d3.tsv("data.tsv", function(error, data) {
+		/*		
+	  var data = [];
+	  content = new String(content);
+	  var arr = content.split('##');
+	
+	  for(var i=0; i< arr.length; i++){
+		var str = new String(arr[i]);
+		str = str.replace(/@@/g, "'");
+		data.push(eval('(' +str+')'));
+	  }
+		*/
+
+	  data.forEach(function(d) {
+	    d.date = parseDate(d.date);
+	    d.close = +d.close;
+	  });
+	
+	  x.domain(d3.extent(data, function(d) { return d.date; }));
+	  y.domain([0, d3.max(data, function(d) { return d.close; })]);
+	
+	  svg.append("path")
+	      .datum(data)
+	      .attr("class", "area")
+	      .attr("d", area);
+	
+	  svg.append("g")
+	      .attr("class", "x axis")
+	      .attr("transform", "translate(0," + height + ")")
+	      .call(xAxis);
+	
+	  svg.append("g")
+	      .attr("class", "y axis")
+	      .call(yAxis)
+	    .append("text")
+	      .attr("transform", "rotate(-90)")
+	      .attr("y", 6)
+	      .attr("dy", ".71em")
+	      .style("text-anchor", "end")
+	      .text("Price ($)");
+	});
+	
+	document.body.style.backgroundColor = backgroundColor;
+	setTimeout(function(){
+		toggle_visibility('area',areaColor);
+	},500);
+	
+}
+
+
+function getElementsByClassName(node,classname) {
+  if (node.getElementsByClassName) { // use native implementation if available
+    return node.getElementsByClassName(classname);
+  } else {
+    return (function getElementsByClass(searchClass,node) {
+        if ( node == null )
+          node = document;
+        var classElements = [],
+            els = node.getElementsByTagName("*"),
+            elsLen = els.length,
+            pattern = new RegExp("(^|\\s)"+searchClass+"(\\s|$)"), i, j;
+
+        for (i = 0, j = 0; i < elsLen; i++) {
+          if ( pattern.test(els[i].className) ) {
+              classElements[j] = els[i];
+              j++;
+          }
+        }
+        return classElements;
+    })(classname, node);
+  }
+}
+function toggle_visibility(className,areaColor) {
+   var elements = getElementsByClassName(document, className),
+       n = elements.length;
+       
+       //alert('n -> ' + n);
+       
+   for (var i = 0; i < n; i++) {
+     var e = elements[i];
+	 e.style.fill = areaColor;
+   }
+}
+</script>

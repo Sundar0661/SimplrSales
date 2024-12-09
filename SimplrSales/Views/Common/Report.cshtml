@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "Report";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    $(".topBar").text("Home / " + screenName + " / List");
+</script>
+
+<script src="~/Scripts/jqueryui-1.12.1.jquery-ui.min.js"></script>
+
+<br />
+
+<div style="width: 100%;">
+    <div class="formContainer">
+        <div id="FormDivId"></div>
+        <br />
+        <div style="text-align: center">
+            <button type="button" class="btn btn-info" onclick="OpenPrint();">Print</button>
+        </div>
+
+    </div>
+</div>
+
+<link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+<link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+
+<script src="~/Scripts/Main/Reports.js"></script>
+
+@section Scripts{
+
+    <script src="~/Scripts/jquery-ui-1.8.24.js"></script>
+    <script src="~/Scripts/jquery-ui-1.8.24.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".datepicker").datepicker({
+                dateFormat: "dd/mm/yy",
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "-60:+0"
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $('#createPopupDialog').dialog({
+                autoOpen: false,
+                width: "80%",
+                resizable: false,
+                title: 'Details',
+                modal: true,
+                close: true,
+                closeOnEscape: true,
+                open: function (event, ui) { },
+                close: function (event, ui) { },
+                beforeClose: function (event, ui) {
+                    $('#createPopupDialogHiddenId').show();
+
+                }
+            });
+        });
+
+
+    </script>
+
+}
+
+<script>
+
+    GetFormConfig("FormDivId", screenName);
+    //$('#createPopupDialog').dialog({ title: "" + screenName + " Details" }).dialog('open');
+    //$('#createPopupDialog').show();
+    //$('#createPopupDialogHiddenId').hide();
+
+    var url_PrintReport = '@Url.Content("~/Common/PrintReport/")';
+</script>
+

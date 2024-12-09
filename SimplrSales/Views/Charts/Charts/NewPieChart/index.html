@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=0.5">
+	
+  <style>
+  	.ButtonStyle{
+  		width:20%; 
+  		height: 40px;
+  		float: left; 
+  		font-size: 14px; 
+  	}
+  </style>
+  
+  <script type="text/javascript">
+  /*** Change type "column" to "bar", "area", "line" or "pie"***/
+  var	_chartType = "pie";//"column";//"line";
+  var arr1=[], arr2=[];
+  
+  function UpdateChartbyTarget(argArr){
+  	//argArr
+  	//alert(_type);
+  	var chart = new CanvasJS.Chart("chartContainer",
+	{
+		title:{
+			text: "",
+			fontFamily: "arial black"
+		},
+    	animationEnabled: true,
+		legend: {
+			verticalAlign: "bottom",
+			horizontalAlign: "center"
+		},
+		theme: "theme1",
+		data: [
+		{        
+			type: "pie",
+			indexLabelFontFamily: "Garamond",       
+			indexLabelFontSize: 18,
+			indexLabelFontWeight: "bold",
+			startAngle:0,
+			indexLabelFontColor: "MistyRose",       
+			indexLabelLineColor: "darkgrey", 
+			indexLabelPlacement: "inside", 
+			toolTipContent: "{name}: {y}",
+			showInLegend: true,
+			indexLabel: "#percent%", 
+			dataPoints: argArr
+			/*[
+				{  y: 52, name: "Time At Work"},
+				{  y: 44, name: "Time At Home"},
+				{  y: 40, name: "Time Atww Home"},
+				{  y: 12, name: "Time Spent Out"}
+			]*/
+		}
+		]
+	});
+
+    chart.render();
+  }
+  
+  window.onload = function () {
+    //UpdateChart('column');
+  };
+  
+  
+  </script>
+  <script type="text/javascript" src="canvasjs.min.js"></script>
+  
+</head>
+<body>
+	
+	<!--
+	<select onchange="UpdateChart(this.value)">
+		<option value="column">Column</option>
+		<option value="bar">Bar</option>
+		<option value="area">Area</option>
+		<option value="line">Line</option>
+		<option value="pie">Pie</option>
+	</select>
+	-->
+  		<!--
+  <div id="btn" style="height: 40px; width: 100%; border:1px solid #e8e8e8;">
+  		<button title="Column" onclick="UpdateChartbyTarget('column', arr1, arr2);" class="ButtonStyle">Column</button>
+  		<button title="Bar" onclick="UpdateChartbyTarget('bar', arr1, arr2);" class="ButtonStyle">Bar</button>
+  		<button title="Area" onclick="UpdateChartbyTarget('area', arr1, arr2);" class="ButtonStyle">Area</button>
+  		<button title="Line" onclick="UpdateChartbyTarget('line', arr1, arr2);" class="ButtonStyle">Line</button>
+  		<button title="Pie" onclick="UpdateChartbyTarget('pie', arr1, arr2);" class="ButtonStyle">Pie</button>
+  		
+  </div>	
+  		-->
+  <div id="chartContainer" style="height: 300px; width: 100%;">
+  </div>
+  
+  <script>
+  
+  	function InitializeNewPieChart(SalesTarget){
+  		
+  		//alert('InitializeNewPieChart');
+		arr1 = [];
+		SalesTarget = new String(SalesTarget);
+  		var arr = SalesTarget.split('##');
+	  	for(var i=0; i< arr.length; i++){
+			var str = new String(arr[i]);
+			str = str.replace(/@@/g, "'");
+			arr1.push(eval('(' +str+')'));
+			//salesData.push(eval('(' +str+')'));
+	  	}
+	  	/*
+	  	CurMonTarget = new String(CurMonTarget);
+  		var arr = CurMonTarget.split('##');
+	  	for(var i=0; i< arr.length; i++){
+			var str = new String(arr[i]);
+			str = str.replace(/@@/g, "'");
+			arr2.push(eval('(' +str+')'));
+			//salesData.push(eval('(' +str+')'));
+	  	}*/
+  	
+	  	//alert(JSON.stringify(arr1));
+  		UpdateChartbyTarget(arr1);
+		//dashboard('#dashboard',freqData);
+	}
+  </script>
+</body>
+</html>

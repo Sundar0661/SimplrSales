@@ -1,0 +1,150 @@
+Time: 16-10-2023 12:47:49 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Invoice'
+-----------------------------------------------------------
+
+Time: 16-10-2023 12:48:41 PM
+-----------------------------------------------------------
+Message: ReadRecord : select Distinct N.DistributorID [Distributor ID],SA.UserID  as [Sales Agent ID],Inv.InvNo as [Invoice No (Doc No)],MDT.Branch as Location,Format(Inv.InvDt,'MM/dd/yyyy') as [Invoice Date], Format(Inv.InvDt,'HH:mm:ss') as [Invoice Time],Inv.PayTerms as [Payment Term Code],Inv.CustID as [Customer No],C.CustName as CustomerName,C.IsDOB as DOB,InvI.ItemNo as [Product Code],I.Description as ItemDescription,InvI.UOM as UOM,InvI.Qty as Qty,InvI.price as Price,InvI.SubAmt as SubAmt,Inv.TotalAmt as Amount,OH.PONo as PONumber,Format(GetDate(),'MM/dd/yyyy') as [System Date],case when Inv.Exported='1' then 'Yes' else 'No' end as [Exported] from Invoice Inv inner join InvItem InvI on Inv.InvNO=InvI.InvNo left join OrderHdr OH on  OH.OrdNo = Inv.OrdNo inner join Customer C ON Inv.CustId=C.CustNo inner join  SalesAgent SA on SA.Code=Inv.AgentID inner join Item I on I.ItemNO=InvI.ItemNO Inner join UOM U on U.ItemNO=InvI.ItemNO and  U.UOM=InvI.UOM Inner join UOM UB on UB.ItemNO=InvI.ItemNO inner join MDT on MDT.MDTNO=Inv.MDTNo inner join NodeTree N on N.SalesManTerritory = C.SalesAgent inner join SalesManGroup SM on SA.NodeTreeValue=SM.GroupId where Convert(Date,Inv.InvDt) BETWEEN {Fromdate} and '2023-10-12 23:59:59.000' and SM.UserId={UserId}
+-----------------------------------------------------------
+
+Time: 16-10-2023 12:48:42 PM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Incorrect syntax near '}'.
+-----------------------------------------------------------
+
+Time: 16-10-2023 12:48:43 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 16-10-2023 12:49:05 PM
+-----------------------------------------------------------
+Message: AutoExport dttoexcel = Specified argument was out of the range of valid values.
+Parameter name: index
+-----------------------------------------------------------
+
+Time: 16-10-2023 12:49:09 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Invoice'
+-----------------------------------------------------------
+
+Time: 16-10-2023 12:49:14 PM
+-----------------------------------------------------------
+Message: ReadRecord : select Distinct N.DistributorID [Distributor ID],SA.UserID  as [Sales Agent ID],Inv.InvNo as [Invoice No (Doc No)],MDT.Branch as Location,Format(Inv.InvDt,'MM/dd/yyyy') as [Invoice Date], Format(Inv.InvDt,'HH:mm:ss') as [Invoice Time],Inv.PayTerms as [Payment Term Code],Inv.CustID as [Customer No],C.CustName as CustomerName,C.IsDOB as DOB,InvI.ItemNo as [Product Code],I.Description as ItemDescription,InvI.UOM as UOM,InvI.Qty as Qty,InvI.price as Price,InvI.SubAmt as SubAmt,Inv.TotalAmt as Amount,OH.PONo as PONumber,Format(GetDate(),'MM/dd/yyyy') as [System Date],case when Inv.Exported='1' then 'Yes' else 'No' end as [Exported] from Invoice Inv inner join InvItem InvI on Inv.InvNO=InvI.InvNo left join OrderHdr OH on  OH.OrdNo = Inv.OrdNo inner join Customer C ON Inv.CustId=C.CustNo inner join  SalesAgent SA on SA.Code=Inv.AgentID inner join Item I on I.ItemNO=InvI.ItemNO Inner join UOM U on U.ItemNO=InvI.ItemNO and  U.UOM=InvI.UOM Inner join UOM UB on UB.ItemNO=InvI.ItemNO inner join MDT on MDT.MDTNO=Inv.MDTNo inner join NodeTree N on N.SalesManTerritory = C.SalesAgent inner join SalesManGroup SM on SA.NodeTreeValue=SM.GroupId where Convert(Date,Inv.InvDt) BETWEEN {Fromdate} and '2023-10-12 23:59:59.000' and SM.UserId={UserId}
+-----------------------------------------------------------
+
+Time: 16-10-2023 12:49:14 PM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Incorrect syntax near '}'.
+-----------------------------------------------------------
+
+Time: 16-10-2023 12:49:17 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 16-10-2023 12:52:09 PM
+-----------------------------------------------------------
+Message: AutoExport dttoexcel = Specified argument was out of the range of valid values.
+Parameter name: index
+-----------------------------------------------------------
+
+Time: 16-10-2023 12:53:30 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Invoice'
+-----------------------------------------------------------
+
+Time: 16-10-2023 12:53:37 PM
+-----------------------------------------------------------
+Message: ReadRecord : select Distinct N.DistributorID [Distributor ID],SA.UserID  as [Sales Agent ID],Inv.InvNo as [Invoice No (Doc No)],MDT.Branch as Location,Format(Inv.InvDt,'MM/dd/yyyy') as [Invoice Date], Format(Inv.InvDt,'HH:mm:ss') as [Invoice Time],Inv.PayTerms as [Payment Term Code],Inv.CustID as [Customer No],C.CustName as CustomerName,C.IsDOB as DOB,InvI.ItemNo as [Product Code],I.Description as ItemDescription,InvI.UOM as UOM,InvI.Qty as Qty,InvI.price as Price,InvI.SubAmt as SubAmt,Inv.TotalAmt as Amount,OH.PONo as PONumber,Format(GetDate(),'MM/dd/yyyy') as [System Date],case when Inv.Exported='1' then 'Yes' else 'No' end as [Exported] from Invoice Inv inner join InvItem InvI on Inv.InvNO=InvI.InvNo left join OrderHdr OH on  OH.OrdNo = Inv.OrdNo inner join Customer C ON Inv.CustId=C.CustNo inner join  SalesAgent SA on SA.Code=Inv.AgentID inner join Item I on I.ItemNO=InvI.ItemNO Inner join UOM U on U.ItemNO=InvI.ItemNO and  U.UOM=InvI.UOM Inner join UOM UB on UB.ItemNO=InvI.ItemNO inner join MDT on MDT.MDTNO=Inv.MDTNo inner join NodeTree N on N.SalesManTerritory = C.SalesAgent inner join SalesManGroup SM on SA.NodeTreeValue=SM.GroupId where Convert(Date,Inv.InvDt) BETWEEN {Fromdate} and '2023-10-12 23:59:59.000' and SM.UserId={UserId}
+-----------------------------------------------------------
+
+Time: 16-10-2023 12:53:37 PM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Incorrect syntax near '}'.
+-----------------------------------------------------------
+
+Time: 16-10-2023 12:53:48 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 16-10-2023 12:54:28 PM
+-----------------------------------------------------------
+Message: AutoExport dttoexcel = Specified argument was out of the range of valid values.
+Parameter name: index
+-----------------------------------------------------------
+
+Time: 16-10-2023 12:57:27 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Invoice'
+-----------------------------------------------------------
+
+Time: 16-10-2023 12:57:28 PM
+-----------------------------------------------------------
+Message: ReadRecord : select Distinct N.DistributorID [Distributor ID],SA.UserID  as [Sales Agent ID],Inv.InvNo as [Invoice No (Doc No)],MDT.Branch as Location,Format(Inv.InvDt,'MM/dd/yyyy') as [Invoice Date], Format(Inv.InvDt,'HH:mm:ss') as [Invoice Time],Inv.PayTerms as [Payment Term Code],Inv.CustID as [Customer No],C.CustName as CustomerName,C.IsDOB as DOB,InvI.ItemNo as [Product Code],I.Description as ItemDescription,InvI.UOM as UOM,InvI.Qty as Qty,InvI.price as Price,InvI.SubAmt as SubAmt,Inv.TotalAmt as Amount,OH.PONo as PONumber,Format(GetDate(),'MM/dd/yyyy') as [System Date],case when Inv.Exported='1' then 'Yes' else 'No' end as [Exported] from Invoice Inv inner join InvItem InvI on Inv.InvNO=InvI.InvNo left join OrderHdr OH on  OH.OrdNo = Inv.OrdNo inner join Customer C ON Inv.CustId=C.CustNo inner join  SalesAgent SA on SA.Code=Inv.AgentID inner join Item I on I.ItemNO=InvI.ItemNO Inner join UOM U on U.ItemNO=InvI.ItemNO and  U.UOM=InvI.UOM Inner join UOM UB on UB.ItemNO=InvI.ItemNO inner join MDT on MDT.MDTNO=Inv.MDTNo inner join NodeTree N on N.SalesManTerritory = C.SalesAgent inner join SalesManGroup SM on SA.NodeTreeValue=SM.GroupId where Convert(Date,Inv.InvDt) BETWEEN {Fromdate} and '2023-02-03 23:59:59.000' and SM.UserId={UserId}
+-----------------------------------------------------------
+
+Time: 16-10-2023 12:57:28 PM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Incorrect syntax near '}'.
+-----------------------------------------------------------
+
+Time: 16-10-2023 12:57:28 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 16-10-2023 12:58:07 PM
+-----------------------------------------------------------
+Message: AutoExport dttoexcel = Specified argument was out of the range of valid values.
+Parameter name: index
+-----------------------------------------------------------
+
+Time: 16-10-2023 01:00:13 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Invoice'
+-----------------------------------------------------------
+
+Time: 16-10-2023 01:02:50 PM
+-----------------------------------------------------------
+Message: ReadRecord : select Distinct N.DistributorID [Distributor ID],SA.UserID  as [Sales Agent ID],Inv.InvNo as [Invoice No (Doc No)],MDT.Branch as Location,Format(Inv.InvDt,'MM/dd/yyyy') as [Invoice Date], Format(Inv.InvDt,'HH:mm:ss') as [Invoice Time],Inv.PayTerms as [Payment Term Code],Inv.CustID as [Customer No],C.CustName as CustomerName,C.IsDOB as DOB,InvI.ItemNo as [Product Code],I.Description as ItemDescription,InvI.UOM as UOM,InvI.Qty as Qty,InvI.price as Price,InvI.SubAmt as SubAmt,Inv.TotalAmt as Amount,OH.PONo as PONumber,Format(GetDate(),'MM/dd/yyyy') as [System Date],case when Inv.Exported='1' then 'Yes' else 'No' end as [Exported] from Invoice Inv inner join InvItem InvI on Inv.InvNO=InvI.InvNo left join OrderHdr OH on  OH.OrdNo = Inv.OrdNo inner join Customer C ON Inv.CustId=C.CustNo inner join  SalesAgent SA on SA.Code=Inv.AgentID inner join Item I on I.ItemNO=InvI.ItemNO Inner join UOM U on U.ItemNO=InvI.ItemNO and  U.UOM=InvI.UOM Inner join UOM UB on UB.ItemNO=InvI.ItemNO inner join MDT on MDT.MDTNO=Inv.MDTNo inner join NodeTree N on N.SalesManTerritory = C.SalesAgent inner join SalesManGroup SM on SA.NodeTreeValue=SM.GroupId where Convert(Date,Inv.InvDt) BETWEEN {Fromdate} and '2023-03-31 23:59:59.000' and SM.UserId={UserId}
+-----------------------------------------------------------
+
+Time: 16-10-2023 01:02:50 PM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Incorrect syntax near '}'.
+-----------------------------------------------------------
+
+Time: 16-10-2023 01:04:49 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 16-10-2023 01:05:16 PM
+-----------------------------------------------------------
+Message: AutoExport dttoexcel = Specified argument was out of the range of valid values.
+Parameter name: index
+-----------------------------------------------------------
+
+Time: 16-10-2023 01:05:23 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Invoice'
+-----------------------------------------------------------
+
+Time: 16-10-2023 01:06:30 PM
+-----------------------------------------------------------
+Message: ReadRecord : select Distinct N.DistributorID [Distributor ID],SA.UserID  as [Sales Agent ID],Inv.InvNo as [Invoice No (Doc No)],MDT.Branch as Location,Format(Inv.InvDt,'MM/dd/yyyy') as [Invoice Date], Format(Inv.InvDt,'HH:mm:ss') as [Invoice Time],Inv.PayTerms as [Payment Term Code],Inv.CustID as [Customer No],C.CustName as CustomerName,C.IsDOB as DOB,InvI.ItemNo as [Product Code],I.Description as ItemDescription,InvI.UOM as UOM,InvI.Qty as Qty,InvI.price as Price,InvI.SubAmt as SubAmt,Inv.TotalAmt as Amount,OH.PONo as PONumber,Format(GetDate(),'MM/dd/yyyy') as [System Date],case when Inv.Exported='1' then 'Yes' else 'No' end as [Exported] from Invoice Inv inner join InvItem InvI on Inv.InvNO=InvI.InvNo left join OrderHdr OH on  OH.OrdNo = Inv.OrdNo inner join Customer C ON Inv.CustId=C.CustNo inner join  SalesAgent SA on SA.Code=Inv.AgentID inner join Item I on I.ItemNO=InvI.ItemNO Inner join UOM U on U.ItemNO=InvI.ItemNO and  U.UOM=InvI.UOM Inner join UOM UB on UB.ItemNO=InvI.ItemNO inner join MDT on MDT.MDTNO=Inv.MDTNo inner join NodeTree N on N.SalesManTerritory = C.SalesAgent inner join SalesManGroup SM on SA.NodeTreeValue=SM.GroupId where Convert(Date,Inv.InvDt) BETWEEN '2023-03-31 00:00:00:000' and '2023-03-31 23:59:59.000' and SM.UserId='Sjssb2'
+-----------------------------------------------------------
+
+Time: 16-10-2023 01:07:23 PM
+-----------------------------------------------------------
+Message: ReadRecord : select Distinct N.DistributorID [Distributor ID],SA.UserID  as [Sales Agent ID],Inv.InvNo as [Invoice No (Doc No)],MDT.Branch as Location,Format(Inv.InvDt,'MM/dd/yyyy') as [Invoice Date], Format(Inv.InvDt,'HH:mm:ss') as [Invoice Time],Inv.PayTerms as [Payment Term Code],Inv.CustID as [Customer No],C.CustName as CustomerName,C.IsDOB as DOB,InvI.ItemNo as [Product Code],I.Description as ItemDescription,InvI.UOM as UOM,InvI.Qty as Qty,InvI.price as Price,InvI.SubAmt as SubAmt,Inv.TotalAmt as Amount,OH.PONo as PONumber,Format(GetDate(),'MM/dd/yyyy') as [System Date],case when Inv.Exported='1' then 'Yes' else 'No' end as [Exported] from Invoice Inv inner join InvItem InvI on Inv.InvNO=InvI.InvNo left join OrderHdr OH on  OH.OrdNo = Inv.OrdNo inner join Customer C ON Inv.CustId=C.CustNo inner join  SalesAgent SA on SA.Code=Inv.AgentID inner join Item I on I.ItemNO=InvI.ItemNO Inner join UOM U on U.ItemNO=InvI.ItemNO and  U.UOM=InvI.UOM Inner join UOM UB on UB.ItemNO=InvI.ItemNO inner join MDT on MDT.MDTNO=Inv.MDTNo inner join NodeTree N on N.SalesManTerritory = C.SalesAgent inner join SalesManGroup SM on SA.NodeTreeValue=SM.GroupId where Convert(Date,Inv.InvDt) BETWEEN '2023-03-01 00:00:00:000' and '2023-03-31 23:59:59.000' and SM.UserId='Sjssb2'
+-----------------------------------------------------------
+
+Time: 16-10-2023 01:07:30 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+

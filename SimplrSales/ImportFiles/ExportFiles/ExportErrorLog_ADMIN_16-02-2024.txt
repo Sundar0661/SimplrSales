@@ -1,0 +1,60 @@
+Time: 16-02-2024 11:44:01 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Payment'
+-----------------------------------------------------------
+
+Time: 16-02-2024 11:44:03 AM
+-----------------------------------------------------------
+Message: ReadRecord : Select Distinct  SA.Code as Agent,R.CustId as CustomerCode,C.CustName as CustomerName,RI.InvNo as InvoiceNo,R.Amount - RI.AmtPaid as Balance ,RI.AmtPaid as PayingAmount,R.PayMethod as PaymentMethod,R.ChqNo as ChequeNo,FORMAT(R.ChqDt,'MM/dd/yyyy') as ChequeDate,R.BankName,R.DTG as TransactionDate,R.RcptNo as PaymentTransactionNo,CASE WHEN R.Void ='1' THEN 'Yes' ELSE 'No' END AS VoidStatus from SalesAgent SA  inner join Receipt R on R.AgentId=SA.Code inner join RcptItem RI on RI.RcptNo=R.RcptNo inner join Customer C on C.CustNo= R.CustID where Convert(Date,R.ChqDt) BETWEEN   Convert(Date,'2024-02-01 00:00:00.000') and  Convert(Date,'2024-02-16 23:59:59.000')
+-----------------------------------------------------------
+
+Time: 16-02-2024 11:44:04 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 16-02-2024 01:59:11 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Order Header'
+-----------------------------------------------------------
+
+Time: 16-02-2024 02:03:25 PM
+-----------------------------------------------------------
+Message: ReadRecord : select Distinct  SA.UserID as [Sales Agent ID],SA.Name as [SalesAgent Name],O.OrdNo as [Order No],Format(O.OrdDt,'dd/MM/yyyy') as [Order Date],Format(O.DeliveryDate,'dd/MM/yyyy') as [Delivery Date],C.CustNo as [Customer No],C.CustName as [Customer Name],O.SubTotal as SubTotal, O.Discount as Discount,O.GstAmt as [GST Amount],O.TotalAmt as [Total Amount],ISNULL(O.ShipMethod,'') as [Ship Method],O.PayTerms as [Payment Term Code],  O.CustID as [Customer No],Case When ISNULL(S.CustNo,'')<>'' and ISNULL(S.ShipCode,'')<>'' Then ISNULL(S.ShipAddr,'') Else ISNULL(C.ShipAddr,'') End as ShipAddress ,Case When ISNULL(S.CustNo,'')<>'' and ISNULL(S.ShipCode,'')<>'' Then ISNULL(S.ShipAddr2,'') Else ISNULL(C.ShipAddr2,'') End as ShipAddress2 ,Case When ISNULL(S.CustNo,'')<>'' and ISNULL(S.ShipCode,'')<>'' Then ISNULL(S.ShipAddr3,'') Else ISNULL(C.ShipAddr3,'') End as ShipAddress3,Case When ISNULL(S.CustNo,'')<>'' and ISNULL(S.ShipCode,'')<>'' Then ISNULL(S.ShipAddr4,'') Else ISNULL(C.ShipAddr4,'') End as ShipAddress4,Case When ISNULL(S.CustNo,'')<>'' and ISNULL(S.ShipCode,'')<>'' Then ISNULL(S.PostalCode,'')  Else ISNULL(C.ShipPost,'')  End as ShipPostalCode,Case When ISNULL(S.CustNo,'')<>'' and ISNULL(S.ShipCode,'')<>'' Then ISNULL(S.City,'') Else ISNULL(C.ShipCity,'') End as ShipCity,CASE WHEN O.Void ='1' THEN 'Yes' ELSE 'No' END AS [VoidStatus] from OrderHDr O inner join SalesAgent SA on SA.Code=O.AgentID inner join Customer C on c.custNo=O.CustID Left join ShipAddr S on S.ShipCode=O.ShipMethod and S.CustNo =O.CustId   where (O.Exported =0 or O.Exported is null)  and Convert(Date,O.OrdDt)  BETWEEN  Convert(Date,'2024-02-01 00:00:00.000') and  Convert(Date,'2024-02-16 23:59:59.000')
+-----------------------------------------------------------
+
+Time: 16-02-2024 02:03:25 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 16-02-2024 02:04:20 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Order Header'
+-----------------------------------------------------------
+
+Time: 16-02-2024 02:04:21 PM
+-----------------------------------------------------------
+Message: ReadRecord : select Distinct  SA.UserID as [Sales Agent ID],SA.Name as [SalesAgent Name],O.OrdNo as [Order No],Format(O.OrdDt,'dd/MM/yyyy') as [Order Date],Format(O.DeliveryDate,'dd/MM/yyyy') as [Delivery Date],C.CustNo as [Customer No],C.CustName as [Customer Name],O.SubTotal as SubTotal, O.Discount as Discount,O.GstAmt as [GST Amount],O.TotalAmt as [Total Amount],ISNULL(O.ShipMethod,'') as [Ship Method],O.PayTerms as [Payment Term Code],  O.CustID as [Customer No],Case When ISNULL(S.CustNo,'')<>'' and ISNULL(S.ShipCode,'')<>'' Then ISNULL(S.ShipAddr,'') Else ISNULL(C.ShipAddr,'') End as ShipAddress ,Case When ISNULL(S.CustNo,'')<>'' and ISNULL(S.ShipCode,'')<>'' Then ISNULL(S.ShipAddr2,'') Else ISNULL(C.ShipAddr2,'') End as ShipAddress2 ,Case When ISNULL(S.CustNo,'')<>'' and ISNULL(S.ShipCode,'')<>'' Then ISNULL(S.ShipAddr3,'') Else ISNULL(C.ShipAddr3,'') End as ShipAddress3,Case When ISNULL(S.CustNo,'')<>'' and ISNULL(S.ShipCode,'')<>'' Then ISNULL(S.ShipAddr4,'') Else ISNULL(C.ShipAddr4,'') End as ShipAddress4,Case When ISNULL(S.CustNo,'')<>'' and ISNULL(S.ShipCode,'')<>'' Then ISNULL(S.PostalCode,'')  Else ISNULL(C.ShipPost,'')  End as ShipPostalCode,Case When ISNULL(S.CustNo,'')<>'' and ISNULL(S.ShipCode,'')<>'' Then ISNULL(S.City,'') Else ISNULL(C.ShipCity,'') End as ShipCity,CASE WHEN O.Void ='1' THEN 'Yes' ELSE 'No' END AS [VoidStatus] from OrderHDr O inner join SalesAgent SA on SA.Code=O.AgentID inner join Customer C on c.custNo=O.CustID Left join ShipAddr S on S.ShipCode=O.ShipMethod and S.CustNo =O.CustId   where (O.Exported =0 or O.Exported is null)  and Convert(Date,O.OrdDt)  BETWEEN  Convert(Date,'2024-02-01 00:00:00.000') and  Convert(Date,'2024-02-16 23:59:59.000')
+-----------------------------------------------------------
+
+Time: 16-02-2024 02:04:21 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 16-02-2024 02:19:27 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Order Header'
+-----------------------------------------------------------
+
+Time: 16-02-2024 02:19:28 PM
+-----------------------------------------------------------
+Message: ReadRecord : select Distinct  SA.UserID as [Sales Agent ID],SA.Name as [SalesAgent Name],O.OrdNo as [Order No],Format(O.OrdDt,'dd/MM/yyyy') as [Order Date],Format(O.DeliveryDate,'dd/MM/yyyy') as [Delivery Date],C.CustNo as [Customer No],C.CustName as [Customer Name],O.SubTotal as SubTotal, O.Discount as Discount,O.GstAmt as [GST Amount],O.TotalAmt as [Total Amount],ISNULL(O.ShipMethod,'') as [Ship Method],O.PayTerms as [Payment Term Code],  O.CustID as [Customer No],Case When ISNULL(S.CustNo,'')<>'' and ISNULL(S.ShipCode,'')<>'' Then ISNULL(S.ShipAddr,'') Else ISNULL(C.ShipAddr,'') End as ShipAddress ,Case When ISNULL(S.CustNo,'')<>'' and ISNULL(S.ShipCode,'')<>'' Then ISNULL(S.ShipAddr2,'') Else ISNULL(C.ShipAddr2,'') End as ShipAddress2 ,Case When ISNULL(S.CustNo,'')<>'' and ISNULL(S.ShipCode,'')<>'' Then ISNULL(S.ShipAddr3,'') Else ISNULL(C.ShipAddr3,'') End as ShipAddress3,Case When ISNULL(S.CustNo,'')<>'' and ISNULL(S.ShipCode,'')<>'' Then ISNULL(S.ShipAddr4,'') Else ISNULL(C.ShipAddr4,'') End as ShipAddress4,Case When ISNULL(S.CustNo,'')<>'' and ISNULL(S.ShipCode,'')<>'' Then ISNULL(S.PostalCode,'')  Else ISNULL(C.ShipPost,'')  End as ShipPostalCode,Case When ISNULL(S.CustNo,'')<>'' and ISNULL(S.ShipCode,'')<>'' Then ISNULL(S.City,'') Else ISNULL(C.ShipCity,'') End as ShipCity,CASE WHEN O.Void ='1' THEN 'Yes' ELSE 'No' END AS [VoidStatus] from OrderHDr O inner join SalesAgent SA on SA.Code=O.AgentID inner join Customer C on c.custNo=O.CustID Left join ShipAddr S on S.ShipCode=O.ShipMethod and S.CustNo =O.CustId   where (O.Exported =0 or O.Exported is null)  and Convert(Date,O.OrdDt)  BETWEEN  Convert(Date,'2024-02-01 00:00:00.000') and  Convert(Date,'2024-02-16 23:59:59.000')
+-----------------------------------------------------------
+
+Time: 16-02-2024 02:19:28 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+

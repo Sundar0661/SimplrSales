@@ -1,0 +1,126 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    var url_ExecuteInsertUpdateQuery = '@Url.Content("~/Common/ExecuteInsertUpdateQuery/")';
+    var url_LoadPickingReport = '@Url.Content("~/VehicleAssignment/LoadPickingReport/")';
+    var url_LoadConsolidatedReport = '@Url.Content("~/VehicleAssignment/LoadConsolidatedReport/")';
+    var url_LoadInvoiceReport = '@Url.Content("~/VehicleAssignment/LoadInvoiceReport/")';
+    var url_printReport = '@Url.Content("~/VehicleAssignment/printReport/")';
+    var url_CalculateVehicles = '@Url.Content("~/VehicleAssignment/CalculateVehicles/")';
+    var url_StockVarianceCreateExcel = '@Url.Content("~/VehicleAssignment/StockVarianceCreateExcel/")';
+    var url_CreateInvoiceReport = '@Url.Content("~/VehicleAssignment/CreateInvoiceReport/")';
+    
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+<link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+<link href="~/Content/FormViewList.css" rel="stylesheet" />
+
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<div id="popupdialog" title="Basic dialog"></div>
+
+@*<input type="file" name="file" webkitdirectory multiple/>*@
+
+<script type="text/javascript">
+    var qry = '@ViewBag.query';
+    var FormView = {};
+    var _UserID = '@Session["UserId"]';
+    FormView.UserID = '@Session["UserId"]';
+    var _screenName = "VehicleAssignmentList";
+    var currentScreenName = _screenName;
+    CurrentScreen_TabScreen_Name = _screenName;
+    currentScreenName = 'VehicleAssignmentReportForm';
+    windowPreparingToOpen(currentScreenName);
+</script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+
+
+<div class="formContainer">
+    <input id="savePath" type="file" webkitdirectory multiple style="display: none" />
+
+    <div class="row" style="margin-left: 0px;">
+        <div class="labeltext" style="width: 10%">
+            <label>Delivery Date</label>
+        </div>
+        <div class="labeltext" style="width: 15%">
+            <input type="text" id="DeliveryDate" class="datepicker" />
+        </div>
+        <div class="labeltext" style="width: 1%">
+        </div>
+        <div class="labeltext" style="width: 10%">
+            <button type="button" class="btn btn-default btn-sm" onclick="GetVehicleData();" style="background-color: #f9f9f9">OK</button>
+        </div>
+    </div>
+
+
+
+    <div style="width: 100%">
+        <div id="VehicleAssignmentId"></div>
+    </div>
+</div>
+<p id="info"></p>
+<script src="~/Scripts/Main/VehicleAssignment.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+<link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+<link href="~/Content/FormViewList.css" rel="stylesheet" />
+@section Scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".datepicker").datepicker({
+                dateFormat: "dd/mm/yy",
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "-60:+0",
+                setDate: new Date()
+            });
+        });
+        DatePicker();
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+            $('#dialog').dialog({
+                autoOpen: false,
+                width: "50%",
+                resizable: false,
+                title: 'Details',
+                modal: true,
+                closeOnEscape: true,
+                open: function (event, ui) {
+                },
+                beforeClose: function (event, ui) {
+                    $('#dialogHiddenId').show();
+                },
+                buttons: {
+                    "Close": function () {
+                        $('#dialog').dialog('close');
+                    }
+                }
+            });
+        });
+
+
+    </script>
+}
+
+
+<style>
+    .w3-dropdown-content {
+        min-width: 200px;
+    }
+</style>

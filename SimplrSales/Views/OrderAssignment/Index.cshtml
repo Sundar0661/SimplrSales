@@ -1,0 +1,318 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    var url_ExecuteInsertUpdateQuery = '@Url.Content("~/Common/ExecuteInsertUpdateQuery/")';
+    var url_printReport_POC = '@Url.Content("~/VehicleAssignment/printReport_POC/")';
+    var url_LoadConsolidatedReport = '@Url.Content("~/VehicleAssignment/LoadConsolidatedReport/")';
+
+    @*var url_ExecuteInsertUpdateQuery = '@Url.Content("~/Common/ExecuteInsertUpdateQuery/")';
+    var url_WMSLoadPickingReport = '@Url.Content("~/VehicleAssignment/WMSLoadPickingReport/")';
+    var url_LoadPickingReport = '@Url.Content("~/VehicleAssignment/LoadPickingReport/")';
+    var url_LoadConsolidatedReport = '@Url.Content("~/VehicleAssignment/LoadConsolidatedReport/")';
+    var url_LoadConsolidatedReport1 = '@Url.Content("~/VehicleAssignment/LoadConsolidatedReport1/")';
+    var url_LoadInvoiceReport = '@Url.Content("~/VehicleAssignment/LoadInvoiceReport/")';
+    var url_LoadInvoiceReport_POC = '@Url.Content("~/VehicleAssignment/LoadInvoiceReport_POC/")';
+    var url_printReport = '@Url.Content("~/VehicleAssignment/printReport/")';*@
+
+    // COMMENTED 20.11.2020
+    @*var url_printReport_POC = '@Url.Content("~/VehicleAssignment/printReport_POC/")';
+
+    var url_printReportJSU = '@Url.Content("~/VehicleAssignment/printReportJSU/")';
+    var url_printReportPVM = '@Url.Content("~/VehicleAssignment/printReportPVM/")';
+    var url_printReportEtika = '@Url.Content("~/VehicleAssignment/printReportEtika/")';
+    var url_GetCreateManifest = '@Url.Content("~/VehicleAssignment/GetCreateManifest/")';
+    var url_CalculateVehicles = '@Url.Content("~/VehicleAssignment/CalculateVehicles/")';
+    var url_StockVarianceCreateExcel = '@Url.Content("~/VehicleAssignment/StockVarianceCreateExcel/")';
+    var url_CreateInvoiceReport = '@Url.Content("~/VehicleAssignment/CreateInvoiceReport/")';
+    var url_CreateInvoiceReportJSU = '@Url.Content("~/VehicleAssignment/CreateInvoiceReportJSU/")';
+    var url_CreateInvoiceReportPVM = '@Url.Content("~/VehicleAssignment/CreateInvoiceReportPVM/")';
+    var url_GetInvoiceReportCount = '@Url.Content("~/VehicleAssignment/GetInvoiceReportCountOne/")';*@
+
+    var Interval_Time = '@ViewBag.IntervalTime';
+
+
+</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+@*<script src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyC5XH-ALvr81IiuEDWekI2k91ujPeZL864"></script>*@
+<script>
+    document.write("<script src=\"https://maps.googleapis.com/maps/api/js?sensor=false&key=" + '@ViewBag.Google_APIKey' + "\" ><\/script>");
+</script>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<div id="popupdialog" title="Basic dialog"></div>
+
+@*<input type="file" name="file" webkitdirectory multiple/>*@
+
+<script type="text/javascript">
+    var qry = '@ViewBag.query';
+    var FormView = {};
+    var _UserID = '@Session["UserId"]';
+    FormView.UserID = '@Session["UserId"]';
+    FormView.URL = '@Session["URL"]';
+    FormView.PlanoGramURL = '@Session["PlanoGramURL"]';
+    var _screenName = "VehicleAssignmentList";
+    var currentScreenName = _screenName;
+    CurrentScreen_TabScreen_Name = _screenName;
+    currentScreenName = 'VehicleAssignmentReportForm';
+    windowPreparingToOpen(currentScreenName);
+</script>
+
+@*<button onclick="clearIntervalFunction()">Start the time</button>*@
+@*<p id="demo"></p>
+
+
+    <button onclick="stertInt()">Start the time</button>
+    <button onclick="myStop()">Stop the time</button>*@
+
+<script>
+    var ddf = 0;
+    //    var ss = 0;
+    //    function stertInt() {
+    //        const myInterval = setInterval(myTimer, 1000);
+    //        ss = myInterval;
+    //        alert(myInterval);
+
+    //    }
+    //function myTimer() {
+    //  const date = new Date();
+    //  document.getElementById("demo").innerHTML = date.toLocaleTimeString();
+    //}
+
+    //function myStop() {
+    //    alert(ss);
+    //    clearInterval(ss);
+    //}
+</script>
+
+
+<div id="OrderAssignmentDivId">
+    
+    <div class="formContainer">
+        &nbsp;&nbsp;<input id="Button_CreateBtn" type="button" value="Details" onclick="Open_Detail();" style="width:100px; height: 30px;font-size:12px;color:#ffffff;background-color:#428bca;font-family:sans-serif;text-align:Center;line-height:none;"/>@*<button type="button" class="btn btn-default btn-sm" onclick="Open_Detail();" style="background-color: #f9f9f9">DETAIL</button>*@
+        @*<button onclick="GetVehicleListDataRefresh()" class="btn btn-info" style="margin-left:94%">Refresh</button>*@
+
+        <input id="savePath" type="file" webkitdirectory multiple style="display: none" />
+
+        <div id="LoadingImg" style="display:none;"></div>
+
+
+
+        <div style="width: 100%">
+            <div id="VehicleAssignmentId"></div>
+        </div>
+
+        <div id="vehicleDialog" title="Basic dialog">
+            <div>
+                Order No <input type="text" readonly id="txtDcOrdNo" />
+                <input type="hidden" readonly id="txtOrdNo" />
+                <br />
+                Picker No <select id="VehicleId"></select>
+            </div>
+        </div>
+
+        <div id="vehicleDialog1" title="Basic dialog">
+            <div>
+                Picker No <select id="VehicleId1"></select>
+            </div>
+        </div>
+
+    </div>
+</div>
+<p id="info"></p>
+<script src="~/Scripts/Inventory/OrderAssignment.js?v=1.7.4"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+<link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+<link href="~/Content/FormViewList.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+
+
+
+@*<link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet" />*@
+
+@*<script src="~/Scripts/Main/FormViewListcshtml.js?v=1.7.4.2"></script>*@
+@section Scripts{
+
+    @*<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>*@
+
+    @*<script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>*@
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //$('#example').DataTable();
+            //$('#table0').DataTable();
+
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        var isVehicleAssignment = true;
+
+        $(function () {
+            $('#dialog').dialog({
+                autoOpen: false,
+                width: "50%",
+                resizable: false,
+                title: 'Details',
+                modal: true,
+                closeOnEscape: true,
+                open: function (event, ui) {
+                },
+                beforeClose: function (event, ui) {
+                    $('#dialogHiddenId').show();
+                },
+                buttons: {
+                    "Close": function () {
+                        $('#dialog').dialog('close');
+                    }
+                }
+            });
+
+            $('#vehicleDialog').dialog({
+                autoOpen: false,
+                width: "25%",
+                resizable: false,
+                title: 'Assigned To',
+                modal: true,
+                closeOnEscape: true,
+                open: function (event, ui) {
+                },
+                beforeClose: function (event, ui) {
+                    //$('#dialogHiddenId').show();
+                },
+                buttons: {
+                    "Assign": function () {
+                        AssignOrder();
+                        $('#vehicleDialog').dialog('close');
+                    },
+                    "Cancel": function () {
+                        $('#vehicleDialog').dialog('close');
+                    }
+                }
+            });
+
+            $('#vehicleDialog1').dialog({
+                autoOpen: false,
+                width: "25%",
+                resizable: false,
+                title: 'Assigned To',
+                modal: true,
+                closeOnEscape: true,
+                open: function (event, ui) {
+                },
+                beforeClose: function (event, ui) {
+                    //$('#dialogHiddenId').show();
+                },
+                buttons: {
+                    "Assign": function () {
+                        BulkAssignOrder();
+                        $('#vehicleDialog1').dialog('close');
+                    },
+                    "Cancel": function () {
+                        $('#vehicleDialog1').dialog('close');
+                    }
+                }
+            });
+
+            $('#dialog1').dialog({
+                autoOpen: false,
+                width: "50%",
+                resizable: false,
+                title: 'Details',
+                modal: true,
+                closeOnEscape: true,
+                open: function (event, ui) {
+                },
+                beforeClose: function (event, ui) {
+                    $('#dialogHiddenId').show();
+                },
+                buttons: {
+                    "Close": function () {
+                        $('#dialog').dialog('close');
+                    }
+                }
+            });
+
+        });
+
+    </script>
+}
+
+
+<style>
+    .w3-dropdown-content {
+        min-width: 200px;
+    }
+</style>
+@*loading, processing,downloading images*@
+<style>
+    #LoadingImg {
+        background: #ffffff;
+        color: #666666;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        z-index: 5000;
+        top: 0;
+        left: 0;
+        float: left;
+        text-align: center;
+        padding-top: 25%;
+        opacity: .80;
+    }
+
+    .spinner {
+        margin: 0 auto;
+        height: 64px;
+        width: 64px;
+        animation: rotate 0.8s infinite linear;
+        border: 5px solid firebrick;
+        border-right-color: transparent;
+        border-radius: 50%;
+    }
+
+    @@keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+
+
+
+<style>
+    .selected {
+        /*background-color: red;*/
+        font-weight: bold;
+        color: #fff;
+    }
+
+    /*.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {*/
+    a:hover {
+        /*color: #555;*/
+        /*background-color: #e7e7e7;*/
+        background-color: midnightblue;
+    }
+</style>
+
+
+

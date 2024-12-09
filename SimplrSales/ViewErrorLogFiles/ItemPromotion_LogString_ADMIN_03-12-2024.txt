@@ -1,0 +1,1256 @@
+Time: 03-12-2024 08:06:13 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select * from Gridfunctions where screenname =N'MAIN' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:06:13 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Customers' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:06:13 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Products' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:06:13 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Inventory' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:06:16 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Sales' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:06:16 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Payments' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:06:16 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Data Transfer' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:06:17 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Reports' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:06:17 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Administration' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:06:29 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ 
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:07:10 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ 
+SELECT 'ALL' as DistributorID,'ALL' as SalesOfficeID,'ALL' as SalesAgent, 'Excel' as FileType,format(getdate(),'dd/MM/yyyy') as FromDate,format(getdate(),'dd/MM/yyyy')  as ToDate  
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:08:42 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_DistributorID :
+ exec  sp_ExportDistributorDD 'ADMIN'  
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:08:43 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_SalesOfficeID :
+ EXEC [sp_ExportSalesOfficeID] 'ADMIN',''  
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:08:43 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_SalesAgent :
+ SELECT 'ALL' as Code,'ALL' as Text,1 as DP UNION select Distinct SalesmanTerritory   as Code,SalesmanTerritory+' - '+Name as Text,2 as DP  from NodeTree N Inner Join SalesAgent Sa on Sa.NodeTreeValue=N.SalesmanTerritory inner join SalesmanGroup G on G.GroupID=N.SalesmanTerritory and  G.UserId ='ADMIN'  and N.SalesOfficeID= case when '' in ('ALL','') then  N.SalesOfficeID else '' end and  N.DistributorID=case when '' in ('ALL','') then N.DistributorID else '' end  Order by DP, Code
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:08:49 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_FileType :
+ Select 'csv' as Code, 'CSV' as Text Union Select 'xlsx' as Code,'Excel' as Text  Order By Code
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:08:50 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_DistributorID :
+ exec  sp_ExportDistributorDD 'ADMIN'  
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:08:50 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_SalesOfficeID :
+ EXEC [sp_ExportSalesOfficeID] 'ADMIN','ALL'  
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:08:50 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_SalesAgent :
+ SELECT 'ALL' as Code,'ALL' as Text,1 as DP UNION select Distinct SalesmanTerritory   as Code,SalesmanTerritory+' - '+Name as Text,2 as DP  from NodeTree N Inner Join SalesAgent Sa on Sa.NodeTreeValue=N.SalesmanTerritory inner join SalesmanGroup G on G.GroupID=N.SalesmanTerritory and  G.UserId ='ADMIN'  and N.SalesOfficeID= case when '' in ('ALL','') then  N.SalesOfficeID else '' end and  N.DistributorID=case when 'ALL' in ('ALL','') then N.DistributorID else 'ALL' end  Order by DP, Code
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:08:51 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_SalesOfficeID :
+ EXEC [sp_ExportSalesOfficeID] 'ADMIN','ALL'  
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:08:51 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_SalesAgent :
+ SELECT 'ALL' as Code,'ALL' as Text,1 as DP UNION select Distinct SalesmanTerritory   as Code,SalesmanTerritory+' - '+Name as Text,2 as DP  from NodeTree N Inner Join SalesAgent Sa on Sa.NodeTreeValue=N.SalesmanTerritory inner join SalesmanGroup G on G.GroupID=N.SalesmanTerritory and  G.UserId ='ADMIN'  and N.SalesOfficeID= case when 'ALL' in ('ALL','') then  N.SalesOfficeID else 'ALL' end and  N.DistributorID=case when 'ALL' in ('ALL','') then N.DistributorID else 'ALL' end  Order by DP, Code
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:08:51 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_SalesAgent :
+ SELECT 'ALL' as Code,'ALL' as Text,1 as DP UNION select Distinct SalesmanTerritory   as Code,SalesmanTerritory+' - '+Name as Text,2 as DP  from NodeTree N Inner Join SalesAgent Sa on Sa.NodeTreeValue=N.SalesmanTerritory inner join SalesmanGroup G on G.GroupID=N.SalesmanTerritory and  G.UserId ='ADMIN'  and N.SalesOfficeID= case when 'ALL' in ('ALL','') then  N.SalesOfficeID else 'ALL' end and  N.DistributorID=case when 'ALL' in ('ALL','') then N.DistributorID else 'ALL' end  Order by DP, Code
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:08:52 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_FileType :
+ Select 'csv' as Code, 'CSV' as Text Union Select 'xlsx' as Code,'Excel' as Text  Order By Code
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:08:55 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select Distinct E.AliasName  from ExportQueryConfig E inner join ExportGroup E1 on E.AliasName=E1.AliasName And E1.Access=(select top 1 Access from Salesagent Where UserID='ADMIN') Where E.IsActive =1   Order by AliasName 
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:08:55 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select Distinct E.AliasName  from ExportQueryConfig E inner join ExportGroup E1 on E.AliasName=E1.AliasName And E1.Access=(select top 1 Access from Salesagent Where UserID='ADMIN') Where E.IsActive =1  
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:08:55 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select Distinct E.AliasName  from ExportQueryConfig E inner join ExportGroup E1 on E.AliasName=E1.AliasName And E1.Access=(select top 1 Access from Salesagent Where UserID='ADMIN') Where E.IsActive =1   Order by AliasName 
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:20:31 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select * from Gridfunctions where screenname =N'MAIN' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:20:32 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Customers' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:20:32 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Products' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:20:32 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Inventory' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:20:32 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Sales' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:20:33 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Payments' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:20:33 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Data Transfer' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:20:33 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Reports' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:20:33 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname =N'Administration' and Access ='6' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:20:41 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ 
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:20:58 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ 
+SELECT 'ALL' as DistributorID,'ALL' as SalesOfficeID,'ALL' as SalesAgent, 'Excel' as FileType,format(getdate(),'dd/MM/yyyy') as FromDate,format(getdate(),'dd/MM/yyyy')  as ToDate  
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:21:02 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_DistributorID :
+ exec  sp_ExportDistributorDD 'ADMIN'  
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:21:02 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_SalesOfficeID :
+ EXEC [sp_ExportSalesOfficeID] 'ADMIN',''  
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:21:03 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_SalesAgent :
+ SELECT 'ALL' as Code,'ALL' as Text,1 as DP UNION select Distinct SalesmanTerritory   as Code,SalesmanTerritory+' - '+Name as Text,2 as DP  from NodeTree N Inner Join SalesAgent Sa on Sa.NodeTreeValue=N.SalesmanTerritory inner join SalesmanGroup G on G.GroupID=N.SalesmanTerritory and  G.UserId ='ADMIN'  and N.SalesOfficeID= case when '' in ('ALL','') then  N.SalesOfficeID else '' end and  N.DistributorID=case when '' in ('ALL','') then N.DistributorID else '' end  Order by DP, Code
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:21:04 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_FileType :
+ Select 'csv' as Code, 'CSV' as Text Union Select 'xlsx' as Code,'Excel' as Text  Order By Code
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:21:04 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_DistributorID :
+ exec  sp_ExportDistributorDD 'ADMIN'  
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:21:04 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_SalesOfficeID :
+ EXEC [sp_ExportSalesOfficeID] 'ADMIN','ALL'  
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:21:05 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_SalesAgent :
+ SELECT 'ALL' as Code,'ALL' as Text,1 as DP UNION select Distinct SalesmanTerritory   as Code,SalesmanTerritory+' - '+Name as Text,2 as DP  from NodeTree N Inner Join SalesAgent Sa on Sa.NodeTreeValue=N.SalesmanTerritory inner join SalesmanGroup G on G.GroupID=N.SalesmanTerritory and  G.UserId ='ADMIN'  and N.SalesOfficeID= case when '' in ('ALL','') then  N.SalesOfficeID else '' end and  N.DistributorID=case when 'ALL' in ('ALL','') then N.DistributorID else 'ALL' end  Order by DP, Code
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:21:05 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_SalesOfficeID :
+ EXEC [sp_ExportSalesOfficeID] 'ADMIN','ALL'  
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:21:06 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_SalesAgent :
+ SELECT 'ALL' as Code,'ALL' as Text,1 as DP UNION select Distinct SalesmanTerritory   as Code,SalesmanTerritory+' - '+Name as Text,2 as DP  from NodeTree N Inner Join SalesAgent Sa on Sa.NodeTreeValue=N.SalesmanTerritory inner join SalesmanGroup G on G.GroupID=N.SalesmanTerritory and  G.UserId ='ADMIN'  and N.SalesOfficeID= case when 'ALL' in ('ALL','') then  N.SalesOfficeID else 'ALL' end and  N.DistributorID=case when 'ALL' in ('ALL','') then N.DistributorID else 'ALL' end  Order by DP, Code
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:21:06 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_SalesAgent :
+ SELECT 'ALL' as Code,'ALL' as Text,1 as DP UNION select Distinct SalesmanTerritory   as Code,SalesmanTerritory+' - '+Name as Text,2 as DP  from NodeTree N Inner Join SalesAgent Sa on Sa.NodeTreeValue=N.SalesmanTerritory inner join SalesmanGroup G on G.GroupID=N.SalesmanTerritory and  G.UserId ='ADMIN'  and N.SalesOfficeID= case when 'ALL' in ('ALL','') then  N.SalesOfficeID else 'ALL' end and  N.DistributorID=case when 'ALL' in ('ALL','') then N.DistributorID else 'ALL' end  Order by DP, Code
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:21:07 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_FileType :
+ Select 'csv' as Code, 'CSV' as Text Union Select 'xlsx' as Code,'Excel' as Text  Order By Code
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:21:09 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select Distinct E.AliasName  from ExportQueryConfig E inner join ExportGroup E1 on E.AliasName=E1.AliasName And E1.Access=(select top 1 Access from Salesagent Where UserID='ADMIN') Where E.IsActive =1   Order by AliasName 
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:21:09 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select Distinct E.AliasName  from ExportQueryConfig E inner join ExportGroup E1 on E.AliasName=E1.AliasName And E1.Access=(select top 1 Access from Salesagent Where UserID='ADMIN') Where E.IsActive =1  
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:21:09 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select Distinct E.AliasName  from ExportQueryConfig E inner join ExportGroup E1 on E.AliasName=E1.AliasName And E1.Access=(select top 1 Access from Salesagent Where UserID='ADMIN') Where E.IsActive =1   Order by AliasName 
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:47:45 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_SalesOfficeID :
+ EXEC [sp_ExportSalesOfficeID] 'ADMIN','C10000'  
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:47:48 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_SalesAgent :
+ SELECT 'ALL' as Code,'ALL' as Text,1 as DP UNION select Distinct SalesmanTerritory   as Code,SalesmanTerritory+' - '+Name as Text,2 as DP  from NodeTree N Inner Join SalesAgent Sa on Sa.NodeTreeValue=N.SalesmanTerritory inner join SalesmanGroup G on G.GroupID=N.SalesmanTerritory and  G.UserId ='ADMIN'  and N.SalesOfficeID= case when '' in ('ALL','') then  N.SalesOfficeID else '' end and  N.DistributorID=case when 'C10000' in ('ALL','') then N.DistributorID else 'C10000' end  Order by DP, Code
+-----------------------------------------------------------
+
+Time: 03-12-2024 08:47:51 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > ExportDataForm_FORM_COMBOBOX_SalesAgent :
+ SELECT 'ALL' as Code,'ALL' as Text,1 as DP UNION select Distinct SalesmanTerritory   as Code,SalesmanTerritory+' - '+Name as Text,2 as DP  from NodeTree N Inner Join SalesAgent Sa on Sa.NodeTreeValue=N.SalesmanTerritory inner join SalesmanGroup G on G.GroupID=N.SalesmanTerritory and  G.UserId ='ADMIN'  and N.SalesOfficeID= case when 'C10000' in ('ALL','') then  N.SalesOfficeID else 'C10000' end and  N.DistributorID=case when 'C10000' in ('ALL','') then N.DistributorID else 'C10000' end  Order by DP, Code
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:48:36 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select * from Gridfunctions where screenname ='MAIN' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:48:36 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Picking' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:48:36 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Product' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:48:36 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Customer' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:48:36 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Masters' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:48:37 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Inventory' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:48:37 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Receiving' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:48:37 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Data Transfer' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:48:37 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Put Away' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:48:37 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Sales' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:48:37 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Transfer' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:48:37 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Stock Take' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:48:37 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Administration' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:48:37 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Reports' and Access ='5' and solutionName='WMS-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:48:44 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ 
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:49:00 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ 
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:49:02 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select  DocNo,DTG,DTG1,AgentID,Exported,IsConfirmed,DocType,Distributor,ConfirmedBy from  (select Distinct StockAdjustmentHdr.DocNo,Format(StockAdjustmentHdr.DTG,(Select DateFormatString From System)) as DTG,StockAdjustmentHdr.DTG as DTG1,StockAdjustmentHdr.AgentID,Exported,    'No' as IsConfirmed,DocType,S.Name as Distributor,StockAdjustmentHdr.ConfirmedBy as ConfirmedBy   from StockAdjustmentHdr INNER JOIN SALESAGENT S ON S.CODE=StockAdjustmentHdr.AGENTID inner join StockAdjustmentdet SD on StockAdjustmentHdr.DocNo=SD.DocNo inner join GoodsInvn G on SD.ItemNo=G.ItemNo and G.Location=SD.Location inner join Item I on G.ItemNo=I.ItemNo  and isnull(ISConfirmed,0)=0 and isnull(void,0)=0)as A WHERE 1=1   order by DocNo desc offset  0  rows Fetch next 10 rows only
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:49:02 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select  DocNo,DTG,DTG1,AgentID,Exported,IsConfirmed,DocType,Distributor,ConfirmedBy from  (select Distinct StockAdjustmentHdr.DocNo,Format(StockAdjustmentHdr.DTG,(Select DateFormatString From System)) as DTG,StockAdjustmentHdr.DTG as DTG1,StockAdjustmentHdr.AgentID,Exported,    'No' as IsConfirmed,DocType,S.Name as Distributor,StockAdjustmentHdr.ConfirmedBy as ConfirmedBy   from StockAdjustmentHdr INNER JOIN SALESAGENT S ON S.CODE=StockAdjustmentHdr.AGENTID inner join StockAdjustmentdet SD on StockAdjustmentHdr.DocNo=SD.DocNo inner join GoodsInvn G on SD.ItemNo=G.ItemNo and G.Location=SD.Location inner join Item I on G.ItemNo=I.ItemNo  and isnull(ISConfirmed,0)=0 and isnull(void,0)=0)as A WHERE 1=1  
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:49:02 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select  DocNo,DTG,DTG1,AgentID,Exported,IsConfirmed,DocType,Distributor,ConfirmedBy from  (select Distinct StockAdjustmentHdr.DocNo,Format(StockAdjustmentHdr.DTG,(Select DateFormatString From System)) as DTG,StockAdjustmentHdr.DTG as DTG1,StockAdjustmentHdr.AgentID,Exported,    'No' as IsConfirmed,DocType,S.Name as Distributor,StockAdjustmentHdr.ConfirmedBy as ConfirmedBy   from StockAdjustmentHdr INNER JOIN SALESAGENT S ON S.CODE=StockAdjustmentHdr.AGENTID inner join StockAdjustmentdet SD on StockAdjustmentHdr.DocNo=SD.DocNo inner join GoodsInvn G on SD.ItemNo=G.ItemNo and G.Location=SD.Location inner join Item I on G.ItemNo=I.ItemNo  and isnull(ISConfirmed,0)=0 and isnull(void,0)=0)as A WHERE 1=1   order by DocNo desc
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:49:09 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Delete from InventoryAdjustmentTemp; select SH.DocNo,'General' as DocType,SD.AdjustmentType,SDE.Location,SDE.BinNo,SDE.PalletNo,SDE.ItemNo,Item.ItemName,SDE.UOM,SDE.LotNo,SDE.ExpiryDate,SD.Reason,SDE.Qty,0 AS Inventory from StockAdjustmentHdr SH left join stockadjustmentdetexp SDE ON SDE.DocNo=SH.DocNo left join stockadjustmentdet SD ON SD.DocNo=SH.DocNo left join Item  ON Item.ItemNo=SDE.ItemNo  where SH.DocNo = 'MDO0000001'  
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:49:11 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > InventoryAdjustmentType1Form_FORM_COMBOBOX_AgentID :
+ 
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:49:11 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > InventoryAdjustmentType1Form_FORM_COMBOBOX_TransNo :
+ 
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:49:11 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > InventoryAdjustmentType1Form_FORM_COMBOBOX_Exported :
+ 
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:49:11 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > InventoryAdjustmentType1Form_FORM_COMBOBOX_DTG :
+ 
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:49:11 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > InventoryAdjustmentType1Form_FORM_COMBOBOX_IsConfirmed :
+ 
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:49:12 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select Distinct StockAdjustmentDet.AdjustmentType,SDE.Location,SDE.BinNo,SDE.ItemNo,Item.ItemName,SDE.UOM,SDE.Qty,SDE.PalletNo,SDE.LotNo,Format(SDE.ExpiryDate,(Select Dateformatstring from system)) as ExpiryDate,(select Case When (select Count(*) from ExpiryItem Where Location=SDE.Location and ItemNo=SDE.ItemNo and BinNo =StockAdjustmentDet.BinNo and LotNo=SDE.LotNo and ISNULL (PalletNo,'')=ISNULL (SDE.PalletNo,''))>0  Then (select Sum(Qty) From ExpiryItem Where Location=SDE.Location and ItemNo=SDE.ItemNo and BinNo=StockAdjustmentDet.BinNo and LotNo=SDE.LotNo and ISNULL (PalletNo,'')=ISNULL (SDE.PalletNo,'')) Else 0 End )as Inventory,StockAdjustmentDet.Reason from StockAdjustmentDetExp SDE inner join StockAdjustmentDet on SDE.DocNo=StockAdjustmentDet.DocNo and SDE.ItemNo=StockAdjustmentDet.ItemNo and SDE.UOM=StockAdjustmentDet.UOM and SDE.BinNo =StockAdjustmentDet.BinNo and SDE.Location=StockAdjustmentDet.Location and SDE.AdjustmentType=StockAdjustmentDet.AdjustmentType inner join Item on Item.ItemNo=StockAdjustmentDet.ItemNo Left join ExpiryItem on Item.ItemNo=ExpiryItem.ItemNo and ExpiryItem.BinNo=StockAdjustmentDet.BinNo and ExpiryItem.Location=StockAdjustmentDet.Location where StockAdjustmentDet.DocNo ='MDO0000001' and IsNULL(SDE.ItemNo,'')<>''   Order by ItemNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:49:12 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select Distinct StockAdjustmentDet.AdjustmentType,SDE.Location,SDE.BinNo,SDE.ItemNo,Item.ItemName,SDE.UOM,SDE.Qty,SDE.PalletNo,SDE.LotNo,Format(SDE.ExpiryDate,(Select Dateformatstring from system)) as ExpiryDate,(select Case When (select Count(*) from ExpiryItem Where Location=SDE.Location and ItemNo=SDE.ItemNo and BinNo =StockAdjustmentDet.BinNo and LotNo=SDE.LotNo and ISNULL (PalletNo,'')=ISNULL (SDE.PalletNo,''))>0  Then (select Sum(Qty) From ExpiryItem Where Location=SDE.Location and ItemNo=SDE.ItemNo and BinNo=StockAdjustmentDet.BinNo and LotNo=SDE.LotNo and ISNULL (PalletNo,'')=ISNULL (SDE.PalletNo,'')) Else 0 End )as Inventory,StockAdjustmentDet.Reason from StockAdjustmentDetExp SDE inner join StockAdjustmentDet on SDE.DocNo=StockAdjustmentDet.DocNo and SDE.ItemNo=StockAdjustmentDet.ItemNo and SDE.UOM=StockAdjustmentDet.UOM and SDE.BinNo =StockAdjustmentDet.BinNo and SDE.Location=StockAdjustmentDet.Location and SDE.AdjustmentType=StockAdjustmentDet.AdjustmentType inner join Item on Item.ItemNo=StockAdjustmentDet.ItemNo Left join ExpiryItem on Item.ItemNo=ExpiryItem.ItemNo and ExpiryItem.BinNo=StockAdjustmentDet.BinNo and ExpiryItem.Location=StockAdjustmentDet.Location where StockAdjustmentDet.DocNo ='MDO0000001' and IsNULL(SDE.ItemNo,'')<>''  
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:49:12 AM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ Select Distinct StockAdjustmentDet.AdjustmentType,SDE.Location,SDE.BinNo,SDE.ItemNo,Item.ItemName,SDE.UOM,SDE.Qty,SDE.PalletNo,SDE.LotNo,Format(SDE.ExpiryDate,(Select Dateformatstring from system)) as ExpiryDate,(select Case When (select Count(*) from ExpiryItem Where Location=SDE.Location and ItemNo=SDE.ItemNo and BinNo =StockAdjustmentDet.BinNo and LotNo=SDE.LotNo and ISNULL (PalletNo,'')=ISNULL (SDE.PalletNo,''))>0  Then (select Sum(Qty) From ExpiryItem Where Location=SDE.Location and ItemNo=SDE.ItemNo and BinNo=StockAdjustmentDet.BinNo and LotNo=SDE.LotNo and ISNULL (PalletNo,'')=ISNULL (SDE.PalletNo,'')) Else 0 End )as Inventory,StockAdjustmentDet.Reason from StockAdjustmentDetExp SDE inner join StockAdjustmentDet on SDE.DocNo=StockAdjustmentDet.DocNo and SDE.ItemNo=StockAdjustmentDet.ItemNo and SDE.UOM=StockAdjustmentDet.UOM and SDE.BinNo =StockAdjustmentDet.BinNo and SDE.Location=StockAdjustmentDet.Location and SDE.AdjustmentType=StockAdjustmentDet.AdjustmentType inner join Item on Item.ItemNo=StockAdjustmentDet.ItemNo Left join ExpiryItem on Item.ItemNo=ExpiryItem.ItemNo and ExpiryItem.BinNo=StockAdjustmentDet.BinNo and ExpiryItem.Location=StockAdjustmentDet.Location where StockAdjustmentDet.DocNo ='MDO0000001' and IsNULL(SDE.ItemNo,'')<>''   Order by ItemNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:51:58 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > InventoryAdjustmentType1Form :
+ Select CASE WHEN (select IsConfirmed from StockAdjustmenthdr where DocNo = 'MDO0000001') = '1' THEN 0 ELSE 1 END as Response    
+-----------------------------------------------------------
+
+Time: 03-12-2024 09:53:15 AM
+-----------------------------------------------------------
+Message: ScreenViewJS > InventoryAdjustmentType1Form :
+ Select CASE WHEN (select IsConfirmed from StockAdjustmenthdr where DocNo = 'MDO0000001') = '1' THEN 0 ELSE 1 END as Response    
+-----------------------------------------------------------
+
+Time: 03-12-2024 12:16:06 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select * from Gridfunctions where screenname ='MAIN' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 12:16:06 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Customers' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 12:16:07 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Products' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 12:16:07 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Inventory' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 12:16:07 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Sales' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 12:16:07 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Payments' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 12:16:07 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Data Transfer' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 12:16:07 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Reports' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 12:16:07 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Administration' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 12:16:07 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Function Settings' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 12:16:16 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ exec LoginAlert 'ADMIN'  
+-----------------------------------------------------------
+
+Time: 03-12-2024 12:16:24 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > Web_DashBoard_01 :
+ select case when (select void from orderhdr where OrdNo='002PSS03O0016701')=1 then 0 else 1 end as Response  
+-----------------------------------------------------------
+
+Time: 03-12-2024 12:17:46 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select * from GoodsInvn where ItemNo= ''    
+-----------------------------------------------------------
+
+Time: 03-12-2024 12:17:47 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > InventoryForm_FORM_COMBOBOX_Location :
+ Select Distinct Location.Code,Name as Text from Location Inner Join LocationGroup on Location.Code=LocationGroup.GroupID where LocationGroup.UserID='ADMIN'  Order by Code
+-----------------------------------------------------------
+
+Time: 03-12-2024 12:17:48 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+
+Time: 03-12-2024 12:17:48 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1  
+-----------------------------------------------------------
+
+Time: 03-12-2024 12:17:48 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:42:11 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select * from Gridfunctions where screenname ='MAIN' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:42:12 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Customers' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:42:12 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Products' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:42:12 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Inventory' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:42:12 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Sales' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:42:12 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Payments' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:42:12 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Data Transfer' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:42:12 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Reports' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:42:12 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Administration' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:42:12 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Function Settings' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:42:23 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ exec LoginAlert 'ADMIN'  
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:42:26 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > Web_DashBoard_01 :
+ select case when (select void from orderhdr where OrdNo='002PSS03O0016701')=1 then 0 else 1 end as Response  
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:43:17 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select * from GoodsInvn where ItemNo= ''    
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:43:19 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > InventoryForm_FORM_COMBOBOX_Location :
+ Select Distinct Location.Code,Name as Text from Location Inner Join LocationGroup on Location.Code=LocationGroup.GroupID where LocationGroup.UserID='ADMIN'  Order by Code
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:43:20 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:43:20 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1  
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:43:20 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:43:33 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT006'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT006'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT006'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT006'   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:43:33 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT006'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT006'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT006'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT006'   ) as Inventoryform where 1=1  
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:43:33 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT006'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT006'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT006'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT006'   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:44:14 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT004'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT004'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT004'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT004'   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:44:14 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT004'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT004'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT004'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT004'   ) as Inventoryform where 1=1  
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:44:14 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT004'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT004'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT004'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT004'   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:53:18 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select * from GoodsInvn where ItemNo= '6250030001'    
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:53:20 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > InventoryForm_FORM_COMBOBOX_Location :
+ Select Distinct Location.Code,Name as Text from Location Inner Join LocationGroup on Location.Code=LocationGroup.GroupID where LocationGroup.UserID='ADMIN'  Order by Code
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:53:20 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > InventoryForm_FORM_COMBOBOX_Location :
+ Select Distinct Location.Code,Name as Text from Location Inner Join LocationGroup on Location.Code=LocationGroup.GroupID where LocationGroup.UserID='ADMIN'  Order by Code
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:53:20 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-RSD03'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-RSD03'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-RSD03'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-RSD03'   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:53:20 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-RSD03'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-RSD03'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-RSD03'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-RSD03'   ) as Inventoryform where 1=1  
+-----------------------------------------------------------
+
+Time: 03-12-2024 01:53:20 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-RSD03'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-RSD03'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-RSD03'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-RSD03'   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:34:10 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select * from Gridfunctions where screenname ='MAIN' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:34:10 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Customers' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:34:10 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Products' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:34:10 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Inventory' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:34:10 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Sales' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:34:10 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Payments' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:34:10 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Data Transfer' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:34:10 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Reports' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:34:11 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Administration' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:34:11 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Function Settings' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:34:17 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ exec LoginAlert 'ADMIN'  
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:34:20 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > Web_DashBoard_01 :
+ select case when (select void from orderhdr where OrdNo='002PSS03O0016701')=1 then 0 else 1 end as Response  
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:34:39 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select * from GoodsInvn where ItemNo= ''    
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:34:41 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > InventoryForm_FORM_COMBOBOX_Location :
+ Select Distinct Location.Code,Name as Text from Location Inner Join LocationGroup on Location.Code=LocationGroup.GroupID where LocationGroup.UserID='ADMIN'  Order by Code
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:34:41 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:34:41 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1  
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:34:41 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:34:47 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT004'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT004'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT004'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT004'   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:34:47 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT004'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT004'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT004'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT004'   ) as Inventoryform where 1=1  
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:34:47 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT004'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT004'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT004'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT004'   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:42:49 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select * from Gridfunctions where screenname ='MAIN' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:42:49 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Customers' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:42:49 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Products' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:42:49 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Inventory' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:42:50 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Sales' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:42:50 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Payments' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:42:50 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Data Transfer' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:42:50 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Reports' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:42:50 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Administration' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:42:50 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Function Settings' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:42:59 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ exec LoginAlert 'ADMIN'  
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:43:02 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > Web_DashBoard_01 :
+ select case when (select void from orderhdr where OrdNo='002PSS03O0016701')=1 then 0 else 1 end as Response  
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:43:27 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select * from GoodsInvn where ItemNo= ''    
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:43:28 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > InventoryForm_FORM_COMBOBOX_Location :
+ Select Distinct Location.Code,Name as Text from Location Inner Join LocationGroup on Location.Code=LocationGroup.GroupID where LocationGroup.UserID='ADMIN'  Order by Code
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:43:29 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:43:29 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1  
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:43:29 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:43:33 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT004'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT004'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT004'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT004'   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:43:33 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT004'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT004'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT004'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT004'   ) as Inventoryform where 1=1  
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:43:33 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT004'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT004'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT004'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT004'   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:48:41 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select * from Gridfunctions where screenname ='MAIN' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:48:41 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Customers' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:48:41 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Products' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:48:41 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Inventory' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:48:41 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Sales' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:48:41 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Payments' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:48:42 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Data Transfer' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:48:42 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Reports' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:48:42 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Administration' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:48:42 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Function Settings' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:48:48 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ exec LoginAlert 'ADMIN'  
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:48:51 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > Web_DashBoard_01 :
+ select case when (select void from orderhdr where OrdNo='002PSS03O0016701')=1 then 0 else 1 end as Response  
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:49:05 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select * from GoodsInvn where ItemNo= ''    
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:49:07 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > InventoryForm_FORM_COMBOBOX_Location :
+ Select Distinct Location.Code,Name as Text from Location Inner Join LocationGroup on Location.Code=LocationGroup.GroupID where LocationGroup.UserID='ADMIN'  Order by Code
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:49:08 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:49:08 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1  
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:49:08 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:49:13 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT004'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT004'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT004'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT004'   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:49:13 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT004'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT004'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT004'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT004'   ) as Inventoryform where 1=1  
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:49:13 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT004'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT004'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT004'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT004'   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:57:27 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select * from Gridfunctions where screenname ='MAIN' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:57:27 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Customers' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:57:27 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Products' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:57:27 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Inventory' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:57:28 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Sales' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:57:28 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Payments' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:57:28 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Data Transfer' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:57:28 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Reports' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:57:29 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Administration' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:57:29 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > MainMenuLoad :
+ select * from Gridfunctions where screenname ='Function Settings' and Access ='14' and solutionName='SALES-WEB'  Order by ColNo
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:57:34 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ exec LoginAlert 'ADMIN'  
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:57:36 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > Web_DashBoard_01 :
+ select case when (select void from orderhdr where OrdNo='002PSS03O0016701')=1 then 0 else 1 end as Response  
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:58:12 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select * from GoodsInvn where ItemNo= ''    
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:58:14 PM
+-----------------------------------------------------------
+Message: ScreenViewJS > InventoryForm_FORM_COMBOBOX_Location :
+ Select Distinct Location.Code,Name as Text from Location Inner Join LocationGroup on Location.Code=LocationGroup.GroupID where LocationGroup.UserID='ADMIN'  Order by Code
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:58:15 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:58:15 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1  
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:58:15 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when ''   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location=''   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when''  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location=''   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:58:21 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT004'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT004'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT004'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT004'   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:58:21 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT004'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT004'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT004'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT004'   ) as Inventoryform where 1=1  
+-----------------------------------------------------------
+
+Time: 03-12-2024 02:58:21 PM
+-----------------------------------------------------------
+Message: ScreenViewJS >  :
+ select ItemNo,ItemName,UOM,ExpiryDate,ExpiryDate1,isnull(CaseQty,0)as CaseQty,BadQty,isnull(LooseQty,0) as LooseQty,TotalCaseQty,ItemNo1,NoColor from    (  select Expiryitem.ItemNO as ItemNo,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate, Expiryitem.ExpiryDate as ExpiryDate1,      case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,   case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor,  (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty from Expiryitem  inner join   Item on Item.ItemNO=Expiryitem.ItemNO   left join UOM UCS  on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join  UOM UPK on UPK.ItemNO=Item.ItemNO and UPK.UOM=Item.LooseUOM   left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno Where 1= (case when '012-LT004'   in (select code from vehicle) then 1 else 0 end)    and Expiryitem.Location='012-LT004'   UNION           select  Expiryitem.ItemNO,Item.[Description] as ItemName,Expiryitem.UOM as UOM,Format(ExpiryItem.ExpiryDate,(Select DateFormatString from system)) as ExpiryDate ,Expiryitem.ExpiryDate as ExpiryDate1,  case when ExpiryDate >cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as ItemNo1,    case when ExpiryDate <=cast(dateadd(d,(select cast(SystemValue as int) from SystemList where Code ='CPFExpiryDate'),getdate()) as date) then 0 else 1 end as Nocolor, (expiryitem.qty-(cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)))/ UCS.BaseQty   as CaseQty,   ISNULL(CAST(GoodsInvn.BadQty as Int)/NULLIF(CAST(UCS.BAseQty as int),0),0) as BadQty,    (cast(Expiryitem.Qty as decimal) % cast(UCS.BAseQty as int)) as LooseQty,  format(isnull(cast(Expiryitem.Qty as int) / CAST(Ucs.BaseQty AS DECIMAL(16,2)),0),'N2')  as TotalCaseQty   from Expiryitem  inner join Item on Item.ItemNO=Expiryitem.ItemNO      left join UOM UCS on UCS.ItemNO=Item.ItemNO and UCS.UOM=Item.BulkUOM   left join UOM UPK on UPK.ItemNO=Item.ItemNO  and UPK.UOM=Item.LooseUOM  left join Goodsinvn on Expiryitem.ItemNo=Goodsinvn.ItemNo and Expiryitem.binno=Goodsinvn.binno where 1= (case when'012-LT004'  not in (select code from vehicle) then 1 else 0 end) and  Expiryitem.Location='012-LT004'   ) as Inventoryform where 1=1   order by ItemNo ASC
+-----------------------------------------------------------
+

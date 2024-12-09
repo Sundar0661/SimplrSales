@@ -1,0 +1,977 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.LoginTitle</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    @*EACH AND EVERY TIME IT REFERS NEW JS, AND CSS FILES*@
+
+    @*<meta http-equiv='cache-control' content='no-cache'>
+        <meta http-equiv='expires' content='0'>
+        <meta http-equiv='pragma' content='no-cache'>*@
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    @*EACH AND EVERY TIME IT REFERS NEW JS, AND CSS FILES*@
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    @*newly added by.M 29.12.2022*@
+    @*<link href="https://fonts.cdnfonts.com/css/3-of-9-barcode" rel="stylesheet">*@
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    @*<link href="~/Content/Bootstrap/bootstrap.min.css" rel="stylesheet" />*@
+    @*<link href="~/Content/Boostrap.css" rel="stylesheet" />*@
+    @*<link href="~/Content/Bootstrap/3.3.7-bootstrap.min.css" rel="stylesheet" />*@
+    <script src="~/Scripts/Bootstrap/bootstrap.min.js"></script>
+    <script src="~/Scripts/aes.js"></script>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/bootstrap")
+    <style>
+
+        td
+        {
+            position:relative;
+        }
+
+        .ClosebtnClass
+        {
+        font-size:12px;
+        color:white;
+        background-color:red;
+        font-family:Poppins-Light.ttf;
+        text-align:center;
+        line-height:none;
+        border-radius:5px;
+        }
+
+        .select2-container
+        {
+            font-size:12px !important;
+        }
+
+        .select2-selection__rendered {
+            font-size: 12px !important;
+            padding-left:0px !important;
+        }
+        .zero {
+            color: rgb(0,0,0);
+        }
+
+        .one {
+            /* color: rgb(255, 0, 0);*/
+            color: rgb(24, 159, 14);
+        }
+
+        .two {
+            color: rgb(255, 106, 0);
+        }
+
+        .three {
+            /*color: rgb(251, 255, 120);*/
+            color: rgb(0, 134, 255);
+        }
+
+        .four {
+            /*color: rgb(255, 255, 0);*/
+            color: rgb(0, 0, 255);
+        }
+
+        .five {
+            color: rgb(24, 159, 14);
+        }
+
+        #container {
+            width: 100%;
+            text-align: center;
+        }
+
+        .sortLeft {
+            float: left;
+            width: 50%;
+            /*background: #fbfbf0;*/
+            padding-left: 5px;
+            text-align: left;
+            /*border: thin;*/
+        }
+
+        .searchRight {
+            float: right;
+            width: 50%;
+            /*background: #fbfbf0;*/
+            padding-right: 5px;
+            text-align: right;
+            /*border: thin;*/
+        }
+
+        /* Style the tab */
+        .tab1 {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            width: 200px;
+        }
+
+            /* Style the buttons that are used to open the tab content */
+            .tab1 button {
+                background-color: lightblue;
+                float: left;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 14px 16px;
+                transition: 0.3s;
+                width: 200px;
+            }
+
+                /* Change background color of buttons on hover */
+                .tab1 button:hover {
+                    background-color: #ddd;
+                }
+
+                /* Create an active/current tablink class */
+                .tab1 button.active {
+                    background-color: ligtblue;
+                }
+
+        /* Style the tab content */
+        .tabcontent1 {
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+            border-radius: 5px;
+        }
+
+        .checkdisable {
+            cursor: pointer;
+        }
+
+        .autocomplete {
+            /*the container must be positioned relative:*/
+            position: relative;
+            display: inline-block;
+        }
+
+        .autocomplete-items {
+            font-size: 12px;
+            position: relative;
+            border: 1px solid #d4d4d4;
+            border-bottom: none;
+            border-top: none;
+            z-index: 99;
+            /*position the autocomplete items to be the same width as the container:*/
+            top: 100%;
+            left: 0;
+            right: 0;
+        }
+
+            .autocomplete-items div {
+                position: relative;
+                z-index: 3600;
+                padding: 10px;
+                cursor: pointer;
+                background-color: #fff;
+                border-bottom: 1px solid #d4d4d4;
+            }
+
+                .autocomplete-items div:hover {
+                    /*when hovering an item:*/
+                    background-color: #e9e9e9;
+                }
+
+        .autocomplete-active {
+            /*when navigating through the items using the arrow keys:*/
+            background-color: DodgerBlue !important;
+            color: #ffffff;
+        }
+
+        .row {
+            /*margin-right: -15px;
+                margin-left: -15px;*/
+        }
+
+        .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+            /*position: relative;*/
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {
+            /*background-color: #f9f9f9;*/
+        }
+
+        .table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {
+            /*background-color: #f9f9f9;*/
+        }
+
+        .navbar {
+            position: relative;
+            min-height: 50px;
+            margin-bottom: 1px;
+            /*margin-bottom: 20px;*/
+            border: 1px solid transparent;
+        }
+
+        .navbar-fixed-top, .navbar-fixed-bottom {
+            position: fixed;
+            right: 0;
+            left: 0;
+            /*z-index: 1030;*/
+            -webkit-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+
+        .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+            color: #555;
+            /*background-color: #e7e7e7;*/
+            background-color: midnightblue;
+        }
+
+        .pagination {
+            display: inline-block;
+            padding-left: 0;
+            /*margin: 20px 0;*/
+            margin: 0px 0;
+            border-radius: 4px;
+        }
+    </style>
+    <style type="text/css">
+        .bs-example {
+            /*margin: 20px;*/
+            font-size: 18px;
+        }
+
+        .navbar-default {
+            background-color: #f8f8f8;
+            border-color: #e7e7e7;
+            width: 98%;
+            height: inherit;
+            margin-left: 1%;
+            margin-right: 1%;
+            /*margin-top: 21px;*/
+            margin-top: 1px;
+        }
+
+        .navbar-dropdown {
+            width: 98%;
+            height: inherit;
+            margin-left: 1%;
+            background-color: #051d67;
+            margin-right: 1%;
+        }
+
+        .dropdown-submenu {
+            position: relative;
+        }
+
+            .dropdown-submenu .dropdown-menu {
+                top: 0;
+                left: 100%;
+                margin-top: -1px;
+            }
+
+        .nav-menu > li > a {
+            padding: 10px 9px !important;
+        }
+
+        .navbar-dropdown > .nav > li > a:hover {
+            background-color: #007dbb !important;
+        }
+
+        .tableDiv {
+            height: inherit !important;
+        }
+
+        .table-bordered {
+            border: 0px solid #ddd !important;
+        }
+    </style>
+
+
+    @Styles.Render("~/Style/css")
+    @* @Scripts.Render("~/jquery/Main")*@
+    <script>
+
+        var url_Login = '@Url.Content("~/Login/Login/")';
+        //var url_Login = '@Url.Content("~/Home/SignOut/")';
+        if ('@Session["ProjectName"]' == null || '@Session["ProjectName"]' == "") {
+            window.location = url_Login;
+        }
+        function PageLogOut(sessionexpired) {
+            setCookie('MainMenuId', "");
+            setCookie('SubMenuId', "");
+
+            setCookie('ScreenName', "");
+            setCookie('FormView', JSON.stringify(""));
+            setCookie('FormView', "");
+            @*EACH AND EVERY TIME IT REFERS NEW JS, AND CSS FILES*@
+
+            var backlen = history.length;
+            history.go(-backlen);
+
+            localStorage.clear();
+
+            @*EACH AND EVERY TIME IT REFERS NEW JS, AND CSS FILES*@
+
+            //window.location.href = loggedOutPageUrl
+
+            //setCookie('LogInType', "PVMSFA");
+            //setCookie('LogInType', "SFANew");
+            setCookie('LogInType', "PVMLiveSFA");
+
+            // document.cookie.split(";").forEach(function (c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
+            if (sessionexpired != undefined && sessionexpired != "")
+                window.location = url_Login + "?sessionexpired=sessionexpired";
+            else
+                window.location = url_Login;
+        }
+
+        var jsVersion = (new Date()).getTime();
+
+        //debugger;
+        var url_JavaScriptErrorData = '@Url.Content("~/Common/JavaScriptErrorData")';
+        var url_JavaScriptErrorData_TestPurpose = '@Url.Content("~/Common/JavaScriptErrorData_TestPurpose")';
+        var url_JavaScriptErrorDataTestPurpose = '@Url.Content("~/Common/JavaScriptErrorDataTestPurpose")';
+    </script>
+    <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+
+    <!------ Include the above in your HEAD tag ---------->
+    @*<link href="~/Content/font/font-awesome.min.css" rel="stylesheet" />*@
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="~/Content/Dynamic.css" rel="stylesheet" />
+    <script src="~/Scripts/Main/ListConfig.js?v=1.7.6"></script>
+    <script src="~/Scripts/Main/FormListConfig.js?v=1.7.6"></script>
+    @*<script src="~/Scripts/Main/FormListConfig.js?v=@DateTime.Now.ToString("ddMMyyyyHHmmss")"></script>*@
+    <script src="~/Scripts/Main/FormConfig.js?v=1.7.6"></script>
+    @*<script src="~/Scripts/Main/FormView.js"></script>*@
+    <script src="~/Scripts/Main/SearchConfig.js?v=1.7.6"></script>
+    <script src="~/Scripts/Main/GeneralCommon.js?v=1.7.6.1"></script>
+
+    <script src="~/Scripts/ImportExport/ImportFile.js?v=1.7.6"></script>
+    <script src="~/Scripts/ImportExport/ExportList.js?v=1.7.6"></script>
+    <script src="~/Scripts/Main/Map.js?v=1.7.6"></script>
+
+    <script src="~/Scripts/Main/Common.js?v=1.7.6"></script>
+
+    <script>
+        //debugger;
+        var systemTableConfig = ''
+        var _screenName = '@ViewBag.ScreenName';
+
+    </script>
+
+    <link href="~/Content/layout.css" rel="stylesheet" />
+
+    <script>
+        var url_GetExecuteReader1 = '@Url.Content("~/Common/ExecuteReader1")';
+        var url_LoadInvoiceReport1 = '@Url.Content("~/VehicleAssignment/LoadInvoiceReport1/")';
+        var url_LoadInvoiceReport = '@Url.Content("~/VehicleAssignment/LoadInvoiceReport/")';
+
+       var url_SendEmail = '@Url.Content("~/Login/SendOTPEmail/")';
+
+
+        // COMMENTED 20.11.2020
+        var url_LoadInvoiceReport_POC = '@Url.Content("~/VehicleAssignment/LoadInvoiceReport_POC/")';
+
+
+        var url_LoadInvoiceReportJSU = '@Url.Content("~/VehicleAssignment/LoadInvoiceReportJSU/")';
+        var url_LoadStockVarianceReport = '@Url.Content("~/VehicleAssignment/LoadStockVarianceReport/")';
+        var url_LoadStockVarianceReport_PVM = '@Url.Content("~/VehicleAssignment/LoadStockVarianceReport_PVM/")';
+
+        var url_ActionConfigClass = '@Url.Content("~/ActionConfig/ActionConfig/")';
+        var url_GetQueryConfigByScreenName = '@Url.Content("~/Common/GetQueryConfigByScreenName/")';
+        var url_FormViewList = '@Url.Content("~/Form/FormList")';
+        var url_FormClickEvent = '@Url.Content("~/Form/FormClickEvent/")';
+        var url_GetActionConfigData = '@Url.Content("~/ActionConfig/GetActionConfigData/")';
+        var url_GetActionConfigData1 = '@Url.Content("~/ActionConfig/GetActionConfigData2/")';
+        var url_DOWNLOADZIP = '@Url.Content("~/ActionConfig/DOWNLOADZIP/")';
+        var url_GetSuggestedOrderQuantity = '@Url.Content("~/ActionConfig/GetSuggestedOrderQuantity/")';
+
+        var url_getFieldList = '@Url.Content("~/ActionConfig/getFieldList/")';
+        var url_GetQueryString = '@Url.Content("~/ActionConfig/GetQueryString/")';
+        var url_ExecuteNonQuerys = '@Url.Content("~/ActionConfig/ExecuteNonQuerys/")';
+        var url_BulkInsertQueries = '@Url.Content("~/ActionConfig/BulkInsertQueries/")';
+        var url_ReportsView = '@Url.Content("~/Reports/ReportView/")';
+        var url_ReportsView1 = '@Url.Content("~/Reports/ReportView1/")';
+        var url_ReportsView2 = '@Url.Content("~/Reports/ReportView2/")';
+        var url_ReportsViewStoreParams = '@Url.Content("~/Reports/Store_ReportParams/")';
+        var url_ReportsViewStoreParams1 = '@Url.Content("~/Reports/Store_ReportParams1/")';
+
+        var url_FormView = '@Url.Content("~/Form/FormView/")';
+        var url_ListConfig = '@Url.Content("~/Common/ListConfig/")';
+        var url_FormConfig = '@Url.Content("~/Common/FormConfig/")';
+        var url_ExportSQL = '@Url.Content("~/ImportExcel/ExportSQL/")';
+         var url_ImageDelete = '@Url.Content("~/ImportExcel/deleteFiles/")';
+        @*var url_ExportSQLUL = '@Url.Content("~/ImportExcel/ExportSQLUL/")';*@
+        var url_ImportFileToSQLUL = '@Url.Content("~/ImportExcel/ImportFileToSQLUL/")';
+        var url_ImportFileUpload = '@Url.Content("~/ImportExcel/ImportFileUpload/")';
+        var url_ImportFileToSQL = '@Url.Content("~/ImportExcel/ImportFileToSQL/")';
+        var url_WriteItemPromoLog = '@Url.Content("~/Common/ItemPromoLogString")';
+        var url_PONewSKUDistributorLog = '@Url.Content("~/Common/PONewSKUDistributorLogString")';
+
+        var url_POReceivingViewFormLogString = '@Url.Content("~/Common/POReceivingViewFormLogString")';
+
+        var url_WriteSearchLog = '@Url.Content("~/Common/SearchLogString")';
+        var url_WritePaginationLog = '@Url.Content("~/Common/PaginationLogString")';
+        var url_ItemPromoLogCalculation = '@Url.Content("~/Common/ItemPromoLogCalculation")';
+        @*var url_ExportSQLUL1 = '@Url.Content("~/ImportExcel/ExportSQLUL1/")';*@
+        var url_ImportFileToSQLUL1 = '@Url.Content("~/ImportExcel/ImportFileToSQLUL1/")';
+        var url_ImportFromExcelToList = '@Url.Content("~/ImportExcel/ImportFromExcelToList/")';
+        var url_ImportFromExcelToListDancom = '@Url.Content("~/ImportExcel/ImportFromExcelToListDancom/")';
+        //var url_MDFImportListDancom = '/ImportExcel/MDFImportListDancom/';
+        var url_MDFImportListDancom = '@Url.Content("~/ImportExcel/MDFImportListDancom/")';
+
+        var url_ExportFileUL = '@Url.Content("~/Export/ExportSQLUL/")';
+        var url_ExportFileULCR = '@Url.Content("~/Export/ExportSQLULCR/")';
+        var url_ExportFile = '@Url.Content("~/Export/ExportSQL/")';
+        var url_ExportSQLFromToDate = '@Url.Content("~/Export/ExportSQLFromToDate/")';
+        var url_ExportSQLFromToDateJSU = '@Url.Content("~/Export/ExportSQLFromToDateJSU/")';
+        var url_ExportCSV = '@Url.Content("~/Export/ExportCSV/")';
+        var url_ExportSQLFromToDateCSV = '@Url.Content("~/Export/ExportSQLFromToDateCSV/")';
+        var url_UploadFiles = '@Url.Content("~/ImportExcel/UploadFiles/")';
+        var url_CheckFiles = '@Url.Content("~/ImportExcel/CheckFile/")';
+        var url_SurveyUploadFiles = '@Url.Content("~/ImportExcel/SurveyUploadFiles/")';
+        var url_ImportConfigMaping = '@Url.Content("~/ImportExcel/ImportConfigMaping/")';
+        var url_ImportConfigMaping1 = '@Url.Content("~/ImportExcel/ImportConfigMaping1/")';
+        var url_ImportFile = '@Url.Content("~/ImportExcel/ImportFile/")';
+        var url_POSDataUploadUL = '@Url.Content("~/ImportExcel/POSDataUploadUL/")';
+        var url_DownloadBlobe = '@Url.Content("~/ImportExcel/DownloadBlobe/")';
+        var url_POSDataUploadAddDelete = '@Url.Content("~/ImportExcel/POSDataUploadAddDelete/")';
+        var url_POSDataUploadError = '@Url.Content("~/ImportExcel/POSDataUploadError/")';
+        var url_RemoveMultiPhoto = '@Url.Content("~/ImportExcel/RemoveMultiPhoto/")';
+        var url_RemovePhoto = '@Url.Content("~/ImportExcel/RemovePhoto/")';
+
+        var url_GetMenuConfig = '@Url.Content("~/Menu/GetMenuConfig/")';
+        var url_GetTabGroupMenuList = '@Url.Content("~/Common/GetTabGroupMenuList/")';
+        var url_GetTabGroupMenuList1 = '@Url.Content("~/Common/GetTabGroupMenuList1/")';
+        var url_GetTabGroupFormList = '@Url.Content("~/Common/GetTabGroupFormList/")';
+        var url_GetDropDownListValue = '@Url.Content("~/Common/GetDropDownListValue")';
+        var url_GetListConfigDropDownValue = '@Url.Content("~/Common/GetListConfigDropDownValue")';
+        var url_GetSearchDropDownListValue = '@Url.Content("~/Common/GetSearchDropDownListValue")';
+
+        var url_GetFormConfigList = '@Url.Content("~/Common/GetFormConfigList")';
+        var url_GetSearchConfigList = '@Url.Content("~/Common/SearchConfig")';
+        var url_GetListConfig = '@Url.Content("~/Common/GetListConfig")';
+        var url_GetLookUpListConfig = '@Url.Content("~/Common/GetLookUpListConfig")';
+        var url_GetListValue = '@Url.Content("~/Common/GetListValue")';
+        var url_GetListQuery = '@Url.Content("~/Common/GetListQuery")';
+        var url_GetListValueN = '@Url.Content("~/Common/GetListValueN")';
+        var url_ExportGetListValue = '@Url.Content("~/Common/ExportGetListValue")';
+        var url_ExportWithOutPagination = '@Url.Content("~/Export/ExportWithOutPagination")';
+
+        var url_ListExport = '@Url.Content("~/Common/ListExport")';
+        var url_GetFormToCopyFields = '@Url.Content("~/Common/GetFormToCopyFields")';
+        @*var url_GetFormConfigHidden = '@Url.Content("~/Common/GetFormConfigHidden")';*@
+        var url_GetRadioButtonListValue = '@Url.Content("~/Common/GetRadioButtonListValue")';
+        var url_ActionConfig = '@Url.Content("~/Common/ActionConfig")';
+        @*var url_JavaScriptErrorData = '@Url.Content("~/Common/JavaScriptErrorData")';
+        var url_JavaScriptErrorData_TestPurpose = '@Url.Content("~/Common/JavaScriptErrorData_TestPurpose")';*@
+
+
+        var url_RunexeExecute = '@Url.Content("~/Common/RunexeExecute")';
+        var url_TempStoreFormView = '@Url.Content("~/Common/TempStoreFormView")';
+        var url_CheckSessionExpired = '@Url.Content("~/Common/CheckSessionExpired")';
+
+        var url_SaveWebtoolAuditlog = '@Url.Content("~/Common/SaveWebtoolAuditlog/")';
+        var url_SEJAdjustItem = '@Url.Content("~/Common/SEJAdjustItem/")';
+
+
+        //Report
+        var url_GETADDRESS = '@Url.Content("~/Reports/GETADDRESS/")';
+        var url_GETDISTANCE = '@Url.Content("~/Reports/GETDISTANCE/")';
+        var url_LOADSERVICE = '@Url.Content("~/Reports/LOADSERVICE/")';
+        var url_LOADPRICESURVEY = '@Url.Content("~/Reports/LOADPRICESURVEY/")';
+        var url_LOADCOMPETITORTRACKING = '@Url.Content("~/Reports/LOADCOMPETITORTRACKING/")';
+        var url_LOADVMI = '@Url.Content("~/Reports/LOADVMI/")';
+        var url_LOADTAKEPHOTO = '@Url.Content("~/Reports/LOADTAKEPHOTO/")';
+        var url_LOADDAILYORDERDETAILREPORT = '@Url.Content("~/Reports/LOADDAILYORDERDETAILREPORT/")';
+        var url_LOADMETERREADING = '@Url.Content("~/Reports/LOADMETERREADING/")';
+        var url_GetExecuteReader = '@Url.Content("~/Common/ExecuteReader")';
+
+        var url_LOADTOPUP = '@Url.Content("~/Reports/LOADTOPUP/")';
+        //Newly added by.M 07.02.2023
+        var url_ExportListData = '@Url.Content("~/Common/ExportListData/")';
+
+        // session problem auto logout=========================
+        var url_KeepSessionAlivePage = '@Url.Content("KeepSessionAlive.aspx")';
+        //var keepSessionAlive = false;
+        //var keepSessionAliveUrl = null;
+        // session problem auto logout=========================
+
+
+        // NEWLY ADDED ============================================= 06.08.2020 Thursday  ============
+        // SIMPLR SALES LITE EINVOICE PURPOSE ===========================================================
+        var url_GetInvoiceProcess_Peppol = '@Url.Content("~/ImportExcel/Peppol_Invoice_Outbound")';
+        var url_GetInvoiceUpdation_Peppol = '@Url.Content("~/ImportExcel/Peppol_Invoice_UpdateStatus")';
+        var url_Register_Form_Data_Peppol = '@Url.Content("~/ImportExcel/Peppol_Register_FormData")';
+        var url_Receive_Invoice_InBound_Peppol = '@Url.Content("~/ImportExcel/Peppol_Receive_Invoice_InBound")';
+        // NEWLY ADDED =========================================================
+        // NEWLY ADDED ============================================= 06.08.2020 Thursday  ============
+
+        // NEWLY ADDED FOR VEHICLE ASSIGNEMENT FOR POD ====================================================
+        var url_Customer_time_Taken_To_Reach_Path = '@Url.Content("~/CustomerMap/time_Taken_Reach_Path")';
+        // NEWLY ADDED FOR VEHICLE ASSIGNEMENT FOR POD ====================================================
+
+        var url_WMSLoadPickingReport = '@Url.Content("~/VehicleAssignment/WMSLoadPickingReport/")';
+
+        var isShowMenu = false;
+
+        var _htmlMenu = '';
+        var _ActiveMenu = '@Session["ActiveMenu"]';
+        var _activeMainMenu = _ActiveMenu.split('$')[1];
+        var _activeSubMenu = _ActiveMenu.split('$')[0] + "_" + _ActiveMenu.split('$')[2];
+
+        var SolutionName = '@Session["SolutionName"]';
+        var ULCR = '@Session["ULCR"]';
+        var AccessLevel = '@Session["AccessLevel"]';
+        // COMMENTED 25.01.2021 FOR MAP CUSTOMER CLICKED ===========
+        var Clicked_Map_CustomerNo = '';
+        // COMMENTED 25.01.2021 FOR MAP CUSTOMER CLICKED ===========
+        var Language = '@Session["Language"]';
+        //var agentID = '@Session["AgentId"]';
+        var WebBrowserName = '@Session["WebBrowserName"]';
+        var SaveImagePath = '@Session["SaveImagePath"]';
+        var PresentationSaveImagePath = '@Session["PresentationSaveImagePath"]';
+        var ServiceSaveImagePath = '@Session["ServiceSaveImagePath"]';
+        var ProjectName = '@Session["ProjectName"]';
+        //debugger;
+        var _URL = '@Session["URL"]';
+
+        var _LastLogin = '@Session["LastLogin"]';
+
+        var _UserID = '@Session["UserId"]';
+
+        var _PlanoGramURL = '@Session["PlanoGramURL"]';
+
+        var _isFormList = false;
+
+        var _isLogin = '@ViewBag.isLogin';
+        if (_isLogin == "True") {
+            setCookie('MainMenuId', "");
+            setCookie('SubMenuId', "");
+            setCookie('ScreenName', "");
+        }
+
+
+    </script>
+
+    @*<script src="~/Scripts/Main/Common.js"></script>*@
+    <script src="~/Scripts/Main/ArrayOperations.js?v=1.7.6"></script>
+    <script src="~/Scripts/utils/Number.js?v=1.7.6"></script>
+    <script src="~/Scripts/Main/Controller.js?v=1.7.6"></script>
+    <script src="~/Scripts/Main/ScreenView.js?v=1.7.6"></script>
+    <script src="~/Scripts/Main/SQL.js?v=1.7.6"></script>
+    <script src="~/Scripts/Main/DBCommon.js?v=1.7.6"></script>
+    <script src="~/Scripts/BaseComponents/AlertDialog.js?v=1.7.6"></script>
+    <script src="~/Scripts/utils/DataBaseConnection.js?v=1.7.6"></script>
+    <script src="~/Scripts/Main/Menu.js?v=1.7.6"></script>
+    <script src="~/Scripts/Main/JsBarcode.all.min.js"></script>
+
+</head>
+<body>
+
+    <div class="bs-example">
+
+        <div class="nav navbar container" style="margin-bottom:0px;width: 98%;background-color: #051d67 !important;">
+            @*<img src="~/Logo/simplrMainLogo1.png" style="margin-left: 48%; width: 3%; background-color: white" />*@
+
+            @*<img style="height: 40px;" />*@
+            @*<img src="~/Images/js_unitrade_logo.jpg"  style="height: 30px;margin-left: 34%;margin-top:0.5%;"/>*@
+            @*<img src="~/Content/themes/base/images/JSULogo.jpg" style="margin-left: 35%;" />*@
+            @*<img src="~/Images/UnileverLogo.png" style="margin-left: 48%; width: 3%; background-color: white" />*@
+            @*<img src="~/Images/MassMarketing.png" style="margin-left: 48%; width: 3%; background-color: white" />*@
+            @if (Session["ProjectName"] != null && Session["ProjectName"].ToString().ToLower() == "etika")
+            {
+                <img src="~/Images/EtikaLogo.png" style="width: 5%;height:48px;  background-color: white" />
+                @*<img src="~/Images/EtikaLogo.png" style="margin-left: 1%; width: 4%;margin-top:0.3%; background-color: white" />*@
+            }
+            @if (Session["ProjectName"] != null && Session["ProjectName"].ToString().ToLower() == "poc")
+            {
+                <img src="~/Images/WSALogo.jpeg" style="height:48px;  background-color: white" />
+                <span style="color: white">@System.Configuration.ConfigurationManager.AppSettings["UATLiveType"]</span>
+            }
+            else
+            {
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a style="color: white">@Session["CompanyName"]</a></li>
+                </ul>
+                @*<span style="color: white;height:48px;"></span>*@
+
+            }
+            @*<img src="~/Images/lotte.jpg" style="margin-left: 9%; width: 4%; background-color: white" />*@
+
+            @*  <ul class="nav navbar-nav navbar-right" style="margin-right:0px">
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" style="color: white;" href="#">@Session["UserName"]<b class="caret"></b></a>
+                        <ul style="background-color: #007dbb" class="dropdown-menu">
+                            <li class="ddmenu-content"><a href="#" style="color: white;" onclick="PageLogOut();"> Log Out </a></li>
+                        </ul>
+                    </li>
+                </ul>*@
+        <ul class="nav navbar-nav navbar-right" style="margin-bottom:0px;margin-right: 0px;margin-top:-7px">
+                        <li>
+                            <a style="color: white">
+                                Welcome, @Session["UserName"]
+                                @if (Session["ProjectName"].ToString().ToLower() == "fgv")
+                                {
+                                    if (Session["Image"] != null && Session["Image"] != "")
+                                    {
+                                        <img src="../../DeviceImages/Images/Images/@Session["Image"]" style="height:20px;width:20px;" />
+                                        <div id="myModal" class="modal">
+                                            <span class="close">&times;</span>
+                                            <img class="modal-content" id="img01">
+                                            <div id="caption"></div>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                    }
+                                }
+
+                                @if (Session["ProjectName"].ToString().ToLower() == "fgv" || Session["ProjectName"].ToString().ToLower() == "ebff" || Session["ProjectName"].ToString().ToLower() == "standard" || Session["ProjectName"].ToString().ToLower() == "ffb")
+                                {
+                                    <br /><small style="font-size:10px;">Last Login: @Session["LastLogin"]</small>
+                                }
+                            </a>
+            </li>
+            <li><a href="#" style="color: white" onclick="PageLogOut()">Log Out</a></li>
+            @*<li><a style="color: white">Welcome, @Session["UserName"]</a></li>
+        <li><a href="#" style="color: white" onclick="PageLogOut()">Log Out</a></li>
+        <br/>
+        <li><a style="color: white">Last Login: @Session["LastLogin"]</a></li>
+                <span><a style="color: white">Welcome, @Session["UserName"]</a></span>
+                <span><a href="#" style="color: white" onclick="PageLogOut()">Log Out</a></span>
+                @if (Session["ProjectName"].ToString().ToLower() == "fgv")
+                {
+                    <br />
+                    <span><a style="color: white; font-size: 10px;">Last Login: @Session["LastLogin"]</a></span>
+                }*@
+        </ul>
+        </div>
+
+        <nav class="navbar navbar-default" style="margin-bottom:0px;">
+            <div class="navbar-header">
+                <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbarCollapse" class="collapse navbar-collapse" style="background-color: #007dbb">
+                <input type="hidden" id="MenuCode" />
+                <div id="Menu"></div>
+
+                <script type="text/javascript">
+
+                    if ('@Session["IsShowMenu"]' == null) {
+                        // INVOKE LOGIN PAGE ============
+                        setCookie('MainMenuId', "");
+                        setCookie('SubMenuId', "");
+                        setCookie('ScreenName', "");
+
+                        window.location = "../Login/Login/";
+                    }
+
+                    else if ('@Session["IsShowMenu"]' == 'True') {
+                        isShowMenu = true;
+                        //// MOBILE SITE
+                        //$("#div_logout").hide();
+                        //// MenuConfig();
+
+                        // NORMAL SITE
+                        $("#div_logout").show();
+                        MenuConfig();
+                    }
+                    else {
+                        _htmlMenu = '@Session["HtmlMenu"]';
+                        if (_htmlMenu == '') {
+                            isShowMenu = true;
+
+                            $("#div_logout").show();
+                            MenuConfig();
+                        }
+                    }
+
+                </script>
+            </div>
+        </nav>
+    </div>
+
+    @RenderBody()
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jquery-ui")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+    /********************************************Session Expiry Code Start****************************************************************************/
+
+    var add_minutes = function(dt, minutes, mins) {
+    return new Date(dt.getTime() + minutes * 60000);
+}
+    var end;
+var minutes;
+var seconds;
+
+var sessionMintus = '@Session["SessionTimeOut"]';
+var sessionEnddate = new Date();
+console.log(sessionMintus + '   sessionMintus');
+    sessionEnddate = add_minutes(sessionEnddate, (sessionMintus/60), 20) //sessionEnddate.setMinutes(sessionEnddate.getMinutes() + parseInt(sessionMintus));
+console.log(sessionEnddate + '   sessionendate1');
+sessionEnddate = (Date.parse(sessionEnddate) / 1000);
+console.log(sessionEnddate + '   sessionendate2');
+end = (Date.parse(sessionEnddate) / 1000);
+console.log(end + '   end');
+    var myInterval = setInterval(function() {
+    SessionTimer();
+}, 1000);
+
+function setCookie(key, value) {
+        var expires = new Date();
+        expires.setTime(expires.getTime() + (1 * 24 * 60 * 60 * 1000));
+        document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+    }
+    function sessionAlertMessage() {
+    var btns = {};
+    btns["Yes"] = function(e) {
+    end=0;
+        minutes = 0;
+        seconds = 0;
+
+        sessionMintus = '@Session["SessionTimeOut"]';
+        sessionEnddate = new Date();
+        console.log(sessionMintus + '   sessionMintus');
+        sessionEnddate = add_minutes(sessionEnddate, (sessionMintus/60), 20) //sessionEnddate.setMinutes(sessionEnddate.getMinutes() + parseInt(sessionMintus));
+        console.log(sessionEnddate + '   sessionendate1');
+        sessionEnddate = (Date.parse(sessionEnddate) / 1000);
+        console.log(sessionEnddate + '   sessionendate2');
+        end = (Date.parse(sessionEnddate) / 1000);
+        console.log(end + '   end');
+        $(this).dialog("close");
+        setCookie('FormView', JSON.stringify(""));
+        @Session["ScreenName"] = '@ViewBag.ScreenName';
+
+    }
+    btns["No"] = function(e) {
+        $(this).dialog("close");
+    }
+    var htmTitle = '<div style="display: inline-block;float:left;">Session Alert!</div> ';
+    $('#SessionAlertId').remove();
+    $('<div id="SessionAlertId"></div>').appendTo('body')
+        .html('<div><h6>Your session will expire in <b><span id="seconds-timer"></span> </b> seconds. Do you want to extend the session? </h6></div>').dialog({
+            modal: true,
+            title: htmTitle,
+            zIndex: 10000,
+            autoOpen: true,
+            width: '35%',
+            resizable: false,
+            buttons: btns
+        });
+}
+
+function showAlertExpire() {
+    var btns = {};
+    btns["Ok"] = function(e) {
+
+        $(this).dialog("close");
+        PageLogOut();
+    }
+    var htmTitle = '<div style="display: inline-block;float:left;">Simplr</div> ';
+    $('#SessionExpire').remove();
+    $('<div id="SessionExpire"></div>').appendTo('body')
+        .html('<div><h6> Session Expired </h6></div>').dialog({
+            modal: true,
+            title: htmTitle,
+            zIndex: 10000,
+            autoOpen: true,
+            width: '35%',
+            resizable: false,
+            buttons: btns
+        });
+}
+
+
+
+
+function SessionTimer() {
+    var now = new Date();
+    now = (Date.parse(now) / 1000);
+    console.log(now + '   now');
+    var timeLeft = (sessionEnddate - now);
+    console.log(timeLeft + '   timesLeft');
+    var days = Math.floor(timeLeft / 86400);
+    var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+    minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600)) / 60);
+    seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+    if (minutes < "10") {
+        minutes = "0" + minutes;
+    }
+    if (seconds < "10") {
+        seconds = "0" + seconds;
+    }
+    console.log(minutes + ' : ' + seconds);
+    $('#seconds-timer').html(minutes + ' : ' + seconds);
+    if (parseInt(minutes) == '00' && parseInt(seconds) == "59")
+    {
+        sessionAlertMessage();
+    }
+    if (parseInt(minutes) == '00' && parseInt(seconds) == "00") {
+
+        showAlertExpire();
+        $('#SessionAlertId').remove();
+    }
+    if (timeLeft < 0) {
+        clearInterval(myInterval);
+        $('#seconds-timer').html('00' + ' : ' + '00');
+        showAlertExpire();
+        $('#SessionAlertId').remove();
+    }
+}
+    /********************************************Sessio Expiry Code End**************************************************************************/
+
+    $(document).ready(function () {
+
+        var modal = document.getElementById("myModal");
+        var imgs = document.getElementsByClassName("myImg");
+        for (var i = 0; i < imgs.length; i++) {
+            imgs[i].addEventListener("click", function () {
+                modal.style.display = "block";
+                document.getElementById("img01").src = this.src;
+                document.getElementById("caption").innerHTML = this.alt;
+            });
+        }
+        var span = document.getElementsByClassName("close")[0];
+        try {
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+        } catch (e) {
+
+        }
+
+        $('.dropdown-submenu a.test').on("click", function (e) {
+            $(this).next('ul').toggle();
+            e.stopPropagation();
+            e.preventDefault();
+        });
+
+        for (i = 0; i < document.anchors.length; i++) {
+            document.anchors[i].onmousedown = protect;
+        }
+    });
+
+    function protect(e) {
+        //alert('Right mouse button not allowed!');
+        this.oncontextmenu = function () {
+
+            return false;
+        };
+    }
+
+
+</script>
+
+<style>
+    .ddmenu-content li:hover {
+        background-color: darkblue;
+    }
+</style>
+
+@*twitter-bootstrap/3.3.7/css/bootstrap.min.css -- main menu space - padding --13px*@
+<style>
+    .nav > li > a {
+        position: relative;
+        display: block;
+        padding: 14px 11px;
+    }
+</style>
+
+<style type="text/css">
+    body {
+        font-family: Arial;
+        font-size: 10pt;
+    }
+
+    .myImg {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        .myImg:hover {
+            opacity: 0.7;
+        }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.9);
+    }
+
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 70%;
+        max-width: 500px;
+    }
+
+    #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+    }
+
+    .modal-content, #caption {
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #fff;
+        opacity: 1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+</style>

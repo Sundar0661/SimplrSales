@@ -1,0 +1,30 @@
+Time: 21-02-2024 10:31:28 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='On Shelf Availability'
+-----------------------------------------------------------
+
+Time: 21-02-2024 10:31:29 AM
+-----------------------------------------------------------
+Message: ReadRecord : select distinct H.TransNo as [Document No],H.CustNo AS [Customer No],C.CustName AS [Customer Name],Format(H.TransDate,'MM/dd/yyyy hh:mm:ss') as [Date and Time],D.ItemNo as [Item No],I.Description as [Item Name],SACS as [SA CS Qty],SAPC as [SA PC Qty],WHCS as [WH CS Qty],WHPC as [WH PC Qty],StatusCode as [Stock Status],StatusDesc as [Status Description],D.ReasonCode as [OOS Reason Code],D.ReasonDesc [OOS Reason Description],H.AgentID as [Sales Agent], S.Name as [Sales Agent Name],[FileName] as [Image File Name] from V5_OSAHeader H Inner Join V5_OSADetail D on H.TransNo = D.TransNo Inner Join (Select CustNo,Custname from Customer) C on H.CustNo =C.CustNo Inner Join Item I on D.ItemNo = I.ItemNo Inner Join (Select Code,name from SalesAgent) S on H.AgentID = S.Code left Join (Select DocNo,FileName from PhotoTransactions) P on H.TransNo = P.DocNo Where  Convert(date,H.TransDate) between Convert(Date,'2024-02-07 00:00:00.000') and Convert(Date,'2024-02-21 23:59:59.000') order by Format(H.TransDate,'MM/dd/yyyy hh:mm:ss')
+-----------------------------------------------------------
+
+Time: 21-02-2024 10:31:29 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 21-02-2024 10:34:39 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='On Shelf Availability'
+-----------------------------------------------------------
+
+Time: 21-02-2024 10:35:49 AM
+-----------------------------------------------------------
+Message: ReadRecord : select distinct H.TransNo as [Document No],H.CustNo AS [Customer No],C.CustName AS [Customer Name],Format(H.TransDate,'MM/dd/yyyy hh:mm:ss') as [Date and Time],D.ItemNo as [Item No],I.Description as [Item Name],SACS as [SA CS Qty],SAPC as [SA PC Qty],WHCS as [WH CS Qty],WHPC as [WH PC Qty],StatusCode as [Stock Status],StatusDesc as [Status Description],D.ReasonCode as [OOS Reason Code],D.ReasonDesc [OOS Reason Description],H.AgentID as [Sales Agent], S.Name as [Sales Agent Name],[FileName] as [Image File Name] from V5_OSAHeader H Inner Join V5_OSADetail D on H.TransNo = D.TransNo Inner Join (Select CustNo,Custname from Customer) C on H.CustNo =C.CustNo Inner Join Item I on D.ItemNo = I.ItemNo Inner Join (Select Code,name from SalesAgent) S on H.AgentID = S.Code left Join (Select DocNo,FileName from PhotoTransactions) P on H.TransNo = P.DocNo Where  Convert(date,H.TransDate) between Convert(Date,'2024-02-07 00:00:00.000') and Convert(Date,'2024-02-21 23:59:59.000') order by Format(H.TransDate,'MM/dd/yyyy hh:mm:ss')
+-----------------------------------------------------------
+
+Time: 21-02-2024 10:35:49 AM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+

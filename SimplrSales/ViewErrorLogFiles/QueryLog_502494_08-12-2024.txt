@@ -1,0 +1,646 @@
+08-12-2024 09:49:23 PM: select SystemValue from systemlist where code ='YearPickerLimit' and SolutionName='SALES-WEB'
+
+08-12-2024 09:50:17 PM: SELECT * FROM MessageConfig  where solutionName='SALES-WEB'  order by ScreenName
+
+08-12-2024 09:50:18 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard%'  order by ScreenName, FieldName
+
+08-12-2024 09:50:19 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard%'  order by roworder
+
+08-12-2024 09:50:20 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'EXECUTELOG'
+
+08-12-2024 09:50:20 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'MainMenuLoad'
+
+08-12-2024 09:50:20 PM: select * from Gridfunctions where screenname =N'MAIN' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+08-12-2024 09:50:20 PM: select * from Gridfunctions where screenname =N'Masters' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+08-12-2024 09:50:21 PM: select * from Gridfunctions where screenname =N'Customers' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+08-12-2024 09:50:21 PM: select * from Gridfunctions where screenname =N'Inventory' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+08-12-2024 09:50:21 PM: select * from Gridfunctions where screenname =N'Sales' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+08-12-2024 09:50:21 PM: select * from Gridfunctions where screenname =N'Payments' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+08-12-2024 09:50:22 PM: select * from Gridfunctions where screenname =N'Data Transfer' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+08-12-2024 09:50:22 PM: select * from Gridfunctions where screenname =N'Reports' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+08-12-2024 09:50:23 PM: select * from Gridfunctions where screenname =N'Administration' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+08-12-2024 09:50:31 PM: select * from SystemList
+
+08-12-2024 09:50:32 PM: select * from System
+
+08-12-2024 09:50:34 PM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='Web_DashBoard_01_FORM'
+
+08-12-2024 09:50:34 PM: SELECT * FROM ActionConfig WHERE ScreenName='Web_DashBoard_01' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+08-12-2024 09:50:34 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='Web_DashBoard_01' and Language = 'English' and (AccessLevel is null or AccessLevel ='7')  order by displayno
+
+08-12-2024 09:50:35 PM: SELECT * FROM FormConfig where  ScreenName='Web_DashBoard_01' and Language = 'English' ORDER BY ScreenName, DisplayNo
+
+08-12-2024 09:50:35 PM: SELECT * FROM ActionConfig WHERE ScreenName='undefined' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+08-12-2024 09:50:35 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'
+
+08-12-2024 09:50:54 PM: SELECT * FROM ActionConfig WHERE ScreenName='MAIN' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+08-12-2024 09:51:03 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard_01%'  order by ScreenName, FieldName
+
+08-12-2024 09:51:03 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard_01%'  order by roworder
+
+08-12-2024 09:51:04 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'NewCustomerList%'  order by ScreenName, FieldName
+
+08-12-2024 09:51:04 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'NewCustomerList%'  order by roworder
+
+08-12-2024 09:51:05 PM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='NewCustomerList_FORM'
+
+08-12-2024 09:51:05 PM: SELECT * FROM ActionConfig WHERE ScreenName='NewCustomerList' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+08-12-2024 09:51:05 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerList' and Language = 'English' and (AccessLevel is null or AccessLevel ='7')  order by displayno
+
+08-12-2024 09:51:07 PM: select ISNULL(COUNT(FieldName),0) cnt from ListConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer' and fieldname = 'isUpDown'
+
+08-12-2024 09:51:08 PM: select ISNULL(COUNT(FieldName),0) cnt from SEARCHConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'
+
+08-12-2024 09:51:09 PM: select * from formconfig where screenname like 'NewCustomerList' and fieldname like 'Lstcustomer'
+
+08-12-2024 09:51:09 PM: select * from listconfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerList_LISTVIEW_Lstcustomer' and Language ='English' and (AccessLevel is null or AccessLevel ='7') order by displayno
+
+08-12-2024 09:51:11 PM: select SystemValue from systemlist where code ='PaginationLimit' and SolutionName='SALES-WEB'
+
+08-12-2024 09:51:11 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='NewCustomerList_LISTVIEW_Lstcustomer' and SolutionName = 'SALES-WEB'
+
+08-12-2024 09:51:12 PM: Select CustID,CustName,AgentID,AgentName from (select N.CustID,N.CustName,N.AgentID,SA.Name as AgentName from NewCust N inner join SalesAgent SA on SA.Code=N.AgentID Inner Join SalesmanGroup G on G.GroupID=SA.NodeTreeValue Where G.UserID='502494' and N.Active=1  and IsNull(N.IsConfirmed,0)=1  and IsNull(N.HQConfirmed,0)=0) as A Where 1=1   Order by CustID offset  0  rows Fetch next 10 rows only
+
+08-12-2024 09:51:13 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (Select CustID,CustName,AgentID,AgentName from (select N.CustID,N.CustName,N.AgentID,SA.Name as AgentName from NewCust N inner join SalesAgent SA on SA.Code=N.AgentID Inner Join SalesmanGroup G on G.GroupID=SA.NodeTreeValue Where G.UserID='502494' and N.Active=1  and IsNull(N.IsConfirmed,0)=1  and IsNull(N.HQConfirmed,0)=0) as A Where 1=1  ) rs
+
+08-12-2024 09:51:16 PM: select * from SearchConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 09:51:16 PM: select * from SortConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 09:51:17 PM: select * from SearchConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 09:51:17 PM: select * from SortConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 09:51:18 PM: select * from SearchConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 09:51:19 PM: select * from SortConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 09:51:19 PM: select * from SearchConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 09:51:20 PM: select * from SortConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 09:51:21 PM: select * from SearchConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 09:51:21 PM: select * from SortConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 09:51:22 PM: select * from SearchConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 09:51:22 PM: select * from SortConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 09:51:23 PM: select * from SearchConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 09:51:24 PM: select * from SortConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 09:51:24 PM: select * from SearchConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 09:51:25 PM: select * from SortConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 09:51:25 PM: select * from SearchConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 09:51:26 PM: select * from SortConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 09:51:27 PM: select * from SearchConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 09:51:27 PM: select * from SortConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 09:51:28 PM: SELECT * FROM FormConfig where  ScreenName='NewCustomerList' and Language = 'English' ORDER BY ScreenName, DisplayNo
+
+08-12-2024 09:51:42 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'NewCustomerList%'  order by ScreenName, FieldName
+
+08-12-2024 09:51:42 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'NewCustomerList%'  order by roworder
+
+08-12-2024 09:51:43 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'NewCustomerForm%'  order by ScreenName, FieldName
+
+08-12-2024 09:51:43 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'NewCustomerForm%'  order by roworder
+
+08-12-2024 09:51:44 PM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='NewCustomerForm_FORM'
+
+08-12-2024 09:51:46 PM: select Top 1 Longitude,Latitude,CASE WHEN IIF(deptcode like '%1%','1','0')=1 then 1 else 0 End as [Day],case when IIF(deptcode like '%2%','1','0')=1 then 1 else 0 End  as Day2 ,case when IIF(deptcode like '%3%','1','0')=1 then 1 else 0 End  as Day3,case when IIF(deptcode like '%4%','1','0')=1 then 1 else 0 end  as Day4,  case when IIF(deptcode like '%5%','1','0')=1 then 1 else 0 End  as Day5,case when IIF(deptcode like '%6%','1','0')=1 then 1 else 0 End  as Day6,CASE WHEN IIF(outlettype like '%Week1%','1','0')=1 then 1 else 0 End as RouteWeek,case when IIF(outlettype like '%Week2%','1','0')=1 then 1 else 0 End as Week2, (Select Description from custgroup where custgroup.code=NewCust.GSTCustGroup) as CustGroup,CustID,    CustName,Case when Address2='' then Address else  Concat(Address,',',Address2) end  as Address,NewCust.MobileNo , NewCust.AgentID+' - '+SA.Name as AgentID1,NewCust.AgentID as AgentID,N.SalesRegion as SalesRegion ,  (Select Distinct ProvinceName from ProvinceMaster   where ProvinceMaster.ProvinceCode=NewCust.Province) as Province,    (select Distinct BarangayName from Barangay where Barangay.Code=NewCust.Barangay) as Barangay,    NewCust.City as City,CustClass,NewCust.Email,NewCust.Phone,NewCust.Contact as ContactPerson,Pin,'http://13.67.95.127/SimplrEBFFSalesService/Photo/'+'/'+Phototransactions.FileName as UserImage, NewCust.Active,BillAdd2,BillAdd3,BillAdd4,NC.Name,NC.Designation,NC.PhoneNo,Channel,SubChannel ,PaymentTerms,PaymentMethod,CSALicenseNo,CSAValidity,SSTRegNo,MSICCode,ECOSS,LicenseNo,LicenseType,FORMAT(CL.StartDate,(Select DateFormatString from system)) as StartDate,FORMAT(CL.EndDate,(Select DateFormatString from system)) as EndDate,ShipName ,ShipAddr ,ShipAddr2 ,ShipAddr3 ,ShipAddr4 ,ShipPost ,ShipCity  ,ProvisionalBalance, ZoneCode,[Bill-toNo],Address2,Address3,Address4,City,Pin as PostCode,state from NewCust  Inner Join SalesAgent SA on NewCust.AgentID=SA.Code inner join nodetree N ON N.SalesManTerritory=NewCust.AgentID left join NewCustContacts NC ON NC.CustNo = NewCust.CustId Left join PhotoTransactions on PhotoTransactions.CustNo= NewCust.CustID Left Join CommodityLicense CL ON CL.CustNo=NewCust.CustId    where  CustID='DOP0000031' Union select Top 1 Longitude,Latitude,CASE WHEN IIF(deptcode like '%1%','1','0')=1 then 1 else 0 End as Day,case when IIF(deptcode like '%2%','1','0')=1 then 1 else 0 End  as Day2 ,case when IIF(deptcode like '%3%','1','0')=1 then 1 else 0 End  as Day3,case when IIF(deptcode like '%4%','1','0')=1 then 1 else 0 end  as Day4,  case when IIF(deptcode like '%5%','1','0')=1 then 1 else 0 End  as Day5,case when IIF(deptcode like '%6%','1','0')=1 then 1 else 0 End  as Day6,CASE WHEN IIF(outlettype like '%Week1%','1','0')=1 then 1 else 0 End as RouteWeek,case when IIF(outlettype like '%Week2%','1','0')=1 then 1 else 0 End as Week2,(Select Description from custgroup where custgroup.code=NewCust.GSTCustGroup) as CustGroup,CustID,    CustName,Case when Address2='' then Address else  Concat(Address,',',Address2) end  as Address,NewCust.MobileNo,NewCust.AgentID+' - '+SA.Name as AgentID1,NewCust.AgentID as AgentID,N.SalesRegion as SalesRegion , (Select Distinct ProvinceName from ProvinceMaster where ProvinceMaster.ProvinceCode=NewCust.Province) as Province,    (select Distinct BarangayName from Barangay where Barangay.Code=NewCust.Barangay) as Barangay,    NewCust.City as City,CustClass,NewCust.Email,NewCust.Phone,NewCust.Contact as ContactPerson,Pin,'http://13.67.95.127/SimplrEBFFSalesService/Photo/'+'/'+Phototransactions.FileName as UserImage,NewCust.Active,BillAdd2,BillAdd3,BillAdd4,NC.Name,NC.Designation,NC.PhoneNo,Channel,SubChannel,PaymentTerms,PaymentMethod,CSALicenseNo,CSAValidity,SSTRegNo,MSICCode,ECOSS,LicenseNo,LicenseType,FORMAT(CL.StartDate,(Select DateFormatString from system)) as StartDate,FORMAT(CL.EndDate,(Select DateFormatString from system)) as EndDate,ShipName ,ShipAddr ,ShipAddr2 ,ShipAddr3 ,ShipAddr4 ,ShipPost ,ShipCity  ,ProvisionalBalance, ZoneCode,[Bill-toNo],Address2,Address3,Address4,City,Pin as PostCode,state from NewCust     Inner Join SalesAgent SA on NewCust.AgentID=SA.Code   Inner Join SalesmanGroup G on G.GroupID=SA.NodeTreeValue inner join nodetree N ON N.SalesManTerritory=NewCust.AgentID left join NewCustContacts NC ON NC.CustNo = NewCust.CustId Left Join CommodityLicense CL ON CL.CustNo=NewCust.CustId Left join PhotoTransactions on PhotoTransactions.CustNo= NewCust.CustID where 'DOP0000031' = ''     and CustID =(Select top 1 CustID from NewCust N inner join SalesAgent SA on SA.Code=N.AgentID   Inner Join   SalesmanGroup G on G.GroupID=SA.NodeTreeValue  Where G.UserID='502494' and N.Active=1 and IsNull(N.HQConfirmed,0)=0 and IsNull(N.IsConfirmed,0)=0   Order By custid)  
+
+08-12-2024 09:51:46 PM: SELECT * FROM ActionConfig WHERE ScreenName='NewCustomerForm' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+08-12-2024 09:51:47 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm' and Language = 'English' and (AccessLevel is null or AccessLevel ='7')  order by displayno
+
+08-12-2024 09:51:50 PM: select QueryText + ' ' + isnull(GroupText,'') + ' ' + isnull(OrderText,'') from Queryconfig where screenname ='NewCustomerForm_FORM_TABGROUP'
+
+08-12-2024 09:51:54 PM: Select 1 as Display,  'General' as Descriptions, 'General' as Value UNION Select  2 as Display,'Communication' as Descriptions, 'Communication' as Value UNION Select  3 as Display,'Invoicing' as Descriptions, 'Invoicing' as Value UNION Select  4 as Display,'Payment' as Descriptions, 'Payment' as Value UNION Select  5 as Display,'Shipping' as Descriptions, 'Shipping' as Value UNION Select 6 as Display,'Contacts' as Descriptions, 'Contacts' as Value UNION Select 7 as Display,'License' as Descriptions, 'License' as Value UNION Select  8 as Display,'Photo' as Descriptions, 'Photo' as Value  
+
+08-12-2024 09:51:54 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_General' and Language = 'English' and (AccessLevel is null or AccessLevel ='7')  order by displayno
+
+08-12-2024 09:51:54 PM: select ISNULL(COUNT(FieldName),0) cnt from ListConfig where  ScreenName = 'NewCustomerForm_General_LISTVIEW_Lstcustomer' and fieldname = 'isUpDown'
+
+08-12-2024 09:51:54 PM: select ISNULL(COUNT(FieldName),0) cnt from SEARCHConfig where  ScreenName = 'NewCustomerForm_General_LISTVIEW_Lstcustomer'
+
+08-12-2024 09:51:55 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'NewCustomerForm_FORM_COMBOBOX_Channel'
+
+08-12-2024 09:51:55 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'NewCustomerForm_FORM_COMBOBOX_SubChannel'
+
+08-12-2024 09:51:56 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'NewCustomerForm_FORM_COMBOBOX_State'
+
+08-12-2024 09:51:58 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_Communication' and Language = 'English' and (AccessLevel is null or AccessLevel ='7')  order by displayno
+
+08-12-2024 09:52:03 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_Invoicing' and Language = 'English' and (AccessLevel is null or AccessLevel ='7')  order by displayno
+
+08-12-2024 09:52:03 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'NewCustomerForm_FORM_COMBOBOX_PriceGroup'
+
+08-12-2024 09:52:23 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_Payment' and Language = 'English' and (AccessLevel is null or AccessLevel ='7')  order by displayno
+
+08-12-2024 09:52:23 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'NewCustomerForm_FORM_COMBOBOX_PaymentTerms'
+
+08-12-2024 09:52:24 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'NewCustomerForm_FORM_COMBOBOX_PaymentMethod'
+
+08-12-2024 09:52:26 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_Shipping' and Language = 'English' and (AccessLevel is null or AccessLevel ='7')  order by displayno
+
+08-12-2024 09:52:28 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_Contacts' and Language = 'English' and (AccessLevel is null or AccessLevel ='7')  order by displayno
+
+08-12-2024 09:52:29 PM: select ISNULL(COUNT(FieldName),0) cnt from SEARCHConfig where  ScreenName = 'NewCustomerForm_Contacts_LISTVIEW_Contacts'
+
+08-12-2024 09:52:34 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_License' and Language = 'English' and (AccessLevel is null or AccessLevel ='7')  order by displayno
+
+08-12-2024 09:52:34 PM: select ISNULL(COUNT(FieldName),0) cnt from ListConfig where  ScreenName = 'NewCustomerForm_License_LISTVIEW_LicenseLst' and fieldname = 'isUpDown'
+
+08-12-2024 09:52:35 PM: select ISNULL(COUNT(FieldName),0) cnt from SEARCHConfig where  ScreenName = 'NewCustomerForm_License_LISTVIEW_LicenseLst'
+
+08-12-2024 09:52:35 PM: select DateFormatString, TimeFormatString, DateTimeFormatString from system
+
+08-12-2024 09:52:39 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_Photo' and Language = 'English' and (AccessLevel is null or AccessLevel ='7')  order by displayno
+
+08-12-2024 09:52:40 PM: select * from formconfig where screenname like 'NewCustomerForm_General' and fieldname like 'Lstcustomer'
+
+08-12-2024 09:52:41 PM: select * from listconfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_General_LISTVIEW_Lstcustomer' and Language ='English' and (AccessLevel is null or AccessLevel ='7') order by displayno
+
+08-12-2024 09:52:41 PM: SELECT * FROM ActionConfig WHERE ScreenName = 'NewCustomerForm_Image_SAVEPHOTO' ORDER By ActionName, DIsplayNo
+
+08-12-2024 09:52:41 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='NewCustomerForm_General_LISTVIEW_Lstcustomer' and SolutionName = 'SALES-WEB'
+
+08-12-2024 09:52:42 PM:    
+
+08-12-2024 09:52:42 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (  ) rs
+
+08-12-2024 09:52:42 PM: Exception : Incorrect syntax near ')'.
+
+08-12-2024 09:52:42 PM: select * from formconfig where screenname like 'NewCustomerForm_Contacts' and fieldname like 'Contacts'
+
+08-12-2024 09:52:43 PM: select * from listconfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_Contacts_LISTVIEW_Contacts' and Language ='English' and (AccessLevel is null or AccessLevel ='7') order by displayno
+
+08-12-2024 09:52:43 PM: SELECT * FROM ActionConfig WHERE ScreenName = 'NewCustomerForm_Image_SAVEPHOTO' ORDER By ActionName, DIsplayNo
+
+08-12-2024 09:52:43 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='NewCustomerForm_Contacts_LISTVIEW_Contacts' and SolutionName = 'SALES-WEB'
+
+08-12-2024 09:52:43 PM: Select Code,Designation,Name,PhoneNo from NewCustContacts where CustNo=''   Order by Name
+
+08-12-2024 09:52:43 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (Select Code,Designation,Name,PhoneNo from NewCustContacts where CustNo=''  ) rs
+
+08-12-2024 09:52:44 PM: select * from SearchConfig where  ScreenName = 'NewCustomerForm_Contacts_LISTVIEW_Contacts'   order by displayno
+
+08-12-2024 09:52:44 PM: select * from SortConfig where  ScreenName = 'NewCustomerForm_Contacts_LISTVIEW_Contacts'   order by displayno
+
+08-12-2024 09:52:44 PM: select * from formconfig where screenname like 'NewCustomerForm_License' and fieldname like 'LicenseLst'
+
+08-12-2024 09:52:44 PM: select * from listconfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_License_LISTVIEW_LicenseLst' and Language ='English' and (AccessLevel is null or AccessLevel ='7') order by displayno
+
+08-12-2024 09:52:44 PM: SELECT * FROM ActionConfig WHERE ScreenName = 'NewCustomerForm_Image_SAVEPHOTO' ORDER By ActionName, DIsplayNo
+
+08-12-2024 09:52:45 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='NewCustomerForm_License_LISTVIEW_LicenseLst' and SolutionName = 'SALES-WEB'
+
+08-12-2024 09:52:45 PM: Select CL.ItemNo as AItemNo,I.Description from CommodityLicense CL inner join Item I ON I.ItemNo=CL.ItemNo WHERE ISNULL(CustNo,'')=''   Order by AItemNo
+
+08-12-2024 09:52:45 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (Select CL.ItemNo as AItemNo,I.Description from CommodityLicense CL inner join Item I ON I.ItemNo=CL.ItemNo WHERE ISNULL(CustNo,'')=''  ) rs
+
+08-12-2024 09:52:45 PM: select * from SearchConfig where  ScreenName = 'NewCustomerForm_License_LISTVIEW_LicenseLst'   order by displayno
+
+08-12-2024 09:52:46 PM: select * from SortConfig where  ScreenName = 'NewCustomerForm_License_LISTVIEW_LicenseLst'   order by displayno
+
+08-12-2024 09:52:46 PM: select * from (Select Distinct Code as Code,Description as Text from Channel) as A  
+
+08-12-2024 09:52:46 PM: select * from (Select Distinct Code as Code,Description as Text from SubChannel) as B  
+
+08-12-2024 09:52:46 PM: select * from (Select Distinct Code as Code,Description as Text from SubChannel) as B  
+
+08-12-2024 09:52:47 PM: select distinct Code as Code,Name as Text from States  Order by Code
+
+08-12-2024 09:52:47 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'NewCustomerForm_General_FORM_COMBOBOX_SalesRegion'
+
+08-12-2024 09:52:48 PM: Select Code,Code as Text  from PriceGroup  order by Code asc
+
+08-12-2024 09:52:49 PM: select * from (select Distinct Code as Code, Description as Text from PayTerms) as A  Order by Code
+
+08-12-2024 09:52:50 PM: select * from (select Distinct Code as Code, Description as Text from PayMethod) as A  Order by Code
+
+08-12-2024 09:53:18 PM: select * from formconfig where screenname like 'NewCustomerForm_General' and fieldname like 'Lstcustomer'
+
+08-12-2024 09:53:18 PM: select * from listconfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_General_LISTVIEW_Lstcustomer' and Language ='English' and (AccessLevel is null or AccessLevel ='7') order by displayno
+
+08-12-2024 09:53:18 PM: SELECT * FROM ActionConfig WHERE ScreenName = 'NewCustomerForm_Image_SAVEPHOTO' ORDER By ActionName, DIsplayNo
+
+08-12-2024 09:53:18 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='NewCustomerForm_General_LISTVIEW_Lstcustomer' and SolutionName = 'SALES-WEB'
+
+08-12-2024 09:53:19 PM:    
+
+08-12-2024 09:53:20 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (  ) rs
+
+08-12-2024 09:53:20 PM: Exception : Incorrect syntax near ')'.
+
+08-12-2024 09:53:20 PM: select * from SearchConfig where  ScreenName = 'NewCustomerForm_General_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 09:53:21 PM: select * from SortConfig where  ScreenName = 'NewCustomerForm_General_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 09:53:22 PM: select * from formconfig where screenname like 'NewCustomerForm_Contacts' and fieldname like 'Contacts'
+
+08-12-2024 09:53:22 PM: select * from listconfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_Contacts_LISTVIEW_Contacts' and Language ='English' and (AccessLevel is null or AccessLevel ='7') order by displayno
+
+08-12-2024 09:53:22 PM: SELECT * FROM ActionConfig WHERE ScreenName = 'NewCustomerForm_Image_SAVEPHOTO' ORDER By ActionName, DIsplayNo
+
+08-12-2024 09:53:23 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='NewCustomerForm_Contacts_LISTVIEW_Contacts' and SolutionName = 'SALES-WEB'
+
+08-12-2024 09:53:24 PM: Select Code,Designation,Name,PhoneNo from NewCustContacts where CustNo='DOP0000031'   Order by Name
+
+08-12-2024 09:53:24 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (Select Code,Designation,Name,PhoneNo from NewCustContacts where CustNo='DOP0000031'  ) rs
+
+08-12-2024 09:53:25 PM: select * from SearchConfig where  ScreenName = 'NewCustomerForm_Contacts_LISTVIEW_Contacts'   order by displayno
+
+08-12-2024 09:53:25 PM: select * from SortConfig where  ScreenName = 'NewCustomerForm_Contacts_LISTVIEW_Contacts'   order by displayno
+
+08-12-2024 09:53:26 PM: select * from formconfig where screenname like 'NewCustomerForm_License' and fieldname like 'LicenseLst'
+
+08-12-2024 09:53:26 PM: select * from listconfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_License_LISTVIEW_LicenseLst' and Language ='English' and (AccessLevel is null or AccessLevel ='7') order by displayno
+
+08-12-2024 09:53:27 PM: SELECT * FROM ActionConfig WHERE ScreenName = 'NewCustomerForm_Image_SAVEPHOTO' ORDER By ActionName, DIsplayNo
+
+08-12-2024 09:53:28 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='NewCustomerForm_License_LISTVIEW_LicenseLst' and SolutionName = 'SALES-WEB'
+
+08-12-2024 09:53:28 PM: Select CL.ItemNo as AItemNo,I.Description from CommodityLicense CL inner join Item I ON I.ItemNo=CL.ItemNo WHERE ISNULL(CustNo,'')='DOP0000031'   Order by AItemNo
+
+08-12-2024 09:53:29 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (Select CL.ItemNo as AItemNo,I.Description from CommodityLicense CL inner join Item I ON I.ItemNo=CL.ItemNo WHERE ISNULL(CustNo,'')='DOP0000031'  ) rs
+
+08-12-2024 09:53:29 PM: select * from SearchConfig where  ScreenName = 'NewCustomerForm_License_LISTVIEW_LicenseLst'   order by displayno
+
+08-12-2024 09:53:30 PM: select * from SortConfig where  ScreenName = 'NewCustomerForm_License_LISTVIEW_LicenseLst'   order by displayno
+
+08-12-2024 09:53:32 PM: SELECT * FROM FormConfig where  ScreenName='NewCustomerForm' and Language = 'English' ORDER BY ScreenName, DisplayNo
+
+08-12-2024 09:53:32 PM: Select * from mandatoryconfig where (screenname like 'NewCustomerForm' or screenname like 'NewCustomerForm_%') and ismandatory=1 order by priorityseq
+
+08-12-2024 09:53:33 PM: Select * from mandatorylistconfig where screenname like 'NewCustomerForm%' and ismandatory=1 order by priorityseq
+
+08-12-2024 09:53:55 PM: SELECT Code, Text FROM (select distinct city as Code,city as Text from customer where city is not null and city <>'') customerdet WHERE 1 = 1 AND Text LIKE '%b%'  ORDER BY Code ASC
+
+08-12-2024 09:54:21 PM: SELECT Code, Text FROM (select distinct countrycode as Code,countrycode as Text from customer where countrycode is not null and countrycode <>'') customerdet WHERE 1 = 1 AND Text LIKE '%m%'  ORDER BY Code ASC
+
+08-12-2024 09:55:03 PM: select case when 'true' = 'true' then  'AMR Kedai Runcit'  else ''  end as [FormView.ShipName],case when 'true' = 'true'  then  'Penang'  else ''  end as [FormView.ShipAddr] ,case when 'true' = 'true' then  ''  else ''   end as [FormView.ShipAddr2], case when 'true' = 'true' then  ''  else ''  end as [FormView.ShipAddr3] ,  case when 'true' = 'true' then  ''  else ''  end as [FormView.ShipAddr4] ,case when 'true' = 'true'  then  '641030'  else ''  end as [FormView.ShipPost] ,case when 'true' = 'true' then  'b'  else ''   end as [FormView.ShipCity] ,case when 'true' = 'true' then '' else '' end as [FormView.State1],case when 'true' = 'true' then  'm'  else ''   end as [FormView.CountryCode1]  
+
+08-12-2024 09:55:05 PM: select * from SearchConfig where  ScreenName = 'NewCustomerForm_LISTVIEW_LicenseLst'   order by displayno
+
+08-12-2024 09:55:06 PM: select * from SortConfig where  ScreenName = 'NewCustomerForm_LISTVIEW_LicenseLst'   order by displayno
+
+08-12-2024 09:55:07 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB' and screenname like 'NewCustomerForm_BillMultiple'
+
+08-12-2024 09:55:08 PM: undefined undefined undefined
+
+08-12-2024 09:55:09 PM: Exception : Incorrect syntax near 'undefined'.
+
+08-12-2024 09:57:25 PM: select case when 'false' = 'true' then  'AMR Kedai Runcit'  else ''  end as [FormView.ShipName],case when 'false' = 'true'  then  'Penang'  else ''  end as [FormView.ShipAddr] ,case when 'false' = 'true' then  ''  else ''   end as [FormView.ShipAddr2], case when 'false' = 'true' then  ''  else ''  end as [FormView.ShipAddr3] ,  case when 'false' = 'true' then  ''  else ''  end as [FormView.ShipAddr4] ,case when 'false' = 'true'  then  '641030'  else ''  end as [FormView.ShipPost] ,case when 'false' = 'true' then  'b'  else ''   end as [FormView.ShipCity] ,case when 'false' = 'true' then '' else '' end as [FormView.State1],case when 'false' = 'true' then  'm'  else ''   end as [FormView.CountryCode1]  
+
+08-12-2024 09:57:27 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB' and screenname like 'NewCustomerForm_BillMultiple'
+
+08-12-2024 09:57:27 PM: undefined undefined undefined
+
+08-12-2024 09:57:28 PM: Exception : Incorrect syntax near 'undefined'.
+
+08-12-2024 09:57:28 PM: select case when 'true' = 'true' then  'AMR Kedai Runcit'  else ''  end as [FormView.ShipName],case when 'true' = 'true'  then  'Penang'  else ''  end as [FormView.ShipAddr] ,case when 'true' = 'true' then  ''  else ''   end as [FormView.ShipAddr2], case when 'true' = 'true' then  ''  else ''  end as [FormView.ShipAddr3] ,  case when 'true' = 'true' then  ''  else ''  end as [FormView.ShipAddr4] ,case when 'true' = 'true'  then  '641030'  else ''  end as [FormView.ShipPost] ,case when 'true' = 'true' then  'b'  else ''   end as [FormView.ShipCity] ,case when 'true' = 'true' then '' else '' end as [FormView.State1],case when 'true' = 'true' then  'm'  else ''   end as [FormView.CountryCode1]  
+
+08-12-2024 09:57:29 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB' and screenname like 'NewCustomerForm_BillMultiple'
+
+08-12-2024 09:57:29 PM: undefined undefined undefined
+
+08-12-2024 09:57:30 PM: Exception : Incorrect syntax near 'undefined'.
+
+08-12-2024 10:22:22 PM: select SystemValue from systemlist where code ='YearPickerLimit' and SolutionName='SALES-WEB'
+
+08-12-2024 10:22:24 PM: SELECT * FROM MessageConfig  where solutionName='SALES-WEB'  order by ScreenName
+
+08-12-2024 10:22:24 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard%'  order by ScreenName, FieldName
+
+08-12-2024 10:22:25 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard%'  order by roworder
+
+08-12-2024 10:22:26 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'EXECUTELOG'
+
+08-12-2024 10:22:26 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'MainMenuLoad'
+
+08-12-2024 10:22:26 PM: select * from Gridfunctions where screenname =N'MAIN' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+08-12-2024 10:22:26 PM: select * from Gridfunctions where screenname =N'Masters' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+08-12-2024 10:22:26 PM: select * from Gridfunctions where screenname =N'Customers' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+08-12-2024 10:22:26 PM: select * from Gridfunctions where screenname =N'Inventory' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+08-12-2024 10:22:26 PM: select * from Gridfunctions where screenname =N'Sales' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+08-12-2024 10:22:27 PM: select * from Gridfunctions where screenname =N'Payments' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+08-12-2024 10:22:27 PM: select * from Gridfunctions where screenname =N'Data Transfer' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+08-12-2024 10:22:27 PM: select * from Gridfunctions where screenname =N'Reports' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+08-12-2024 10:22:27 PM: select * from Gridfunctions where screenname =N'Administration' and Access ='7' and solutionName='SALES-WEB' AND LANGUAGE='English'  Order by ColNo
+
+08-12-2024 10:22:32 PM: select * from SystemList
+
+08-12-2024 10:22:33 PM: select * from System
+
+08-12-2024 10:22:35 PM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='Web_DashBoard_01_FORM'
+
+08-12-2024 10:22:35 PM: SELECT * FROM ActionConfig WHERE ScreenName='Web_DashBoard_01' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+08-12-2024 10:22:35 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='Web_DashBoard_01' and Language = 'English' and (AccessLevel is null or AccessLevel ='7')  order by displayno
+
+08-12-2024 10:22:36 PM: SELECT * FROM FormConfig where  ScreenName='Web_DashBoard_01' and Language = 'English' ORDER BY ScreenName, DisplayNo
+
+08-12-2024 10:22:36 PM: SELECT * FROM ActionConfig WHERE ScreenName='undefined' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+08-12-2024 10:22:36 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'
+
+08-12-2024 10:22:41 PM: SELECT * FROM ActionConfig WHERE ScreenName='MAIN' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+08-12-2024 10:22:47 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard_01%'  order by ScreenName, FieldName
+
+08-12-2024 10:22:47 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'Web_DashBoard_01%'  order by roworder
+
+08-12-2024 10:22:47 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'NewCustomerList%'  order by ScreenName, FieldName
+
+08-12-2024 10:22:47 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'NewCustomerList%'  order by roworder
+
+08-12-2024 10:22:47 PM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='NewCustomerList_FORM'
+
+08-12-2024 10:22:47 PM: SELECT * FROM ActionConfig WHERE ScreenName='NewCustomerList' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+08-12-2024 10:22:48 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerList' and Language = 'English' and (AccessLevel is null or AccessLevel ='7')  order by displayno
+
+08-12-2024 10:22:50 PM: select ISNULL(COUNT(FieldName),0) cnt from ListConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer' and fieldname = 'isUpDown'
+
+08-12-2024 10:22:50 PM: select ISNULL(COUNT(FieldName),0) cnt from SEARCHConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'
+
+08-12-2024 10:22:50 PM: select * from formconfig where screenname like 'NewCustomerList' and fieldname like 'Lstcustomer'
+
+08-12-2024 10:22:50 PM: select * from listconfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerList_LISTVIEW_Lstcustomer' and Language ='English' and (AccessLevel is null or AccessLevel ='7') order by displayno
+
+08-12-2024 10:22:50 PM: select SystemValue from systemlist where code ='PaginationLimit' and SolutionName='SALES-WEB'
+
+08-12-2024 10:22:51 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='NewCustomerList_LISTVIEW_Lstcustomer' and SolutionName = 'SALES-WEB'
+
+08-12-2024 10:22:51 PM: Select CustID,CustName,AgentID,AgentName from (select N.CustID,N.CustName,N.AgentID,SA.Name as AgentName from NewCust N inner join SalesAgent SA on SA.Code=N.AgentID Inner Join SalesmanGroup G on G.GroupID=SA.NodeTreeValue Where G.UserID='502494' and N.Active=1  and IsNull(N.IsConfirmed,0)=1  and IsNull(N.HQConfirmed,0)=0) as A Where 1=1   Order by CustID offset  0  rows Fetch next 10 rows only
+
+08-12-2024 10:22:51 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (Select CustID,CustName,AgentID,AgentName from (select N.CustID,N.CustName,N.AgentID,SA.Name as AgentName from NewCust N inner join SalesAgent SA on SA.Code=N.AgentID Inner Join SalesmanGroup G on G.GroupID=SA.NodeTreeValue Where G.UserID='502494' and N.Active=1  and IsNull(N.IsConfirmed,0)=1  and IsNull(N.HQConfirmed,0)=0) as A Where 1=1  ) rs
+
+08-12-2024 10:22:53 PM: select * from SearchConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 10:22:53 PM: select * from SortConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 10:22:54 PM: select * from SearchConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 10:22:54 PM: select * from SortConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 10:22:54 PM: select * from SearchConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 10:22:55 PM: select * from SortConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 10:22:55 PM: select * from SearchConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 10:22:55 PM: select * from SortConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 10:22:55 PM: select * from SearchConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 10:22:55 PM: select * from SortConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 10:22:55 PM: select * from SearchConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 10:22:55 PM: select * from SortConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 10:22:55 PM: select * from SearchConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 10:22:56 PM: select * from SortConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 10:22:56 PM: select * from SearchConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 10:22:56 PM: select * from SortConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 10:22:56 PM: select * from SearchConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 10:22:56 PM: select * from SortConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 10:22:56 PM: select * from SearchConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 10:22:56 PM: select * from SortConfig where  ScreenName = 'NewCustomerList_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 10:22:57 PM: SELECT * FROM FormConfig where  ScreenName='NewCustomerList' and Language = 'English' ORDER BY ScreenName, DisplayNo
+
+08-12-2024 10:23:06 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'NewCustomerList%'  order by ScreenName, FieldName
+
+08-12-2024 10:23:06 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'NewCustomerList%'  order by roworder
+
+08-12-2024 10:23:06 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'NewCustomerForm%'  order by ScreenName, FieldName
+
+08-12-2024 10:23:06 PM: SELECT * FROM ColorConfig  where solutionName='SALES-WEB' and ScreenName like 'NewCustomerForm%'  order by roworder
+
+08-12-2024 10:23:07 PM: select QueryText + ' ' + GroupText + ' ' + OrderText from Queryconfig where screenname ='NewCustomerForm_FORM'
+
+08-12-2024 10:23:07 PM: select Top 1 Longitude,Latitude,CASE WHEN IIF(deptcode like '%1%','1','0')=1 then 1 else 0 End as [Day],case when IIF(deptcode like '%2%','1','0')=1 then 1 else 0 End  as Day2 ,case when IIF(deptcode like '%3%','1','0')=1 then 1 else 0 End  as Day3,case when IIF(deptcode like '%4%','1','0')=1 then 1 else 0 end  as Day4,  case when IIF(deptcode like '%5%','1','0')=1 then 1 else 0 End  as Day5,case when IIF(deptcode like '%6%','1','0')=1 then 1 else 0 End  as Day6,CASE WHEN IIF(outlettype like '%Week1%','1','0')=1 then 1 else 0 End as RouteWeek,case when IIF(outlettype like '%Week2%','1','0')=1 then 1 else 0 End as Week2, (Select Description from custgroup where custgroup.code=NewCust.GSTCustGroup) as CustGroup,CustID,    CustName,Case when Address2='' then Address else  Concat(Address,',',Address2) end  as Address,NewCust.MobileNo , NewCust.AgentID+' - '+SA.Name as AgentID1,NewCust.AgentID as AgentID,N.SalesRegion as SalesRegion ,  (Select Distinct ProvinceName from ProvinceMaster   where ProvinceMaster.ProvinceCode=NewCust.Province) as Province,    (select Distinct BarangayName from Barangay where Barangay.Code=NewCust.Barangay) as Barangay,    NewCust.City as City,CustClass,NewCust.Email,NewCust.Phone,NewCust.Contact as ContactPerson,Pin,'http://13.67.95.127/SimplrEBFFSalesService/Photo/'+'/'+Phototransactions.FileName as UserImage, NewCust.Active,BillAdd2,BillAdd3,BillAdd4,NC.Name,NC.Designation,NC.PhoneNo,Channel,SubChannel ,PaymentTerms,PaymentMethod,CSALicenseNo,CSAValidity,SSTRegNo,MSICCode,ECOSS,LicenseNo,LicenseType,FORMAT(CL.StartDate,(Select DateFormatString from system)) as StartDate,FORMAT(CL.EndDate,(Select DateFormatString from system)) as EndDate,ShipName ,ShipAddr ,ShipAddr2 ,ShipAddr3 ,ShipAddr4 ,ShipPost ,ShipCity  ,ProvisionalBalance, ZoneCode,[Bill-toNo],Address2,Address3,Address4,City,Pin as PostCode,state from NewCust  Inner Join SalesAgent SA on NewCust.AgentID=SA.Code inner join nodetree N ON N.SalesManTerritory=NewCust.AgentID left join NewCustContacts NC ON NC.CustNo = NewCust.CustId Left join PhotoTransactions on PhotoTransactions.CustNo= NewCust.CustID Left Join CommodityLicense CL ON CL.CustNo=NewCust.CustId    where  CustID='DOP0000031' Union select Top 1 Longitude,Latitude,CASE WHEN IIF(deptcode like '%1%','1','0')=1 then 1 else 0 End as Day,case when IIF(deptcode like '%2%','1','0')=1 then 1 else 0 End  as Day2 ,case when IIF(deptcode like '%3%','1','0')=1 then 1 else 0 End  as Day3,case when IIF(deptcode like '%4%','1','0')=1 then 1 else 0 end  as Day4,  case when IIF(deptcode like '%5%','1','0')=1 then 1 else 0 End  as Day5,case when IIF(deptcode like '%6%','1','0')=1 then 1 else 0 End  as Day6,CASE WHEN IIF(outlettype like '%Week1%','1','0')=1 then 1 else 0 End as RouteWeek,case when IIF(outlettype like '%Week2%','1','0')=1 then 1 else 0 End as Week2,(Select Description from custgroup where custgroup.code=NewCust.GSTCustGroup) as CustGroup,CustID,    CustName,Case when Address2='' then Address else  Concat(Address,',',Address2) end  as Address,NewCust.MobileNo,NewCust.AgentID+' - '+SA.Name as AgentID1,NewCust.AgentID as AgentID,N.SalesRegion as SalesRegion , (Select Distinct ProvinceName from ProvinceMaster where ProvinceMaster.ProvinceCode=NewCust.Province) as Province,    (select Distinct BarangayName from Barangay where Barangay.Code=NewCust.Barangay) as Barangay,    NewCust.City as City,CustClass,NewCust.Email,NewCust.Phone,NewCust.Contact as ContactPerson,Pin,'http://13.67.95.127/SimplrEBFFSalesService/Photo/'+'/'+Phototransactions.FileName as UserImage,NewCust.Active,BillAdd2,BillAdd3,BillAdd4,NC.Name,NC.Designation,NC.PhoneNo,Channel,SubChannel,PaymentTerms,PaymentMethod,CSALicenseNo,CSAValidity,SSTRegNo,MSICCode,ECOSS,LicenseNo,LicenseType,FORMAT(CL.StartDate,(Select DateFormatString from system)) as StartDate,FORMAT(CL.EndDate,(Select DateFormatString from system)) as EndDate,ShipName ,ShipAddr ,ShipAddr2 ,ShipAddr3 ,ShipAddr4 ,ShipPost ,ShipCity  ,ProvisionalBalance, ZoneCode,[Bill-toNo],Address2,Address3,Address4,City,Pin as PostCode,state from NewCust     Inner Join SalesAgent SA on NewCust.AgentID=SA.Code   Inner Join SalesmanGroup G on G.GroupID=SA.NodeTreeValue inner join nodetree N ON N.SalesManTerritory=NewCust.AgentID left join NewCustContacts NC ON NC.CustNo = NewCust.CustId Left Join CommodityLicense CL ON CL.CustNo=NewCust.CustId Left join PhotoTransactions on PhotoTransactions.CustNo= NewCust.CustID where 'DOP0000031' = ''     and CustID =(Select top 1 CustID from NewCust N inner join SalesAgent SA on SA.Code=N.AgentID   Inner Join   SalesmanGroup G on G.GroupID=SA.NodeTreeValue  Where G.UserID='502494' and N.Active=1 and IsNull(N.HQConfirmed,0)=0 and IsNull(N.IsConfirmed,0)=0   Order By custid)  
+
+08-12-2024 10:23:07 PM: SELECT * FROM ActionConfig WHERE ScreenName='NewCustomerForm' and solutionname like 'SALES-WEB'  ORDER By  DisplayNo
+
+08-12-2024 10:23:07 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm' and Language = 'English' and (AccessLevel is null or AccessLevel ='7')  order by displayno
+
+08-12-2024 10:23:11 PM: select QueryText + ' ' + isnull(GroupText,'') + ' ' + isnull(OrderText,'') from Queryconfig where screenname ='NewCustomerForm_FORM_TABGROUP'
+
+08-12-2024 10:23:12 PM: Select 1 as Display,  'General' as Descriptions, 'General' as Value UNION Select  2 as Display,'Communication' as Descriptions, 'Communication' as Value UNION Select  3 as Display,'Invoicing' as Descriptions, 'Invoicing' as Value UNION Select  4 as Display,'Payment' as Descriptions, 'Payment' as Value UNION Select  5 as Display,'Shipping' as Descriptions, 'Shipping' as Value UNION Select 6 as Display,'Contacts' as Descriptions, 'Contacts' as Value UNION Select 7 as Display,'License' as Descriptions, 'License' as Value UNION Select  8 as Display,'Photo' as Descriptions, 'Photo' as Value  
+
+08-12-2024 10:23:12 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_General' and Language = 'English' and (AccessLevel is null or AccessLevel ='7')  order by displayno
+
+08-12-2024 10:23:13 PM: select ISNULL(COUNT(FieldName),0) cnt from ListConfig where  ScreenName = 'NewCustomerForm_General_LISTVIEW_Lstcustomer' and fieldname = 'isUpDown'
+
+08-12-2024 10:23:13 PM: select ISNULL(COUNT(FieldName),0) cnt from SEARCHConfig where  ScreenName = 'NewCustomerForm_General_LISTVIEW_Lstcustomer'
+
+08-12-2024 10:23:13 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'NewCustomerForm_FORM_COMBOBOX_Channel'
+
+08-12-2024 10:23:13 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'NewCustomerForm_FORM_COMBOBOX_SubChannel'
+
+08-12-2024 10:23:13 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'NewCustomerForm_FORM_COMBOBOX_State'
+
+08-12-2024 10:23:13 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_Communication' and Language = 'English' and (AccessLevel is null or AccessLevel ='7')  order by displayno
+
+08-12-2024 10:23:13 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_Invoicing' and Language = 'English' and (AccessLevel is null or AccessLevel ='7')  order by displayno
+
+08-12-2024 10:23:14 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'NewCustomerForm_FORM_COMBOBOX_PriceGroup'
+
+08-12-2024 10:23:14 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_Payment' and Language = 'English' and (AccessLevel is null or AccessLevel ='7')  order by displayno
+
+08-12-2024 10:23:14 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'NewCustomerForm_FORM_COMBOBOX_PaymentTerms'
+
+08-12-2024 10:23:14 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'NewCustomerForm_FORM_COMBOBOX_PaymentMethod'
+
+08-12-2024 10:23:14 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_Shipping' and Language = 'English' and (AccessLevel is null or AccessLevel ='7')  order by displayno
+
+08-12-2024 10:23:15 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_Contacts' and Language = 'English' and (AccessLevel is null or AccessLevel ='7')  order by displayno
+
+08-12-2024 10:23:15 PM: select ISNULL(COUNT(FieldName),0) cnt from SEARCHConfig where  ScreenName = 'NewCustomerForm_Contacts_LISTVIEW_Contacts'
+
+08-12-2024 10:23:15 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_License' and Language = 'English' and (AccessLevel is null or AccessLevel ='7')  order by displayno
+
+08-12-2024 10:23:15 PM: select ISNULL(COUNT(FieldName),0) cnt from ListConfig where  ScreenName = 'NewCustomerForm_License_LISTVIEW_LicenseLst' and fieldname = 'isUpDown'
+
+08-12-2024 10:23:15 PM: select ISNULL(COUNT(FieldName),0) cnt from SEARCHConfig where  ScreenName = 'NewCustomerForm_License_LISTVIEW_LicenseLst'
+
+08-12-2024 10:23:15 PM: select DateFormatString, TimeFormatString, DateTimeFormatString from system
+
+08-12-2024 10:23:15 PM: select * from FormConfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_Photo' and Language = 'English' and (AccessLevel is null or AccessLevel ='7')  order by displayno
+
+08-12-2024 10:23:16 PM: select * from formconfig where screenname like 'NewCustomerForm_General' and fieldname like 'Lstcustomer'
+
+08-12-2024 10:23:16 PM: select * from listconfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_General_LISTVIEW_Lstcustomer' and Language ='English' and (AccessLevel is null or AccessLevel ='7') order by displayno
+
+08-12-2024 10:23:16 PM: SELECT * FROM ActionConfig WHERE ScreenName = 'NewCustomerForm_Image_SAVEPHOTO' ORDER By ActionName, DIsplayNo
+
+08-12-2024 10:23:16 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='NewCustomerForm_General_LISTVIEW_Lstcustomer' and SolutionName = 'SALES-WEB'
+
+08-12-2024 10:23:17 PM:    
+
+08-12-2024 10:23:17 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (  ) rs
+
+08-12-2024 10:23:17 PM: Exception : Incorrect syntax near ')'.
+
+08-12-2024 10:23:17 PM: select * from formconfig where screenname like 'NewCustomerForm_Contacts' and fieldname like 'Contacts'
+
+08-12-2024 10:23:17 PM: select * from listconfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_Contacts_LISTVIEW_Contacts' and Language ='English' and (AccessLevel is null or AccessLevel ='7') order by displayno
+
+08-12-2024 10:23:17 PM: SELECT * FROM ActionConfig WHERE ScreenName = 'NewCustomerForm_Image_SAVEPHOTO' ORDER By ActionName, DIsplayNo
+
+08-12-2024 10:23:18 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='NewCustomerForm_Contacts_LISTVIEW_Contacts' and SolutionName = 'SALES-WEB'
+
+08-12-2024 10:23:18 PM: Select Code,Designation,Name,PhoneNo from NewCustContacts where CustNo=''   Order by Name
+
+08-12-2024 10:23:18 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (Select Code,Designation,Name,PhoneNo from NewCustContacts where CustNo=''  ) rs
+
+08-12-2024 10:23:18 PM: select * from SearchConfig where  ScreenName = 'NewCustomerForm_Contacts_LISTVIEW_Contacts'   order by displayno
+
+08-12-2024 10:23:19 PM: select * from SortConfig where  ScreenName = 'NewCustomerForm_Contacts_LISTVIEW_Contacts'   order by displayno
+
+08-12-2024 10:23:19 PM: select * from formconfig where screenname like 'NewCustomerForm_License' and fieldname like 'LicenseLst'
+
+08-12-2024 10:23:19 PM: select * from listconfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_License_LISTVIEW_LicenseLst' and Language ='English' and (AccessLevel is null or AccessLevel ='7') order by displayno
+
+08-12-2024 10:23:19 PM: SELECT * FROM ActionConfig WHERE ScreenName = 'NewCustomerForm_Image_SAVEPHOTO' ORDER By ActionName, DIsplayNo
+
+08-12-2024 10:23:19 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='NewCustomerForm_License_LISTVIEW_LicenseLst' and SolutionName = 'SALES-WEB'
+
+08-12-2024 10:23:19 PM: Select CL.ItemNo as AItemNo,I.Description from CommodityLicense CL inner join Item I ON I.ItemNo=CL.ItemNo WHERE ISNULL(CustNo,'')=''   Order by AItemNo
+
+08-12-2024 10:23:19 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (Select CL.ItemNo as AItemNo,I.Description from CommodityLicense CL inner join Item I ON I.ItemNo=CL.ItemNo WHERE ISNULL(CustNo,'')=''  ) rs
+
+08-12-2024 10:23:20 PM: select * from SearchConfig where  ScreenName = 'NewCustomerForm_License_LISTVIEW_LicenseLst'   order by displayno
+
+08-12-2024 10:23:20 PM: select * from SortConfig where  ScreenName = 'NewCustomerForm_License_LISTVIEW_LicenseLst'   order by displayno
+
+08-12-2024 10:23:20 PM: select * from (Select Distinct Code as Code,Description as Text from Channel) as A  
+
+08-12-2024 10:23:20 PM: select * from (Select Distinct Code as Code,Description as Text from SubChannel) as B  
+
+08-12-2024 10:23:20 PM: select * from (Select Distinct Code as Code,Description as Text from SubChannel) as B  
+
+08-12-2024 10:23:20 PM: select distinct Code as Code,Name as Text from States  Order by Code
+
+08-12-2024 10:23:20 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB'   and ScreenName = 'NewCustomerForm_General_FORM_COMBOBOX_SalesRegion'
+
+08-12-2024 10:23:21 PM: Select Code,Code as Text  from PriceGroup  order by Code asc
+
+08-12-2024 10:23:21 PM: select * from (select Distinct Code as Code, Description as Text from PayTerms) as A  Order by Code
+
+08-12-2024 10:23:21 PM: select * from (select Distinct Code as Code, Description as Text from PayMethod) as A  Order by Code
+
+08-12-2024 10:23:23 PM: select * from formconfig where screenname like 'NewCustomerForm_General' and fieldname like 'Lstcustomer'
+
+08-12-2024 10:23:24 PM: select * from listconfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_General_LISTVIEW_Lstcustomer' and Language ='English' and (AccessLevel is null or AccessLevel ='7') order by displayno
+
+08-12-2024 10:23:24 PM: SELECT * FROM ActionConfig WHERE ScreenName = 'NewCustomerForm_Image_SAVEPHOTO' ORDER By ActionName, DIsplayNo
+
+08-12-2024 10:23:24 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='NewCustomerForm_General_LISTVIEW_Lstcustomer' and SolutionName = 'SALES-WEB'
+
+08-12-2024 10:23:24 PM:    
+
+08-12-2024 10:23:24 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (  ) rs
+
+08-12-2024 10:23:24 PM: Exception : Incorrect syntax near ')'.
+
+08-12-2024 10:23:24 PM: select * from SearchConfig where  ScreenName = 'NewCustomerForm_General_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 10:23:25 PM: select * from SortConfig where  ScreenName = 'NewCustomerForm_General_LISTVIEW_Lstcustomer'   order by displayno
+
+08-12-2024 10:23:25 PM: select * from formconfig where screenname like 'NewCustomerForm_Contacts' and fieldname like 'Contacts'
+
+08-12-2024 10:23:25 PM: select * from listconfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_Contacts_LISTVIEW_Contacts' and Language ='English' and (AccessLevel is null or AccessLevel ='7') order by displayno
+
+08-12-2024 10:23:25 PM: SELECT * FROM ActionConfig WHERE ScreenName = 'NewCustomerForm_Image_SAVEPHOTO' ORDER By ActionName, DIsplayNo
+
+08-12-2024 10:23:25 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='NewCustomerForm_Contacts_LISTVIEW_Contacts' and SolutionName = 'SALES-WEB'
+
+08-12-2024 10:23:25 PM: Select Code,Designation,Name,PhoneNo from NewCustContacts where CustNo='DOP0000031'   Order by Name
+
+08-12-2024 10:23:25 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (Select Code,Designation,Name,PhoneNo from NewCustContacts where CustNo='DOP0000031'  ) rs
+
+08-12-2024 10:23:26 PM: select * from SearchConfig where  ScreenName = 'NewCustomerForm_Contacts_LISTVIEW_Contacts'   order by displayno
+
+08-12-2024 10:23:26 PM: select * from SortConfig where  ScreenName = 'NewCustomerForm_Contacts_LISTVIEW_Contacts'   order by displayno
+
+08-12-2024 10:23:26 PM: select * from formconfig where screenname like 'NewCustomerForm_License' and fieldname like 'LicenseLst'
+
+08-12-2024 10:23:26 PM: select * from listconfig where  solutionname='SALES-WEB' and  screenname ='NewCustomerForm_License_LISTVIEW_LicenseLst' and Language ='English' and (AccessLevel is null or AccessLevel ='7') order by displayno
+
+08-12-2024 10:23:26 PM: SELECT * FROM ActionConfig WHERE ScreenName = 'NewCustomerForm_Image_SAVEPHOTO' ORDER By ActionName, DIsplayNo
+
+08-12-2024 10:23:26 PM: select QueryText ,  OrderText ,GroupText from Queryconfig where screenname ='NewCustomerForm_License_LISTVIEW_LicenseLst' and SolutionName = 'SALES-WEB'
+
+08-12-2024 10:23:27 PM: Select CL.ItemNo as AItemNo,I.Description from CommodityLicense CL inner join Item I ON I.ItemNo=CL.ItemNo WHERE ISNULL(CustNo,'')='DOP0000031'   Order by AItemNo
+
+08-12-2024 10:23:27 PM: select floor(count(*) /10) + case when (count(*) %10) = 0 then 0 else 1 end  as cnt, count(*) as totalrows,10 as pagesize from (Select CL.ItemNo as AItemNo,I.Description from CommodityLicense CL inner join Item I ON I.ItemNo=CL.ItemNo WHERE ISNULL(CustNo,'')='DOP0000031'  ) rs
+
+08-12-2024 10:23:27 PM: select * from SearchConfig where  ScreenName = 'NewCustomerForm_License_LISTVIEW_LicenseLst'   order by displayno
+
+08-12-2024 10:23:27 PM: select * from SortConfig where  ScreenName = 'NewCustomerForm_License_LISTVIEW_LicenseLst'   order by displayno
+
+08-12-2024 10:23:30 PM: SELECT * FROM FormConfig where  ScreenName='NewCustomerForm' and Language = 'English' ORDER BY ScreenName, DisplayNo
+
+08-12-2024 10:23:30 PM: Select * from mandatoryconfig where (screenname like 'NewCustomerForm' or screenname like 'NewCustomerForm_%') and ismandatory=1 order by priorityseq
+
+08-12-2024 10:23:30 PM: Select * from mandatorylistconfig where screenname like 'NewCustomerForm%' and ismandatory=1 order by priorityseq
+
+08-12-2024 10:23:48 PM: SELECT Code, Text FROM (select distinct city as Code,city as Text from customer where city is not null and city <>'') customerdet WHERE 1 = 1 AND Text LIKE '%b%'  ORDER BY Code ASC
+
+08-12-2024 10:23:49 PM: SELECT Code, Text FROM (select distinct city as Code,city as Text from customer where city is not null and city <>'') customerdet WHERE 1 = 1 AND Text LIKE '%ba%'  ORDER BY Code ASC
+
+08-12-2024 10:23:53 PM: SELECT Code, Text FROM (select distinct countrycode as Code,countrycode as Text from customer where countrycode is not null and countrycode <>'') customerdet WHERE 1 = 1 AND Text LIKE '%m%'  ORDER BY Code ASC
+
+08-12-2024 10:23:57 PM: select case when 'true' = 'true' then  'AMR Kedai Runcit'  else ''  end as [FormView.ShipName],case when 'true' = 'true'  then  'Penang'  else ''  end as [FormView.ShipAddr] ,case when 'true' = 'true' then  ''  else ''   end as [FormView.ShipAddr2], case when 'true' = 'true' then  ''  else ''  end as [FormView.ShipAddr3] ,  case when 'true' = 'true' then  ''  else ''  end as [FormView.ShipAddr4] ,case when 'true' = 'true'  then  '641030'  else ''  end as [FormView.ShipPost] ,case when 'true' = 'true' then  'BALING'  else ''   end as [FormView.ShipCity] ,case when 'true' = 'true' then '' else '' end as [FormView.State1],case when 'true' = 'true' then  'Malasiya'  else ''   end as [FormView.CountryCode1]  
+
+08-12-2024 10:24:00 PM: select * from SearchConfig where  ScreenName = 'NewCustomerForm_LISTVIEW_LicenseLst'   order by displayno
+
+08-12-2024 10:24:01 PM: select * from SortConfig where  ScreenName = 'NewCustomerForm_LISTVIEW_LicenseLst'   order by displayno
+
+08-12-2024 10:24:01 PM: select ScreenName, QueryText, ISNULL(GroupText,'') as GroupText, ISNULL(OrderText, '' ) as OrderText from QueryConfig where solutionName='SALES-WEB' and screenname like 'NewCustomerForm_BillMultiple'
+
+08-12-2024 10:24:01 PM: undefined undefined undefined
+
+08-12-2024 10:24:01 PM: Exception : Incorrect syntax near 'undefined'.
+

@@ -1,0 +1,27 @@
+^XA^LL240^LS0
+^FT15,35
+^CF0,16
+^FH^CI12^FDLine:" + LineNumber + "^FS^CI0
+^BY2
+^FT120,50
+^BCN,40,Y,N
+^FD" + ItemNoBarCode + "^FS
+^FT20,90
+^CF1,20
+^FH^CI12^FD" + ItemDescription + "^FS^CI0
+^FT25,160^BY2
+^BEN,60,Y,N
+^FD" + EANCode + "^FS
+^FT240,220
+^CF0,16
+^FH^CI15
+^FDQTY:^FS
+^CI0^BY1
+^FT295,215
+^BCN,50,Y,N
+^FD" + Qty + "^FS
+^FT15,330
+^FB200,7,J,0
+^CF0,20
+^FD" + AltPartNo + "^FS
+^XZ

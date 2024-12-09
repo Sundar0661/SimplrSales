@@ -1,0 +1,26 @@
+Time: 15-05-2023 07:48:19 AM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Freight Export'
+-----------------------------------------------------------
+
+Time: 15-05-2023 07:49:20 AM
+-----------------------------------------------------------
+Message: ReadRecord : Exec [SP_DistributorClaimsQtyUpdate_FreightExport] '2023-04-01 00:00:00.000','2023-04-30 23:59:59.000','ALL','ALL','ALL','',''
+-----------------------------------------------------------
+
+Time: 15-05-2023 08:49:20 AM
+-----------------------------------------------------------
+Message: ReadRecord Exception : Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+-----------------------------------------------------------
+
+Time: 15-05-2023 08:49:25 AM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 15-05-2023 08:49:28 AM
+-----------------------------------------------------------
+Message: AutoExport dttoexcel = Specified argument was out of the range of valid values.
+Parameter name: index
+-----------------------------------------------------------
+

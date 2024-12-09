@@ -1,0 +1,5 @@
+Time: 03-12-2024 02:57:36 PM
+ValidateQry : select case when (select void from orderhdr where OrdNo='002PSS03O0016701')=1 then 0 else 1 end as Response  
+PerformAction completed
+
+

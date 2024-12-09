@@ -1,0 +1,313 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Customer Map Details</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript">
+        var Input_Details = [];
+        var Output_Details = [];
+        var Origin_latitude = '1.283000';
+        var Origin_longitude = '103.819900';
+    </script>
+
+</head>
+<body>
+    <div>
+        Origin Latitude : <input type="text" id="txtOrigin_lati" />
+        Origin Logitude : <input type="text" id="txtOrigin_longi" />
+        <br /><br />
+        Input Details
+        <br />
+        <br />
+        <div id="divInputDetails">
+            <table class="table table-bordered table-condensed table-striped" id="InTable" style="border:3px solid #ccc;">
+                <thead style="background-color:#000066">
+                    <tr style="border:3px solid #ccc;color:white;">
+                        <th>Customer No</th>
+                        <th>Latitude</th>
+                        <th>Logitude</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <br />
+        <br />
+        <input type="button" id="btnSubmit" value="Submit" />
+        <br />
+        <br />
+        Output Details
+        <br />
+        <br />
+        <div id="divOutputDetails">
+            <table class="table table-bordered table-condensed table-striped" id="OutTable" style="border:3px solid #ccc;">
+                <thead style="background-color:#000066">
+                    <tr style="border:3px solid #ccc;color:white;">
+                        <th>Customer No</th>
+                        <th>Latitude</th>
+                        <th>Logitude</th>
+                        <th>Address</th>
+                        <th>Distance (km) </th>
+                        <th>Time </th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <br />
+        <br />
+    </div>
+    
+    <script type="text/javascript">
+
+        $(window).load(function () {
+            Prepare_Input_Data();
+
+            $("#txtOrigin_lati").val(Origin_latitude);
+            $("#txtOrigin_longi").val(Origin_longitude);
+
+            Display_Input_Data();
+
+        });
+
+        $("#btnSubmit").click(function () {
+            
+            Output_Details = [];
+            $('#OutTable').find("tr:not(:first)").remove();
+
+            Prepare_Output_Data();
+            alert('Process Completed!');
+            Display_Output_Data();
+        });
+
+        function Prepare_Output_Data() {
+            var origin_Dets='';
+            var destination_Dets = '';
+            var processed_value = '';
+            var sTemp1 ,sTemp2, sTemp3;
+
+            var url = '@Url.Content("~/CustomerMap/find_ShortestPath")';
+            // debugger;
+
+            origin_Dets = Origin_latitude + "," + Origin_longitude;
+
+            destination_Dets = '';
+
+            for (var i = 0; i < Input_Details.length; i++)
+            {
+                destination_Dets += "|" + Input_Details[i].Latitude + "," + Input_Details[i].Longitude ;
+            }
+
+            destination_Dets = destination_Dets.substring(1);
+
+            //for (i = 0; i < 10; i++)
+            for (i = 0; i < 10; i++)
+            {
+                $.ajax({
+                    type: "GET",
+                    url: url,
+                    contentType: "application/json; charset=utf-8",
+                    //data: { orginPlace: "1.283000,103.819900", inputDestinations: "1.38371,103.839954 | 1.3321289,103.897083" },
+                    data: { orginPlace: origin_Dets, inputDestinations: destination_Dets },
+                    dataType: "text",
+                    async: false,
+                    success: function (data) {
+                        // Here update Output Data
+                        processed_value = data;
+
+                        //alert(processed_value);
+
+                    },
+                    error: function (xhr) {
+                        alert("Error occurred while1 " + JSON.stringify(xhr));
+                    }
+                });
+
+                if (processed_value == '1') {
+                    alert('Error: Please check it');
+                    break;
+                }
+
+                // OUTPUT FORMAT =====
+                // "lati$longi$address$distance$time";
+
+                Output_Details.push(
+                           {
+                               "CustomerNo": get_CustomerNo(processed_value.split('$')[0].toString(), processed_value.split('$')[1].toString()),
+                               "Latitude": processed_value.split('$')[0].toString(),
+                               "Longitude": processed_value.split('$')[1].toString(),
+                               "Address": processed_value.split('$')[2].toString(),
+                               "Distance": processed_value.split('$')[3].toString(),
+                               "Time": processed_value.split('$')[4].toString()
+                           }
+                       );
+
+                // Modify - Origin and Destination Details
+                origin_Dets = processed_value.split('$')[0].toString() + "," + processed_value.split('$')[1].toString();
+
+                sTemp1 = '|' + origin_Dets + '|';
+                sTemp2 = '|' + origin_Dets;
+                sTemp3 = origin_Dets + '|';
+                if (destination_Dets.indexOf(sTemp1) > -1)
+                {
+                    destination_Dets = destination_Dets.replace(sTemp2, '');
+                }
+                else if (destination_Dets.indexOf(sTemp2) > -1) {
+                    destination_Dets = destination_Dets.replace(sTemp2, '');
+                }
+                else if (destination_Dets.indexOf(sTemp3) > -1) {
+                    destination_Dets = destination_Dets.replace(sTemp3, '');
+                }
+            }
+
+        } // end of function dont comment it.
+
+
+        function get_CustomerNo(lati,longi)
+        {
+            var custNumber = '';
+            for (var i = 0; i < Input_Details.length; i++) {
+
+                if (lati.toString() == Input_Details[i].Latitude.toString() && longi.toString() == Input_Details[i].Longitude.toString())
+                {
+                    custNumber = Input_Details[i].CustomerNo;
+                    return custNumber;
+                }
+            }
+            return custNumber;
+        }
+
+        function Display_Input_Data() {
+            var tr;
+            var link;
+            var param_s;
+
+            $('#InTable').find("tr:not(:first)").remove();
+            for (var i = 0; i < Input_Details.length; i++) {
+
+                tr = $('<tr/>');
+                tr.append("<td style='border:1px solid navy;'>" + Input_Details[i].CustomerNo + "</td>");
+                tr.append("<td style='border:1px solid navy;'>" + Input_Details[i].Latitude + "</td>");
+                tr.append("<td style='border:1px solid navy;'>" + Input_Details[i].Longitude + "</td>");
+                $('#InTable').append(tr);
+            }
+        }
+
+        function Display_Output_Data() {
+            var tr;
+            var link;
+            var param_s;
+
+            $('#OutTable').find("tr:not(:first)").remove();
+            for (var i = 0; i < Output_Details.length; i++)
+            {
+
+                tr = $('<tr/>');
+                tr.append("<td style='border:1px solid navy;'>" + Output_Details[i].CustomerNo + "</td>");
+                tr.append("<td style='border:1px solid navy;'>" + Output_Details[i].Latitude + "</td>");
+                tr.append("<td style='border:1px solid navy;'>" + Output_Details[i].Longitude + "</td>");
+                tr.append("<td style='border:1px solid navy;'>" + Output_Details[i].Address + "</td>");
+                tr.append("<td style='border:1px solid navy;'>" + Output_Details[i].Distance + "</td>");
+                tr.append("<td style='border:1px solid navy;'>" + Output_Details[i].Time + "</td>");
+
+                $('#OutTable').append(tr);
+            }
+        }
+
+
+        function Prepare_Input_Data() {
+
+            Input_Details.push(
+				{
+				    "CustomerNo": 'A00200',
+				    "Latitude": '1.281966',
+				    "Longitude": '103.851059'
+				}
+			);
+
+            Input_Details.push(
+               {
+                   "CustomerNo": 'A00300',
+                   "Latitude": '1.38371',
+                   "Longitude": '103.839954'
+               }
+           );
+
+            Input_Details.push(
+               {
+                   "CustomerNo": 'A00400',
+                   "Latitude": '1.3321289',
+                   "Longitude": '103.897083'
+               }
+           );
+
+            Input_Details.push(
+               {
+                   "CustomerNo": 'A00600',
+                   "Latitude": '1.325319',
+                   "Longitude": '103.894541'
+               }
+           );
+
+            Input_Details.push(
+               {
+                   "CustomerNo": 'A10200',
+                   "Latitude": '1.329073',
+                   "Longitude": '103.688852'
+               }
+           );
+
+            Input_Details.push(
+               {
+                   "CustomerNo": 'A10300',
+                   "Latitude": '1.328989',
+                   "Longitude": '103.886929'
+               }
+           );
+
+            Input_Details.push(
+               {
+                   "CustomerNo": 'A10700',
+                   "Latitude": '1.357491',
+                   "Longitude": '103.843971'
+               }
+           );
+
+            Input_Details.push(
+               {
+                   "CustomerNo": 'A10701',
+                   "Latitude": '1.361909',
+                   "Longitude": '103.855275'
+               }
+           );
+
+            Input_Details.push(
+               {
+                   "CustomerNo": 'A10702',
+                   "Latitude": '1.371775',
+                   "Longitude": '103.879699'
+               }
+           );
+
+            Input_Details.push(
+               {
+                   "CustomerNo": 'A10703',
+                   "Latitude": '1.336337',
+                   "Longitude": '103.848418'
+               }
+           );
+        }
+    </script>
+
+   
+</body>
+
+</html>

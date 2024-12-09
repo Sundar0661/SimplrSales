@@ -1,0 +1,227 @@
+﻿@{
+    ViewBag.Title = "Survey List";
+}
+
+@section Scripts{
+    <script>
+        var url_GetCheckListDetails = '@Url.Content("~/Survey/GetCheckListDetails/")';
+        var url_ExecuteNonQuerys = '@Url.Content("~/Survey/ExecuteNonQuerys/")';
+        var url_GetCheckList = '@Url.Content("~/Survey/GetCheckList/")';
+        var url_Survey = '@Url.Content("~/Survey/Survey/")';
+        
+        var FormView = {};
+        var _UserID = '@Session["UserId"]';
+        FormView.UserID = '@Session["UserId"]';
+        var _screenName = "SurveyList";
+        var currentScreenName = _screenName;
+        CurrentScreen_TabScreen_Name = _screenName;
+        currentScreenName = 'VehicleAssignmentReportForm';
+
+        $(document).ready(function () {
+
+            //debugger;
+            $.ajax({
+
+                url: url_GetCheckList,
+                // url: '/Survey/GetCheckList',
+                type: 'GET',
+                dataType: 'json',
+                async: false,
+                data: {},
+                success: function (results) {
+                    if (results != null && results != "" && results != undefined) {
+                        prepare_Data(results);
+                    }
+                },
+                error: function (xhr) {
+                   // alert('Failed. To get data please check.');
+
+                    var obj = {};
+                    obj.title = "Information";
+                    obj.message = "Failed. To get data please check.";
+                    showAlertMessage_survey(obj);
+
+                    //alert('Request Status: ' + xhr.status + ' Status Text: ' + xhr.statusText + ' ' + xhr.responseText);
+                }
+            });
+            //Call EmpDetails jsonResult Method
+
+        });
+
+        function prepare_Data(json) {
+            var tr;
+            var link;
+            var param_s;
+            //Append each row to html table
+            //$('table').empty();
+            $('table').find("tr:not(:first)").remove();
+            for (var i = 0; i < json.Table.length; i++) {
+                //param_s = encodeURI(url_Survey + '?ChecklistName=' + json.Table[i].ThemeName + '&NoofScreens=' + json.Table[i].FormId + '');
+                
+                param_s = encodeURI(url_Survey + '?ChecklistName=' + json.Table[i].ThemeName + '&NoofScreens=' + json.Table[i].FormId + '&Active=' + json.Table[i].Active + '&screenType=edit');
+                tr = $('<tr/>');
+                //<th>Copy Option</th>
+                //tr.append("<td><a href=" + param_s + ">" + json.Table[i].CopyOption + "</a></td>");
+                //tr.append("<td>" + json.Table[i].CopyOption + "</td>");
+                //<th>Checklist Name</th>
+                tr.append("<td><a href=" + param_s + ">" + json.Table[i].ThemeName + "</a></td>");
+                //<th>No of Screens</th>
+                //<th>No of Screens</th>
+                tr.append("<td>" + json.Table[i].FormId + "</td>");
+                //<th>Device</th>
+                tr.append("<td>" + json.Table[i].Device + "</td>");
+                $('table').append(tr);
+
+                //if (Session["ProjectName"].ToString() == "Danone")
+                    tr.append("<td>" + json.Table[i].Active + "</td>");
+
+                //tr.append("<td style='display:none;'>" + json.Table[i].Description + "</td>");
+                $('table').append(tr);
+            }
+        }
+
+       function callDesignerPage() {
+           window.location = url_Survey + '?screenType=new';
+        }
+
+        var getQueryString = function (field) {
+            var href = window.location.href;
+            var reg = new RegExp('[?&]' + field + '=([^&#]*)', 'i');
+            var string = reg.exec(href);
+            return string ? string[1] : null;
+        };
+
+        function ExitButton() {
+            $('#Input_div').hide();
+        }
+
+        function DeleteRows() {
+            var tblInfo = $('table');
+            var rowCount = tblInfo.rows.length;
+            for (var i = rowCount - 1; i > 0; i--) {
+                tblInfo.deleteRow(i);
+            }
+        }
+
+        function EnterSearchOption(SearchValue) {
+
+            if (event.keyCode === 13) {
+                SearchOption(SearchValue);
+            }
+        }
+        function SearchOption(SearchValue) {
+            //alert(SearchValue);
+            $.ajax({
+                url: url_GetCheckList,
+                // url: '/Survey/GetCheckList',
+                type: 'GET',
+                dataType: 'json',
+                async: false,
+                data: { SearchOption: SearchValue },
+                success: function (results) {
+                    if (results != null && results != "" && results != undefined) {
+                        prepare_Data(results);
+                    }
+                    else
+                        $('table').find("tr:not(:first)").remove();
+                },
+                error: function (xhr) {
+                    //alert('Failed. To get data please check.');
+
+                    var obj = {};
+                    obj.title = "Information";
+                    obj.message = "Failed. To get data please check.";
+                    showAlertMessage_survey(obj);
+
+                    //alert('Request Status: ' + xhr.status + ' Status Text: ' + xhr.statusText + ' ' + xhr.responseText);
+                }
+            });
+        }
+
+    </script>
+
+
+}
+
+<style>
+    .formContainer_survey {
+        width: 98%;
+        height: auto;
+        /*height: 100%;*/
+        /* padding: 57px; */
+        border: 2px solid #e7e7e7;
+        padding-top: 12px;
+        /*border-radius: 20px;*/
+        border-radius: 5px;
+        /*margin-left: 17px;*/
+        /*margin-left: 1%;*/
+        margin-bottom: 5px;
+    }
+</style>
+
+<!-- PANEL FOR GETTING INPUT STARTS HERE... ========================-->
+<div id="Input_div" align="center">
+
+    <div class="formContainer_survey">
+        <div class="row">
+            <!-- padding-left:10px;-->
+            <div class="labeltext" style="width:100%;">
+                <label style="height: 30px;font-size:24px;background-color:;font-family:sans-serif;text-align:Center;">
+                    SURVEY LIST PAGE
+                </label>
+                <hr />
+            </div>
+
+        </div>
+        <div class="row">
+            <!-- padding-left:10px;-->
+            <div class="labeltext" style="width:10%;">
+                @*<input type="button" onclick="callDesignerPage()" value="New Checklist" style="width:100%; height: 30px;font-size:12px;color:#ffffff;background-color:#428bca;font-family:sans-serif;text-align:Center;line-height:none;" />*@
+                <Button id="Button_CreateBtn" value="New Checklist" onclick="callDesignerPage();" style="width:100%; height: 40px;font-size:14px;color:#ffffff;background-color:#0000ff;font-family:Poppins-Light.ttf;text-align:Center;line-height:none;border-radius:5px;"><i class="fa fa-plus-circle"></i> | New Checklist</Button>
+            </div>
+
+            @*<div class="labeltext" style="width:10%;">
+                <input type="button" onclick="callCopyNewSurvey()" value="Copy Survey" style="width:100%; height: 30px;font-size:12px;color:#ffffff;background-color:#428bca;font-family:sans-serif;text-align:Center;line-height:none;" />
+            </div>*@
+
+        <div align="right" style="padding:10px;width:100%;">
+            Search [By Checklist Name]:
+            <!-- onkeyup="SearchOption(this.value)" -->
+            @*<input type="text" id="txtSearchOption" onblur="SearchOption(this.value)" onkeyup="EnterSearchOption(this.value)" style="width:150px;" />*@
+            <input type="text" id="txtSearchOption" onblur="SearchOption(this.value)" onkeyup="EnterSearchOption(this.value)" placeholder="&#xf002; Search" style="font-family: FontAwesome, Arial; font-style: normal; width: 150px;" />
+        </div>
+        </div>
+            <div class="row">
+                <div class="labeltext" style="width:99%;">
+                    <!--  -->
+                    <div style="height:320px;overflow:scroll;">
+                        <table class="table table-bordered table-condensed table-striped" style="border:3px solid #ccc;">
+                            <thead style="background-color:#000066">
+                                <tr style="border:3px solid #ccc;color:white;">
+
+                                    <th>Checklist Name</th>
+                                    <th>No of Screens</th>
+                                    <th>Device</th>
+                                   
+                                    <th>Active</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="row">
+                <!-- padding-left:10px;-->
+                <div align="right" style="padding:10px;width:100%">
+                    @*<input type="button" onclick="ExitButton()" value="Exit" style="width:80px;height: 30px;font-size:12px;color:#ffffff;background-color:#428bca;font-family:sans-serif;text-align:Center;line-height:none;" />*@
+                    <Button id="Button_CancelBtn" value="Cancel" onclick="ExitButton();" style="width:100px;height: 40px;font-size:14px;color:#ffffff;background-color:#ff0000;font-family:Poppins-Light.ttf;text-align:Center;line-height:none;border-radius:5px;"><i class="fa fa-close"></i> | Exit</Button>
+                </div>
+            </div>
+        </div>
+</div>
+<!-- PANEL FOR GETTING INPUT ENDS HERE... ========================-->

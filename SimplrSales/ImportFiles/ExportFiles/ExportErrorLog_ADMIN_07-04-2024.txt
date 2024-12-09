@@ -1,0 +1,96 @@
+Time: 07-04-2024 07:49:02 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Exception Report'
+-----------------------------------------------------------
+
+Time: 07-04-2024 07:49:02 PM
+-----------------------------------------------------------
+Message: ReadRecord : Select Distinct E.DocNo as [Document No] , E.DocType as [Document Type], E.AgentID as [Agent], S.Name as [Agent Name],Format(E.DocDate,'MM-dd-yyyy') as [Document Date],E.Remarks as [Remarks],  E.CustNo as [Customer No],C.CustName as [Customer Name],case when P.FileName like '%.simg' then (SELECT Reverse( SUBSTRING(REVERSE(P.FileName),6, (Len(max(P.FileName)))) )+'.png') else P.FileName  end AS ImageName from Exception E left Join phototransactions P on  P.DOcno=E.Docno and P.AgentID=E.AgentID inner join  Customer C on E.CustID = C.CustNo inner join SalesAgent S on E.AgentID= S.Code  left join item I on E.ItemID = I.ItemNo Where E.DocType <> 'Password Change' and Convert(date,E.DocDate) BETWEEN  Convert(Date,'2024-04-01 00:00:00.000') and  Convert(Date,'2024-04-07 23:59:59.000') group by e.DocNo,e.DocType,e.AgentID,e.DocDate,e.Remarks,e.CustNo,c.CustName,s.Name,i.Description,p.FileName order by Format(E.DocDate,'MM-dd-yyyy')
+
+-----------------------------------------------------------
+
+Time: 07-04-2024 07:49:03 PM
+-----------------------------------------------------------
+Message: strSteps : done
+-----------------------------------------------------------
+
+Time: 07-04-2024 07:52:59 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Holiday Master'
+-----------------------------------------------------------
+
+Time: 07-04-2024 07:53:03 PM
+-----------------------------------------------------------
+Message: ReadRecord : Select HM.DistributorID as Code,D.DistributorName as Description,HM.Year as Year,Format(HM.HolidayDate,'MM/dd/yyyy') as 'Holiday Date',[Desc] AS 'Description' from HolidayMaster HM inner join Distributor D on HM.DistributorID=D.DistributorID where HM.HolidayDate  BETWEEN  '2024-04-07 00:00:00.000' and '2024-04-07 23:59:59.000' 
+-----------------------------------------------------------
+
+Time: 07-04-2024 07:53:05 PM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 07-04-2024 07:54:10 PM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 07-04-2024 08:02:22 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Holiday Master'
+-----------------------------------------------------------
+
+Time: 07-04-2024 08:02:22 PM
+-----------------------------------------------------------
+Message: ReadRecord : Select HM.DistributorID as Code,D.DistributorName as Description,HM.Year as Year,Format(HM.HolidayDate,'MM/dd/yyyy') as 'Holiday Date',[Desc] AS 'Description' from HolidayMaster HM inner join Distributor D on HM.DistributorID=D.DistributorID where HM.HolidayDate  BETWEEN  '2024-04-07 00:00:00.000' and '2024-04-07 23:59:59.000' 
+-----------------------------------------------------------
+
+Time: 07-04-2024 08:02:22 PM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 07-04-2024 08:02:22 PM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 07-04-2024 08:07:55 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Holiday Master'
+-----------------------------------------------------------
+
+Time: 07-04-2024 08:07:55 PM
+-----------------------------------------------------------
+Message: ReadRecord : Select HM.DistributorID as Code,D.DistributorName as Description,HM.Year as Year,Format(HM.HolidayDate,'MM/dd/yyyy') as 'Holiday Date',[Desc] AS 'Description' from HolidayMaster HM inner join Distributor D on HM.DistributorID=D.DistributorID where HM.HolidayDate  BETWEEN  '2024-04-07 00:00:00.000' and '2024-04-07 23:59:59.000' 
+-----------------------------------------------------------
+
+Time: 07-04-2024 08:07:56 PM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 07-04-2024 08:07:56 PM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
+Time: 07-04-2024 08:12:42 PM
+-----------------------------------------------------------
+Message: ReadRecord : select * from ExportQueryConfig where AliasName='Holiday Master'
+-----------------------------------------------------------
+
+Time: 07-04-2024 08:12:44 PM
+-----------------------------------------------------------
+Message: ReadRecord : Select HM.DistributorID as Code,D.DistributorName as Description,HM.Year as Year,Format(HM.HolidayDate,'MM/dd/yyyy') as 'Holiday Date',[Desc] AS 'Description' from HolidayMaster HM inner join Distributor D on HM.DistributorID=D.DistributorID where HM.HolidayDate  BETWEEN  '2024-04-07 00:00:00.000' and '2024-04-07 23:59:59.000' 
+-----------------------------------------------------------
+
+Time: 07-04-2024 08:12:45 PM
+-----------------------------------------------------------
+Message: strSteps  =done
+-----------------------------------------------------------
+
+Time: 07-04-2024 08:12:59 PM
+-----------------------------------------------------------
+Message: strSteps  =AutoExport done csv
+-----------------------------------------------------------
+
