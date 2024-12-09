@@ -534,6 +534,7 @@ namespace SimplrSales.Controllers
             }
             catch (Exception ex)
             {
+                //TestingBYSundar
                 //QueryLog(query + System.Environment.NewLine + "=========================================================== " + System.Environment.NewLine);
                 QueryLog("Exception : " + ex.Message);
                 conn.Close();
